@@ -1,0 +1,23 @@
+# Site settings
+title: Powa Open Source & Documentation
+email:
+support_email: support@powa.com
+description: > # this means to ignore newlines until "baseurl:"
+  Powa Open Source projects, SDKs and API Documentation.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.powa.com" # the base hostname & protocol for your site
+twitter_username: powatechltd
+github_username: powa  # To link to our open-source projects
+copyright: "Copyright &copy; Powa Technologies 2015"
+
+# Homepage
+show_mobile_docs: true
+show_web_docs: true
+show_aim_docs: true
+show_core_docs: false
+# Mobile SDK
+show_sdk_download_links: false
+
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,106 @@
+---
+layout: post
+---
+
+{{ content }}
+
+{% if page.swagger %}
+<div class="swagger">
+  <link rel="stylesheet" href="{{ "/css/swagger.css" | prepend: site.baseurl }}" media="screen" />
+  <link rel="stylesheet" href="{{ "/css/swagger-print.css" | prepend: site.baseurl }}" media="print" />
+  <script src='{{site.baseurl}}/js/swagger-jquery-1.8.0.min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-jquery.slideto.min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-jquery.wiggle.min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-jquery.ba-bbq.min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-handlebars-2.0.0.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-underscore-min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-backbone-min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-ui.min.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-highlight.7.3.pack.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-marked.js' type='text/javascript'></script>
+  <script src='{{site.baseurl}}/js/swagger-oauth.js' type='text/javascript'></script>
+  <script type="text/javascript">
+    $(function () {
+      var url = "{{page.swagger}}";
+
+      // Pre load translate...
+      if(window.SwaggerTranslator) {
+        window.SwaggerTranslator.translate();
+      }
+      window.swaggerUi = new SwaggerUi({
+        url: url,
+        dom_id: "swagger-ui-container",
+        supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+        onComplete: function(swaggerApi, swaggerUi){
+          if(typeof initOAuth == "function") {
+            initOAuth({
+              clientId: "your-client-id",
+              clientSecret: "your-client-secret",
+              realm: "your-realms",
+              appName: "your-app-name",
+              scopeSeparator: ","
+            });
+          }
+
+          if(window.SwaggerTranslator) {
+            window.SwaggerTranslator.translate();
+          }
+
+          $('pre code').each(function(i, e) {
+            hljs.highlightBlock(e)
+          });
+
+          addApiKeyAuthorization();
+        },
+        onFailure: function(data) {
+          log("Unable to Load SwaggerUI");
+        },
+        docExpansion: "none",
+        apisSorter: "alpha",
+        showRequestHeaders: false
+      });
+
+      function addApiKeyAuthorization(){
+        var key = encodeURIComponent($('#input_apiKey')[0].value);
+        if(key && key.trim() != "") {
+            var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
+            window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
+            log("added key " + key);
+        }
+      }
+
+      $('#input_apiKey').change(addApiKeyAuthorization);
+
+      {% if page.swaggerkey %}
+      // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
+      var apiKey = "{{page.swaggerkey}}";
+      $('#input_apiKey').val(apiKey);
+      {% endif %}
+
+      window.swaggerUi.load();
+
+      function log() {
+        if ('console' in window) {
+          console.log.apply(console, arguments);
+        }
+      }
+  });
+  </script>
+
+  <div class="swagger-section">
+
+    <div class="swagger-ui-wrap">
+
+      <form id='api_selector'>
+        <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
+      </form>
+
+    </div>
+
+    <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+
+    <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+
+  </div>
+</div>
+{% endif %}

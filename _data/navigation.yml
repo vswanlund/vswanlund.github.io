@@ -1,0 +1,159 @@
+- title: "PowaTag"
+
+- title: "Web SDK"
+  url: "/tag-web-sdk-apis/"
+  pages:
+
+  - title: "Getting Started"
+    url: "/tag-web-sdk/start/"
+
+  - title: "Tags"
+    url: "/tag-web-sdk/tags/"
+
+  - title: "Changelog"
+    url: "/tag-web-sdk/changelog/"
+
+- title: "Mobile SDKs"
+  url: "/tag-mobile-sdks/"
+  pages:
+
+  - title: "Android SDK"
+    url: "/tag-mobile-sdks/android/"
+    pages:
+
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/android/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/android/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/android/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/android/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/android/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/android/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/android/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/android/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/android/campaigns/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/android/payments/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/android/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/android/changelog/"
+
+  - title: "iOS SDK"
+    url: "/tag-mobile-sdks/ios/"
+    pages:
+
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/ios/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/ios/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/ios/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/ios/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/ios/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/ios/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/ios/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/ios/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/ios/campaigns/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/ios/payments/"
+
+    - title: "Errors"
+      url: "/tag-mobile-sdks/ios/errors/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/ios/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/ios/changelog/"
+
+  - title: "Windows Phone SDK"
+    url: "/tag-mobile-sdks/wp/"
+    pages:
+
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/wp/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/wp/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/wp/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/wp/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/wp/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/wp/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/wp/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/wp/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/wp/campaigns/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/wp/payments/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/wp/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/wp/changelog/"
+
+- title: "PowaAim"
+
+- title: "PowaAim API"
+  url: "/aim-docs"
+  pages:
+
+- title: "PowaCore"
+
+- title: "Core Services"
+  url: "/core-apis/"
+  pages:
+
+  - title: "Getting Started"
+    url: "/core-apis/start/"
+
+  - title: "Authorization Service"
+    url: "/core-apis/authorization/"

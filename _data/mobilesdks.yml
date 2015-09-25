@@ -1,0 +1,14 @@
+android:
+
+    version: 0.9.0
+    url: "http://nexus.ht.powa.com/nexus/service/local/repositories/ptk-releases/content/com/powatag/sdk/PowaTag-SDK-Android/0.9.0/PowaTag-SDK-Android-0.9.0.zip"
+
+ios:
+
+    version: 0.9.0
+    url: "http://nexus.ht.powa.com/nexus/service/local/repositories/ptk-releases/content/com/powatag/sdk/PowaTag-SDK-iOS/0.9.0/PowaTag-SDK-iOS-0.9.0.zip"
+
+wp:
+
+    version: 0.9.0
+    url: "http://nexus.ht.powa.com/nexus/service/local/repositories/ptk-releases/content/com/powatag/sdk/PowaTag-SDK-WP80/0.9.0/PowaTag-SDK-WP80-0.9.0.zip"
