@@ -26,10 +26,9 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 1. Add the following to Module-level /app/build.gradle before dependencies:
 
-    <code>
     <pre>repositories {
         maven { url "http://nexus.ht.powa.com/nexus/content/repositories/ptk-releases/" }
-    }</pre></code>
+    }</pre>
 
 2. Modify the build.gradle file:
 	a. Add the compile dependency with the latest version of the PowaTag SDK
