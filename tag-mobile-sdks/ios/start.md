@@ -52,6 +52,21 @@ You need to initialize PowaTag SDK before you can use it. Add a call to `[PowaTa
       [PowaTagSDK initializeSdk:[UIApplication sharedApplication]];
     }
 
+		#@ use these two:
+	+ (void)initializeSdkWithApiKey:(nonnull NSString *)apiKey
+						 secret:(nonnull NSString *)secret;
+					
+ * Initializes the PowaTag SDK library, the behavior of SDK functions are
+ * undetermined if this function is not called. It should be called as early as possible, ideally in the <code>application:didFinishLaunchingWithOptions:</code> of your app delegate.
+ * It is safe to call this method multiple times, if called more than once subsequent calls have no effect.
+ * @param endpoint The new PowaTag endpoint to use for managers and services instead of the default host name "https://powatag.com" and ports. The endpoint should never be changed in production code.
+ * @param apiKey The API key for the application.
+ * @param secret The secret for the application.					
+	
+	+ (void)initializeSdkWithEndpoint:(nonnull PowaTagEndpoint *)endpoint
+						   apiKey:(nonnull NSString *)apiKey
+						   secret:(nonnull NSString *)secret;
+	
 <br />
 
 # Importing Sample Apps
