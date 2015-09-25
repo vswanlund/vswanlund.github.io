@@ -34,9 +34,10 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 2. Modify the build.gradle file:
 	a. Add the compile dependency with the latest version of the PowaTag SDK
     <code>
+	<pre>
     dependencies {
         compile 'com.powatag.android:powatag-kit:0.8.5'
-    }</code>
+    }</pre></code>
 	
 	b. Add exclusions to the packagingOptions
 	<code>
