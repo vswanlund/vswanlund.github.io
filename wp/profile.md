@@ -1,0 +1,169 @@
+---
+layout: page
+title: Profile on Windows Phone
+permalink: /tag-mobile-sdks/wp/profile/
+---
+
+A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage the users profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/wp/login/).
+
+After logging in you can retrieve the current user profile using `Profile.CurrentProfile`. You can then use ProfileManager to add addresses, cards or update the user profile.
+
+<br />
+
+# Retrieving the Current Profile Information
+
+1. The users current profile, which reflects any successful modifications, can be retrieved using:
+
+    <pre>Profile profile = Profile.GetCurrentProfile();</pre>
+
+2. Check whether the current profile is temporary using:
+
+    <pre>boolean isTemporary = profile.IsTemporary;</pre>
+
+3. Get the list of address currently added to the profile with:
+
+    <pre>List&lt;Address&gt; addresses = profile.Addresses;</pre>
+
+4. Get the list of payment methods currently added to the profile with:
+
+    <pre>List&lt;PaymentInstrument&gt; paymentInstruments = profile.PaymentInstruments;</pre>
+
+<br />
+
+# Adding an Address
+
+For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/wp/addresses/).
+
+1. Create a new Address object and set the address information:
+
+    <pre>Address address = new Address();
+   address.Alias = "Powa";
+   address.FirstName = "Dan";
+   address.LastName = "Wagner";
+   address.Line1 = "110 Bishopsgate";
+   address.City = "London";
+   address.PostCode = "EC2N 4AY";
+   address.County = "London";
+   Country country = new Country();
+   country.Alpha2Code = "GB";
+   country.Name = "United Kingdom";
+   address.Country = country;</pre>
+
+2. Add the address to the user profile using the ProfileManager:
+
+    <pre>ProfileManager pm = ProfileManager.Instance;
+   Address addedAddress = await pm.AddAddressAsync(address);
+   // Address was successfully added</pre>
+
+ 3. The new address will also be available in the current profile:
+
+    <pre>List&lt;Address&gt; addresses = ProfileManager.GetInstance().GetCurrentProfile().Addresses;</pre>
+
+<br />
+
+# Updating an Address
+
+1. Create an AddressDetails object from an existing Address and modify the address information:
+
+    <pre>AddressDetails modifiedAddress = address.EditableCopy();
+   modifiedAddress.Alias = "110 Bishopsgate";</pre>
+
+3. Use the ProfileManager to update the address information:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   Address updatedAddress = pm.UpdateAddressAsync(address, modifiedAddress);
+   // Address was successfully updated</pre>
+
+<br />
+
+# Deleting an Address
+
+1. Use the ProfileManager to delete an existing address:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   Profile updatedProfile = await pm.DeleteAddressAsync(address);
+   // Address was successfully deleted from profile</pre>
+
+<br />
+
+# Adding a Payment Instrument
+
+1. Create a new PaymentInstrument object and set the card information:
+
+    <pre>PaymentMethodDetails paymentMethod = new PaymentMethodDetails();
+   paymentMethod.CardHolderName = "Dan Wagner";
+   paymentMethod.CardNumber = "4111111111111111";
+   paymentMethod.ValidFromDate = new YearMonth(2010, 1);
+   paymentMethod.ExpiryDate = new YearMonth(2020, 1);</pre>
+
+2. Create a new PaymentMethod object and set the payment instrument, billing address and other information:
+
+    <pre>PaymentInstrumentDetails paymentInstrument = new PaymentInstrumentDetails();
+   paymentInstrument.Issuer = CreditCardIssuer.Visa;
+   paymentInstrument.PaymentMethod = paymentMethod;
+   paymentInstrument.Alias = "Powa";
+   paymentInstrument.PaymentType = PaymentMethodType.PaymentCard;
+   paymentInstrument.BillingAddressId = addressId;</pre>
+
+3. Add the payment instrument to the user profile using the ProfileManager:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   PaymentInstrument addedPaymentInstrument = await pm.AddPaymentInstrumentAsync(paymentInstrument);
+   // Payment method was successfully added</pre>
+
+ 4. The new payment instrument will also be available in the current profile:
+
+    <pre>List&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.GetInstance().GetCurrentProfile().PaymentInstruments;</pre>
+
+<br />
+
+# Updating a Payment Instrument
+
+You can only change the billing address of a payment instrument once created.
+
+1. Use the ProfileManager to update the billing address of a payment instrument:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   PaymentInstrument updatedPaymentInstrument = pm.UpdatePaymentInstrumentAsync(paymentInstrument, newBillingAddress);
+   // Payment instrument was successfully updated</pre>
+
+<br />
+
+# Deleting a Payment Instrument
+
+1. Use the ProfileManager to delete an existing payment instrument:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   Profile updatedProfile = await pm.DeletePaymentInstrumentAsync(paymentInstrument);
+   // Payment instrument was successfully deleted from profile</pre>
+
+<br />
+
+# Updating the Profile
+
+1. Create a new ProfileUpdate object and set the profile information:
+
+    <pre>ProfileDetails profile = new ProfileDetails();
+   profile.Title = "CEO";
+   profile.FirstName = "Dan";
+   profile.LastName = "Wagner";
+   profile.Email = "support@powa.com";
+   profile.MobileNumber = "01234567890";</pre>
+
+2. Use the ProfileManager to update the current profile:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   Profile updatedProfile = await pm.UpdateProfileAsync(profile);
+   // Profile information is updated</pre>
+
+3. The updated profile information will be reflected in the users current profile:
+
+    <pre>Profile profile = ProfileManager.GetInstance().GetCurrentProfile();</pre>
+
+# Saving the Profile
+
+1. Use the ProfileManager to save the current profile:
+
+    <pre>ProfileManager pm = ProfileManager.GetInstance();
+   Profile savedProfile = await pm.SaveProfileAsync();
+   // Profile is no longer temporary</pre>
