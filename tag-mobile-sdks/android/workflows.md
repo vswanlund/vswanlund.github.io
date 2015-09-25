@@ -8,7 +8,7 @@ A workflow defines the action(s) an application should offer the user for a part
 
 The workflow also includes the information required to display the actions (such as the product information).
 
-After detecting a tag with one of the triggers use `WorkflowManager` to retrieve the workflow information for that tag.
+After detecting a tag with one of the triggers use the `WorkflowManager` to retrieve the workflow information for that tag.
 
 The workflow information will contain the data necessary to integrate with the action SDK components (for instance through `BasketManager` and `Baskets` for a Product workflow).
 
@@ -17,12 +17,13 @@ The currently supported workflows are:
 * Product
 * Basket
 * Campaign
+* Act
 
 <br />
 
 # Determine the Workflow Type
 
-1. Use the WorkflowType `asXyzWorkflow` methods to convert the generic workflow object to the correct workflow subclass:
+1. Use the `WorkflowType.asXyzWorkflow` methods to convert the generic workflow object to the correct workflow subclass:
 
     <pre>switch (workflow.getWorkflowType()) {
      case PRODUCT:
@@ -37,7 +38,12 @@ The currently supported workflows are:
        CampaignWorkflow campaignWorkflow = WorkflowType.asCampaignWorkflow(workflow);
        Campaign campaign = campaignWorkflow.getCampaign();
        break;
+     case ACT:
+       ActWorkflow actWorkflow = WorkflowType.asActWorkflow(workflow);
+       Act act = actWorkflow.getAct();
+       break;
    }</pre>
+   
 
 <br />
 
@@ -58,6 +64,10 @@ The currently supported workflows are:
      public void onError(PowaTagException exception) {
      }
    });</pre>
+       
+  	The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues 
+    
+    <code>Workflow workflow = wm.getWorkflow(tag); </code>
 
 <br />
 
@@ -71,3 +81,6 @@ TemporaryBasket containing a fixed set of items that can be purchased.
 
 **[Campaign]({{site.baseurl}}/tag-mobile-sdks/android/campaigns/)**<br />
 Charity donation campaign, one time or recurring.
+
+**[Act]({{site.baseurl}}/tag-mobile-sdks/android/act/)**<br />
+Act campaign workflow to collect information from the user.
