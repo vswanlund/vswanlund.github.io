@@ -60,8 +60,9 @@ A number of triggers are currently supported:
 
 4. To check if the audio tag detector is actively listening for tags use:
 
-	<code>audioTagDetector.isDetecting()</code>
-<br />
+	<code>audioTagDetector.isDetecting();</code>
+	
+<br/>
 
 
 # QR Tags
@@ -80,7 +81,7 @@ A number of triggers are currently supported:
     <pre>&lt;com.powatag.android.sdk.triggers.barcode.BarcodeTagDetectorView
        android:id="@+id/barcode_detector_view"
        android:layout_width="match_parent"
-       android:layout_height="match_parent" /&gt;</pre>
+       android:layout_height="match_parent"/&gt;</pre>
 
 3. Find the BarcodeTagDetectorView and set a BarcodeTagDetectorViewListener to be notified of events:
 
@@ -130,6 +131,7 @@ A number of triggers are currently supported:
      barcodeTagDetectorView.stopDetection();
    }</pre>
    
+   
 5. To check if the audio tag detector is actively listening for tags use:
 
 	<code>audioTagDetector.isDetecting()</code>
@@ -141,7 +143,7 @@ A number of triggers are currently supported:
 
 1. Touch to Buy tag detection requires the following entry in your manifest:
 
-   	<pre>&lt;intent-filter&gt;
+   	<pre><intent-filter>
      	&lt;action android:name="android.intent.action.VIEW" /&gt;
     	&lt;data android:host="powat.ag" /&gt;
      	&lt;data android:scheme="hellopowatag" /&gt;
