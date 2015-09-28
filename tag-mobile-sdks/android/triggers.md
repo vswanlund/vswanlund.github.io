@@ -145,10 +145,10 @@ A number of triggers are currently supported:
 	
 	
 	&lt;intent-filter&gt;
-                &lt;action android:name="android.intent.action.VIEW" /&gt;
-                &lt;data android:host="powat.ag" /&gt;
-                &lt;data android:scheme="hellopowatag" /&gt;
-            &lt;/intent-filter&gt;
+        &lt;action android:name="android.intent.action.VIEW" /&gt;
+        &lt;data android:host="powat.ag" /&gt;
+        &lt;data android:scheme="hellopowatag" /&gt;
+    &lt;/intent-filter&gt;
 
 2. Create instance of the <code>AppLinkTagDetector</code>
 
