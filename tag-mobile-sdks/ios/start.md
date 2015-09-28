@@ -46,38 +46,29 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 # Initialize the SDK
 
-You need to initialize PowaTag SDK before you can use it. Add a call to `[PowaTagSDK initializeSdk]` from application:didFinishLaunchingWithOptions: in UIApplicationDelegate or viewDidLoad in UIViewController:
+You need to initialize PowaTag SDK before you can use it. Add a call to `[PowaTagSDK initializeSdkWithApiKey]` from application:didFinishLaunchingWithOptions: in UIApplicationDelegate or viewDidLoad in UIViewController:
 
     - (void)viewDidLoad {
-      [PowaTagSDK initializeSdk:[UIApplication sharedApplication]];
+      [PowaTagKit initializeSdkWithApiKey:@“apiKey”
+		secret:@“secret”];
     }
 
-		#@ use these two:
-	+ (void)initializeSdkWithApiKey:(nonnull NSString *)apiKey
-						 secret:(nonnull NSString *)secret;
-					
- * Initializes the PowaTag SDK library, the behavior of SDK functions are
- * undetermined if this function is not called. It should be called as early as possible, ideally in the <code>application:didFinishLaunchingWithOptions:</code> of your app delegate.
- * It is safe to call this method multiple times, if called more than once subsequent calls have no effect.
- * @param endpoint The new PowaTag endpoint to use for managers and services instead of the default host name "https://powatag.com" and ports. The endpoint should never be changed in production code.
- * @param apiKey The API key for the application.
- * @param secret The secret for the application.					
-	
-	+ (void)initializeSdkWithEndpoint:(nonnull PowaTagEndpoint *)endpoint
-						   apiKey:(nonnull NSString *)apiKey
-						   secret:(nonnull NSString *)secret;
+During development you need to use a non-production endpoint and for this a second initialization method is available:
+  
+	- (BOOL)application:(UIApplication *)application
+		didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+		[PowaTagKit initializeSdkWithEndpoint:[PowaTagEndpoint defaultEndpoint]
+			apiKey:@“apiKey”
+			secret:@“secret”];
+			 
 	
 <br />
 
 # Importing Sample Apps
 
-The following samples come with the SDK:
+The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
 
-* **AudioSample** - Detect PowaTag Audio tags.
-* **BarcodeSample** - Scan PowaTag QR codes.
-* **Touch2BuySample** - Receive requests from web-pages or other apps.
-
-You can experiment with samples by importing the sample into Xcode.
+You can experiment with these features by importing the sample into Xcode.
 
 1. Go to Xcode \| File \| Open
 
@@ -99,6 +90,7 @@ After you install PowaTag SDK for iOS, you can see:
 * [Workflows]({{site.baseurl}}/tag-mobile-sdks/ios/workflows/)
 * [Baskets]({{site.baseurl}}/tag-mobile-sdks/ios/baskets/)
 * [Campaigns]({{site.baseurl}}/tag-mobile-sdks/ios/campaigns/)
+* [Acts]({{site.baseurl}}/tag-mobile-sdks/ios/acts/)
 * [Payments]({{site.baseurl}}/tag-mobile-sdks/ios/payments/)
 
 <br />

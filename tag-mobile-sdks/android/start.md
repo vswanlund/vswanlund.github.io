@@ -65,7 +65,7 @@ You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTag
         PowaTagKit.initializeSdk(getApplicationContext(), apiKey, secret);
     }
 
-During development you will need ot use a non-production endpoint and for this a second constructor is available for initializing the SDK:    
+During development you need to use a non-production endpoint and for this a second initialization method is available:
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,9 +85,9 @@ Note; they need to set every single endpoint if they use this method because
 
 # Importing The Sample App
 
-The **HelloPowaTag-Sample** application has been included in the SDK.
+The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
 
-You can experiment with the sample by importing the it into a Android Studio project:
+You can experiment with the SDK features by importing the it into a Android Studio project:
 
 1. Go to Android Studio \| New \| Import Project
 
