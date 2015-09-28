@@ -91,9 +91,7 @@ A number of triggers are currently supported:
      barcodeTagDetectorView = (BarcodeTagDetectorView) findViewById(R.id.barcode_detector_view);
      barcodeTagDetectorView.setListener(new BarcodeTagDetectorViewListener() {
        @Override
-       public void onBarcodeTagDetected(final BarcodeTagDetectorView
-       #@repair &lt;PointF&gt;
-       barcodeTagDetectorView,final Tag barcodeTag, final Image image, final List&lt;PointF&gt; barcodeRegion) {
+       public void onBarcodeTagDetected(final BarcodeTagDetectorView barcodeTagDetectorView,final Tag barcodeTag, final Image image, final List&lt;PointF&gt; barcodeRegion) {
          showAlertDialog("PowaTag Barcode Tag Detected", tag.getReference());
        }
        @Override
@@ -102,12 +100,10 @@ A number of triggers are currently supported:
          showAlertDialog("Unsupported Barcode Detected", barcode.getCode());
        }
        @Override
-       #@
        public void onDetectorStarted(final BarcodeTagDetectorView barcodeTagDetectorView) {
          // Camera feed is live.
        }
        @Override
-       #@
        public void onDetectorStopped(final BarcodeTagDetectorView barcodeTagDetectorView,final PowaTagException exception) {
          if (exception != null) {
            // Detector stopped due to an error.
@@ -139,15 +135,14 @@ A number of triggers are currently supported:
 
 
 # Touch to Buy Tags
-==========
 
 1. Touch to Buy tag detection requires the following entry in your manifest:
 
    	<pre><intent-filter>
-     	&lt;action android:name="android.intent.action.VIEW" /&gt;
-    	&lt;data android:host="powat.ag" /&gt;
-     	&lt;data android:scheme="hellopowatag" /&gt;
-    &lt;/intent-filter&gt;</pre>
+     	<action android:name="android.intent.action.VIEW" />
+    	<data android:host="powat.ag" />
+     	<data android:scheme="hellopowatag" />
+    </intent-filter></pre>
 
 2. Create instance of the <code>AppLinkTagDetector</code>
 
