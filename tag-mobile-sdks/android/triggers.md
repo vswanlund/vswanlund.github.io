@@ -137,12 +137,11 @@ A number of triggers are currently supported:
 # Touch to Buy Tags
 
 1. Touch to Buy tag detection requires the following entry in your manifest:
-    <pre>    
-<intent-filter>
-<action android:name="android.intent.action.VIEW"/>
-<data android:host="powat.ag"/>
-<data android:scheme="hellopowatag">
-</intent-filter> </pre>
+    <pre><intent-filter>
+		<action android:name="android.intent.action.VIEW"/>
+		<data android:host="powat.ag"/>
+		<data android:scheme="hellopowatag">
+	</intent-filter></pre>
 
 2. Create instance of the <code>AppLinkTagDetector</code>
 
