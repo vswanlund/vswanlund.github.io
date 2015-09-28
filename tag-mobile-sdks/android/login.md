@@ -6,7 +6,7 @@ permalink: /tag-mobile-sdks/android/login/
 
 PowaTag Login is a secure and easy way for people to log in to your app and manage their PowaTag Profile.
 
-To facilitate seamless engangement, you can use a guest login for users that do not have an existing PowaTag profile. This creates a temporary user profile which requires no user information upfront because the profile is tied to the device. 
+To facilitate seamless engagement, you can use a guest login for users that do not have an existing PowaTag profile. This creates a temporary user profile which requires no user information upfront because the profile is tied to the device. 
 
 The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 

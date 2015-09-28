@@ -30,16 +30,16 @@ A number of triggers are currently supported:
      audioTagDetector = new AudioTagDetector(this);
      audioTagDetector.setListener(new AudioTagDetectorListener() {
        @Override
-       public void onAudioTagDetected(final Tag audioTag) {
+       public void onAudioTagDetected(final AudioTagDetector audioTagDetector,final Tag audioTag) {
          showAlertDialog("PowaTag Audio Tag Detected", tag.getReference());
        }
        @Override
-       public void onVolumeChanged(final float volume) {
+       public void onVolumeChanged(final AudioTagDetector audioTagDetector, final float volume) {
          // Volume from 0.0f to 1.0f
          showAlertDialog("Current Volume", Float.toString(volume));
        }
        @Override
-       public void onDetectorStopped(final PowaTagException exception) {
+       public void onDetectorStopped(final AudioTagDetector audioTagDetector, final PowaTagException exception) {
          if (exception != null) {
            // Detector stopped due to an error.
            showAlertDialog("Exception!", exception.getMessage());
@@ -58,13 +58,11 @@ A number of triggers are currently supported:
      audioTagDetector.stopDetection();
    }</pre>
 
+4. To check if the audio tag detector is actively listening for tags use:
+
+	<code>audioTagDetector.isDetecting()</code>
 <br />
 
-**Sample**
-
-To see an example of this code in action, import the audio-sample project from the PowaTag SDK.
-
-<br />
 
 # QR Tags
 
@@ -92,27 +90,31 @@ To see an example of this code in action, import the audio-sample project from t
      barcodeTagDetectorView = (BarcodeTagDetectorView) findViewById(R.id.barcode_detector_view);
      barcodeTagDetectorView.setListener(new BarcodeTagDetectorViewListener() {
        @Override
-       public void onBarcodeTagDetected(final Tag barcodeTag, final Image image, final List<PointF> barcodeRegion) {
+       public void onBarcodeTagDetected(final BarcodeTagDetectorView
+       #@repair &lt;PointF&gt;
+       barcodeTagDetectorView,final Tag barcodeTag, final Image image, final List&lt;PointF&gt; barcodeRegion) {
          showAlertDialog("PowaTag Barcode Tag Detected", tag.getReference());
        }
        @Override
-       public void onNonPowaTagBarcodeDetected(final Barcode barcode, final Image image, final List<PointF> barcodeRegion) {
+       public void onNonPowaTagBarcodeDetected(final BarcodeTagDetectorView barcodeTagDetectorView, final Barcode barcode, final Image image, final List&lt;PointF&gt; barcodeRegion) {
          // Some other kind of barcode unsupported by PowaTag was detected.
          showAlertDialog("Unsupported Barcode Detected", barcode.getCode());
        }
        @Override
-       public void onDetectorStarted() {
+       #@
+       public void onDetectorStarted(final BarcodeTagDetectorView barcodeTagDetectorView) {
          // Camera feed is live.
        }
        @Override
-       public void onDetectorStopped(final PowaTagException exception) {
+       #@
+       public void onDetectorStopped(final BarcodeTagDetectorView barcodeTagDetectorView,final PowaTagException exception) {
          if (exception != null) {
            // Detector stopped due to an error.
            showAlertDialog("Exception!", exception.getMessage());
          }
        }
      });
-   }</pre>
+     }</pre>
 
 4. Call startDetection and stopDetection from appropriate lifecycle methods in your Activity:
 
@@ -127,12 +129,47 @@ To see an example of this code in action, import the audio-sample project from t
      super.onPause();
      barcodeTagDetectorView.stopDetection();
    }</pre>
+   
+5. To check if the audio tag detector is actively listening for tags use:
 
+	<code>audioTagDetector.isDetecting()</code>
 <br />
 
-**Sample**
 
-To see an example of this code in action, import the barcode-sample project from the PowaTag SDK.
+# Touch to Buy Tags
+==========
+
+1. Touch to Buy tag detection requires the following entry in your manifest:
+
+   	<pre>&lt;intent-filter&gt;
+     	&lt;action android:name="android.intent.action.VIEW" /&gt;
+    	&lt;data android:host="powat.ag" /&gt;
+     	&lt;data android:scheme="hellopowatag" /&gt;
+    &lt;/intent-filter&gt;</pre>
+
+2. Create instance of the <code>AppLinkTagDetector</code>
+
+
+3. AppLink and AppLinkTagDetector:
+========
+
+      <pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
+      schemes.add("hellopowatag");
+      AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
+
+      AppLink appLink = detector.detectAppLink(intent);
+      if (appLink != null) {
+          processDetectedTag(appLink.getTag());
+      }    
+    }</pre>
+
+
+<br/>
+
+
+# Sample
+
+To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#install-the-sdk-using-android-studio/) app and review the <code>ScanActivity</code> class.
 
 <br />
 
