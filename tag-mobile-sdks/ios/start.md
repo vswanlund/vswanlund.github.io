@@ -64,7 +64,7 @@ During development you need to use a non-production endpoint and for this a seco
 			 
 <br />
 
-# Importing Sample Apps
+# Importing The Sample App
 
 The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
 

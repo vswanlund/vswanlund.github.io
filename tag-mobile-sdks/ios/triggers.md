@@ -18,7 +18,12 @@ A number of triggers are currently supported:
 
 # Audio Tags
 
-1. Create a PTKAudioTagDetector in your ViewController and set a PTKAudioTagDetectorDelegate to be notified of any events:
+1. 1. Audio tag detection requires the use of the audio recording permission. Add the following entry to your manifest:
+
+    <pre>INSERT WHAT IS REQUIRED IN MANIFEST/&gt;</pre>
+	==================
+
+2. Create a PTKAudioTagDetector in your ViewController and set a PTKAudioTagDetectorDelegate to be notified of any events:
 
     <pre>- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 	 if (self = [super initWithCoder:aDecoder]) {
@@ -40,7 +45,7 @@ A number of triggers are currently supported:
 	   [[[UIAlertView alloc] initWithTitle:@"Error!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
    }</pre>
 
-2. Call startDetection and stopDetection when required:
+3. Call startDetection and stopDetection when required:
 
     <pre>- (IBAction)startButtonClick {
 	   [self.audioTagDetector startDetection];
@@ -49,14 +54,14 @@ A number of triggers are currently supported:
    - (IBAction)stopButtonClick {
 	   [self.audioTagDetector stopDetection];
    }</pre>
+   
+4. To check if the audio tag detector is actively listening for tags use:
+
+	<code>AUDIOTAGDETECTOR ISDETECTING CODE SNIPPET</code>
+	=========================
 
 <br />
 
-**Sample**
-
-To see an example of this code in action, import the AudioSample project from the PowaTag SDK.
-
-<br />
 
 # QR Tags
 
@@ -97,12 +102,41 @@ To see an example of this code in action, import the AudioSample project from th
    - (void)viewDidDisappear {
      [self.barcodeTagDetectorView stopDetection];
    }</pre>
+   
+5. To check if the audio tag detector is actively listening for tags use:
+
+	<code>TAGDETECTOR ISDETECTING CODE SNIPPET</code>
 
 <br />
 
-**Sample**
+# Touch to Buy Tags - STEPS AND CODE SNIPPETS NEEDED
 
-To see an example of this code in action, import the BarcodeSample project from the PowaTag SDK.
+1. Touch to Buy tag detection requires the following entry in your manifest:
+    
+	<pre>&lt;intent-filter&gt;
+        &lt;action android:name="android.intent.action.VIEW" /&gt;
+        &lt;data android:host="powat.ag" /&gt;
+        &lt;data android:scheme="hellopowatag" /&gt;
+    &lt;/intent-filter&gt; </pre>
+
+2. Create an instance of the <code>AppLinkTagDetector</code>
+
+	<pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
+	schemes.add("hellopowatag");
+	AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
+
+	AppLink appLink = detector.detectAppLink(intent);
+	if (appLink != null) {
+		processDetectedTag(appLink.getTag());
+	}    
+	}</pre>
+
+
+<br/>
+
+# Sample - MICHAL PLEASE PROVIDE THE CLASS NAME THAT A DEVELOPER CAN REVIEW FOR DETAILED EXAMPLES OF THE ABOVE
+
+To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app/) app and review the <code>CLASS/FILE NAME</code>.
 
 <br />
 

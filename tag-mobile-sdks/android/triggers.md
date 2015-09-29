@@ -153,7 +153,6 @@ A number of triggers are currently supported:
 	AppLink appLink = detector.detectAppLink(intent);
 	if (appLink != null) {
 		processDetectedTag(appLink.getTag());
-	}    
 	}</pre>
 
 
@@ -162,7 +161,7 @@ A number of triggers are currently supported:
 
 # Sample
 
-To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#install-the-sdk-using-android-studio/) app and review the <code>ScanActivity</code> class.
+To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app/) app and review the <code>ScanActivity</code> class.
 
 <br />
 

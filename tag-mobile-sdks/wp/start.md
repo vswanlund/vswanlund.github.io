@@ -44,7 +44,7 @@ You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTag
 
 <br />
 
-# Importing Sample Apps
+# Importing The Sample App
 
 The following samples come with the SDK:
 

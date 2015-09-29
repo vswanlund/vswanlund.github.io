@@ -18,8 +18,10 @@ A number of triggers are currently supported:
 
 # Audio Tags
 
-1. Audio tag detection requires the use of the audio recording permission. Add ID_CAP_MICROPHONE Capability in WMAppManifest.xml file.
-2. Create handlers for OnBarcodeTagDetected and OnDetectorStarted events:
+1. Audio tag detection requires the use of the audio recording permission. Add <code>ID_CAP_MICROPHONE</code> Capability in WMAppManifest.xml file.
+
+
+2. Create handlers for OnAudioTagDetected, OnVolumeChanged and OnDetectorStopped events:
 
     <pre>private void audioTag_OnVolumeChanged(object sender, VolumeChangedEventArgs e) {
        Debug.WriteLine(e.Volume);
@@ -44,25 +46,34 @@ A number of triggers are currently supported:
 
     <pre>audioTagDetector.StartDetection();</pre>
 
-<br />
+5. To check if the audio tag detector is actively listening for tags use:
 
-**Sample**
-
-To see an example of this code in action, import the AudioSample project from the PowaTag SDK.
+	<code>audioTagDetector.IsDetecting();</code>
 
 <br />
+
 
 # QR Tags
 
-1. Barcode tag detection requires use of the system camera. Add ID_CAP_ISV_CAMERA Capability in WMAppManifest.xml file.
+1. Barcode tag detection requires use of the system camera. Add <code>ID_CAP_ISV_CAMERA</code> capability in WMAppManifest.xml file.
 
-2. Create handlers for OnBarcodeTagDetected and OnDetectorStarted events:
+2. Create handlers for all <code>BarcodeTagDetector</code> events:
 
     <pre>private void OnTagDetected(object sender, BarcodeTagDetectedEventArgs e) {
        MessageBox.Show(e.BarcodeTag.Reference);
    }
-
+   
+   private void OnNonPowaTagDetected(object sender, NonPowaTagBarcodeDetectedEventArgs e) {
+       //Barcode detected that is not a PowaTag barcode.
+       MessageBox.Show(e.BarcodeTag.Reference);
+   }
+   
    private void OnDetectionStarted(object sender, DetectorStartedEventArgs e) {
+       // assign retrieved VideoBrush to a supported UI control
+       Dispatcher.BeginInvoke(() => Canvas.Background = e.VideoBrush);
+   }
+   
+   private void OnDetectionStopped(object sender, DetectorStoppedEventArgs e) {
        // assign retrieved VideoBrush to a supported UI control
        Dispatcher.BeginInvoke(() => Canvas.Background = e.VideoBrush);
    }</pre>
@@ -71,7 +82,9 @@ To see an example of this code in action, import the AudioSample project from th
 
     <pre>BarcodeTagDetector barcodeTagDetector = new BarcodeTagDetector();
    barcodeTagDetector.OnBarcodeTagDetected += OnTagDetected;
-   barcodeTagDetector.OnDetectorStarted    += OnDetectionStarted;</pre>
+   barcodeTagDetector.OnNonPowaTagBarcodeDetected += OnNonPowaTagDetected;
+   barcodeTagDetector.OnDetectorStarted    += OnDetectionStarted;
+   barcodeTagDetector.OnDetectorStopped    += OnDetectionStopped;</pre>
 
 4. Call StartDetection and StopDetection according to your App lifecycle, for example when navigation happens:
 
@@ -82,12 +95,41 @@ To see an example of this code in action, import the AudioSample project from th
    protected override void OnNavigatedFrom(NavigationEventArgs e) {
        audioTagDetector.StopDetection();
    }</pre>
+   
+5. To check if the audio tag detector is actively listening for tags use:
+
+	<code>tagDetector.IsDetecting();</code>
 
 <br />
 
-**Sample**
+# Touch to Buy Tags - STEPS AND CODE SNIPPETS NEEDED
 
-To see an example of this code in action, import the BarcodeSample project from the PowaTag SDK.
+1. Touch to Buy tag detection requires the following entry in your manifest:
+    
+	<pre>&lt;intent-filter&gt;
+        &lt;action android:name="android.intent.action.VIEW" /&gt;
+        &lt;data android:host="powat.ag" /&gt;
+        &lt;data android:scheme="hellopowatag" /&gt;
+    &lt;/intent-filter&gt; </pre>
+
+2. Create an instance of the <code>AppLinkTagDetector</code>
+
+	<pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
+	schemes.add("hellopowatag");
+	AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
+
+	AppLink appLink = detector.detectAppLink(intent);
+	if (appLink != null) {
+		processDetectedTag(appLink.getTag());
+	}    
+	}</pre>
+
+
+<br/>
+
+# Sample
+
+To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/wp/start/#importing-the-sample-app/) app and review the <code>MainPageViewModel</code>.
 
 <br />
 
