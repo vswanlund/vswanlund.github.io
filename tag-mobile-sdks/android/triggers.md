@@ -144,21 +144,17 @@ A number of triggers are currently supported:
         &lt;data android:scheme="hellopowatag" /&gt;
     &lt;/intent-filter&gt; </pre>
 
-2. Create instance of the <code>AppLinkTagDetector</code>
+2. Create an instance of the <code>AppLinkTagDetector</code>
 
+	<pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
+	schemes.add("hellopowatag");
+	AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
 
-3. AppLink and AppLinkTagDetector:
-========
-
-      <pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
-      schemes.add("hellopowatag");
-      AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
-
-      AppLink appLink = detector.detectAppLink(intent);
-      if (appLink != null) {
-          processDetectedTag(appLink.getTag());
-      }    
-    }</pre>
+	AppLink appLink = detector.detectAppLink(intent);
+	if (appLink != null) {
+		processDetectedTag(appLink.getTag());
+	}    
+	}</pre>
 
 
 <br/>
