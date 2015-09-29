@@ -137,15 +137,9 @@ A number of triggers are currently supported:
 # Touch to Buy Tags
 
 1. Touch to Buy tag detection requires the following entry in your manifest:
-    <pre><intent-filter>
-		<action 1111android:name="android.intent.action.VIEW"/>
-		<data android:host="powat.ag"/>
-		<data android:scheme="hellopowatag">
-	</intent-filter></pre>
-	
-	
+    
 	&lt;intent-filter&gt;
-        &lt;action222 android:name="android.intent.action.VIEW" /&gt;
+        &lt;action android:name="android.intent.action.VIEW" /&gt;
         &lt;data android:host="powat.ag" /&gt;
         &lt;data android:scheme="hellopowatag" /&gt;
     &lt;/intent-filter&gt;
