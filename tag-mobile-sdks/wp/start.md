@@ -36,21 +36,19 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 # Initialize the SDK
 
-You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTagKit.InitializeSdk` from the constructor of your `Application` subclass:
+You need to initialize PowaTag SDK before you can use it. Add a call to <code>PowaTagKit.InitializeSdk</code> from the constructor of your `Application` subclass:
 
-    public App() {
-      PowaTagKit.InitializeSdk();
-    }
+	<pre>public App() 
+	{
+		string endpoint = getAlternateEndpoint();
+		PowaTagKit.InitializeSdk(App.API_KEY, App.SECRET, PowaTagEndpoint.DefaultEndpointPorts(new Uri(endpoint)));
+	}</pre>
 
 <br />
 
 # Importing The Sample App
 
-The following samples come with the SDK:
-
-* **AudioSample** - Detect PowaTag Audio tags.
-* **BarcodeSample** - Scan PowaTag QR codes.
-* **Touch2BuySample** - Receive requests from web-pages or other apps.
+The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
 
 You can experiment with samples by importing the sample into Visual Studio.
 
@@ -68,6 +66,7 @@ After you install PowaTag SDK for Windows Phone, you can see:
 * [Workflows]({{site.baseurl}}/tag-mobile-sdks/wp/workflows/)
 * [Baskets]({{site.baseurl}}/tag-mobile-sdks/wp/baskets/)
 * [Campaigns]({{site.baseurl}}/tag-mobile-sdks/wp/campaigns/)
+* [Acts]({{site.baseurl}}/tag-mobile-sdks/wp/acts/)
 * [Payments]({{site.baseurl}}/tag-mobile-sdks/wp/payments/)
 
 <br />

@@ -77,10 +77,7 @@ During development you need to use a non-production endpoint and for this a seco
 <br />	
 
         
-If you plan to test your application using a mock server 
-There is a third approach to initialising the SDK. This method requires that you provide every endpoint and port manually.on is to use the builder directly to set all the services endpoints
-* This is intended for testing purposes where you may need the ability to change ports when using mock servers
-Note: they need to set every single endpoint if they use this method because 
+BART to provide code snippet for using builder to initialise
 ==================================
 
 # Importing The Sample App
