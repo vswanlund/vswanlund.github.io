@@ -102,27 +102,54 @@ A number of triggers are currently supported:
 
 <br />
 
-# Touch to Buy Tags - STEPS AND CODE SNIPPETS NEEDED
+# Touch to Buy Tags
 
-1. Touch to Buy tag detection requires the following entry in your manifest:
+1. Following entry needs to be added to manifest <code>WMAppManifest.xml</code>:
     
-	<pre>&lt;intent-filter&gt;
-        &lt;action android:name="android.intent.action.VIEW" /&gt;
-        &lt;data android:host="powat.ag" /&gt;
-        &lt;data android:scheme="hellopowatag" /&gt;
-    &lt;/intent-filter&gt; </pre>
+	<pre>&lt;Extensions&gt;
+		&lt;Protocol Name="hellopowatag" NavUriFragment="encodedLaunchUri=%s" TaskID="_default" /&gt;
+	&lt;/Extensions&gt; </pre>
+	
+2. Create a custom URI mapper class:
 
-2. Create an instance of the <code>AppLinkTagDetector</code>
+	<pre>public class AppLinkUriMapper : UriMapperBase
+	{
+		public const string EncodedLaunchUri = "encodedLaunchUri";
+		public override Uri MapUri(Uri uri)
+		{
+			string uriString = uri.ToString();
+ 
+			// URI association launch for my app detected
+			if (uriString.Contains(EncodedLaunchUri + "=" + "hellopowatag"))
+			{
+				int embeddedUriIndex = uriString.IndexOf(EncodedLaunchUri) + EncodedLaunchUri.Length + 1;
+				string embeddedUriString = uriString.Substring(embeddedUriIndex);
+				return new Uri("/WorkflowPage.xaml?encodedLaunchUri=" + embeddedUriString, UriKind.Relative);
+			}
+ 
+			// Otherwise perform normal launch.
+			return uri;
+		}
+	}
 
-	<pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
-	schemes.add("hellopowatag");
-	AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
+3. During App initialization set RootFrame.UriMapper to the instance of your UriMapper class (E.g. in App class constructor):
 
-	AppLink appLink = detector.detectAppLink(intent);
-	if (appLink != null) {
-		processDetectedTag(appLink.getTag());
-	}    
-	}</pre>
+		<pre>RootFrame.UriMapper = new AppLinkUriMapper();</pre>
+
+
+4. In WorkflowPage.OnNavigatedTo method process the app link if present:
+
+	<pre>protected override void OnNavigatedTo(NavigationEventArgs e)
+	{
+		if (NavigationContext.QueryString.ContainsKey(AppLinkUriMapper.EncodedLaunchUri))
+		{
+			AppLink appLink =
+				new AppLinkTagDetector(new HashSet<string> { "hellopowatag" }).DetectAppLink(
+					NavigationContext.QueryString[AppLinkUriMapper.EncodedLaunchUri]);
+		}
+	}
+
+</pre>
 
 
 <br/>
