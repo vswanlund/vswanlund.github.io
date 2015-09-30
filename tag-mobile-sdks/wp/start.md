@@ -41,11 +41,11 @@ You need to initialize PowaTag SDK before you can use it. Add a call to <code>Po
 	
 	
 	
-			<pre>public App()
+	public App()
 	{
 		string endpoint = getAlternateEndpoint();
 		PowaTagKit.InitializeSdk(App.API_KEY, App.SECRET, PowaTagEndpoint.DefaultEndpointPorts(new Uri(endpoint)));
-	}</pre>
+	}
 	
 
 <br/>
