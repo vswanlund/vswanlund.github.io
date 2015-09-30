@@ -66,9 +66,9 @@ During development you need to use a non-production endpoint and for this a seco
 
 # Importing The Sample App
 
-The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
+The **HelloPowaTagSample** app is included with the SDK to provide you with examples of the main PowaTag SDK features. 
 
-You can experiment with these features by importing the sample into Xcode.
+You can experiment with the SDK features by importing the app into Xcode.
 
 1. Go to Xcode \| File \| Open
 

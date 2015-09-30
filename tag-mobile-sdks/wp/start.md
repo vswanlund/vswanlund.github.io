@@ -48,9 +48,9 @@ You need to initialize PowaTag SDK before you can use it. Add a call to <code>Po
 
 # Importing The Sample App
 
-The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
+The **HelloPowaTagSample** app is included with the SDK to provide you with examples of the main PowaTag SDK features. 
 
-You can experiment with samples by importing the sample into Visual Studio.
+You can experiment with the SDK features by importing the app into into Visual Studio.
 
 The samples have a project dependency rather than a central repository dependency via NuGet. This is so that when a local copy of the SDK gets updates, the samples reflect the changes.
 

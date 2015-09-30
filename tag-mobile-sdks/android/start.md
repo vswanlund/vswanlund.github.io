@@ -82,9 +82,9 @@ BART to provide code snippet for using builder to initialise
 
 # Importing The Sample App
 
-The **HelloPowaTagSample** app is included in the SDK to provide you with examples for the use of the main PowaTag SDK features. 
+The **HelloPowaTagSample** app is included with the SDK to provide you with examples of the main PowaTag SDK features. 
 
-You can experiment with the SDK features by importing the it into a Android Studio project:
+You can experiment with the SDK features by importing the app into an Android Studio project:
 
 1. Go to Android Studio \| New \| Import Project
 
