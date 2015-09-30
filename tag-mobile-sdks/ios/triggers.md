@@ -140,17 +140,17 @@ A number of triggers are currently supported:
 # Touch to Buy Tags
 
 1. Add the following to the <code>plist</code> file
-<pre>&lt;key&gt;CFBundleURLTypes&lt;/key&gt;
-	&lt;array&gt;
-		&lt;dict&gt;
-			&lt;key&gt;CFBundleURLName&lt;/key&gt;
-			&lt;string&gt;com.powatag&lt;/string&gt;
-			&lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
-			&lt;array&gt;
-				&lt;string&gt;hellopowatag&lt;/string&gt;
-			&lt;/array&gt;
-		&lt;/dict&gt;
-	&lt;/array&gt;</pre>
+	<pre>&lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+		&lt;array&gt;
+			&lt;dict&gt;
+				&lt;key&gt;CFBundleURLName&lt;/key&gt;
+				&lt;string&gt;com.powatag&lt;/string&gt;
+				&lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+				&lt;array&gt;
+					&lt;string&gt;hellopowatag&lt;/string&gt;
+				&lt;/array&gt;
+			&lt;/dict&gt;
+		&lt;/array&gt;</pre>
 
 
 2. Create an instance of the <code>AppLinkTagDetector</code>
