@@ -171,7 +171,7 @@ A number of triggers are currently supported:
 
 # Sample
 
-To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app/) app and review the <code>ScanController.swift</code> and <code>AppDelegate.swift</code> files.
+To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app) app and review the <code>ScanController.swift</code> and <code>AppDelegate.swift</code> files.
 
 <br />
 

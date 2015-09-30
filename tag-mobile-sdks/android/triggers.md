@@ -161,7 +161,7 @@ A number of triggers are currently supported:
 
 # Sample
 
-To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app/) app and review the <code>ScanActivity</code> class.
+To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ScanActivity</code> class.
 
 <br />
 
