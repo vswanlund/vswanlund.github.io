@@ -13,52 +13,56 @@ A number of triggers are currently supported:
 * Audio
 * QR
 * Touch To Buy (Mobile Web or App2App)
-
+ 
 <br />
 
 # Audio Tags
 
-1. 1. Audio tag detection requires the use of the audio recording permission. Add the following entry to your manifest:
+1. Implement the PTKAudioTagDetectorDelegate methods. and set a PTKAudioTagDetectorDelegate to be notified of any events:
 
-    <pre>INSERT WHAT IS REQUIRED IN MANIFEST/&gt;</pre>
-	==================
+  	<pre>- (void)viewDidLoad
+	{
+    	self.audioTagDetector = [PTKAudioTagDetector new];
+		self.audioTagDetector.delegate = self;
+	}
+    
+	&#45; (void)onAudioTagDetected:(PTKTag *)audioTag
+	{
+		// Handle detected tag
+	}
+    
+	&#45; (void)onVolumeChanged:(double)volume 
+	{
+		// Handle volue change (display)
+	}
+    
+    &#45; (void)onDetectorStopped:(NSError *)error 
+	{
+		// Hanle error if pressent
+	}</pre>
 
-2. Create a PTKAudioTagDetector in your ViewController and set a PTKAudioTagDetectorDelegate to be notified of any events:
+2. Call startDetection and stopDetection when required:
 
-    <pre>- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-	 if (self = [super initWithCoder:aDecoder]) {
-     _audioTagDetector = [PTKAudioTagDetector new];
-	   _audioTagDetector.delegate = self;
-   }
-	 return self;
-   }
+    <pre>- (IBAction)startButtonClick 
+		{
+	   		[self.audioTagDetector startDetection];
+  	 	}
 
-   - (void)onAudioTagDetected:(PTKTag *)audioTag {
-	   [[[UIAlertView alloc] initWithTitle:@"PowaTag Barcode Tag Detected" message:audioTag.reference, volume] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-   }
-
-   - (void)onVolumeChanged:(double)volume {
-     [[[UIAlertView alloc] initWithTitle:@"Current Volume" message:[NSString stringWithFormat:@"%.2f", volume] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-   }
-
-   - (void)onDetectorStopped:(NSError *)error {
-	   [[[UIAlertView alloc] initWithTitle:@"Error!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-   }</pre>
-
-3. Call startDetection and stopDetection when required:
-
-    <pre>- (IBAction)startButtonClick {
-	   [self.audioTagDetector startDetection];
-   }
-
-   - (IBAction)stopButtonClick {
+   	&#45; (IBAction)stopButtonClick 
+    {
 	   [self.audioTagDetector stopDetection];
-   }</pre>
+   	}</pre>
    
-4. To check if the audio tag detector is actively listening for tags use:
+3. To check if the audio tag detector is actively listening for tags use:
 
-	<code>AUDIOTAGDETECTOR ISDETECTING CODE SNIPPET</code>
-	=========================
+	<pre>- (void)myMethod
+		{
+			if ([self.audioTagDetector isDetecting]) {
+ 			// It’s running 
+			} else {
+ 			// It’s not detecting 
+			}
+            }</pre>
 
 <br />
 
@@ -71,72 +75,103 @@ A number of triggers are currently supported:
 
 2. Implement the PTKBarcodeTagDetectorViewDelegate in your ViewController:
 
-    <pre>- (void)onBarcodeTagDetected:(PTKTag *)tag image:(UIImage *)image barcodeRegion:(NSArray *)barcodeRegion {
-	 PTKTag *labelTag = tag;
-	   [[[UIAlertView alloc] initWithTitle:@"Supported code" message:labelTag.reference delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-   }
+    <pre>&#45; (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	didDetectBarcode:(nonnull PTKTag *)tag
+	image:(nonnull UIImage *)image
+	barcodeRegion:(nonnull NSArray *)barcodeRegion
+	{
+		// Stop detection
+		[self.detectorView stopDetection];
+		// Process tag
+		[self processTag:tag];
+	}
 
-   - (void)onNonPowaTagBarcodeDetected:(PTKBarcode *)barcode image:(UIImage *)image barcodeRegion:(NSArray *)barcodeRegion {
-	   [[[UIAlertView alloc] initWithTitle:@"Unsupported code" message:@"unsupported barcode" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-   }
+	&#45; (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	didDetectNonPowaTagBarcode:(nonnull PTKBarcode *)barcode
+		 image:(nonnull UIImage *)image
+		barcodeRegion:(nonnull NSArray *)barcodeRegion
+	{
+		// Stop detection and show error. 
+	}
 
-   - (void)onDetectorStarted {
-   }
+	&#45; (void)barcodeTagDetectorViewDidStart:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	{
+		// Detector started.
+	}
 
-   - (void)onDetectorStopped:(NSError *)error {
-     [[[UIAlertView alloc] initWithTitle:@"Error!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-   }</pre>
+ 	&#45; (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	  didStopWithError:(nullable NSError *)error
+	{
+		// Detector stopped handle error if present.
+	}   </pre>
 
 3. Set the delegate when your controller loads:
 
-    <pre>- (void)viewDidLoad {
+    <pre>- (void)viewDidLoad 
+    {
      self.barcodeTagDetectorView.delegate = self;
    }</pre>
 
 4. Call startDetection and stopDetection from appropriate lifecycle methods in your ViewController:
 
-    <pre>- (void)viewDidAppear {
+    <pre>- (void)viewDidAppear 
+    {
      [self.barcdeTagDetectorView startDetection];
-   }
+   	}
 
-   - (void)viewDidDisappear {
+   &#45; (void)viewDidDisappear 
+   {
      [self.barcodeTagDetectorView stopDetection];
    }</pre>
    
 5. To check if the audio tag detector is actively listening for tags use:
 
-	<code>TAGDETECTOR ISDETECTING CODE SNIPPET</code>
+	<pre>- (void)myMethod
+	{
+		if ([self.detectorView isDetecting]) {
+		// detecting
+		} else {
+		// not detecting
+		}
+        }</pre>
 
 <br />
 
-# Touch to Buy Tags - STEPS AND CODE SNIPPETS NEEDED
+# Touch to Buy Tags
 
-1. Touch to Buy tag detection requires the following entry in your manifest:
-    
-	<pre>&lt;intent-filter&gt;
-        &lt;action android:name="android.intent.action.VIEW" /&gt;
-        &lt;data android:host="powat.ag" /&gt;
-        &lt;data android:scheme="hellopowatag" /&gt;
-    &lt;/intent-filter&gt; </pre>
+1. Add the following to the <code>plist</code> file
+<pre>&lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+	&lt;array&gt;
+		&lt;dict&gt;
+			&lt;key&gt;CFBundleURLName&lt;/key&gt;
+			&lt;string&gt;com.powatag&lt;/string&gt;
+			&lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+			&lt;array&gt;
+				&lt;string&gt;hellopowatag&lt;/string&gt;
+			&lt;/array&gt;
+		&lt;/dict&gt;
+	&lt;/array&gt;</pre>
+
 
 2. Create an instance of the <code>AppLinkTagDetector</code>
 
-	<pre>Set&lt;String&gt; schemes = new HashSet&lt;&gt;();
-	schemes.add("hellopowatag");
-	AppLinkTagDetector detector = new AppLinkTagDetector(schemes);
-
-	AppLink appLink = detector.detectAppLink(intent);
-	if (appLink != null) {
-		processDetectedTag(appLink.getTag());
-	}    
-	}</pre>
-
-
+	<pre>- (BOOL)application:(UIApplication )application handleOpenURL:(NSURL )url
+    {	
+    	NSError *error; 
+		PTKAppLink *tagDetector = [PTKAppLinkTagDetector detectAppLinkWithURL:url  error:&error];
+		if (tagDetector) {
+ 			[self processTag:tagDetector.labelTag];
+		} else {
+ 			// No/invalid tag  error.
+		}
+    }</pre>
+    
+      
 <br/>
 
-# Sample - MICHAL PLEASE PROVIDE THE CLASS NAME THAT A DEVELOPER CAN REVIEW FOR DETAILED EXAMPLES OF THE ABOVE
+# Sample
 
-To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app/) app and review the <code>CLASS/FILE NAME</code>.
+To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app/) app and review the <code>ScanController.swift</code> and <code>AppDelegate.swift</code> files.
 
 <br />
 
