@@ -133,8 +133,8 @@ A number of triggers are currently supported:
 	}
 
 3. During App initialization set RootFrame.UriMapper to the instance of your UriMapper class (E.g. in App class constructor):
-
-		<pre>RootFrame.UriMapper = new AppLinkUriMapper();</pre>
+	
+	<pre>RootFrame.UriMapper = new AppLinkUriMapper();</pre>
 
 
 4. In WorkflowPage.OnNavigatedTo method process the app link if present:
