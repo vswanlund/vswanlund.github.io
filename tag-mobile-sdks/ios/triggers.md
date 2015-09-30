@@ -114,26 +114,26 @@ A number of triggers are currently supported:
 
 4. Call startDetection and stopDetection from appropriate lifecycle methods in your ViewController:
 
-    <pre>- (void)viewDidAppear 
-    {
-     [self.barcdeTagDetectorView startDetection];
-   	}
+    <pre>- (void)viewDidAppear
+	{
+		[self.barcdeTagDetectorView startDetection];
+	}
 
-   - (void)viewDidDisappear 
+   - (void)viewDidDisappear
    {
-     [self.barcodeTagDetectorView stopDetection];
-   }</pre>
+		[self.barcodeTagDetectorView stopDetection];
+	}</pre>
    
 5. To check if the audio tag detector is actively listening for tags use:
 
 	<pre>- (void)myMethod
 	{
 		if ([self.detectorView isDetecting]) {
-		// detecting
+			// detecting
 		} else {
-		// not detecting
+			// not detecting
 		}
-        }</pre>
+	}</pre>
 
 <br />
 
