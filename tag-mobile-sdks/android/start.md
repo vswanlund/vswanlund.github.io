@@ -80,7 +80,7 @@ During development you need to use a non-production endpoint and for this a seco
 If you plan to test your application using a mock server 
 There is a third approach to initialising the SDK. This method requires that you provide every endpoint and port manually.on is to use the builder directly to set all the services endpoints
 * This is intended for testing purposes where you may need the ability to change ports when using mock servers
-Note; they need to set every single endpoint if they use this method because 
+Note: they need to set every single endpoint if they use this method because 
 ==================================
 
 # Importing The Sample App
@@ -122,7 +122,7 @@ After you install PowaTag SDK for Android, you can see:
 
 2. Go to File > New Module > "Import .JAR or .AAR Package" and add the powatag-kit.aar file located in the library folder.
 
-3. Set powatag-kit-0.8.5 as a new dependency of your application module by going to File > Project Structure. On tab Dependencies tab click plus button and choose powatag-kit-0.8.5 module.
+3. Set powatag-kit-0.9.5 as a new dependency of your application module by going to File > Project Structure. On tab Dependencies tab click plus button and choose powatag-kit-0.9.5 module.
 
 4. Now you can import `com.powatag.android.sdk.PowaTagKit` into your app.
 
@@ -135,5 +135,5 @@ You can declare the Maven dependency with the latest available version of the An
     <dependency>
         <groupId>com.powatag.android</groupId>
         <artifactId>powatag-kit</artifactId>
-         <version>0.8.5</version>
+         <version>0.9.5</version>
     </dependency>
