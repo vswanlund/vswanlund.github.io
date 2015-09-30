@@ -104,7 +104,7 @@ A number of triggers are currently supported:
 
 # Touch to Buy Tags
 
-1. Following entry needs to be added to manifest <code>WMAppManifest.xml</code>:
+1. Following entry needs to be added to manifest WMAppManifest.xml:
     
 	<pre>&lt;Extensions&gt;
 		&lt;Protocol Name="hellopowatag" NavUriFragment="encodedLaunchUri=%s" TaskID="_default" /&gt;
