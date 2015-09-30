@@ -22,8 +22,8 @@ A number of triggers are currently supported:
 
 	<pre>- (void)viewDidLoad
 	{
-    self.audioTagDetector = [PTKAudioTagDetector new];
-	self.audioTagDetector.delegate = self;
+		self.audioTagDetector = [PTKAudioTagDetector new];
+		self.audioTagDetector.delegate = self;
 	}
     
 	- (void)onAudioTagDetected:(PTKTag *)audioTag
