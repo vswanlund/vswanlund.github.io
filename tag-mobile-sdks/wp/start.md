@@ -38,9 +38,6 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 You need to initialize PowaTag SDK before you can use it. Add a call to <code>PowaTagKit.InitializeSdk</code> from the constructor of your `Application` subclass:
 
-	
-	
-	
 	public App()
 	{
 		string endpoint = getAlternateEndpoint();
