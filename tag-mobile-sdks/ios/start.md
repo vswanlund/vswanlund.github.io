@@ -53,8 +53,7 @@ You need to initialize PowaTag SDK before you can use it. Add a call to `[PowaTa
 	}</pre>
 
 During development you need to use a non-production endpoint and for this a second initialization method is available:
-
-	- (BOOL)application:(UIApplication *)application 
+	<pre>- (BOOL)application:(UIApplication *)application 
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 	{
 		[PowaTagKit initializeSdkWithEndpoint:[PowaTagEndpoint defaultEndpoint]
