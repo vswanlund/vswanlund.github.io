@@ -20,10 +20,10 @@ A number of triggers are currently supported:
 
 1. Implement the PTKAudioTagDetectorDelegate methods. and set a PTKAudioTagDetectorDelegate to be notified of any events:
 
-	<pre> - (void)viewDidLoad
+	<pre>- (void)viewDidLoad
 	{
-    	self.audioTagDetector = [PTKAudioTagDetector new];
-		self.audioTagDetector.delegate = self;
+    self.audioTagDetector = [PTKAudioTagDetector new];
+	self.audioTagDetector.delegate = self;
 	}
     
 	- (void)onAudioTagDetected:(PTKTag *)audioTag
