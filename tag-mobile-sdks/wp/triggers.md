@@ -147,9 +147,7 @@ A number of triggers are currently supported:
 				new AppLinkTagDetector(new HashSet<string> { "hellopowatag" }).DetectAppLink(
 					NavigationContext.QueryString[AppLinkUriMapper.EncodedLaunchUri]);
 		}
-	}
-
-</pre>
+	}</pre>
 
 
 <br/>
