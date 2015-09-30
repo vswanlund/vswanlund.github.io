@@ -20,23 +20,23 @@ A number of triggers are currently supported:
 
 1. Implement the PTKAudioTagDetectorDelegate methods. and set a PTKAudioTagDetectorDelegate to be notified of any events:
 
-		<pre>- (void)viewDidLoad
+	<pre> - (void)viewDidLoad
 	{
     	self.audioTagDetector = [PTKAudioTagDetector new];
 		self.audioTagDetector.delegate = self;
 	}
     
-	< (void)onAudioTagDetected:(PTKTag *)audioTag
+	- (void)onAudioTagDetected:(PTKTag *)audioTag
 	{
 		// Handle detected tag
 	}
     
-	< (void)onVolumeChanged:(double)volume 
+	- (void)onVolumeChanged:(double)volume 
 	{
 		// Handle volue change (display)
 	}
     
-    < (void)onDetectorStopped:(NSError *)error 
+    - (void)onDetectorStopped:(NSError *)error 
 	{
 		// Hanle error if pressent
 	}</pre>
