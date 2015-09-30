@@ -67,13 +67,14 @@ You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTag
 
 During development you need to use a non-production endpoint and for this a second initialization method is available:
 
-    @Override
+    <pre>@Override
     public void onCreate(Bundle savedInstanceState) {
         PowaTagEndpoint endpoint;
         super.onCreate(savedInstanceState);
         endpoint = PowaTagEndpoint.defaultEndpointPorts(hostNameString);
         PowaTagKit.initializeSdk(getApplicationContext(), endpoint, apiKey, secret);
-    }	
+    }</pre>
+	
 <br />	
 
         
