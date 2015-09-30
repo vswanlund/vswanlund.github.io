@@ -44,25 +44,25 @@ A number of triggers are currently supported:
 2. Call startDetection and stopDetection when required:
 
     <pre>- (IBAction)startButtonClick 
-		{
-	   		[self.audioTagDetector startDetection];
-  	 	}
+	{
+		[self.audioTagDetector startDetection];
+  	}
 
-   	< (IBAction)stopButtonClick 
-    {
-	   [self.audioTagDetector stopDetection];
+	- (IBAction)stopButtonClick 
+	{
+		self.audioTagDetector stopDetection];
    	}</pre>
    
 3. To check if the audio tag detector is actively listening for tags use:
 
 	<pre>- (void)myMethod
-		{
-			if ([self.audioTagDetector isDetecting]) {
- 			// It’s running 
-			} else {
- 			// It’s not detecting 
-			}
-            }</pre>
+	{
+		if ([self.audioTagDetector isDetecting]) {
+		// It’s running 
+		} else {
+		// It’s not detecting 
+		}
+	}</pre>
 
 <br />
 
@@ -75,9 +75,9 @@ A number of triggers are currently supported:
 
 2. Implement the PTKBarcodeTagDetectorViewDelegate in your ViewController:
 
-    <pre>< (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
-	didDetectBarcode:(nonnull PTKTag *)tag
-	image:(nonnull UIImage *)image
+	<pre>- (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+		didDetectBarcode:(nonnull PTKTag *)tag
+		image:(nonnull UIImage *)image
 	barcodeRegion:(nonnull NSArray *)barcodeRegion
 	{
 		// Stop detection
@@ -86,21 +86,21 @@ A number of triggers are currently supported:
 		[self processTag:tag];
 	}
 
-	< (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	- (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
 	didDetectNonPowaTagBarcode:(nonnull PTKBarcode *)barcode
-		 image:(nonnull UIImage *)image
+		image:(nonnull UIImage *)image
 		barcodeRegion:(nonnull NSArray *)barcodeRegion
 	{
 		// Stop detection and show error. 
 	}
 
-	< (void)barcodeTagDetectorViewDidStart:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	- (void)barcodeTagDetectorViewDidStart:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
 	{
 		// Detector started.
 	}
 
- 	< (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
-	  didStopWithError:(nullable NSError *)error
+	- (void)barcodeTagDetectorView:(nonnull PTKBarcodeTagDetectorView *)barcodeTagDetectorView
+	didStopWithError:(nullable NSError *)error
 	{
 		// Detector stopped handle error if present.
 	}   </pre>
@@ -109,8 +109,8 @@ A number of triggers are currently supported:
 
     <pre>- (void)viewDidLoad 
     {
-     self.barcodeTagDetectorView.delegate = self;
-   }</pre>
+		self.barcodeTagDetectorView.delegate = self;
+	}</pre>
 
 4. Call startDetection and stopDetection from appropriate lifecycle methods in your ViewController:
 
@@ -119,7 +119,7 @@ A number of triggers are currently supported:
      [self.barcdeTagDetectorView startDetection];
    	}
 
-   < (void)viewDidDisappear 
+   - (void)viewDidDisappear 
    {
      [self.barcodeTagDetectorView stopDetection];
    }</pre>
@@ -157,14 +157,14 @@ A number of triggers are currently supported:
 
 	<pre>- (BOOL)application:(UIApplication )application handleOpenURL:(NSURL )url
     {	
-    	NSError *error; 
+		NSError *error; 
 		PTKAppLink *tagDetector = [PTKAppLinkTagDetector detectAppLinkWithURL:url  error:&error];
 		if (tagDetector) {
- 			[self processTag:tagDetector.labelTag];
+			[self processTag:tagDetector.labelTag];
 		} else {
- 			// No/invalid tag  error.
+			// No/invalid tag  error.
 		}
-    }</pre>
+	}</pre>
     
       
 <br/>
