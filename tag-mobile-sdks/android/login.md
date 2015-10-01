@@ -28,7 +28,7 @@ Use the <code>LoginManager</code> class to do the following:
 
 # Log into an Existing PowaTag Profile
 
-A existing PowaTag user can log in and immediately beging making payments using the payment instruments stored in their PowaTag profile.
+A existing PowaTag user can log in and immediately begin making payments using the payment instruments stored in their PowaTag profile.
 
 There are three ways an existing user can log in using the SDK: 
 
