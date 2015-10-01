@@ -113,8 +113,21 @@ Log out from the current profile, removing the current AccessToken and other use
    
       #IS ASYNCHRONOUS METHOD DESCRIPTION NEEDED?
 
+   <br/>
    
-   
+# Clearing All Login Information 
+ 
+ To clear all user information from the device including the current access token, profile and baskets use the <code>clearLogin</code> method.
+ 
+ CODE SNIPPET
+	<pre>loginManager.clearLogin();</pre>
+<br/>	
+
+# Sample
+
+To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/wp/start/#importing-the-sample-app) app and review the <code>ADD SOME CLASS NAME</code> class.
+    
+<br/>   
    
    
    
