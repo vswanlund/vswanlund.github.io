@@ -4,11 +4,11 @@ title: Login on iOS
 permalink: /tag-mobile-sdks/ios/login/
 ---
 
-PowaTag Login is a secure and easy way for people to log in to your app and manage their PowaTag Profile.
+To facilitate seamless engagement, you can create an temporary user profile for users that do not have an existing PowaTag profile. This temporary profile requires no personal user information upfront because the profile is tied to the device. 
 
-To facilitate seamless engangement, you can create a temporary user profile for which no personably identifiable user information is required up-front using the `PTKLoginManager guestLoginWithCompletion` method. The profile is tied to the device and if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
+The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 
-A temporary profile can later be saved allowing the user to use their PowaTag account across multiple devices.
+Use the <code>LoginManager</code> class to do the following:
 
 <br />
 
@@ -39,7 +39,11 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
      }
    }];</pre>
 
-2. The current access token for the user can also be retrieved using:
+   
+   #DO WE NEED TO DESCRIBE ASYNCHRONOUS METHOD HERE
+   
+   
+2. The access token for the currently authenticated user can be retrieved using:
 
     <pre>PTKAccessToken *accessToken = [PTKLoginManager sharedManager].currentAccessToken;</pre>
 
@@ -51,7 +55,9 @@ Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/i
 
 # Log Out
 
-1. Log out using PTKLoginManager, if the current profile is temporary this will delete the profile:
+Log out from the current profile, removing the current AccessToken and other user data from memory. If the current profile is a temporary profile, all personal user information associated with that account will be deleted.
+
+1. Log out using PTKLoginManager:
 
     <pre>PTKLoginManager *lm = [PTKLoginManager sharedManager];
    [lm guestLoginWithCompletion:^(NSError *error) {
@@ -59,3 +65,22 @@ Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/i
        // User is now logged out and you can log in as another user
      }
    }];</pre>
+   
+   #IS ASYNCHRONOUS METHOD DESCRIPTION NEEDED?
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

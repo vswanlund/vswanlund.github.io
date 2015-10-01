@@ -6,7 +6,7 @@ permalink: /tag-mobile-sdks/android/login/
 
 PowaTag Login is a secure and easy way for people to log in to your app and manage their PowaTag Profile.
 
-To facilitate seamless engagement, you can use a guest login for users that do not have an existing PowaTag profile. This creates a temporary user profile which requires no user information upfront because the profile is tied to the device. 
+To facilitate seamless engagement, you can create an temporary user profile for users that do not have an existing PowaTag profile. This temporary profile requires no personal user information upfront because the profile is tied to the device. 
 
 The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 
@@ -25,6 +25,66 @@ Use the <code>LoginManager</code> class to do the following:
    }</pre>
 
 <br />
+
+# Log into an Existing PowaTag Profile
+
+A existing PowaTag user can log in and immediately beging making payments using the payment instruments stored in their PowaTag profile.
+
+There are three ways an existing user can log in using the SDK: 
+
+1. Using a Profile ID
+
+	ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
+
+
+	For more details on the getter and setter methods for <code>ProfileIdSignInDetails</code> please see Reference Docs
+	
+	site email: {% if site.support_email %}
+	sdk version: {% if current_sdk_version %}
+    sdk ref docs: {% if sdk_reference_link %}
+	
+
+
+public void setProfileId(@NonNull String profileId)
+public String getPassword()
+public void setPassword(@NonNull password)
+}
+
+
+2. Using a Mobile Number
+
+MobileNumberSignInDetails
+
+public MobileNumberSignInDetails(@NonNull String mobileNumber, @NonNull password)
+public String getMobileNumber()
+public void setMobileNumber(@NonNull String mobileNumber)
+public String getPassword()
+public void setPassword(@NonNull password)
+
+
+Using an Email Address
+public class EmailSignInDetails{
+public EmailSignInDetails(@NonNull String email, @NonNull password)
+public String getEmail()
+public void setEmail(@NonNull String email)
+public String getPassword()
+public void setPassword(@NonNull password)
+
+
+*LoginManager*
+
+* Compute Hash of password using Sha256 algorithm
+* Rename the guestLogin method to signInAsGuest.
+
+* login using profileId
+public void signIn(@NonNull final ProfileIdSignInDetails profileIdSignInDetails, @NonNull final PowaTagCallback<Profile> callback)
+
+* login using mobile number
+public void signIn(@NonNull final MobileNumberSignInDetails mobileNumberSignInDetails, @NonNull final PowaTagCallback<Profile> callback)
+
+* login using email
+public void signIn(@NonNull final EmailSignInDetails emailSignInDetails, @NonNull final PowaTagCallback<Profile> callback)
+
 
 # Log In and Create a Temporary Profile
 
@@ -45,8 +105,6 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
    
    <b>Note:</b> The login manager also provides a synchronous <code>guestLogin()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
 
-	<pre>public AccessToken guestLogin() throws PowaTagException {</pre>
-    ====================================================================
    
    
 2. The access token for the currently authenticated user can be retrieved using:
@@ -54,6 +112,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
     <pre>AccessToken accessToken = LoginManager.getInstance().getCurrentAccessToken();  </pre>
 
 <br/>
+
 
 # After Logging In
 
@@ -77,18 +136,9 @@ Log out from the current profile, removing the current AccessToken and other use
      }
    });</pre>
 
-	<b>Note:</b> The login manager also provides a synchronous <code>logout()</code> 	 method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
-
-	<pre>public void logout()</pre>
-    ===============================
+	<b>Note:</b> The login manager also provides a synchronous <code>logout()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
 
    
-    
-    
-    
 
- /**
-     * Clears the currently authenticated user by clearing all login information from the device including the current access token, profile and baskets.
-     * This method does not invalidate the current access token with the server.
-     */
-    public void clearLogin() {
+
+
