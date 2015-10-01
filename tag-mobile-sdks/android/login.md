@@ -115,8 +115,8 @@ Log out from the current profile, removing the current AccessToken and other use
 
 1. Log out using LoginManager:
 
-    <pre>LoginManager lm = LoginManager.getInstance();
-   lm.logout(new PowaTagCallback&lt;Void&gt;() {
+    <pre>LoginManager loginManager = LoginManager.getInstance();
+   loginManager.logout(new PowaTagCallback&lt;Void&gt;() {
      public void onSuccess(Void result) {
        // User is now logged out and you can log in as another user
      }
@@ -126,7 +126,17 @@ Log out from the current profile, removing the current AccessToken and other use
 
 	<b>Note:</b> The login manager also provides a synchronous <code>logout()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
 
-   
+ # Clearing All Login Information 
+ 
+ To clear all user information from the device including the current access token, profile and baskets use the <code>clearLogin</code> method.
+ 
+	<pre>loginManager.clearLogin();</pre>
+	
+
+# Sample
+
+To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ADD SOME CLASS NAME</code> class.
+    
 
 
 
