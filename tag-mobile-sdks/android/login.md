@@ -34,7 +34,7 @@ There are three ways an existing user can log in using the SDK:
 
 1. Using a Profile ID
 
-	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());</pre>
+	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
 	LoginManager loginManager = LoginManager.getInstance();
 	loginManager.signIn(profileIdSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
 		public void onSuccess(Profile profile) {
@@ -42,7 +42,7 @@ There are three ways an existing user can log in using the SDK:
 			Profile profile = ProfileManager.getInstance().getCurrentProfile();
 			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
 		}
-	}
+	}</pre>
 
 
 2. Using a Mobile Number
