@@ -34,52 +34,45 @@ There are three ways an existing user can log in using the SDK:
 
 1. Using a Profile ID
 
-	ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
-
-	For more details on getter and setter methods for <code>ProfileIdSignInDetails</code> please see the {% if site.sdk_reference_android_url  %} <a href="{{site.sdk_reference_android_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
-	    
-
-
-public void setProfileId(@NonNull String profileId)
-public String getPassword()
-public void setPassword(@NonNull password)
-}
+	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());</pre>
+	LoginManager loginManager = LoginManager.getInstance();
+	loginManager.signIn(profileIdSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
+		public void onSuccess(Profile profile) {
+			// User is now logged in
+			Profile profile = ProfileManager.getInstance().getCurrentProfile();
+			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+		}
+	}
 
 
 2. Using a Mobile Number
 
-MobileNumberSignInDetails
+	<pre>MobileNumberSignInDetails mobileNumberSignInDetails = new MobileNumberSignInDetails( signInDiag.getMobileNumber(), signInDiag.getPassword());
+	LoginManager loginManager = LoginManager.getInstance();
+	loginManager.signIn(mobileNumberSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
+		public void onSuccess(Profile profile) {
+			// User is now logged in
+			Profile profile = ProfileManager.getInstance().getCurrentProfile();
+			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+		}
+	}</pre>
 
-public MobileNumberSignInDetails(@NonNull String mobileNumber, @NonNull password)
-public String getMobileNumber()
-public void setMobileNumber(@NonNull String mobileNumber)
-public String getPassword()
-public void setPassword(@NonNull password)
+	
+3. Using an Email Address
 
+	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails( signInDiag.getEmail(), signInDiag.getPassword());
+	LoginManager loginManager = LoginManager.getInstance();
+	loginManager.signIn(emailSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
+		public void onSuccess(Profile profile) {
+			// User is now logged in
+			Profile profile = ProfileManager.getInstance().getCurrentProfile();
+			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+		}
+	}</pre>
 
-Using an Email Address
-public class EmailSignInDetails{
-public EmailSignInDetails(@NonNull String email, @NonNull password)
-public String getEmail()
-public void setEmail(@NonNull String email)
-public String getPassword()
-public void setPassword(@NonNull password)
-
-
-*LoginManager*
-
-* Compute Hash of password using Sha256 algorithm
-* Rename the guestLogin method to signInAsGuest.
-
-* login using profileId
-public void signIn(@NonNull final ProfileIdSignInDetails profileIdSignInDetails, @NonNull final PowaTagCallback<Profile> callback)
-
-* login using mobile number
-public void signIn(@NonNull final MobileNumberSignInDetails mobileNumberSignInDetails, @NonNull final PowaTagCallback<Profile> callback)
-
-* login using email
-public void signIn(@NonNull final EmailSignInDetails emailSignInDetails, @NonNull final PowaTagCallback<Profile> callback)
-
+	
+	For details on the getter and setter methods available please see the {% if site.sdk_reference_android_url  %} <a href="{{site.sdk_reference_android_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
+	
 
 # Log In and Create a Temporary Profile
 
@@ -88,7 +81,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
 1. Log in as an anonymous guest user using the LoginManager:
 	
     <pre>LoginManager lm = LoginManager.getInstance();
-   lm.guestLogin(new PowaTagCallback&lt;AccessToken&gt;() {
+   lm.signInAsGuest(new PowaTagCallback&lt;AccessToken&gt;() {
      public void onSuccess(AccessToken accessToken) {
        // User is now logged in
        Profile profile = ProfileManager.getInstance().getCurrentProfile();
@@ -98,7 +91,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
      }
    });</pre>
    
-   <b>Note:</b> The login manager also provides a synchronous <code>guestLogin()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
+   <b>Note:</b> The login manager also provides a synchronous <code>signInAsGuest()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
 
    
    
