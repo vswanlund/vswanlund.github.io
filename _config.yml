@@ -9,8 +9,8 @@ url: "http://www.powa.com" # the base hostname & protocol for your site
 twitter_username: powatechltd
 github_username: powa  # To link to our open-source projects
 copyright: "Copyright &copy; Powa Technologies 2015"
-current_sdk_version: 0.9.5
-sdk_reference_link: http://www.ccn.com
+current_sdk_version: "0.9.5"
+sdk_reference_link: "http://www.ccn.com"
 
 # Homepage
 show_mobile_docs: true
