@@ -28,7 +28,7 @@ Use the <code>LoginManager</code> class to do the following:
 
 # Log into an Existing PowaTag Profile
 
-A existing PowaTag user can log in and immediately beging making payments using the payment instruments stored in their PowaTag profile.
+A existing PowaTag user can log in and immediately begin making payments using the payment instruments stored in their PowaTag profile.
 
 There are three ways an existing user can log in using the SDK: 
 
@@ -71,7 +71,7 @@ There are three ways an existing user can log in using the SDK:
 	}</pre>
 
 	
-For details on the getter and setter methods available please see the {% if site.sdk_reference_android_url  %} <a href="{{site.sdk_reference_android_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
+For details on the getter and setter methods available please see the {% if site.sdk_reference_wp_url  %} <a href="{{site.sdk_reference_wp_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
 <br/>
 
 # Log In and Create a Temporary Profile

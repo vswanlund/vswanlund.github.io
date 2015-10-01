@@ -126,7 +126,9 @@ Log out from the current profile, removing the current AccessToken and other use
 
 	<b>Note:</b> The login manager also provides a synchronous <code>logout()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
 
- # Clearing All Login Information 
+<br/>
+	
+# Clearing All Login Information 
  
  To clear all user information from the device including the current access token, profile and baskets use the <code>clearLogin</code> method.
  
