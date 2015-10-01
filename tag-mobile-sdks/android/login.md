@@ -40,8 +40,8 @@ There are three ways an existing user can log in using the SDK:
 	For more details on the getter and setter methods for <code>ProfileIdSignInDetails</code> please see Reference Docs
 	
 	site email: {% if site.support_email %}
-	sdk version: {% if current_sdk_version %}
-    sdk ref docs: {% if sdk_reference_link %}
+	sdk version: {% if site.current_sdk_version %}
+    sdk ref docs: {% if site.sdk_reference_link %}
 	
 
 
