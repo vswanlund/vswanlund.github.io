@@ -36,20 +36,13 @@ There are three ways an existing user can log in using the SDK:
 
 	ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
 
+	For more details on getter and setter methods for <code>ProfileIdSignInDetails</code> please see the {% if site.sdk_reference_android_url  %} <a class="reference-link android" href="{{sdk_reference_android_url}}">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
+	 
 
-	For more details on the getter and setter methods for <code>ProfileIdSignInDetails</code> please see Reference Docs
 	
-	site email: {% if site.support_email %}
-		{{site.support_email}}
-	{% endif %}
+
 	
-	sdk version: {% if site.current_sdk_version %}
-	{{site.current_sdk_version}}
-	{% endif %}
-	
-    sdk ref docs: {% if site.sdk_reference_link %}
-	{{site.sdk_reference_link}}
-	{% endif %}
+    
 
 
 public void setProfileId(@NonNull String profileId)
