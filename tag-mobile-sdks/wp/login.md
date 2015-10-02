@@ -48,7 +48,7 @@ There are three ways an existing user can log in using the SDK:
 	Profile profile = await loginManager.SignInAsync(mobileNumberSignInDetails);</pre>
 
 	
-3. Using an Email Address
+3. Log In Using an Email Address
 
 	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails(signInDiag.Email, signInDiag.Password);
 	LoginManager loginManager = LoginManager.GetInstance();
@@ -66,8 +66,8 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
 
 1. Log in as an anonymous guest user using the LoginManager:
 
-	<pre>LoginManager lm = LoginManager.GetInstance();
-	AccessToken accessToken = await lm.GuestLoginAsync();
+	<pre>LoginManager loginManager = LoginManager.GetInstance();
+	AccessToken accessToken = await loginManager.GuestLoginAsync();
 	// User is now logged in
 	Profile profile = ProfileManager.GetInstance().CurrentProfile;
 	Baskets baskets = BasketsManager.GetInstance().CurrentBaskets;</pre>
@@ -100,9 +100,10 @@ Log out from the current profile, removing the current AccessToken and other use
    
 # Clearing All Login Information 
  
- Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
-	
+Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
+
 	<pre>LoginManager.GetInstance().ClearLogin();</pre>
+	
 	
 <br/>	
 
