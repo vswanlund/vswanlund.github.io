@@ -66,13 +66,12 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
 
 1. Log in as an anonymous guest user using the LoginManager:
 
-    <pre>LoginManager lm = LoginManager.GetInstance();
-   AccessToken accessToken = await lm.GuestLoginAsync();
-   // User is now logged in
-   Profile profile = ProfileManager.GetInstance().CurrentProfile;
-   Baskets baskets = BasketsManager.GetInstance().CurrentBaskets;</pre>
+	<pre>LoginManager lm = LoginManager.GetInstance();
+	AccessToken accessToken = await lm.GuestLoginAsync();
+	// User is now logged in
+	Profile profile = ProfileManager.GetInstance().CurrentProfile;
+	Baskets baskets = BasketsManager.GetInstance().CurrentBaskets;</pre>
 
-   #DO WE NEED TO DESCRIBE ASYNCHRONOUS METHOD HERE?
    
 2. The access token for the currently authenticated user can be retrieved using:
 
@@ -90,16 +89,13 @@ Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/w
 
 Log out from the current profile, removing the current AccessToken and other user data from memory. If the current profile is a temporary profile, all personal user information associated with that account will be deleted.
 
-
 1. Log out using LoginManager:
 
     <pre>LoginManager loginManager = LoginManager.GetInstance();
-   await loginManager.LogoutAsync();
-   // User is now logged out and you can log in as another user</pre>
+	await loginManager.LogoutAsync();
+	// User is now logged out and you can log in as another user</pre>
    
    
-      <b>IS ASYNCHRONOUS METHOD DESCRIPTION NEEDED?</b>
-
    <br/>
    
 # Clearing All Login Information 
