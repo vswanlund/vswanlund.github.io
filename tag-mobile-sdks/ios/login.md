@@ -32,50 +32,52 @@ A existing PowaTag user can log in and immediately begin making payments using t
 
 There are three ways an existing user can log in using the SDK: 
 
-1. Using a Profile ID
+1. Log In Using a Profile ID
+	
+	<pre>PTKLoginManager *loginManager = [PTKLoginManager sharedManager];
+	PTKProfilIdSignInDetails *signInDetails = [PTKProfileIdSignInDetails profileIdSignInDetailsWithProfileId:@"profileId"
+		password:@"Password"];
 
-<B>CODE SNIPPED LIKE THIS:</B>
-	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
-	loginManager.signIn(profileIdSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(Profile profile) {
-			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+	[loginManager signInWithProfileId:signInDetails;
+	completion:^(PTKProfile *__nullable currentProfile, NSError *__nullable error) {
+	if (error) {
+		// Handle error.
+	} else {
+		// Hanlde login success.
 		}
-	}</pre>
+	}];</pre>
 
 
-2. Using a Mobile Number
+2. Log In Using a Mobile Number
 
-<B>CODE SNIPPED LIKE THIS:</B>
-
-
-	<pre>MobileNumberSignInDetails mobileNumberSignInDetails = new MobileNumberSignInDetails( signInDiag.getMobileNumber(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
-	loginManager.signIn(mobileNumberSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(Profile profile) {
-			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+	<pre>PTKLoginManager *loginManager = [PTKLoginManager sharedManager];
+	PTKMobileNumberSignInDetails *signInDetails = [PTKMobileNumberSignDetails mobileNumberSignInDetailsWithMobileNumber:@"71234567"
+                                                                                                           password:@"Password"];
+                                                                                                           
+	[loginManager signInWithMobileNumber:signInDetails
+    completion:^(PTKProfile *__nullable currentProfile, NSError *__nullable error) {
+		if (error) {
+			// Handle error.
+		} else {
+			// Hanlde login success.
 		}
-	}</pre>
+	}];</pre>
 
 	
-3. Using an Email Address
+3. Log In Using an Email Address
 
-<B>CODE SNIPPED LIKE THIS:</B>
-
-
-	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails( signInDiag.getEmail(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
-	loginManager.signIn(emailSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(Profile profile) {
-			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+	<pre>PTKLoginManager *loginManager = [PTKLoginManager sharedManager];
+	PTKEmailSignInDetails *signInDetails = [PTKEmailSignInDetails emailSignInDetailsWithEmail:@"email@email.com"
+								password:@"Password"];
+                                                                                                           
+	[loginManager signInWithEmail:signInDetails
+	completion:^(PTKProfile *__nullable currentProfile, NSError *__nullable error) {
+		if (error) {
+			// Handle error.
+		} else {
+		// Hanlde login success.
 		}
-	}</pre>
+	}];</pre>
 
 	
 For details on the getter and setter methods available please see the {% if site.sdk_reference_ios_url  %} <a href="{{site.sdk_reference_ios_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
@@ -87,28 +89,27 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
 
 1. Log in as an anonymous get user using the LoginManager:
 
-    <pre>PTKLoginManager *lm = [PTKLoginManager sharedManager];
-   [lm guestLoginWithCompletion:^(PTKAccessToken *accessToken, NSError *error) {
-     if (accessToken) {
-       // User is now logged in
-       PTKProfile *profile = [PTKProfileManager sharedManager].currentProfile;
-       PTKBaskets *baskets = [PTKBasketsManager sharedManager].currentBaskets;
-     }
-   }];</pre>
+	<pre>PTKLoginManager *loginManager = [PTKLoginManager sharedManager];
+	[loginManager signInAsGuestWithCompletion:^(PTKAccessToken *accessToken, NSError *error) {
+		if (accessToken) {
+			// User is now logged in
+			PTKProfile *profile = [PTKProfileManager sharedManager].currentProfile;
+			PTKBaskets *baskets = [PTKBasketsManager sharedManager].currentBaskets;
+		}
+	}];</pre>
 
-   
-   <b>DO WE NEED TO DESCRIBE ASYNCHRONOUS METHOD HERE?</b>
-   
    
 2. The access token for the currently authenticated user can be retrieved using:
 
-    <pre>PTKAccessToken *accessToken = [PTKLoginManager sharedManager].currentAccessToken;</pre>
+	PTKAccessToken *accessToken = [PTKLoginManager sharedManager].currentAccessToken;
 
-<br />
+<br/>
 
 # After Logging In
 
 Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/ios/profile/) for the current user or get a [Workflow]({{site.baseurl}}/tag-mobile-sdks/ios/workflows/) when a [Trigger]({{site.baseurl}}/tag-mobile-sdks/ios/triggers/) detects a PowaTag.
+
+<br/>
 
 # Log Out
 
@@ -116,17 +117,17 @@ Log out from the current profile, removing the current AccessToken and other use
 
 1. Log out using PTKLoginManager:
 
-    <pre>PTKLoginManager *lm = [PTKLoginManager sharedManager];
-   [lm guestLoginWithCompletion:^(NSError *error) {
-     if (!error) {
-       // User is now logged out and you can log in as another user
-     }
-   }];</pre>
+    <pre>PTKLoginManager *loginManager = [PTKLoginManager sharedManager];
+	[loginManager logoutWithCompletion:^(NSError *__nullable error) {
+		if (error) {
+			//Handle error
+		} else {
+			//Logout success.
+		}
+	}];</pre>
    
-   #IS ASYNCHRONOUS METHOD DESCRIPTION NEEDED?
-
+   <br/>
    
-
 # Clearing All Login Information 
  
  Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
@@ -136,7 +137,7 @@ Log out from the current profile, removing the current AccessToken and other use
 
 # Sample
 
-To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app) app and review the <code><b>ADD SOME CLASS NAME</b></code> class.
+To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app) app and review the <code>LoginController</code>.
     
 <br/>   
    
