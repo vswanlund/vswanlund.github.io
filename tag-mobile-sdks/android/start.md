@@ -35,7 +35,7 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
     
 	<pre>
     dependencies {
-        compile 'com.powatag.android:powatag-kit:0.8.5'
+        compile 'com.powatag.android:powatag-kit:{{site.sdk.current.version}}'
     }</pre>
 	
 	b. Add exclusions to the packagingOptions

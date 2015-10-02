@@ -117,8 +117,8 @@ Log out from the current profile, removing the current AccessToken and other use
    
 # Clearing All Login Information 
  
- To clear all user information from the device including the current access token, profile and baskets use the <code>clearLogin</code> method.
- 
+ Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
+  	 
  CODE SNIPPET
 	<pre>loginManager.clearLogin();</pre>
 <br/>	
