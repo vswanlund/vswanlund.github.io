@@ -81,7 +81,7 @@ There are three ways an existing user can log in using the SDK:
 
 	
 For details on the getter and setter methods available please see the {% if site.sdk_reference_ios_url  %} <a href="{{site.sdk_reference_ios_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
-<br/>	
+
 
 # Log In and Create a Temporary Profile
 
@@ -101,7 +101,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
    
 2. The access token for the currently authenticated user can be retrieved using:
 
-	PTKAccessToken *accessToken = [PTKLoginManager sharedManager].currentAccessToken;
+	<pre>PTKAccessToken *accessToken = [PTKLoginManager sharedManager].currentAccessToken;</pre>
 
 <br/>
 
