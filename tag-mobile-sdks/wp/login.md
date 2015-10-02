@@ -33,7 +33,9 @@ A existing PowaTag user can log in and immediately begin making payments using t
 There are three ways an existing user can log in using the SDK: 
 
 1. Using a Profile ID
-
+	
+	<B>CODE SNIPPED LIKE THIS:/<B>
+	
 	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
 	LoginManager loginManager = LoginManager.getInstance();
 	loginManager.signIn(profileIdSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
@@ -47,6 +49,7 @@ There are three ways an existing user can log in using the SDK:
 
 2. Using a Mobile Number
 
+<B>CODE SNIPPED LIKE THIS:/<B>
 	<pre>MobileNumberSignInDetails mobileNumberSignInDetails = new MobileNumberSignInDetails( signInDiag.getMobileNumber(), signInDiag.getPassword());
 	LoginManager loginManager = LoginManager.getInstance();
 	loginManager.signIn(mobileNumberSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
@@ -60,6 +63,7 @@ There are three ways an existing user can log in using the SDK:
 	
 3. Using an Email Address
 
+<B>CODE SNIPPED LIKE THIS:/<B>
 	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails( signInDiag.getEmail(), signInDiag.getPassword());
 	LoginManager loginManager = LoginManager.getInstance();
 	loginManager.signIn(emailSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
@@ -72,7 +76,9 @@ There are three ways an existing user can log in using the SDK:
 
 	
 For details on the getter and setter methods available please see the {% if site.sdk_reference_wp_url  %} <a href="{{site.sdk_reference_wp_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
-<br/>
+<br/>	
+
+
 
 # Log In and Create a Temporary Profile
 
