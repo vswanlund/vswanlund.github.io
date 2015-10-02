@@ -120,7 +120,7 @@ After you install PowaTag SDK for Android, you can see:
 
 2. Go to File > New Module > "Import .JAR or .AAR Package" and add the powatag-kit.aar file located in the library folder.
 
-3. Set powatag-kit-0.9.5 as a new dependency of your application module by going to File > Project Structure. On tab Dependencies tab click plus button and choose powatag-kit-0.9.5 module.
+3. Set powatag-kit-{{site.current_sdk_version}} as a new dependency of your application module by going to File > Project Structure. On tab Dependencies tab click plus button and choose powatag-kit-{{site.current_sdk_version}} module.
 
 4. Now you can import `com.powatag.android.sdk.PowaTagKit` into your app.
 
@@ -133,5 +133,5 @@ You can declare the Maven dependency with the latest available version of the An
     <dependency>
         <groupId>com.powatag.android</groupId>
         <artifactId>powatag-kit</artifactId>
-         <version>0.9.5</version>
+         <version>{{site.current_sdk_version}}</version>
     </dependency>
