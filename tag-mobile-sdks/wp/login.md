@@ -32,51 +32,27 @@ A existing PowaTag user can log in and immediately begin making payments using t
 
 There are three ways an existing user can log in using the SDK: 
 
-1. Using a Profile ID
+1. Log In Using a Profile ID
 	
-	<B>CODE SNIPPED LIKE THIS:</B>
-
-	
-	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
-	loginManager.signIn(profileIdSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(Profile profile) {
-			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
-		}
-	}</pre>
+	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails(signInDiag.ProfileId, signInDiag.Password);
+	LoginManager loginManager = LoginManager.GetInstance();
+	Profile newProfile = await loginManager.SignInAsync(profileIdSignInDetails);
+	// User is now logged in
+	Profile profile = ProfileManager.GetInstance().GetCurrentProfile();</pre>
 
 
-2. Using a Mobile Number
+2. Log In Using a Mobile Number
 
-<B>CODE SNIPPED LIKE THIS:</B>
-
-
-	<pre>MobileNumberSignInDetails mobileNumberSignInDetails = new MobileNumberSignInDetails( signInDiag.getMobileNumber(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
-	loginManager.signIn(mobileNumberSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(Profile profile) {
-			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
-		}
-	}</pre>
+	<pre>MobileNumberSignInDetails mobileNumberSignInDetails = new MobileNumberSignInDetails(signInDiag.MobileNumber, signInDiag.Password);
+	LoginManager loginManager = LoginManager.GetInstance();
+	Profile profile = await loginManager.SignInAsync(mobileNumberSignInDetails);</pre>
 
 	
 3. Using an Email Address
 
-<B>CODE SNIPPED LIKE THIS:</B>
-
-	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails( signInDiag.getEmail(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
-	loginManager.signIn(emailSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(Profile profile) {
-			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
-		}
-	}</pre>
+	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails(signInDiag.Email, signInDiag.Password);
+	LoginManager loginManager = LoginManager.GetInstance();
+	Profile profile = await loginManager.SignInAsync(emailSignInDetails);</pre>
 
 	
 For details on the getter and setter methods available please see the {% if site.sdk_reference_wp_url  %} <a href="{{site.sdk_reference_wp_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
@@ -129,20 +105,16 @@ Log out from the current profile, removing the current AccessToken and other use
 # Clearing All Login Information 
  
  Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
-  	 
- CODE SNIPPET
-	<pre>loginManager.clearLogin();</pre>
+	
+	<pre>LoginManager.GetInstance().ClearLogin();</pre>
+	
 <br/>	
 
 # Sample
 
-To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/wp/start/#importing-the-sample-app) app and review the <code><b>ADD SOME CLASS NAME</b></code> class.
+To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/wp/start/#importing-the-sample-app) app and review the <code>MainPageViewModel</code> class.
     
 <br/>   
-   
-   
-   
-   
    
    
    
