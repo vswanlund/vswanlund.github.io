@@ -48,7 +48,7 @@ People using your application can add products to their basket, checkout or save
 Provide fund-raising tools to charities, causes and events.
 
 **[Acts]({{site.baseurl}}/tag-mobile-sdks/wp/acts/)**<br />
-Provide ability for users to perform acts.
+Provide functionality to allow users to perform acts.
 
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/wp/payments/)**<br />
 Add payments functionality to your app.
