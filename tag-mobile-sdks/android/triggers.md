@@ -16,6 +16,7 @@ A number of triggers are currently supported:
 
 <br />
 
+
 # Audio Tags
 
 1. Audio tag detection requires the use of the audio recording permission. Add the following entry to your manifest:
@@ -28,10 +29,10 @@ A number of triggers are currently supported:
    protected void onCreate(final Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
      audioTagDetector = new AudioTagDetector(this);
-     audioTagDetector.setListener(new AudioTagDetectorListener() {
+     audioTagDetector.setAudioTagDetectorListener(new AudioTagDetectorListener() {
        @Override
        public void onAudioTagDetected(final AudioTagDetector audioTagDetector,final Tag audioTag) {
-         showAlertDialog("PowaTag Audio Tag Detected", tag.getReference());
+         showAlertDialog("PowaTag Audio Tag Detected", audioTag.getReference());
        }
        @Override
        public void onVolumeChanged(final AudioTagDetector audioTagDetector, final float volume) {
@@ -89,10 +90,10 @@ A number of triggers are currently supported:
      super.onCreate(savedInstanceState);
      setContentView(R.layout.activity_barcode_tag_detector_view);
      barcodeTagDetectorView = (BarcodeTagDetectorView) findViewById(R.id.barcode_detector_view);
-     barcodeTagDetectorView.setListener(new BarcodeTagDetectorViewListener() {
+     barcodeTagDetectorView.setBarcodeTagDetectorViewListener(new BarcodeTagDetectorViewListener() {
        @Override
        public void onBarcodeTagDetected(final BarcodeTagDetectorView barcodeTagDetectorView,final Tag barcodeTag, final Image image, final List&lt;PointF&gt; barcodeRegion) {
-         showAlertDialog("PowaTag Barcode Tag Detected", tag.getReference());
+         showAlertDialog("PowaTag Barcode Tag Detected", barcodeTag.getReference());
        }
        @Override
        public void onNonPowaTagBarcodeDetected(final BarcodeTagDetectorView barcodeTagDetectorView, final Barcode barcode, final Image image, final List&lt;PointF&gt; barcodeRegion) {
@@ -159,18 +160,21 @@ A number of triggers are currently supported:
 <br/>
 
 
-# Sample
-
-To see examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ScanActivity</code> class.
-
-<br />
-
 # Next Get the Workflow for a Tag
 
 See [Workflows]({{site.baseurl}}/tag-mobile-sdks/android/workflows/) for how to retrieve workflow information for a tag from the PowaTag API.
 
 <br />
 
+
+# Sample
+
+To explore this topic in more detail, including package imports and trigger implementation, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ScanActivity</code> class.
+
+<br />
+
+
 # Troubleshooting Sample Apps
 
 If you have a problem running a sample app, view the [FAQ]({{site.baseurl}}/tag-mobile-sdks/android/faq/) for solutions.
+

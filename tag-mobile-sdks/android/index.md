@@ -47,6 +47,9 @@ People using your application can add products to their basket, checkout or save
 **[Campaigns]({{site.baseurl}}/tag-mobile-sdks/android/campaigns/)**<br />
 Provide fund-raising tools to charities, causes and events.
 
+**[Acts]({{site.baseurl}}/tag-mobile-sdks/android/acts/)**<br />
+Provide ability for users to perform acts.
+
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/android/payments/)**<br />
 Add payments functionality to your app simply and easily.
 
