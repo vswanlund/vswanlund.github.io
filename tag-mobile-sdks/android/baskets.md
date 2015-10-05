@@ -128,6 +128,6 @@ Once you have created an invoice for a basket you can make a [Payment]({{site.ba
     }
    });</pre>
    
-   The <code>BasketManager</code> also provides a synchronous <code>updateBasket()</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
+   The <code>BasketManager</code> also provides a synchronous <code>updateBasket</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
    
    <pre>Basket basket = bm.updateBasket(merchant);</pre>
