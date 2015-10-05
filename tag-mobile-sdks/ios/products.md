@@ -68,74 +68,36 @@ Variants are the individual styles of a product. If you have a product customers
 
 <br />
 
-# Saving and Restoring the Picker State
-
-1. To save the picker state when your Activity is rotated, using the `saveInstanceState` picker method:
-<b> &lt;CODE SNIPPET&gt;</b>
-    <pre>@Override
-   public void onSaveInstanceState(Bundle outState) {
-     super.onSaveInstanceState(outState);
-     outState.putParcelable("picker", picker.saveInstanceState());
-    }
-   </pre>
-
-2. You can restore the picker state using the `restoreInstanceState` method:
-<b> &lt;CODE SNIPPET&gt;</b>
-    <pre>@Override
-   public void onCreate(Bundle savedInstanceState) {
-     super.onCreate(savedInstanceState);
-     picker = new ProductVariantPicker(product);
-   }
-   @Override
-   public void onRestoreInstanceState(Bundle savedInstanceState) {
-     super.onRestoreInstanceState(savedInstanceState);
-     picker.restoreInstanceState(savedInstanceState.getParcelable("picker"));
-   }</pre>
-
-3. Or when instantiating your picker if you know the saved state is not null:
-<b> &lt;CODE SNIPPET&gt;</b>
-    <pre>@Override
-   public void onCreate(Bundle savedInstanceState) {
-     super.onCreate(savedInstanceState);
-     if (savedInstanceState != null) {
-       picker = new ProductVariantPicker(product, savedInstanceState.getParcelable("picker"));
-     } else {
-       picker = new ProductVariantPicker(product);
-     }
-   }</pre>
-
-<br />
-
 # Useful Product Methods
 
 1. The following methods can be used to obtian useful product information:
 <b> &lt;CODE SNIPPETS&gt;</b>
 	<pre>// Get the ID of the product.
-	String productId = product.getProductId();
+	NSString *productId = product.productId;
 	
 	// Get the ID of the merchant which this product is from.
-	String merchantId = product.getMerchantId();
+	NSString *merchantId = product.merchantId;
 	
     // Get The Global Trade Item Number (GTIN) that uniquely identifies the product globally, if it has one.
-    String gtin = product.getGtin();
+    NSString *gtin = product.gtin;
 
     // Get the product title
-    String title = product.getTitle();
+	NSString *title = product.title;
 	
     // Get the product description.
-    String productDescription = product.getDescription();
+    NSString *productDescription = product.productDescription;
 	
     // Get the brand associated with the product.
-    String brand = product.getBrand();
+    NSString *brand = product.brand;
 
     // Get the product condition. e.g. new, refurbished, used or unknown
-    ProductCondition condition = product.getCondition();
+    PTKProductCondition condition = product.condition;
 
     // Get a URL to view more information about the product. The URL is optional
-    URI productLink = product.getLink();
+    NSURL *productLink = product.link;
 
     // Get the list of categories this product is in.
-    List&lt;String&gt; categories = product.getCategories();</pre>
+    NSArray *categories = product.categories;</pre>
 	
 <br />
 
