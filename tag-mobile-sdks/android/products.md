@@ -108,8 +108,8 @@ Variants are the individual styles of a product. If you have a product customers
 
 # Useful Product Methods
 
-	<pre>// Get the ID of the product.
-	String productId = product.getProductId();
+		<pre>// Get the ID of the product.
+		String productId = product.getProductId();
 	
 	// Get the ID of the merchant which this product is from.
 	String merchantId = product.getMerchantId();
