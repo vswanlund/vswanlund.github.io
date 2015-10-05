@@ -70,7 +70,7 @@ Variants are the individual styles of a product. If you have a product customers
 
 # Saving and Restoring the Picker State
 
-1. To save the picker state when your Activity is rotated, using the `saveInstanceState` picker method:
+1. To save the picker state when your Activity is destroyed, using the `saveInstanceState` picker method:
 
     <pre>@Override
    public void onSaveInstanceState(Bundle outState) {
