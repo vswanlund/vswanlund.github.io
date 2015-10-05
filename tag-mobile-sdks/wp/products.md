@@ -39,7 +39,7 @@ Variants are the individual styles of a product. If you have a product customers
     <pre>picker.ChooseOption(productOption);
    DisplayChoices(optionChoices);</pre>
 
-3. If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
+3. If you want to know what the currently chosen options are, you can find this out quickly using the `ChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
 
 	<pre>IReadOnlyList&lt;ProductOption&gt; chosenOptions = picker.ChosenOptions;</pre>
 
