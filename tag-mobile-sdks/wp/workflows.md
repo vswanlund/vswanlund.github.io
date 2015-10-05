@@ -17,6 +17,7 @@ The currently supported workflows are:
 * Product
 * Basket
 * Campaign
+* Act
 
 <br />
 
@@ -36,7 +37,11 @@ The currently supported workflows are:
      case Campaign:
        CampaignWorkflow campaignWorkflow = WorkflowType.AsCampaignWorkflow(workflow);
        Campaign campaign = campaignWorkflow.Campaign;
-       break;
+       break
+     case Act:
+       ActWorkflow actWorkflow = WorkflowType.AsActWorkflow(workflow);
+       Act act = actWorkflow.Campaign;
+       break;	   
    }</pre>
 
 <br />
@@ -67,3 +72,6 @@ TemporaryBasket containing a fixed set of items that can be purchased.
 
 **[Campaign]({{site.baseurl}}/tag-mobile-sdks/wp/campaigns/)**<br />
 Charity donation campaign, one time or recurring.
+
+**[Act]({{site.baseurl}}/tag-mobile-sdks/wp/acts/)**<br />
+Custom user information required to act on a merchant's act campaign.

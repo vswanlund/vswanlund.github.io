@@ -83,4 +83,4 @@ TemporaryBasket containing a fixed set of items that can be purchased.
 Charity donation campaign, one time or recurring.
 
 **[Act]({{site.baseurl}}/tag-mobile-sdks/android/acts/)**<br />
-Act campaign workflow to collect information from the user.
+Custom user information required to act on a merchant's act campaign.

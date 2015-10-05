@@ -17,6 +17,7 @@ The currently supported workflows are:
 * Product
 * Basket
 * Campaign
+* Act
 
 <br />
 
@@ -36,6 +37,10 @@ The currently supported workflows are:
      case PTKWorkflowTypeCampaign:
        PTKCampaignWorkflow *campaignWorkflow = [PTKWorkflow asCampaignWorkflow:workflow];
        PTKCampaign *campaign = campaignWorkflow.campaign;
+       break;
+	case PTKWorkflowTypeCampaign:
+       PTKActWorkflow *actWorkflow = [PTKWorkflow asActWorkflow:workflow];
+       PTKAct *act = actWorkflow.campaign;
        break;
    }</pre>
 
@@ -65,3 +70,6 @@ TemporaryBasket containing a fixed set of items that can be purchased.
 
 **[Campaign]({{site.baseurl}}/tag-mobile-sdks/ios/campaigns/)**<br />
 Charity donation campaign, one time or recurring.
+
+**[Act]({{site.baseurl}}/tag-mobile-sdks/ios/acts/)**<br />
+Custom user information required to act on a merchant's act campaign.

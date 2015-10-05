@@ -23,14 +23,14 @@ Reference docs and sample code
 
 # In Windows Phone SDK
 
+While integrating the PowaTag SDK into your app will be useful to keep the following data flow in mind.
+<img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="120" />
+
 **[Login]({{site.baseurl}}/tag-mobile-sdks/wp/login/)**<br />
 People can easily sign in to your app.
 
 **[Profile]({{site.baseurl}}/tag-mobile-sdks/wp/profile/)**<br />
 Let a user view and manage their profile information, addresses and payment methods.
-
-**[Addresses]({{site.baseurl}}/tag-mobile-sdks/wp/addresses/)**<br />
-Display and manage addresses in region-specific formats.
 
 **[Triggers]({{site.baseurl}}/tag-mobile-sdks/wp/triggers/)**<br />
 React to PowaTag tags placed around the environment.
@@ -52,6 +52,9 @@ Provide functionality to allow users to perform acts.
 
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/wp/payments/)**<br />
 Add payments functionality to your app.
+
+**[Addresses]({{site.baseurl}}/tag-mobile-sdks/wp/addresses/)**<br />
+Display and manage addresses in region-specific formats.
 
 <br />
 
