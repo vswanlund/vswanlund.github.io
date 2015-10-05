@@ -1,3 +1,9 @@
+---
+layout: page
+title: Profile on Android
+permalink: /tag-mobile-sdks/android/profile/
+---
+
 A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage a user's profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/android/login/).
 
 After logging in you can retrieve the current user's profile using <code>ProfileManager.getInstance().getCurrentProfile()</code>.
