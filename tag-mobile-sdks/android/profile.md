@@ -284,13 +284,16 @@ Before transacting with a merchant you should check if the profile contains all 
 
 	The synchronous version of the <code>updateProfile</code> method should not be used in the main thread to avoid performance issues 
 
-	<code>Profile updatedProfile = pm.updateProfile(profileDetails); </code>
+	<pre>Profile updatedProfile = pm.updateProfile(profileDetails);</pre>
     
 <br/>
+
 3. The updated profile information will be reflected in the users current profile:
 
-    <pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();</pre>
+	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();</pre>
 
+<br/>
+	
 # Saving a Temporary Profile
 
 1. Use the ProfileManager to save the current profile:
