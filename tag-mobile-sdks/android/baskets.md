@@ -33,6 +33,10 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
     <pre>ProductVariant variant = workflow.getProduct().getVariants().get(0);
    BasketsManager bm = BasketsManager.getInstance();
    bm.addVariant(workflow.getMerchant(), variant);</pre>
+   
+2. Or you can add a specific quantity of the product variant to the basket:
+
+    <pre>bm.addVariant(workflow.getMerchant(), variant, 2);</pre>   
 
 <br />
 
