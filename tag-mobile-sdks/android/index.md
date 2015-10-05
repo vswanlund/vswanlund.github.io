@@ -21,6 +21,9 @@ Reference docs and sample code
 
 <br />
 
+The 
+<img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="400" />
+
 # In Android SDK
 
 **[Login]({{site.baseurl}}/tag-mobile-sdks/android/login/)**<br />
@@ -28,9 +31,6 @@ People can easily sign in to your app.
 
 **[Profile]({{site.baseurl}}/tag-mobile-sdks/android/profile/)**<br />
 Let a user view and manage their profile information, addresses and payment methods.
-
-**[Addresses]({{site.baseurl}}/tag-mobile-sdks/android/addresses/)**<br />
-Display and manage addresses in region-specific formats.
 
 **[Triggers]({{site.baseurl}}/tag-mobile-sdks/android/triggers/)**<br />
 React to PowaTag tags placed around the environment.
@@ -51,7 +51,10 @@ Provide fund-raising tools to charities, causes and events.
 Provide functionality to allow users to perform acts.
 
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/android/payments/)**<br />
-Add payments functionality to your app simply and easily.
+Add payments functionality to your app simply and easily
+
+**[Addresses]({{site.baseurl}}/tag-mobile-sdks/android/addresses/)**<br />
+Display and manage addresses in region-specific formats.
 
 <br />
 
