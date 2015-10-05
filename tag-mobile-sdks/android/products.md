@@ -37,14 +37,18 @@ Variants are the individual styles of a product. If you have a product customers
 
 	<pre>picker.chooseOption(productOption);
 	displayChoices(optionChoices);</pre>
+	
+3. If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
 
-3. You can find out which variants match your current option choices using the `getVariants` method of the picker:
+	<pre>List<ProductOption> chosenOptions = picker.getChosenOptions();</pre>
+
+4. You can find out which variants match your current option choices using the `getVariants` method of the picker:
 
     <pre>List&lt;ProductVariant&gt; variants = picker.getVariants();</pre>
 
-4. Once a desired option has been selected for each choice, the number of variants returned will either be `1` (the desired variant) or `0` (no variants available that match the current selection).
+5. Once a desired option has been selected for each choice, the number of variants returned will either be `1` (the desired variant) or `0` (no variants available that match the current selection).
 
-5. If you want to deselect an already chosen option, use the pickers `unchooseOption` or `reset` methods to remove one or all previously chosen option(s):
+6. If you want to deselect an already chosen option, use the pickers `unchooseOption` or `reset` methods to remove one or all previously chosen option(s):
 
     <pre>// Unchoose a single option
 	picker.unchooseOption(productOption);
@@ -102,15 +106,7 @@ Variants are the individual styles of a product. If you have a product customers
 
 <br />
 
-# Useful Methods
-
-1. Currently Chosen Options
-
-	If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
-
-    List<ProductOption> chosenOptions = picker.getChosenOptions();
-	
-2. Product Methods:
+# Useful Product Methods
 
 	<pre>// Get the ID of the product.
 	String productId = product.getProductId();
@@ -142,22 +138,9 @@ Variants are the individual styles of a product. If you have a product customers
 <br />
 
 
-#DO WE NEED TO SHOW ProductVariantFilter methods????
-    /**
-     * Gets the list of variants which match the provided options.
-     *
-     * @param chosenOptions A list of {@code ProductOptions} describing the desired options.
-     * @return A filtered list of variants containing only those matching the filter query.
-     */
-    @NonNull
-    public List<ProductVariant> getVariants(@NonNull final List<ProductOption> chosenOptions) {
-		
-<br/>		
-
-
 # Sample
 
-To explore this topic in detail, including package imports and trigger implementation, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ProductDetailsActivity</code> class.
+To explore this topic in detail, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ProductDetailsActivity</code> class.
 
 <br />
 		
