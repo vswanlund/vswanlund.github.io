@@ -35,16 +35,19 @@ Variants are the individual styles of a product. If you have a product customers
 
 2. To choose a specific option call the pickers `chooseOption` which will update the state of the options in the choices list based on the currently chosen options. The list is updated in-place so there is no need to get the list from the picker again:
 
-    <pre>[picker chooseOption:option];
-   [self displayChoices:optionChoices];
+    <pre>NSArray *chosenOptions = picker.chosenOptions;</pre>
 
-3. You can find out which variants match your currently choices using the `variants` method of the picker:
+3. If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place: 
+   
+	<b> CODE SNIPPET</b>
+   
+4. You can find out which variants match your currently choices using the `variants` method of the picker:
 
     <pre>NSArray *variants = [picker variants];</pre>
 
-4. Once a desired option has been selected for each choice, the number of variants returned will either be `1` (the desired variant) or `0` (no variants available that match the current selection).
+5. Once a desired option has been selected for each choice, the number of variants returned will either be `1` (the desired variant) or `0` (no variants available that match the current selection).
 
-5. If you want to deselect an already chosen option, use the pickers `unchooseOption` or `reset` methods to remove one or all previously chosen option(s):
+6. If you want to deselect an already chosen option, use the pickers `unchooseOption` or `reset` methods to remove one or all previously chosen option(s):
 
     <pre>// Unchoose a single option
    [picker unchooseOption:option];
@@ -65,11 +68,81 @@ Variants are the individual styles of a product. If you have a product customers
 
 <br />
 
-**Currently Chosen Options**
+# Saving and Restoring the Picker State
 
-If you want to know what the currently chosen options are, you can find this out quickly by accessing the `chosenOptions` property. Like the list of option choices, when changes are made this list is updated in-place:
+1. To save the picker state when your Activity is rotated, using the `saveInstanceState` picker method:
 
-    NSArray *chosenOptions = picker.chosenOptions;
+    <pre>@Override
+   public void onSaveInstanceState(Bundle outState) {
+     super.onSaveInstanceState(outState);
+     outState.putParcelable("picker", picker.saveInstanceState());
+    }
+   </pre>
+
+2. You can restore the picker state using the `restoreInstanceState` method:
+
+    <pre>@Override
+   public void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     picker = new ProductVariantPicker(product);
+   }
+   @Override
+   public void onRestoreInstanceState(Bundle savedInstanceState) {
+     super.onRestoreInstanceState(savedInstanceState);
+     picker.restoreInstanceState(savedInstanceState.getParcelable("picker"));
+   }</pre>
+
+3. Or when instantiating your picker if you know the saved state is not null:
+
+    <pre>@Override
+   public void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     if (savedInstanceState != null) {
+       picker = new ProductVariantPicker(product, savedInstanceState.getParcelable("picker"));
+     } else {
+       picker = new ProductVariantPicker(product);
+     }
+   }</pre>
+
+<br />
+
+# Useful Product Methods
+
+1. The following methods can be used to obtian useful product information:
+
+	<pre>// Get the ID of the product.
+	String productId = product.getProductId();
+	
+	// Get the ID of the merchant which this product is from.
+	String merchantId = product.getMerchantId();
+	
+    // Get The Global Trade Item Number (GTIN) that uniquely identifies the product globally, if it has one.
+    String gtin = product.getGtin();
+
+    // Get the product title
+    String title = product.getTitle();
+	
+    // Get the product description.
+    String productDescription = product.getDescription();
+	
+    // Get the brand associated with the product.
+    String brand = product.getBrand();
+
+    // Get the product condition. e.g. new, refurbished, used or unknown
+    ProductCondition condition = product.getCondition();
+
+    // Get a URL to view more information about the product. The URL is optional
+    URI productLink = product.getLink();
+
+    // Get the list of categories this product is in.
+    List&lt;String&gt; categories = product.getCategories();</pre>
+	
+<br />
+
+
+# Sample
+
+To explore this topic in detail, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/ios/start/#importing-the-sample-app) app and review the <code>ProductController</code> class.
 
 <br />
 
