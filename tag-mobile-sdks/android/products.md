@@ -42,7 +42,7 @@ Variants are the individual styles of a product. If you have a product customers
 
 	<pre>List<ProductOption> chosenOptions = picker.getChosenOptions();</pre>
 
-4. You can find out which variants match your current option choices using the `getVariants` method of the picker:
+4. You can find out which variants match the current option choices:
 
     <pre>List&lt;ProductVariant&gt; variants = picker.getVariants();</pre>
 
@@ -108,8 +108,10 @@ Variants are the individual styles of a product. If you have a product customers
 
 # Useful Product Methods
 
-		<pre>// Get the ID of the product.
-		String productId = product.getProductId();
+1. The following methods can be used to obtian useful product information:
+
+	<pre>// Get the ID of the product.
+	String productId = product.getProductId();
 	
 	// Get the ID of the merchant which this product is from.
 	String merchantId = product.getMerchantId();
@@ -133,7 +135,7 @@ Variants are the individual styles of a product. If you have a product customers
     URI productLink = product.getLink();
 
     // Get the list of categories this product is in.
-    List<String> categories = product.getCategories();</pre>
+    List&lt;String&gt; categories = product.getCategories();</pre>
 	
 <br />
 
