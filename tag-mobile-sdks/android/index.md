@@ -22,7 +22,7 @@ Reference docs and sample code
 <br />
 
 The 
-<img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="400" />
+<img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="100" />
 
 # In Android SDK
 
