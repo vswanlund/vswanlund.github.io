@@ -39,7 +39,7 @@ Variants are the individual styles of a product. If you have a product customers
 
 3. If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place: 
    
-	<b> CODE SNIPPET</b>
+	<b> &lt;CODE SNIPPET&gt;</b>
    
 4. You can find out which variants match your currently choices using the `variants` method of the picker:
 
@@ -71,7 +71,7 @@ Variants are the individual styles of a product. If you have a product customers
 # Saving and Restoring the Picker State
 
 1. To save the picker state when your Activity is rotated, using the `saveInstanceState` picker method:
-
+<b> &lt;CODE SNIPPET&gt;</b>
     <pre>@Override
    public void onSaveInstanceState(Bundle outState) {
      super.onSaveInstanceState(outState);
@@ -80,7 +80,7 @@ Variants are the individual styles of a product. If you have a product customers
    </pre>
 
 2. You can restore the picker state using the `restoreInstanceState` method:
-
+<b> &lt;CODE SNIPPET&gt;</b>
     <pre>@Override
    public void onCreate(Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
@@ -93,7 +93,7 @@ Variants are the individual styles of a product. If you have a product customers
    }</pre>
 
 3. Or when instantiating your picker if you know the saved state is not null:
-
+<b> &lt;CODE SNIPPET&gt;</b>
     <pre>@Override
    public void onCreate(Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
@@ -109,7 +109,7 @@ Variants are the individual styles of a product. If you have a product customers
 # Useful Product Methods
 
 1. The following methods can be used to obtian useful product information:
-
+<b> &lt;CODE SNIPPETS&gt;</b>
 	<pre>// Get the ID of the product.
 	String productId = product.getProductId();
 	
