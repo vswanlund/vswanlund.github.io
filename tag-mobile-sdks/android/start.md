@@ -10,6 +10,7 @@ It enables:
 
 * Triggers - Your app can react to PowaTag tags placed around the environment.
 * Workflows - Respond to tags by providing appropriate and contextual user journeys.
+* Products - People can purchase products from PowaTag merchants using your app.
 * Baskets - People can purchase products from PowaTag merchants using your app.
 
 <br />

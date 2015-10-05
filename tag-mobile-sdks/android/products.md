@@ -28,18 +28,17 @@ Variants are the individual styles of a product. If you have a product customers
 
 1. If the product has multiple variants, create a `ProductVariantPicker` and get the choices for the product. Each choice such as size or color has a number of options (such as Red and Blue options for color) and each option has a state indicating whether it is currently chosen or whether it can be chosen (some options may not be chosen in combination with others):
 
-    <pre>ProductVariantPicker picker = new ProductVariantPicker(product);
-   List&lt;ProductOptionChoice&gt; optionChoices = picker.getOptionChoices();
-   // Display the choices in some manner
-   displayChoices(optionChoices);
-   </pre>
+	<pre>ProductVariantPicker picker = new ProductVariantPicker(product);
+	List&lt;ProductOptionChoice&gt; optionChoices = picker.getOptionChoices();
+	// Display the choices in some manner
+	displayChoices(optionChoices);</pre>
 
 2. To choose a specific option call the pickers `chooseOption` method which will update the state of the options in the choices list based on the currently chosen options. The list is updated in-place so there is no need to get the list from the picker again:
 
 	<pre>picker.chooseOption(productOption);
 	displayChoices(optionChoices);</pre>
 
-3. You can find out which variants match your currently choices using the `getVariants` method of the picker:
+3. You can find out which variants match your current option choices using the `getVariants` method of the picker:
 
     <pre>List&lt;ProductVariant&gt; variants = picker.getVariants();</pre>
 
@@ -59,7 +58,7 @@ Variants are the individual styles of a product. If you have a product customers
 
 # Checking if User Has Picked a Variant
 
-1. To check if the user has picked a variant, check whether they have a picked an option for each choice:
+1. To check if the user has picked a variant, check whether they have picked an option for each choice:
 
     picker.isOptionChosenForEveryChoice();
 
@@ -103,13 +102,63 @@ Variants are the individual styles of a product. If you have a product customers
 
 <br />
 
-**Currently Chosen Options**
+# Useful Methods
+
+1. Currently Chosen Options
 
 If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
 
     List<ProductOption> chosenOptions = picker.getChosenOptions();
+	
+2. Product Methods:
+	<pre>// Get the ID of the product.
+	String productId = product.getProductId();
+	
+	// Get the ID of the merchant which this product is from.
+	String merchantId = product.getMerchantId();
+	
+    // Get The Global Trade Item Number (GTIN) that uniquely identifies the product globally, if it has one.
+    String gtin = product.getGtin();
+
+    // Get the product title
+    String title = product.getTitle();
+
+    // Get the product description.
+    String productDescription = product.getDescription();
+	
+    // Get the brand associated with the product.
+    String brand = product.getBrand();
+
+    // Get the product condition. e.g. new, refurbished, used or unknown
+    ProductCondition condition = product.getCondition();
+
+    // Get a URL to view more information about the product. The URL is optional
+    URI productLink = product.getLink();
+
+    // Get the list of categories this product is in.
+    List<String> categories = product.getCategories();
+	
+<br />
+
+
+#DO WE NEED TO SHOW ProductVariantFilter methods????
+    /**
+     * Gets the list of variants which match the provided options.
+     *
+     * @param chosenOptions A list of {@code ProductOptions} describing the desired options.
+     * @return A filtered list of variants containing only those matching the filter query.
+     */
+    @NonNull
+    public List<ProductVariant> getVariants(@NonNull final List<ProductOption> chosenOptions) {
+<br/>		
+
+
+# Sample
+
+To explore this topic in detail, including package imports and trigger implementation, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ProductDetailsActivity</code> class.
 
 <br />
+		
 
 # Adding a Product to a Basket
 
