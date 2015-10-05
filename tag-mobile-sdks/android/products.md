@@ -64,7 +64,7 @@ Variants are the individual styles of a product. If you have a product customers
 
 1. To check if the user has picked a variant, check whether they have picked an option for each choice:
 
-    picker.isOptionChosenForEveryChoice();
+    <pre>picker.isOptionChosenForEveryChoice();</pre>
 
 <br />
 
