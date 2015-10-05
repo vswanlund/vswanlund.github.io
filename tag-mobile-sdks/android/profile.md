@@ -120,7 +120,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     <pre>AddressDetails modifiedAddress = address.editableCopy();
    modifiedAddress.setAlias("110 Bishopsgate");</pre>
 
-3. Use the ProfileManager to update the address information:
+2. Use the ProfileManager to update the address information:
 
     <pre>ProfileManager pm = ProfileManager.getInstance();
    pm.updateAddress(address, modifiedAddress, new PowaTagCallback&lt;Address&gt;() {
@@ -291,36 +291,22 @@ Before transacting with a merchant you should check if the profile contains all 
 
     <pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();</pre>
 
-# *****Saving the Profile
-==============
+# Saving a Temporary Profile
 
 1. Use the ProfileManager to save the current profile:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
-   pm.saveProfile(new PowaTagCallback&lt;Profile&gt;() {
-     public void onSuccess(Profile savedProfile) {
-       // Profile is no longer temporary
-     }
-     public void onError(PowaTagException exception) {
-     }
-   }</pre>
+	Saving a temporary profile makes it permanent which will allow the user to log into the same profile at a later time or on another device.
+	
+	<pre>ProfileManager pm = ProfileManager.getInstance();
+	pm.saveProfile(new PowaTagCallback&lt;Profile&gt;() {
+		public void onSuccess(Profile savedProfile) {
+		// Profile is no longer temporary
+		}
+		public void onError(PowaTagException exception) {
+		}
+	}</pre>
  <br/>
  
-# Saving a Temporary Profile
-
-1. Use the ProfileManager to save the current temporary profile:
-
-	Saving a temporary profile makes it permanent which will allow the user to log into the same profile at a later time or on another device.
-    
-    <pre>ProfileManager pm = ProfileManager.getInstance();
-   pm.saveProfile(password, new PowaTagCallback&lt;Profile&gt;() {
-     public void onSuccess(Profile savedProfile) {
-       // Profile is no longer temporary
-     }
-     public void onError(PowaTagException exception) {
-     }
-   }</pre>
-
 	The synchronous version of the <code>saveProfile</code> method should not be used in the main thread to avoid performance issues 
 
 	<code>Profile savedProfile = pm.saveProfile(password); </code>

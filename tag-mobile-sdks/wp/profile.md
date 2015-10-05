@@ -10,7 +10,7 @@ After logging in you can retrieve the current user profile using `Profile.Curren
 
 <br />
 
-# Retrieving the Current Profile Information
+# Retrieving the Current User's Profile Information
 
 1. The users current profile, which reflects any successful modifications, can be retrieved using:
 
@@ -20,13 +20,38 @@ After logging in you can retrieve the current user profile using `Profile.Curren
 
     <pre>boolean isTemporary = profile.IsTemporary;</pre>
 
-3. Get the list of address currently added to the profile with:
+3. Get the list of addresses currently added to the profile with:
 
     <pre>List&lt;Address&gt; addresses = profile.Addresses;</pre>
+	
+4. Get the default address with:
 
-4. Get the list of payment methods currently added to the profile with:
+	<pre> Address defaultAddress = profile.DefaultAddress;</pre>
+
+5. Get the list of payment instruments currently added to the profile with:
 
     <pre>List&lt;PaymentInstrument&gt; paymentInstruments = profile.PaymentInstruments;</pre>
+	
+6. Get the default payment instrument with:
+
+    <pre>PaymentInstrument defaultPaymentInstrument = profile.DefaultPaymentInstrument;</pre>
+
+7. Get the device ID associated with the profile with:
+
+	<pre>string deviceId = profile.DeviceId;</pre>
+
+8. Get the profile ID with:
+
+	<pre>string profileId = profile.ProfileId;</pre>
+    
+9. Check if the user profile is active and can be used:
+    
+    <pre>boolean activeProfile = profile.IsActive;</pre>
+
+10. Get a list of any custom data keys attached to the profile:
+    
+    <pre>List&lt;CustomDataValue&gt; customDataValues = profile.CustomDataValues;</pre>
+
 
 <br />
 
@@ -51,9 +76,9 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 2. Add the address to the user profile using the ProfileManager:
 
-    <pre>ProfileManager pm = ProfileManager.Instance;
-   Address addedAddress = await pm.AddAddressAsync(address);
-   // Address was successfully added</pre>
+	<pre>ProfileManager pm = ProfileManager.Instance;
+	Address addedAddress = await pm.AddAddressAsync(address);
+	// Address was successfully added</pre>
 
  3. The new address will also be available in the current profile:
 
@@ -68,7 +93,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     <pre>AddressDetails modifiedAddress = address.EditableCopy();
    modifiedAddress.Alias = "110 Bishopsgate";</pre>
 
-3. Use the ProfileManager to update the address information:
+2. Use the ProfileManager to update the address information:
 
     <pre>ProfileManager pm = ProfileManager.GetInstance();
    Address updatedAddress = pm.UpdateAddressAsync(address, modifiedAddress);
@@ -139,6 +164,26 @@ You can only change the billing address of a payment instrument once created.
 
 <br />
 
+# Getting the Payment Instruments Accepted by a Merchant
+
+To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code> use: 
+    
+	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
+    List&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile..GetAcceptedPaymentMethods(merchant); </pre>
+    
+In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> will be returned.
+
+<br/>
+
+
+# Checking the Profile Against a Merchant's Requirements
+ 
+Before transacting with a merchant you should check if the profile contains all the information required for the merchant.
+		
+	<pre>bool canTransact = profile.HasRequiredInfo(merchant);</pre>
+
+<br/>
+
 # Updating the Profile
 
 1. Create a new ProfileUpdate object and set the profile information:
@@ -165,5 +210,5 @@ You can only change the billing address of a payment instrument once created.
 1. Use the ProfileManager to save the current profile:
 
     <pre>ProfileManager pm = ProfileManager.GetInstance();
-   Profile savedProfile = await pm.SaveProfileAsync();
+   Profile savedProfile = await pm.SaveProfileAsync(string password);
    // Profile is no longer temporary</pre>
