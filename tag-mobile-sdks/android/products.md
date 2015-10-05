@@ -34,10 +34,10 @@ Variants are the individual styles of a product. If you have a product customers
    displayChoices(optionChoices);
    </pre>
 
-2. To choose a specific option call the pickers `choose` method which will update the state of the options in the choices list based on the currently chosen options. The list is updated in-place so there is no need to get the list from the picker again:
+2. To choose a specific option call the pickers `chooseOption` method which will update the state of the options in the choices list based on the currently chosen options. The list is updated in-place so there is no need to get the list from the picker again:
 
-    <pre>picker.choose(option);
-   displayChoices(optionChoices);</pre>
+	<pre>picker.chooseOption(productOption);
+	displayChoices(optionChoices);</pre>
 
 3. You can find out which variants match your currently choices using the `getVariants` method of the picker:
 
@@ -45,16 +45,15 @@ Variants are the individual styles of a product. If you have a product customers
 
 4. Once a desired option has been selected for each choice, the number of variants returned will either be `1` (the desired variant) or `0` (no variants available that match the current selection).
 
-5. If you want to deselect an already chosen option, use the pickers `unchoose` or `clear` methods to remove one or all previously chosen option(s):
+5. If you want to deselect an already chosen option, use the pickers `unchooseOption` or `reset` methods to remove one or all previously chosen option(s):
 
     <pre>// Unchoose a single option
-   picker.unchoose(option);
-   displayChoices(optionChoices);
+	picker.unchooseOption(productOption);
+	displayChoices(optionChoices);
 
    // Unchoose all options
-   picker.clear();
-   displayChoices(optionChoices);
-   </pre>
+	picker.reset();
+	displayChoices(optionChoices);</pre>
 
 <br />
 
