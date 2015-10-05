@@ -106,11 +106,12 @@ Variants are the individual styles of a product. If you have a product customers
 
 1. Currently Chosen Options
 
-If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
+	If you want to know what the currently chosen options are, you can find this out quickly using the `getChosenOptions` method. Like the list of option choices, when changes are made this list is updated in-place:
 
     List<ProductOption> chosenOptions = picker.getChosenOptions();
 	
 2. Product Methods:
+
 	<pre>// Get the ID of the product.
 	String productId = product.getProductId();
 	
@@ -136,7 +137,7 @@ If you want to know what the currently chosen options are, you can find this out
     URI productLink = product.getLink();
 
     // Get the list of categories this product is in.
-    List<String> categories = product.getCategories();
+    List<String> categories = product.getCategories();</pre>
 	
 <br />
 
@@ -150,6 +151,7 @@ If you want to know what the currently chosen options are, you can find this out
      */
     @NonNull
     public List<ProductVariant> getVariants(@NonNull final List<ProductOption> chosenOptions) {
+		
 <br/>		
 
 
