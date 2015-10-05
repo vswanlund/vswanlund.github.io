@@ -21,10 +21,12 @@ Reference docs and sample code
 
 <br />
 
-The 
-<img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="100" />
 
 # In Android SDK
+
+While integrating the PowaTag SDK into your app will be useful to keep the following data flow in mind.
+<img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="120" />
+
 
 **[Login]({{site.baseurl}}/tag-mobile-sdks/android/login/)**<br />
 People can easily sign in to your app.
