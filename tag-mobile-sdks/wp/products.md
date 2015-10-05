@@ -69,43 +69,6 @@ Variants are the individual styles of a product. If you have a product customers
 
 <br />
 
-# Saving and Restoring the Picker State
-
-1. To save the picker state when your Activity is rotated, using the `saveInstanceState` picker method:
-
-	pre>@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		outState.putParcelable("picker", picker.saveInstanceState());
-	}</pre>
-
-2. You can restore the picker state using the `restoreInstanceState` method:
-
-	<pre>@Override
-   public void onCreate(Bundle savedInstanceState) {
-     super.onCreate(savedInstanceState);
-     picker = new ProductVariantPicker(product);
-   }
-   @Override
-   public void onRestoreInstanceState(Bundle savedInstanceState) {
-     super.onRestoreInstanceState(savedInstanceState);
-     picker.restoreInstanceState(savedInstanceState.getParcelable("picker"));
-   }</pre>
-
-3. Or when instantiating your picker if you know the saved state is not null:
-
-    <pre>@Override
-   public void onCreate(Bundle savedInstanceState) {
-     super.onCreate(savedInstanceState);
-     if (savedInstanceState != null) {
-       picker = new ProductVariantPicker(product, savedInstanceState.getParcelable("picker"));
-     } else {
-       picker = new ProductVariantPicker(product);
-     }
-   }</pre>
-
-<br />
-
 # Useful Product Methods
 
 1. The following methods can be used to obtian useful product information:
