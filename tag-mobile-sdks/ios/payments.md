@@ -11,7 +11,7 @@ PowaTag supports payments for a variety of different goods and services. In orde
 
 <br />
 
-# Paying for an Invoice
+# Paying for an Invoice using PaymentDetails
 
 1. Create PaymentDetails with the CVV:
 
