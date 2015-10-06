@@ -6,9 +6,9 @@ permalink: /tag-mobile-sdks/android/acts/
 
 The "Act Now" functionality provides users with a means to respond to a merchant's act campaign. 
 Some examples of Acts:
- <pre><i>"Book a test drive at a car dealership"
- "Request the campaign information pack from a charity"
- "Book a viewing of a painting at a gallery"</i></pre>
+ - <i>"Book a test drive at a car dealership"
+ - "Request the campaign information pack from a charity"
+ - "Book a viewing of a painting at a gallery"</i>
 
 When a merchant sets up an Act campaign they specify what information they require from the user which is the presented through the SDK when they interact with a PowaTag trigger 
 
