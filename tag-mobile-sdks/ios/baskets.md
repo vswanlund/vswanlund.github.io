@@ -117,7 +117,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/ios/payments/) for that invoice.
 
 	
-	<pre>PTKPaymentDetails *paymentDetails = [PTKPaymentDetails paymentDetailsWithCvv:@"123"];
+	PTKPaymentDetails *paymentDetails = [PTKPaymentDetails paymentDetailsWithCvv:@"123"];
 	PTKPaymentManager *paymentManager = [PTKPaymentManager sharedManager];
 	[paymentManager payForInvoice:invoice
 		paymentDetails:paymentDetails
@@ -127,7 +127,7 @@ Once you have created an invoice for a basket you can make a [Payment]({{site.ba
 		} else {
 			// error
 		}
-	}];</pre>
+	}];
 
 <br />
 
