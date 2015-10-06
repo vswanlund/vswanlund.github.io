@@ -36,10 +36,11 @@ PowaTag supports payments for a variety of different goods and services. In orde
 
 # Paying for an Invoice Using an Encrypted CVV
 
-1. Create PaymentDetails with the CVV:
+1. Create EncryptedCVV with the CVV:
 
-	<pre>EncryptedCVV encryptedCvv = new EncryptedCVV("123");
-	EncryptedCVVStorage?????
+	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
+	PaymentInstrument paymentInstrument = profile.getDefaultPaymentInstrument();
+	EncryptedCVV encryptedCvv = EncryptedCvvStorage.getInstance().getCvv(paymentInstrument);
 
 2. Use the PaymentManager to pay for the invoice:
 
@@ -54,7 +55,7 @@ PowaTag supports payments for a variety of different goods and services. In orde
    
 	The <code>PaymentManager</code> also provides a synchronous <code>pay</code> method which should only be used outside of the main thread to avoid performance bottlenecks. 
 	
-	<pre>Payment payment = pm.pay(invoice, paymentDetails);</pre>
+	<pre>Payment payment = pm.pay(invoice, encryptedCvv);</pre>
 
     
 	
