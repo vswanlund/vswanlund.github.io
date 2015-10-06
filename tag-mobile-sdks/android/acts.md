@@ -5,31 +5,13 @@ permalink: /tag-mobile-sdks/android/acts/
 ---
 
 The "Act Now" functionality provides users with a means to respond to a merchant's act campaign.
-<p>Some examples of Acts</p>
- - <i>"Book a test drive at a car dealership"
- - "Request the campaign information pack from a charity"
- - "Book a viewing of a painting at a gallery"</i>
+<p>Some examples of Acts:</p>
+ - Book a test drive at a car dealership.
+ - Request the campaign information pack from a charity.
+ - Book a viewing of a painting at an art gallery.
 
-When a merchant sets up an Act campaign they specify what information they require from the user which is the presented through the SDK when they interact with a PowaTag trigger 
-
-a user interacts with a PowaTag trigger and the resulting workflow is ‘Act now’ the user will be prompted to provide some personal information for a specific call to action. 
-
-An Act can be to book a test drive. For this purpose the user may be required to provide personal details that would include their driving license details.
-Another Act maybe to view a painting and this may only require some contact details.
-Act campaigns are merchant-specific.
-
-Consumer Experience:
-Act Now can be triggered from any PowaTag trigger;
-We present the user with information the merchant has supplied about their company, promotion or campaign.
-The user then sees what information the merchant needs;
-
-If mandatory information is missing, the user will be prompted to fill-in any gaps;
-The user agrees to share the information with the merchant.
-
-Client Integration:
-The merchant must always choose a corresponding workflow to attach to their PowaTag.
-When they choose the 'Act Now' workflow they must specify the data they require.
-We send the information in these data fields to the merchant once the user provides and agrees to share them.
+When a merchant creates an Act campaign they specify the information they require from the user which is then stored as a template on the server. 
+When a user interacts with the PowaTag trigger for the act campaign they are prompted to provide this information which is then sent to the merchant. 
 
 Title
 First and last name
@@ -39,11 +21,6 @@ Default address (Line 1, Line 2, City, County, State, Postcode, Country)*
 custom info
 
 
-W
- Campaign is a particular charity or even a specific cause or event that the user can donate to. Donations can be made on a single-time or on a recurring monthly basis. If the merchant (charity) and consumer are both eligible for a tax-reclaim scheme, such as Gift Aid in the UK, this can be offered through the app.
-
-
- 
    /**
      * The {@code ActManager} for the current application.
      */
