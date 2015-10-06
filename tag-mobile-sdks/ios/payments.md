@@ -22,6 +22,6 @@ PowaTag supports payments for a variety of different goods and services. In orde
     <pre>PTKPaymentManager *pm = [PTKPaymentManager sharedManager];
    [pm payForInvoice:invoice paymentDetails:paymentDetails completion:^(PTKPayment *payment, NSError *error) {
      if (!error) {
-       // Payment contains information such as transaction ID
+       // Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for
      }
    }];</pre>

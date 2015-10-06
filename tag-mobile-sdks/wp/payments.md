@@ -21,4 +21,4 @@ PowaTag supports payments for a variety of different goods and services. In orde
 
     <pre>PaymentManager pm = PaymentManager.GetInstance();
    Payment payment = await pm.PayAsync(invoice, paymentDetails);
-   // Payment contains information such as transaction ID</pre>
+   // Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for</pre>
