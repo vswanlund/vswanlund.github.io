@@ -12,39 +12,48 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Checking if a Basket is a TemporaryBasket or PersistentBasket
+# Creating a Basket
 
-1. Check the `isTemporary` property of the basket:
+1. Create a <code>TemporaryBasket</code>:
 
-    <pre>if (basket.isTemporary) {
-     // Preset basket
-     PTKTemporaryBasket *basket = (PTKTemporaryBasket) basket;
-   } else {
-     // User basket
-     PTKPersistentBasket *basket = (PTKPersistentBasket) basket;
-   }</pre>
-
+	<pre>- (void)myMethod
+	{
+		PTKTemporaryBasket *tempBasket = [PTKTemporaryBasket temporarybasketWithId:@"basketId"
+			items:@[item1, item2 ...]
+			merchant:merchantObject];
+	}</pre>
+	
+2. Creating a <code>PersistentBasket</code>:
+	
+	<pre>- (void)myMethod
+	{
+		PTKPersistentBasket *persistentBasket = [PTKPersistentBasket persistentBasketWithId:@"basketId"
+			profileId:@"profileId"
+			items:@[item1, item2 ...]
+			merchant:merchantObject];
+	}
+ 
 <br />
 
 # Adding a Product Variant to a Basket
 
 1. Add a product variant to the basket for the merchant:
 
-    <pre>PTKProductVariant *variant = [workflow.product.variants firstObject];
-   PTKBasketsManager *bm = [PTKBasketsManager sharedManager];
-   [bm addProductVariantWithMerchant:workflow.merchant productVariant:variant];</pre>
-
+	<pre>PTKProductVariant *variant = [workflow.product.variants firstObject];
+	PTKBasketsManager *bm = [PTKBasketsManager sharedManager];
+	[bm addVariantWithMerchant:workflow.merchant productVariant:variant];</pre>
+   
 <br />
 
 # Removing a Product Variant from a Basket
 
 1. You can remove a single quantity of a variant (this will return true if the quantity of the variant was decreased by 1), if the remaining quantity is 0 the item will be removed from the basket:
 
-    <pre>boolean singleQuantityRemoved = [bm removeVariant:workflow.merchant variant:variant];</pre>
+    <pre>boolean singleQuantityRemoved = [bm removeVariantWithMerchant:workflow.merchant variant:variant];</pre>
 
 2. Or you can remove a specific quantity (in this the amount the quantity was decreased by will be returned):
 
-    <pre>int quantityRemoved = [bm removeVariant:workflow.merchant, variant:variant quantity: 2];</pre>
+    <pre>int quantityRemoved = [bm removeVariantWithMerchant:workflow.merchant, variant:variant quantity: 2];</pre>
 
 <br />
 
@@ -52,11 +61,11 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. Set the quantity of a variant (this will override any existing quantity, if you set the quantity to 0 the basket item for that variant will be removed):
 
-    <pre>[bm setVariantQuantity:workflow.merchant variant:variant quantity:3];</pre>
+    <pre>[bm setVariantQuantityWithMerchant:workflow.merchant variant:variant quantity:3];</pre>
 
 2. You can use this to remove a variant from a basket entirely, regardless of the current quantity by setting the quantity to 0 (causing the basket item for the variant to be removed from the basket):
 
-    <pre>[bm setVariantQuantity:workflow.merchant variant:variant quantity:0];</pre>
+    <pre>[bm setVariantQuantityWithMerchant:workflow.merchant variant:variant quantity:0];</pre>
 
 <br />
 
@@ -64,11 +73,11 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. A basket is made up of multiple line items, one for each unique product variant. An item records the quantity of each variant (the quantity will always be >= 1):
 
-    <pre>for (PTKBasketItem *item in basket.items) {
-      PTKProductVariant *variant = item.variant;
-      int quantity = item.quantity;
-   }</pre>
-
+	<pre>for (PTKBasketItem *item in basket.items) {
+		PTKProductVariant *variant = item.variant;
+		int quantity = item.quantity;
+	}</pre>
+   
 <br />
 
 # Creating an Invoice for a Basket
@@ -77,9 +86,9 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
-    <pre>NSArray *acceptedPaymentInstruments = [[PTKProfile currentProfile] acceptedPaymentInstrumentsForMerchant:merchant];
-   PTKPaymentInstrument *paymentInstrument = acceptedPaymentInstruments[0];</pre>
-
+	<pre>NSArray *acceptedPaymentInstruments = [[PTKProfile currentProfile] acceptedPaymentInstrumentsForMerchant:merchant];
+	PTKPaymentInstrument *paymentInstrument = acceptedPaymentInstruments[0];<pre>
+    
 2. Select an AddressAlias to use for the shipping address from the Profile:
 
     <pre>PTKAddress *shippingAddress = [PTKProfileManager sharedManager].currentProfile.addresses[0];</pre>
@@ -94,26 +103,38 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
 
-    <pre>PTKBasketsManager *bm = [PTKBasketsManager sharedManager];
-   [bm createInvoiceWithBasket:basket paymentInvoiceDetails:paymentInvoiceDetails completion:^(PTKPaymentInvoice *invoice, NSError *error) {
-       if (invoice) {
-           PTKCost *cost = invoice.cost;
-       }
-   }];
-
+	<pre>PTKBasketsManager *bm = [PTKBasketsManager sharedManager];
+	[bm createInvoiceWithBasket:basket paymentInvoiceDetails:paymentInvoiceDetails completion:^(PTKPaymentInvoice *invoice, NSError *error) {
+		if (invoice) {
+			PTKCost *cost = invoice.cost;
+		}
+	}];
+	
 <br />
 
 # Paying for a Payment Invoice
 
 Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/ios/payments/) for that invoice.
 
+	<pre>PTKPaymentDetails *paymentDetails = [PTKPaymentDetails paymentDetailsWithCvv:@"123"];
+	PTKPaymentManager *paymentManager = [PTKPaymentManager sharedManager];
+	[paymentManager payForInvoice:invoice
+		paymentDetails:paymentDetails
+			completion:^(PTKPayment *__nullable payment, NSError *__nullable  error) {
+		if (!error)
+			// success
+		} else {
+			// error
+		}
+	}];</pre>
+
 <br />
 
 # Saving a Basket to the Server
-
+	
 1. To make Basket information available to other devices or between logins you need to update the Basket on the server using the BasketsManager:
 
-    <pre>PTKBasketsManager *bm = [PTKBasketsManager sharedManager];
-   [bm updateBasketWithMerchant:merchant completion:^(PTKBasket *basket, NSError *error) {
-       // Basket is now accessible from other devices
-   }]</pre>
+	<pre>PTKBasketsManager *bm = [PTKBasketsManager sharedManager];
+	[bm updateBasketWithMerchant:merchant completion:^(PTKBasket *basket, NSError *error) {
+		// Basket is now accessible from other devices
+	}];</pre>
