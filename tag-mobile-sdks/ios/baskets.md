@@ -87,7 +87,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
 	<pre>NSArray *acceptedPaymentInstruments = [[PTKProfile currentProfile] acceptedPaymentInstrumentsForMerchant:merchant];
-	PTKPaymentInstrument *paymentInstrument = acceptedPaymentInstruments[0];<pre>
+	PTKPaymentInstrument *paymentInstrument = acceptedPaymentInstruments[0];</pre>
     
 2. Select an AddressAlias to use for the shipping address from the Profile:
 
@@ -98,8 +98,8 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
     <pre>PTKShippingOption *shippingOption = basket.merchant.shippingOptions[0];</pre>
 
 4. Create payment invoice details object with all necessary data:
-
-<pre>PTKPaymentInvoiceDetails *paymentInvoiceDetails = [PTKPaymentInvoiceDetails aymentInvoiceDetailsWithPaymentInstrument:paymentInstrument shippingAddress:shippingAddress shippingOption:shippingOption]</pre>
+	<pre>PTKPaymentInvoiceDetails *paymentInvoiceDetails = [PTKPaymentInvoiceDetails
+	paymentInvoiceDetailsWithPaymentInstrument:paymentInstrument shippingAddress:shippingAddress shippingOption:shippingOption]</pre>
 
 5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
 
@@ -108,7 +108,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 		if (invoice) {
 			PTKCost *cost = invoice.cost;
 		}
-	}];
+	}];</pre>
 	
 <br />
 
