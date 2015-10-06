@@ -4,7 +4,7 @@ title: Acts on Android
 permalink: /tag-mobile-sdks/android/acts/
 ---
 
-The "Act Now" functionality provides users with a means to respond to a merchant's act campaign. 
+The "Act Now" functionality provides users with a means to respond to a merchant's act campaign.
 Some examples of Acts:
  - <i>"Book a test drive at a car dealership"
  - "Request the campaign information pack from a charity"
