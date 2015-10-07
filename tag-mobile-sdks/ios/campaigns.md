@@ -16,9 +16,9 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
-    <pre>List<PaymentMethodAlias> acceptedPaymentInstruments = ProfileManager.getInstance().getCurrentProfile().getAcceptedPaymentInstruments(merchant);
-   PaymentInstrument paymentInstrument = acceptedPaymentInstruments.get(0);</pre>
-
+	<pre>NSArray *acceptedPaymentInstruments = [[ProfileManager sharedManager].currentProfile acceptedPaymentInstrumentsForMerchant(merchant)];
+	PTKPaymentInstrument *paymentInstrument = acceptedPaymentInstruments.firstObject;</pre>
+   
 2. Create donation invoice details object with all necessary data:
 
 	<pre>PTKDonationInvoiceDetails *donationInvoiceDetails = [PTKDonationInvoiceDetails donationInvoiceDetailsWithAmount:amount isRepeated:isRepeated paymentInstrument:paymentInstrument giftAidAddress:giftAidAddress];</pre>
