@@ -166,10 +166,10 @@ You can only change the billing address of a payment instrument once created.
 
 # Getting the Payment Instruments Accepted by a Merchant
 
-To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code> use: 
+1. To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code> use: 
     
 	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
-    List&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile..GetAcceptedPaymentMethods(merchant); </pre>
+    List&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile.GetAcceptedPaymentMethods(merchant); </pre>
     
 In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> will be returned.
 
@@ -178,7 +178,7 @@ In the case where the profile does not contain any accepted payment instruments 
 
 # Checking the Profile Against a Merchant's Requirements
  
-Before transacting with a merchant you should check if the profile contains all the information required for the merchant.
+1. Before transacting with a merchant you should check if the profile contains all the information required for the merchant.
 		
 	<pre>bool canTransact = profile.HasRequiredInfo(merchant);</pre>
 

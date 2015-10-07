@@ -20,9 +20,8 @@ WIP
 
 Obtain the act from the workflow and 
  
- 
-	<pre>void initializeView(@NonNull final Act act) {
-        ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+ 	<pre>Act act = workflow.getAct();
+	void initializeView(Act act) {
         LinearLayout actInformationContainer = (LinearLayout) findViewById(R.id.layout_act_information_container);
         for (ActDataKey actDataKey : act.getActDataKeys()) {
             ActField<?> actField = fieldGenerators.get(actDataKey.getType()).generate(actDataKey);
