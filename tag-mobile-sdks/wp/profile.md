@@ -22,7 +22,7 @@ After logging in you can retrieve the current user profile using `Profile.Curren
 
 3. Get the list of addresses currently added to the profile with:
 
-    <pre>List&lt;Address&gt; addresses = profile.Addresses;</pre>
+    <pre>IReadonlyCollection&lt;Address&gt; addresses = profile.Addresses;</pre>
 	
 4. Get the default address with:
 
@@ -30,7 +30,7 @@ After logging in you can retrieve the current user profile using `Profile.Curren
 
 5. Get the list of payment instruments currently added to the profile with:
 
-    <pre>List&lt;PaymentInstrument&gt; paymentInstruments = profile.PaymentInstruments;</pre>
+    <pre>IReadonlyCollection&lt;PaymentInstrument&gt; paymentInstruments = profile.PaymentInstruments;</pre>
 	
 6. Get the default payment instrument with:
 
@@ -61,18 +61,15 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 1. Create a new Address object and set the address information:
 
-    <pre>Address address = new Address();
-   address.Alias = "Powa";
-   address.FirstName = "Dan";
-   address.LastName = "Wagner";
-   address.Line1 = "110 Bishopsgate";
-   address.City = "London";
-   address.PostCode = "EC2N 4AY";
-   address.County = "London";
-   Country country = new Country();
-   country.Alpha2Code = "GB";
-   country.Name = "United Kingdom";
-   address.Country = country;</pre>
+	<pre>Address address = new Address();
+	address.Alias = "Powa";
+	address.FirstName = "Dan";
+	address.LastName = "Wagner";
+	address.Line1 = "110 Bishopsgate";
+	address.City = "London";
+	address.PostCode = "EC2N 4AY";
+	address.County = "London";
+	address.Country = Country.UnitedKingdom;</pre>
 
 2. Add the address to the user profile using the ProfileManager:
 
@@ -82,7 +79,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
  3. The new address will also be available in the current profile:
 
-    <pre>List&lt;Address&gt; addresses = ProfileManager.GetInstance().GetCurrentProfile().Addresses;</pre>
+    <pre>IReadonlyCollection&lt;Address&gt; addresses = ProfileManager.GetInstance().GetCurrentProfile().Addresses;</pre>
 
 <br />
 
@@ -138,7 +135,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
  4. The new payment instrument will also be available in the current profile:
 
-    <pre>List&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.GetInstance().GetCurrentProfile().PaymentInstruments;</pre>
+    <pre>IReadonlyCollection&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.GetInstance().GetCurrentProfile().PaymentInstruments;</pre>
 
 <br />
 
@@ -169,9 +166,9 @@ You can only change the billing address of a payment instrument once created.
 1. To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code> use:
 	
 	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
-	List&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile.GetAcceptedPaymentMethods(merchant); </pre>
+	IReadOnlyList&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile.GetAcceptedPaymentMethods(merchant); </pre>
     
-In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> will be returned.
+In the case where the profile does not contain any accepted payment instruments an empty <code>IReadOnlyList</code> will be returned.
 
 <br/>
 
