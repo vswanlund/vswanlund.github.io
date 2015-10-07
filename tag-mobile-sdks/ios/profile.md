@@ -36,20 +36,19 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 1. Create a new Address object and set the address information:
 
-    <pre>PTKAddressDetails *address = [PTKAddressDetails addressDetails];
-   address.alias = @"Powa";
-   address.firstName = @"Dan";
-   address.lastName = @"Wagner";
-   address.line1 = @"110 Bishopsgate";
-   address.city = @"London";
-   address.postCode = @"EC2N 4AY";
-   address.county = @"London";
-   address.country = PTKCountryUnitedKingdom;</pre>
+    <pre>PTKAddressDetails *address = [PTKAddressDetails addressDetailsWithAlias:@"Powa";
+	firstName:@"Dan";
+	lastName:@"Wagner";
+	line1:@"110 Bishopsgate";
+	city:@"London";
+	postCode:@"EC2N 4AY";
+	county:@"London";
+	country:PTKCountryUnitedKingdom];</pre>
 
 2. Add the address to the user profile using the PTKProfileManager:
 
-    <pre>PTKProfileManager *pm = [PTKProfileManager sharedManager];
-   [pm addAddress:address completion:^(PTKAddress *addedAddress, NSError *error) {
+    <pre>PTKProfileManager *profileManager = [PTKProfileManager sharedManager];
+   [profileManager addAddress:address completion:^(PTKAddress *addedAddress, NSError *error) {
      if (addedAddress) {
        // Address was successfully added
      }
@@ -104,11 +103,10 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 2. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
 
-    <pre>[PTKPaymentInstrumentDetails *paymentInstrument = [PTKPaymentInstrumentDetails paymentInstrumentDetails];
-   paymentInstrument.issuer = PTKCreditCardIssuerVisa;
-   paymentInstrument.paymentMethod = paymentMethod;
-   paymentInstrument.paymentType = PTKPaymentMethodTypeCard;
-   paymentInstrument.billingAddressId = addressId;</pre>
+	<pre>[PTKPaymentInstrumentDetails *paymentInstrument = [PTKPaymentInstrumentDetails paymentInstrumentDetailsWithPaymentType:PTKCreditCardIssuerVisa
+	paymentMethod:paymentMethod
+	paymentType:PTKPaymentMethodTypeCard
+	billingAddressId:addressId];</pre>
 
 3. Add the payment instrument to the user profile using the PTKProfileManager:
 
@@ -157,12 +155,14 @@ You can only change the billing address of a payment instrument once created.
 
 1. Create a new ProfileDetails object and set the profile information:
 
-    <pre>PTKProfileDetails *profile = [PTKProfileDetails profileDetails];
-   profile.title = @"CEO";
-   profile.firstName = @"Dan";
-   profile.lastName = @"Wagner";
-   profile.email = @"support@powa.com";
-   profile.mobileNumber = @"01234567890";</pre>
+	<pre>PTKProfileDetails *profile = [PTKProfileDetails profileDetailsWithTitle:@"CEO"
+	firstName:@"Dan"
+	lastName:@"Wagner"
+	email:@"support@powa.com"
+	mobileNumber:@"01234567890"
+	defaultAddress:defaultAddress
+	defaultPaymentInstrument:paymentInstrument
+	customDataValues:@[customDataValue, customDataValue2]];</pre>
 
 2. Use the PTKProfileManager to update the current profile:
 
@@ -181,9 +181,11 @@ You can only change the billing address of a payment instrument once created.
 
 1. Use the PTKProfileManager to save the current profile:
 
-    <pre>PTKProfileManager *pm = [PTKProfileManager sharedManager];
-   [pm saveProfileWithCompletion:^(PTKProfile *savedProfile, NSError *error) {
-     if (savedProfile) {
-       // Profile is no longer temporary
-     }
-   }];</pre>
+	<pre>PTKProfileManager *pm = [PTKProfileManager sharedManager];
+	[pm saveProfileWithPassword:@"password"
+	completion:^(PTKProfile *savedProfile, NSError *error) {
+		if (savedProfile) {
+			// Profile is no longer temporary
+		}
+	}];</pre>
+    
