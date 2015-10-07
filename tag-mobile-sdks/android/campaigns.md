@@ -25,14 +25,14 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 3. Use the CampaignManager to create an invoice for the correct amount:
 
-    <pre>CampaignManager cm = CampaignManager.getInstance();
-   cm.createInvoice(campaign, donationInvoiceDetails, new PowaTagCallback&lt;DonationInvoice&gt;() {
-     public void onSuccess(DonationInvoice invoice) {
-       Money amountToBeDonated = invoice.getAmount();
-     }
-     public void onError(PowaTagException exception) {
-     }
-   });</pre>
+	<pre>CampaignManager cm = CampaignManager.getInstance();
+	cm.createInvoice(campaign, donationInvoiceDetails, new PowaTagCallback&lt;DonationInvoice&gt;() {
+		public void onSuccess(DonationInvoice invoice) {
+			Money amountToBeDonated = invoice.getAmount();
+		}
+		public void onError(PowaTagException exception) {
+		}
+	});</pre>
 
 <br />
 

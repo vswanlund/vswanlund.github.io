@@ -21,14 +21,15 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
     PaymentInstrument paymentInstrument = acceptedPaymentInstruments[0];
     </pre>
 
-2. Use the CampaignManager to create an invoice for the correct amount, you can also specify if the donation repeats every month:
+2. Create an DonationInvoiceDetails to provide correct amount, payment instrument, gift aid address for crating an donation invoice. You can also specify if the donation repeats every month.
 
-    <pre>
-    CampaignManager cm = CampaignManager.GetInstance();
-    DonationInvoiceDetails donationInvoiceDetails = new DonationInvoiceDetails(amount, false, paymentInstrument, null);
-    DonationInvoice invoice = cm.CreateInvoiceAsync(campaign, donationInvoiceDetails);
-    Money amountToBeDonated = invoice.Amount;
-    </pre>
+	<pre>DonationInvoiceDetails donationInvoiceDetails = new DonationInvoiceDetails(amount, repeated, paymentInstrument, giftAidAddress);</pre>
+
+3. Use the CampaignManager to create an invoice for the correct amount, you can also specify if the donation repeats every month:
+
+	<pre>CampaignManager cm = CampaignManager.GetInstance();
+	DonationInvoice invoice = cm.CreateInvoiceAsync(campaign, donationInvoiceDetails);
+	Money amountToBeDonated = invoice.Amount;</pre>
 
 <br />
 
