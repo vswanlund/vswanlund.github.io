@@ -25,6 +25,7 @@ If an address field is not listed in the format for a country it should not be s
 |`[County]`||
 |`PostCode`||
 
+<br/>
 
 # Denmark Address Format
 
@@ -32,4 +33,3 @@ If an address field is not listed in the format for a country it should not be s
 |`Line1`|StreetName, HouseNumber|
 |`PostCode` `City`||
 |`Country`||
-
