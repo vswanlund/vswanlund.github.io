@@ -13,13 +13,15 @@ The "Act Now" functionality provides users with a means to respond to a merchant
 When a merchant creates an Act campaign they specify the information they require from the user which is then stored as a template on the server. 
 When a user interacts with the PowaTag trigger for the act campaign they need to be prompted to provide this information which is then sent to the merchant. 
 
-# Retrieving the Act
+<br/>
 
-1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/android/workflows) for more details)
+# Retrieving the Act Data Keys
+
+1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/android/workflows) for more details):
 
 	<pre>Act act = workflow.getAct();</pre>
 	
-2. Get the act data keys 
+2. Get the act data keys:
 	
 	The data needed to display the custom field to the user is stored in <code>ActDataKey</code> 
 
@@ -42,12 +44,21 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 <br/>
 	
-# Add values to the ActTransactionDetails
-once all data has been obetained from the user and valided then its time to submit the act using the ActManager
+# Adding an Act Data Value
+
+1. Create a <code>ActTransactionDetails</code>:
+
+	<pre>ActTransactionDetails actTransactionDetails = new ActTransactionDetails();</pre>
+
+2. Add the values supplied by the user for each <code>ActDataKey</code>:
+
+	Each
 	
-	TO do this you need to create an actTransactionDetails object
-	ActTransactionDetails actTransactionDetails = new ActTransactionDetails();
+	<pre>// Add the user's value as a string
+	actTransactionDetails.addActDataValue(actDataKey, userValueString)
 	
+<br/>	
+		
 # Submit the Act Transaction Details
 
 	once all data has been obetained from the user and valided then its time to submit the act using the ActManager
