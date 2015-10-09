@@ -8,38 +8,19 @@ Change log and release notes for the PowaTag SDK for Windows Phone.
 
 <br />
 
-# 0.9.5 - Sep 28th, 2015
+# 0.9.5 - Sep 21st, 2015
 
 **Added**
         
-        Bug
-[<a href='https://jira.powa.com/jira/browse/PTK-4526'>PTK-4526</a>] -         [WP] Fix act end2end integration tests
+* Act Workflow.
+* Model validators.
+* Payment method validators
+* Added Address Layout for Denmark.
+		
+**Modified**
 
-                                                            
-
-Story
-[<a href='https://jira.powa.com/jira/browse/PTK-3409'>PTK-3409</a>] -         Act Workflow
-[<a href='https://jira.powa.com/jira/browse/PTK-3410'>PTK-3410</a>] -         Act Send Information
-[<a href='https://jira.powa.com/jira/browse/PTK-3411'>PTK-3411</a>] -         Sample Display Act Tag
-[<a href='https://jira.powa.com/jira/browse/PTK-3552'>PTK-3552</a>] -         ProductVariantPicker Enhancements
-[<a href='https://jira.powa.com/jira/browse/PTK-3672'>PTK-3672</a>] -         Sample Act Send Information
-[<a href='https://jira.powa.com/jira/browse/PTK-3676'>PTK-3676</a>] -         Act End2End Test
-[<a href='https://jira.powa.com/jira/browse/PTK-4353'>PTK-4353</a>] -         Add model validators
-[<a href='https://jira.powa.com/jira/browse/PTK-4385'>PTK-4385</a>] -         Add payment method validators
-
-    
-Task
-
-
-[<a href='https://jira.powa.com/jira/browse/PTK-4378'>PTK-4378</a>] -         API Key Nonce
-[<a href='https://jira.powa.com/jira/browse/PTK-4379'>PTK-4379</a>] -         Remove getSdkApiVersion from PowaTagKit
-[<a href='https://jira.powa.com/jira/browse/PTK-4459'>PTK-4459</a>] -         Model vs JSON tracking improvement
-[<a href='https://jira.powa.com/jira/browse/PTK-4495'>PTK-4495</a>] -         Model vs JSON tracking exception message improvement
-[<a href='https://jira.powa.com/jira/browse/PTK-4497'>PTK-4497</a>] -         Model vs JSON improvement - tracking changed key name in JSON response
-                                               
-Sub-Task
-[<a href='https://jira.powa.com/jira/browse/PTK-4471'>PTK-4471</a>] -         [iOS] Address Layout for Country Denmark
-        
+* ProductVariantPicker maintains a list of restricting options for each choosable option.
+* Removed getSdkApiVersion method from PowaTagkit.                                                         
 
 <br />
 

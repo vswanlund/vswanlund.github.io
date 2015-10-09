@@ -8,6 +8,22 @@ Change log and release notes for the PowaTag SDK for Android.
 
 <br />
 
+# 0.9.5 - Sep 21st, 2015
+
+**Added**
+
+* Act Workflow.
+* Model validators.
+* Payment method validators
+* Added Address Layout for Denmark.
+
+**Modified**
+
+* ProductVariantPicker maintains a list of restricting options for each choosable option.
+* Removed getSdkApiVersion method from PowaTagkit.
+
+<br />
+
 # 0.9.0 - Sep 7th, 2015
 
 **Added**
