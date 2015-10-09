@@ -12,20 +12,6 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# obtaining a 
-    /**
-     * @return The baskets for the current user if logged in.
-     */
-    @NonNull
-    public Baskets getCurrentBaskets() {
-        Baskets baskets = BasketsCacheManager.getInstance().getCurrentBaskets();
-        if (baskets == null) {
-            throw new PowaTagAuthorizationException(CURRENT_BASKETS_NULL_MESSAGE);
-        }
-        return baskets;
-    }
-
-
 # Checking if a Basket is a TemporaryBasket or PersistentBasket
 
 1. Check the `isTemporary` property of the basket:
@@ -39,6 +25,18 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
    }</pre>
 
 <br />
+
+# Obtaining the Baskets for a User
+    
+1. Get the list of baskets for the current user:
+
+	<pre>Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();</pre>
+	
+2. Get the user's basket for a specific merchant:
+
+	<pre>PersistentBasket basket = baskets.getBasket(merchant);</pre>
+	
+<br/>
 
 # Adding a Product Variant to a Basket
 
