@@ -52,54 +52,60 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 2. Add the values supplied by the user for each <code>ActDataKey</code>:
 
-	Each
+	Values must be added for each mandatory act data key.
 	
 	<pre>// Add the user's value as a string
 	actTransactionDetails.addActDataValue(actDataKey, userValueString)
 	
 <br/>	
+
+# Removing an Act Data Value
+
+1. To remove a stored user value:
+	
+	<pre>boolean valueRemoved = actTransactionDetails.removeActDataValue(actDatakey);</pre>	
+	
+<br/>
+
+# Removing All Act Data Values
+
+1. To clear <code>ActTransActionDetails</code> of all act data values:
+	
+	<pre>actTransactionDetails.clearActDataValues();</pre>	
+	
+<br/>
+
+# Obtaining all Act Data Values
+
+1. To obtain all act data values added to <code>ActTransActionDetails</code>:
+	
+	<pre>Map<String, String> actDataValues = actTransactionDetails.getActDataValues();</pre>	
+	
+<br/>
 		
 # Submit the Act Transaction Details
 
-	once all data has been obetained from the user and valided then its time to submit the act using the ActManager
+1. Submit the act transaction details using the <code>ActManager</code>:
 	
-	TO do this you need to create an actTransactionDetails object
-	ActTransactionDetails actTransactionDetails = new ActTransactionDetails();
+	<pre>ActManager actManager = ActManager.getinstance();
+	// submit the transaction and keep the transaction ID stored in actTransaction
+	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());
 	
+
+<br/>
+
+# Useful Act Methods
+
+1. The following methods can be used to obtian useful act information:
+
+	<pre>// Get the ID of the act.
+	String actId = act.getActId();
 	
-	actmangaer actManger = Actmanager.getinstance();
-	actManger.submitTransaction(act)
-    /** Act on an act campaign, submitting the required information in the transaction details.
-     * @param act The act campaign.
-     * @param actTransactionDetails The act transaction details containing the default values to be submitted for the act campaign.     */
-    public void submitTransaction(@NonNull final Act act, @NonNull final ActTransactionDetails actTransactionDetails, @NonNull final PowaTagCallback<ActTransaction> callback) {}
-
-    /**Act on an act campaign, submitting the required information in the transaction details.
-     * This method is blocking, do not use from the main thread.
-     *
-     * @param act The act campaign.
-     * @param actTransactionDetails The act transaction details containing the default values to be submitted for the act campaign.     */
-    public ActTransaction submitTransaction(@NonNull final Act act, @NonNull final ActTransactionDetails actTransactionDetails)
-            throws PowaTagException { }
-
-
-    /**Creates a new {@code Act} instance.     *
-     * @param actId The act ID.
-     * @param name The name of the act.
-     * @param merchant The act merchant.
-     * @param actDataKeys List of act data keys.     */
-    public Act(@NonNull final String actId, @NonNull final String name, @NonNull final Merchant merchant, @NonNull final List<ActDataKey> actDataKeys) {    }
-
-    /**     * @return The act ID.     */
-    public String getActId() {    }
-
-    /**     * @return The name of the act.     */
-    public String getName() {   }
-
-    /**     * @return The merchant running the act.     */
-    public Merchant getMerchant() {    }
-
-    /**     * @return List of act data keys.     */
-    public List<ActDataKey> getActDataKeys() {  }
-			
+	// Get the name of the act.
+	String actName = act.getName();
  
+	// Get the merchant running the act.
+	Merchant merchant = act.getMerchant();
+    
+    // Get the List of act data keys.
+	List<ActDataKey> actDataKeys = act.getActDataKeys();
