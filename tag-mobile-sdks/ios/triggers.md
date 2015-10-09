@@ -33,12 +33,12 @@ A number of triggers are currently supported:
     
 	- (void)onVolumeChanged:(double)volume 
 	{
-		// Handle volue change (display)
+		// Handle volume change (display)
 	}
     
     - (void)onDetectorStopped:(NSError *)error 
 	{
-		// Hanle error if pressent
+		// Handle error if present
 	}</pre>
 
 2. Call startDetection and stopDetection when required:
