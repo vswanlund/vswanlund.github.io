@@ -162,7 +162,7 @@ A number of triggers are currently supported:
 		if (tagDetector) {
 			[self processTag:tagDetector.labelTag];
 		} else {
-			// No/invalid tag  error.
+			// invalid tag  error.
 		}
 	}</pre>
     
