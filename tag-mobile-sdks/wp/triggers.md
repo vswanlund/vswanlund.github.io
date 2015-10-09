@@ -89,16 +89,16 @@ A number of triggers are currently supported:
 4. Call StartDetection and StopDetection according to your App lifecycle, for example when navigation happens:
 
     <pre>protected override async void OnNavigatedTo(NavigationEventArgs e) {
-       await audioTagDetector.StartDetection();
+       await barcodeTagDetector.StartDetectionAsync();
    }
 
    protected override void OnNavigatedFrom(NavigationEventArgs e) {
-       audioTagDetector.StopDetection();
+       barcodeTagDetector.StopDetection();
    }</pre>
    
 5. To check if the audio tag detector is actively listening for tags use:
 
-	<code>tagDetector.IsDetecting();</code>
+	<code>barcodeTagDetector.IsDetecting();</code>
 
 <br />
 
