@@ -55,7 +55,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 	Values must be added for each mandatory act data key.
 	
 	<pre>// Add the user's value as a string
-	actTransactionDetails.addActDataValue(actDataKey, userValueString)
+	actTransactionDetails.addActDataValue(actDataKey, userValueString);</pre>
 	
 <br/>	
 
@@ -89,7 +89,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 	
 	<pre>ActManager actManager = ActManager.getinstance();
 	// submit the transaction and keep the transaction ID stored in actTransaction
-	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());
+	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());</pre>
 	
 
 <br/>
@@ -108,4 +108,4 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 	Merchant merchant = act.getMerchant();
     
     // Get the List of act data keys.
-	List<ActDataKey> actDataKeys = act.getActDataKeys();
+	List<ActDataKey> actDataKeys = act.getActDataKeys();</pre>
