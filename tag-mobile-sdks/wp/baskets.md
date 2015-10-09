@@ -16,7 +16,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. Check the `isTemporary` property of the basket:
 
-    <pre>if (basket.isTemporary()) {
+    <pre>if (basket.IsTemporary) {
      // Preset basket
      TemporaryBasket basket = (TemporaryBasket) basket;
    } else {
