@@ -79,9 +79,6 @@ During development you need to use a non-production endpoint and for this a seco
 	
 <br/>	
 
-        
-BART to provide code snippet for using builder to initialise
-==================================
 
 # Importing The Sample App
 
@@ -91,7 +88,7 @@ You can experiment with the SDK features by importing the app into an Android St
 
 1. Go to Android Studio \| New \| Import Project
 
-2. Navigate to the folder where you unpacked the SDK, open the samples folder, and choose the sample project you want to import. In this example, we choose the barcode-sample project. Click OK to open it.
+2. Navigate to the folder where you unpacked the SDK, open the samples folder, and choose the hellopowatag-sample project to import. Click OK to open it.
 
     <img src="{{ '/images/powatag_mobile_sdks_android_start_import.png' | prepend: site.baseurl }}" height="400" />
 

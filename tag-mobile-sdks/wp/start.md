@@ -54,7 +54,7 @@ The **HelloPowaTagSample** app is included with the SDK to provide you with exam
 
 You can experiment with the SDK features by importing the app into into Visual Studio.
 
-The samples have a project dependency rather than a central repository dependency via NuGet. This is so that when a local copy of the SDK gets updates, the samples reflect the changes.
+The sample has a project dependency rather than a central repository dependency via NuGet. This is so that when a local copy of the SDK gets updates, the samples reflect the changes.
 
 <br />
 

@@ -75,7 +75,7 @@ You can experiment with the SDK features by importing the app into Xcode.
 
 1. Go to Xcode \| File \| Open
 
-2. Navigate to the folder where you unpacked the SDK, open the Samples folder, and choose the sample project you want to import. In this example, we choose the BarcodeSample project. Click OK to open it.
+2. Navigate to the folder where you unpacked the SDK, open the Samples folder, and choose the HelloPowaTagSample project. Click OK to open it.
 
 3. Build the sample project.
 

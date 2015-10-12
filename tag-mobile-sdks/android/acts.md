@@ -52,7 +52,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 2. Add the values supplied by the user for each <code>ActDataKey</code>:
 
-	Values must be added for each mandatory act data key.
+	Values must be added for at least each mandatory act data key.
 	
 	<pre>// Add the user's value as a string
 	actTransactionDetails.addActDataValue(actDataKey, userValueString);</pre>
@@ -69,13 +69,13 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 # Removing All Act Data Values
 
-1. To clear <code>ActTransActionDetails</code> of all act data values:
+1. To clear <code>ActTransactionDetails</code> of all act data values:
 	
 	<pre>actTransactionDetails.clearActDataValues();</pre>	
 	
 <br/>
 
-# Obtaining all Act Data Values
+# Obtaining All Act Data Values
 
 1. To obtain all act data values added to <code>ActTransActionDetails</code>:
 	
