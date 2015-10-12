@@ -17,7 +17,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 # Retrieving the Act Data Keys
 
-1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/android/workflows) for more details):
+1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/ios/workflows) for more details):
 
 	<pre>Act act = workflow.getAct();</pre>
 	

@@ -79,7 +79,7 @@ You can experiment with the SDK features by importing the app into Xcode.
 
 3. Build the sample project.
 
-The samples have a project dependency rather than a central repository dependency via CocoaPods. This is so that when a local copy of the SDK gets updates, the samples reflect the changes.
+The sample has a project dependency rather than a central repository dependency via CocoaPods. This is so that when a local copy of the SDK gets updates, the samples reflect the changes.
 
 <br />
 
