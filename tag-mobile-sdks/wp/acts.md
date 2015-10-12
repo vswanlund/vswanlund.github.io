@@ -17,29 +17,30 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 # Retrieving the Act Data Keys
 
-1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/android/workflows) for more details):
+1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/wp/workflows) for more details):
 
-	<pre>Act act = workflow.getAct();</pre>
+	<pre>Act act = workflow.Act;</pre>
 	
 2. Get the act data keys:
 	
 	The data needed to display the custom field to the user is stored in <code>ActDataKey</code> 
 
-	<pre>for (ActDataKey actDataKey : act.getActDataKeys()) {
-		// Retrieve the key identifier for this custom value
-		String key = actDataKey.getKey();
-		
-		// Retrieve the display name of the custom value
-		String name = actDataKey.getName();
-		
-		// Retrieve the data type the must be returned to the SDK. valid types are String, Timestamp, Email,Flag
-		ActDataType actDataType = actDataKey.getType();
-		
-		// Retrieve the optional predefined value to display to the user
-		String value = actDataKey.getPredefinedValue();
-		
-		// Retrieve the flag indicating if this is an optional field
-		boolean optional = actDataKey.isOptional();
+	<pre>foreach (ActDataKey actDataKey in act.ActDataKeys)
+	{
+		// Retrieve the key identifier for this custom value.
+		string key = actDataKey.Key;
+
+		// Retrieve the display name of the custom value.
+		string name = actDataKey.Name;
+
+		// Retrieve the data type that must be returned to the SDK. Valid types are String, Timestamp, Email and Flag.
+		ActDataType actDataType = actDataKey.Type;
+
+		// Retrieve the optional predefined value to display to the user.
+		string value = actDataKey.PredefinedValue;
+ 
+		// Retrieve the flag indicating if this is an optional field.
+		bool optional = actDataKey.IsOptional;
 	}</pre>
 
 <br/>
@@ -55,7 +56,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 	Values must be added for at least each mandatory act data key.
 	
 	<pre>// Add the user's value as a string
-	actTransactionDetails.addActDataValue(actDataKey, userValueString);</pre>
+	 actTransactionDetails.AddActDataValue(actDataKey, userValueString);</pre>
 	
 <br/>	
 
@@ -63,7 +64,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. To remove a stored user value:
 	
-	<pre>boolean valueRemoved = actTransactionDetails.removeActDataValue(actDatakey);</pre>	
+	<pre> bool valueRemoved = actTransactionDetails.RemoveActDataValue(actDatakey);</pre>	
 	
 <br/>
 
@@ -71,7 +72,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. To clear <code>ActTransactionDetails</code> of all act data values:
 	
-	<pre>actTransactionDetails.clearActDataValues();</pre>	
+	<pre>actTransactionDetails.ClearActDataValues();</pre>	
 	
 <br/>
 
@@ -79,7 +80,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. To obtain all act data values added to <code>ActTransActionDetails</code>:
 	
-	<pre>Map<String, String> actDataValues = actTransactionDetails.getActDataValues();</pre>	
+	<pre>IReadOnlyDictionary<string, string> actDataValues = actTransactionDetails.ActDataValues;</pre>	
 	
 <br/>
 		
@@ -87,11 +88,10 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. Submit the act transaction details using the <code>ActManager</code>:
 	
-	<pre>ActManager actManager = ActManager.getinstance();
-	// submit the transaction and keep the transaction ID stored in actTransaction
-	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());</pre>
+	<pre>ActManager actManager = ActManager.GetInstance();
+	// submit the transaction and keep the transaction ID stored in actTransaction.
+	ActTransaction actTransaction = await actManager.SubmitTransactionAsync(act, actTransactionDetails);</pre>
 	
-
 <br/>
 
 # Useful Act Methods
@@ -99,13 +99,13 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 1. The following methods can be used to obtian useful act information:
 
 	<pre>// Get the ID of the act.
-	String actId = act.getActId();
+	String actId = act.ActId;
 	
 	// Get the name of the act.
-	String actName = act.getName();
+	String actName = act.Name;
  
 	// Get the merchant running the act.
-	Merchant merchant = act.getMerchant();
+	Merchant merchant = act.Merchant;
     
     // Get the List of act data keys.
-	List<ActDataKey> actDataKeys = act.getActDataKeys();</pre>
+	List<ActDataKey> actDataKeys = act.ActDataKeys;</pre>
