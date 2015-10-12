@@ -96,7 +96,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 # Useful Act Properties
 
-1. The following methods can be used to obtian useful act information:
+1. The following properties can be used to obtain useful act information:
 
 	<pre>// Get the ID of the act.
 	String actId = act.ActId;
