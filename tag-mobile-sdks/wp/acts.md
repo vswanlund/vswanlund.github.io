@@ -94,7 +94,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 	
 <br/>
 
-# Useful Act Methods
+# Useful Act Properties
 
 1. The following methods can be used to obtian useful act information:
 
