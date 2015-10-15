@@ -98,6 +98,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	This validator uses property validators to validate each property of <code>AddressDetails</code>:
 
 	The property validators used:
+	
 * <code>AliasValidator</code>: for checking the alias.
 	* <code>NameValidator</code: for checking the first name, last name and county.
 	* <code>UkPostcodeValidator</code>: for checking the post code.
