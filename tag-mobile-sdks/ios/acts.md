@@ -19,43 +19,43 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/ios/workflows) for more details):
 
-	<pre>Act act = workflow.getAct();</pre>
+	<pre>PTKAct *act = workflow.act;</pre>
 	
 2. Get the act data keys:
 	
-	The data needed to display the custom field to the user is stored in <code>ActDataKey</code> 
+	The data needed to display the custom field to the user is stored in <code>PTKActDataKey</code> 
 
-	<pre>for (ActDataKey actDataKey : act.getActDataKeys()) {
-		// Retrieve the key identifier for this custom value
-		String key = actDataKey.getKey();
-		
-		// Retrieve the display name of the custom value
-		String name = actDataKey.getName();
-		
-		// Retrieve the data type the must be returned to the SDK. valid types are String, Timestamp, Email,Flag
-		ActDataType actDataType = actDataKey.getType();
-		
-		// Retrieve the optional predefined value to display to the user
-		String value = actDataKey.getPredefinedValue();
-		
-		// Retrieve the flag indicating if this is an optional field
-		boolean optional = actDataKey.isOptional();
-	}</pre>
+	<pre>for (PTKActDataKey actDataKey : act.actDataKeys) {
+	// Retrieve the key identifier for this custom value
+	NSString *key = actDataKey.key;
+	
+	// Retrieve the display name of the custom value
+	NSString *name = actDataKey.name;
+	
+	// Retrieve the data type the must be returned to the SDK. valid types are String, Timestamp, Email,Flag
+	PTKActDataType actDataType = actDataKey.type;
+	
+	// Retrieve the optional predefined value to display to the user
+	NSString *value = actDataKey.predefinedValue;
+	
+	// Retrieve the flag indicating if this is an optional field
+	BOOL optional = actDataKey.optional;
+ }</pre>
 
 <br/>
 	
 # Adding an Act Data Value
 
-1. Create a <code>ActTransactionDetails</code>:
+1. Create a <code>PTKActTransactionDetails</code>:
 
-	<pre>ActTransactionDetails actTransactionDetails = new ActTransactionDetails();</pre>
+	<pre>PTKActTransactionDetails *actTransactionDetails = [PTKActTransactionDetails actTransactionDetails];</pre>
 
-2. Add the values supplied by the user for each <code>ActDataKey</code>:
+2. Add the values supplied by the user for each <code>PTKActDataKey</code>:
 
 	Values must be added for at least each mandatory act data key.
 	
 	<pre>// Add the user's value as a string
-	actTransactionDetails.addActDataValue(actDataKey, userValueString);</pre>
+	[actTransactionDetails addActDataValueForKey:actDataKey value:userValueString];</pre>
 	
 <br/>	
 
@@ -63,33 +63,33 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. To remove a stored user value:
 	
-	<pre>boolean valueRemoved = actTransactionDetails.removeActDataValue(actDatakey);</pre>	
+	<pre>BOOL valueRemoved = [actTransactionDetails removeActDataValue:actDatakey];</pre>	
 	
 <br/>
 
 # Removing All Act Data Values
 
-1. To clear <code>ActTransactionDetails</code> of all act data values:
+1. To clear <code>PTKActTransactionDetails</code> of all act data values:
 	
-	<pre>actTransactionDetails.clearActDataValues();</pre>	
+	<pre>[actTransactionDetails clearActDataValues];</pre>	
 	
 <br/>
 
 # Obtaining All Act Data Values
 
-1. To obtain all act data values added to <code>ActTransActionDetails</code>:
+1. To obtain all act data values added to <code>PTKActTransActionDetails</code>:
 	
-	<pre>Map<String, String> actDataValues = actTransactionDetails.getActDataValues();</pre>	
+	<pre>NSDictionary *actDataValues = [actTransactionDetails actDataValues];</pre>	
 	
 <br/>
 		
 # Submit the Act Transaction Details
 
-1. Submit the act transaction details using the <code>ActManager</code>:
+1. Submit the act transaction details using the <code>PTKActManager</code>:
 	
-	<pre>ActManager actManager = ActManager.getinstance();
+	<pre>PTKActManager *actManager = [PTKActManager sharedManager];
 	// submit the transaction and keep the transaction ID stored in actTransaction
-	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());</pre>
+	[actManager submitTransactionWithAct:act transactionDetails:actTransactionDetails completion:^(PTKActTransaction *actTransaction, NSError *error)];</pre>
 	
 
 <br/>
@@ -99,13 +99,13 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 1. The following methods can be used to obtian useful act information:
 
 	<pre>// Get the ID of the act.
-	String actId = act.getActId();
+	NSString *actId = act.actId;
 	
 	// Get the name of the act.
-	String actName = act.getName();
+	NSString *actName = act.name;
  
 	// Get the merchant running the act.
-	Merchant merchant = act.getMerchant();
+	PTKMerchant *merchant = act.merchant;
     
-    // Get the List of act data keys.
-	List<ActDataKey> actDataKeys = act.getActDataKeys();</pre>
+	// Get the List of act data keys.
+	NSArray *actDataKeys = act.actDataKeys;</pre>
