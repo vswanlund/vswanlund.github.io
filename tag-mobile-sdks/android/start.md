@@ -75,6 +75,7 @@ During development you need to use a non-production endpoint and for this a seco
 		PowaTagEndpoint endpoint = PowaTagEndpoint.defaultEndpointPorts(hostNameString);
 		PowaTagKit.initializeSdk(getApplicationContext(), endpoint, apiKey, secret);
 	}</pre>
+
 	
 <br/>	
 
