@@ -95,13 +95,13 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 2. Validate the address details
 
 	Use the <code>AddressDetailsValidator</code> model validator to verify that all address details are set correctly. 
-	The model validator a property validator for each property of <code>AddressDetails</code>
-	
+	This validator uses property validators to validate each property of <code>AddressDetails</code>:
+
 	The property validators used:
-	- <code>AliasValidator</code>: for checking the Alias.
-	- <code>NameValidator</code: for checking the first name, last name and county.
-	- <code>UkPostcodeValidator</code>: for checking the post code.
-	- <code>AddressLineValidator</code> for checking all address lines.
+	* <code>AliasValidator</code>: for checking the Alias.
+	* <code>NameValidator</code: for checking the first name, last name and county.
+	* <code>UkPostcodeValidator</code>: for checking the post code.
+	* <code>AddressLineValidator</code> for checking all address lines.
 	
 	For more information on each of these property validators please refer to the reference documentation.
 	
