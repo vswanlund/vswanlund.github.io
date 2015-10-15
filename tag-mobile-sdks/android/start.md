@@ -71,9 +71,8 @@ During development you need to use a non-production endpoint and for this a seco
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
-        PowaTagEndpoint endpoint;
-        super.onCreate(savedInstanceState);
-        endpoint = PowaTagEndpoint.defaultEndpointPorts(hostNameString);
+        PowaTagEndpoint endpoint = PowaTagEndpoint.defaultEndpointPorts(hostNameString);
+        super.onCreate(savedInstanceState);        
         PowaTagKit.initializeSdk(getApplicationContext(), endpoint, apiKey, secret);
 	}
 	
