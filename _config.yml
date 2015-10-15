@@ -9,7 +9,7 @@ url: "http://www.powa.com" # the base hostname & protocol for your site
 twitter_username: powatechltd
 github_username: powa  # To link to our open-source projects
 copyright: "Copyright &copy; Powa Technologies 2015"
-current_sdk_version: "0.9.5"
+current_sdk_version: "0.9.6"
 sdk_reference_android_url: "http://bamboo.ht.powa.com:81/docs/ptk/android/0.9.5/"
 sdk_reference_ios_url: "http://bamboo.ht.powa.com:81/docs/ptk/ios/0.9.5"
 sdk_reference_wp_url: "http://bamboo.ht.powa.com:81/docs/ptk/wp/0.9.5/"
