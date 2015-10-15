@@ -18,7 +18,7 @@ It enables:
 
 # Requirements
 
-PowaTag SDK for Android requires a minimum Android API version of 9, ensure either your AndroidManifest.xml has `android:minSdkVersion="9"` or your /app/build.gradle file has `minSdkVersion 9` or higher.
+PowaTag SDK for Android requires a minimum Android API level of 9, ensure either your AndroidManifest.xml has `android:minSdkVersion="9"` or your /app/build.gradle file has `minSdkVersion 9` or higher.
 
 <br />
 
@@ -26,7 +26,7 @@ PowaTag SDK for Android requires a minimum Android API version of 9, ensure eith
 
 To use PowaTag SDK in a project, add it as a build dependency and import it.
 
-1. Add the following to Module-level /app/build.gradle before dependencies:
+1. Add the following to Module-level build.gradle before dependencies:
 
     <pre>repositories {
         maven { url "http://nexus.ht.powa.com/nexus/content/repositories/ptk-releases/" }
@@ -58,7 +58,7 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 # Initialize the SDK
 
-You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTagSdk.initializeSdk` from onCreate in Application or Activity:
+You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTagKit.initializeSdk` from onCreate in Application or Activity:
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +84,7 @@ During development you need to use a non-production endpoint and for this a seco
 
 The **HelloPowaTagSample** app is included with the SDK to provide you with examples of the main PowaTag SDK features. 
 
-You can experiment with the SDK features by importing the app into an Android Studio project:
+You can experiment with the SDK features by importing the app into Android Studio project (steps may differ in other IDEs):
 
 1. Go to Android Studio \| New \| Import Project
 
