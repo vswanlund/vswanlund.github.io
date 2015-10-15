@@ -58,18 +58,18 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 # Initialize the SDK
 
-	You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTagKit.initializeSdk` from onCreate in Application or Activity:
+You need to initialize PowaTag SDK before you can use it. Add a call to `PowaTagKit.initializeSdk` from onCreate in Application or Activity:
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        //Initialize the SDK using the default PowaTag endpoint
-        PowaTagKit.initializeSdk(getApplicationContext(), apiKey, secret);
-    }
-
-	During development you need to use a non-production endpoint and for this a second initialization method is available:
-	
 	<pre>@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		//Initialize the SDK using the default PowaTag endpoint
+		PowaTagKit.initializeSdk(getApplicationContext(), apiKey, secret);
+	}</pre>
+	
+During development you need to use a non-production endpoint and for this a second initialization method is available:
+	
+		<pre>@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		PowaTagEndpoint endpoint = PowaTagEndpoint.defaultEndpointPorts(hostNameString);
