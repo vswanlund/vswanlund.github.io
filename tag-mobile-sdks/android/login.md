@@ -130,14 +130,16 @@ Log out from the current profile, removing the current AccessToken and other use
 	
 # Clearing All Login Information 
  
- Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
+Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
   
 	<pre>loginManager.clearLogin();</pre>
+	
+	
 <br/>	
 
 # Sample
 
-To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>ADD SOME CLASS NAME</code> class.
+To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/android/start/#importing-the-sample-app) app and review the <code>WelcomeActivity</code> class.
     
 <br/>
 
