@@ -133,11 +133,6 @@ Log out from the current profile, removing the current AccessToken and other use
 Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
 
 	loginManager.clearLogin();
-	<pre>
-	loginManager.clearLogin();
-	</pre>
-		
-			<pre>loginManager.clearLogin();</pre>
 
 <br/>	
 
