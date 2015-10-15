@@ -99,10 +99,10 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 	The property validators used:
 	
-	* <code>AliasValidator</code>: for checking the alias.
-	* <code>NameValidator</code: for checking the first name, last name and county.
-	* <code>UkPostcodeValidator</code>: for checking the post code.
-	* <code>AddressLineValidator</code> for checking all address lines (line1, city,country).
+	* <code>AliasValidator</code> - to check the alias.
+	* <code>NameValidator</code> - to check the first name, last name and county.
+	* <code>UkPostcodeValidator</code> - to check the post code.
+	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 	
 	For more information on each of these property validators please refer to the reference documentation.
 	
