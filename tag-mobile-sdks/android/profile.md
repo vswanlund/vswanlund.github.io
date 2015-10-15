@@ -79,18 +79,18 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 1. Create a new Address object and set the address information:
 
-    <pre>AddressDetails address = new AddressDetails();
-   address.setAlias("Powa");
-   address.setFirstName("Dan");
-   address.setLastName("Wagner");
-   address.setLine1("110 Bishopsgate");
-   address.setCity("London");
-   address.setPostCode("EC2N 4AY");
-   address.setCounty("London");
-   Country country = new Country();
-   country.setAlpha2Code("GB");
-   country.setName("United Kingdom");
-   address.setCountry(country);</pre>
+	<pre>AddressDetails address = new AddressDetails();
+	address.setAlias("Powa");
+	address.setFirstName("Dan");
+	address.setLastName("Wagner");
+	address.setLine1("110 Bishopsgate");
+	address.setCity("London");
+	address.setPostCode("EC2N 4AY");
+	address.setCounty("London");
+	Country country = new Country();
+	country.setAlpha2Code("GB");
+	country.setName("United Kingdom");
+	address.setCountry(country);</pre>
 
 2. Add the address to the user profile using the ProfileManager:
 
@@ -237,7 +237,6 @@ You can only change the billing address of a payment instrument once created.
     <code> Profile updatedProfile =pm.deletePaymentInstrument(paymentInstrument); </code>
 
 <br />
-
 
 # Getting the Payment Instruments Accepted by a Merchant
 
