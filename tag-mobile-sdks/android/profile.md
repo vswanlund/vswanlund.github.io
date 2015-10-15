@@ -96,40 +96,28 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 	Use <code>AddressDetailsValidator</code> to verify that all address details are set correctly. 
 	This validator uses property validators to validate each property of <code>AddressDetails</code>:
-
-	The property validators used:
 	
 	* <code>AliasValidator</code> - to check the alias.
 	* <code>NameValidator</code> - to check the first name, last name and county.
 	* <code>UkPostcodeValidator</code> - to check the post code.
 	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 	
-	For more information on each of these property validators please refer to the reference documentation.
+	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	
-	
+	List<ValidationFailure> errors = addressDetailsValidator.validate(address);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain updated value
+		}
+	} else {
+		// No issues found while validating the address details
+	}</pre>	
 	
 	    
-    /**
-     * {@inheritDoc}
-     */
-    @Nullable
-    @Override
-    public List<ValidationFailure> validate(@Nullable final AddressDetails input) {
-        List<ValidationFailure> validationFailures = new ArrayList<>();
-
-        addValidationFailure(validationFailures, "alias", aliasValidator.validate(input.getAlias()));
-        addValidationFailure(validationFailures, "firstName", nameValidator.validate(input.getFirstName()));
-        addValidationFailure(validationFailures, "lastName", nameValidator.validate(input.getLastName()));
-        addValidationFailure(validationFailures, "state", addressLineValidator.validate(input.getState()));
-        ValidationError countryError = addressLineValidator.validate(input.getCountry() == null ? null : input.getCountry().getAlpha2Code());
-        addValidationFailure(validationFailures, "country", countryError);
-        addValidationFailure(validationFailures, "postCode", ukPostcodeValidator.validate(input.getPostCode()));
-        addValidationFailure(validationFailures, "line1", addressLineValidator.validate(input.getLine1()));
-        addValidationFailure(validationFailures, "line2", addressLineValidator.validate(input.getLine2()));
-        addValidationFailure(validationFailures, "county", nameValidator.validate(input.getCounty()));
-
 
 3. Add the address to the user profile using the ProfileManager:
 
