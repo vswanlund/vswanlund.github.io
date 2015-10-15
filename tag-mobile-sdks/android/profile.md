@@ -115,9 +115,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 		}
 	} else {
 		// No issues found while validating the address details
-	}</pre>	
-	
-	    
+	}</pre>		    
 
 3. Add the address to the user profile using the ProfileManager:
 
