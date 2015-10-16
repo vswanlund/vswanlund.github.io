@@ -213,12 +213,12 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 		}
 	});</pre>
 
-The synchronous version of the <code>addPaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues 
+The synchronous version of the <code>addPaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues.
 
-	<code>PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails); </code>
+	<pre>PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails);</pre>
+	
 
-
- 4. The new payment instrument will also be available in the current profile:
+4. The new payment instrument will also be available in the current profile:
 
     <pre>List&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.getInstance().getCurrentProfile().getPaymentInstruments();</pre>
 
