@@ -106,7 +106,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List<ValidationFailure> errors = addressDetailsValidator.validate(address);
+	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
 			ValidationFailure validationFailure = errors.get(s);
@@ -204,18 +204,18 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 3. Add the payment instrument to the user profile using the ProfileManager:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
-   pm.addPaymentInstrument(paymentInstrument, new PowaTagCallback&lt;PaymentInstrument&gt;() {
-     public void onSuccess(PaymentInstrument addedPaymentInstrument) {
-       // Payment instrument was successfully added
-     }
-     public void onError(PowaTagException exception) {
-     }
-   });</pre>
+	<pre>ProfileManager pm = ProfileManager.getInstance();
+	pm.addPaymentInstrument(paymentInstrument, new PowaTagCallback&lt;PaymentInstrument&gt;() {
+		public void onSuccess(PaymentInstrument addedPaymentInstrument) {
+		// Payment instrument was successfully added
+		}
+		public void onError(PowaTagException exception) {
+		}
+	});</pre>
 
 The synchronous version of the <code>addPaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues 
 
-	<code> PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails); </code>
+	<code>PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails); </code>
 
 
  4. The new payment instrument will also be available in the current profile:
