@@ -85,7 +85,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List<ValidationFailure> errors = addressDetailsValidator.Validate(address);
+	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.Validate(address);
 	if (errors != null)
 	{
 		foreach (ValidationFailure validationFailure in errors)
@@ -164,7 +164,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
-	List<ValidationFailure> errors = paymentMethodDetailsValidator.Validate(address);
+	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.Validate(address);
 	if (errors != null)
 	{
 		foreach (ValidationFailure validationFailure in errors)
@@ -265,7 +265,7 @@ In the case where the profile does not contain any accepted payment instruments 
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
-	List<ValidationFailure> errors = profileDetailsValidator.Validate(address);
+	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.Validate(address);
 	if (errors != null)
 	{
 		foreach (ValidationFailure validationFailure in errors)
