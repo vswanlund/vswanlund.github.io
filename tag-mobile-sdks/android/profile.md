@@ -194,7 +194,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    paymentMethodDetails.setValidFromDate(new YearMonth(2010, 1));
    paymentMethodDetails.setExpiryDate(new YearMonth(2020, 1));</pre>
 
-2. Validate the address details
+2. Validate the payment method details
 
 	Use <code>PaymentMethodDetailsValidator</code> to verify that all payment method details have been entered correctly. 
 	This validator uses property validators to validate each property of <code>PaymentMethodDetails</code>:
@@ -219,7 +219,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 		// No issues found while validating the address details
 	}</pre>		    
    
-2. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
+3. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
 
     <pre>PaymentInstrumentDetails paymentInstrumentDetails = new PaymentInstrumentDetails();
    paymentInstrumentDetails.setIssuer(CreditCardIssuer.VISA);
@@ -227,7 +227,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    paymentInstrumentDetails.setPaymentType(PaymentMethodType.PAYMENT_CARD);
    paymentInstrumentDetails.setBillingAddressId(addressId);</pre>
 
-3. Add the payment instrument to the user profile using the ProfileManager:
+4. Add the payment instrument to the user profile using the ProfileManager:
 
 	<pre>ProfileManager pm = ProfileManager.getInstance();
 	pm.addPaymentInstrument(paymentInstrument, new PowaTagCallback&lt;PaymentInstrument&gt;() {
@@ -243,7 +243,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	<pre>PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails);</pre>
 	
 
-4. The new payment instrument will also be available in the current profile:
+5. The new payment instrument will also be available in the current profile:
 
     <pre>List&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.getInstance().getCurrentProfile().getPaymentInstruments();</pre>
 
