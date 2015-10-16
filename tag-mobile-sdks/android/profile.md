@@ -67,7 +67,7 @@ After logging in you can retrieve the current user's profile using <code>Profile
      }
    });</pre>
     
-    The synchronous version of the <code>getProfile</code> method should not be used in the main thread to avoid performance issues 
+    The synchronous version of the <code>getProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues 
     
     <code> Profile latestProfile = pm.getProfile(); </code>
 
@@ -94,13 +94,14 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	
 2. Validate the address details
 
-	Use <code>AddressDetailsValidator</code> to verify that all address details are set correctly. 
+	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly. 
 	This validator uses property validators to validate each property of <code>AddressDetails</code>:
 	
 	* <code>AliasValidator</code> - to check the alias.
 	* <code>NameValidator</code> - to check the first name, last name and county.
 	* <code>UkPostcodeValidator</code> - to check the post code.
 	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
+	
 	
 	For more information on each of these property validators please see the reference documentation.
 	
@@ -128,9 +129,9 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
      }
    });</pre>
     
-    The synchronous version of the <code>addAddress</code> method should not be used in the main thread to avoid performance issues 
+    The synchronous version of the <code>addAddress</code> method should <b>not be used in the main thread</b> to avoid performance issues 
     
-    <code> Address addedAddress = pm.addAddress(addressDetails); </code>
+    Address addedAddress = pm.addAddress(addressDetails);
 
  4. The new address will also be available in the current profile:
 
@@ -156,7 +157,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
      }
    });</pre>
    
-    The synchronous version of the <code>updateAddress</code> method should not be used in the main thread to avoid performance issues 
+    The synchronous version of the <code>updateAddress</code> method should <b>not be used in the main thread</b> to avoid performance issues 
     
     <code>Address updatedAddress = pm.updateAddress(address, modifiedAddress); </code>
    
@@ -176,7 +177,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
      }
    });</pre>
    
-   The synchronous version of the <code>deleteAddress</code> method should not be used in the main thread to avoid performance issues 
+   The synchronous version of the <code>deleteAddress</code> method should <b>not be used in the main thread</b> to avoid performance issues 
     
     <code>Profile updatedProfile = pm.deleteAddress(address) </code>
    
@@ -212,7 +213,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
      }
    });</pre>
 
-The synchronous version of the <code>addPaymentInstrument</code> method should not be used in the main thread to avoid performance issues 
+The synchronous version of the <code>addPaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues 
 
 	<code> PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails); </code>
 
@@ -238,7 +239,7 @@ You can only change the billing address of a payment instrument once created.
      }
    });</pre>
    
-   The synchronous version of the <code>updateAddress</code> method should not be used in the main thread to avoid performance issues 
+   The synchronous version of the <code>updateAddress</code> method should <b>not be used in the main thread</b> to avoid performance issues 
     
     <code>PaymentInstrument updatedPaymentInstrument = pm.updatePaymentInstrument(paymentInstrument, newBillingAddress) </code>
 
@@ -257,7 +258,7 @@ You can only change the billing address of a payment instrument once created.
      }
    });</pre>
     
-    The synchronous version of the <code>deletePaymentInstrument</code> method should not be used in the main thread to avoid performance issues:
+    The synchronous version of the <code>deletePaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues:
     
     <code> Profile updatedProfile =pm.deletePaymentInstrument(paymentInstrument); </code>
 
@@ -267,8 +268,8 @@ You can only change the billing address of a payment instrument once created.
 
 To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code>:
 
-	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
-	List&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile.getAcceptedPaymentInstruments(merchant);</pre>
+	Profile profile = ProfileManager.getInstance().getCurrentProfile();
+	List&lt;PaymentInstrument&gt; acceptedPaymentInstruments = profile.getAcceptedPaymentInstruments(merchant);
 	
     
 In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> is returned.
@@ -308,7 +309,7 @@ Before transacting with a merchant you should check if the profile contains all 
    }
    </pre>
 
-	The synchronous version of the <code>updateProfile</code> method should not be used in the main thread to avoid performance issues 
+	The synchronous version of the <code>updateProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues 
 
 	<pre>Profile updatedProfile = pm.updateProfile(profileDetails);</pre>
     
@@ -336,7 +337,7 @@ Before transacting with a merchant you should check if the profile contains all 
 	}</pre>
  <br/>
  
-	The synchronous version of the <code>saveProfile</code> method should not be used in the main thread to avoid performance issues 
+	The synchronous version of the <code>saveProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues 
 
 	<code>Profile savedProfile = pm.saveProfile(password); </code>
 <br/>
