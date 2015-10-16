@@ -108,4 +108,4 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 	Merchant merchant = act.Merchant;
     
     // Get the List of act data keys.
-	List<ActDataKey> actDataKeys = act.ActDataKeys;</pre>
+	List&lt;ActDataKey&gt; actDataKeys = act.ActDataKeys;</pre>
