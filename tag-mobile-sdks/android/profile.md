@@ -194,6 +194,31 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    paymentMethodDetails.setValidFromDate(new YearMonth(2010, 1));
    paymentMethodDetails.setExpiryDate(new YearMonth(2020, 1));</pre>
 
+2. Validate the address details
+
+	Use <code>PaymentMethodDetailsValidator</code> to verify that all payment method details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>PaymentMethodDetails</code>:
+	
+	* <code>CardHolderNameValidator</code> - to check the card holder name.
+	* <code>cardNumberValidator</code> - to check the card number.
+	* <code>expiryDateValidator</code> - to check the expiry date.
+	* <code>validFromDateValidator</code> - to check valid from date.
+	
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the address details
+	}</pre>		    
+   
 2. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
 
     <pre>PaymentInstrumentDetails paymentInstrumentDetails = new PaymentInstrumentDetails();
