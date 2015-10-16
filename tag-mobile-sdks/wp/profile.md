@@ -176,7 +176,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	}
 	else
 	{
-    // No issues found while validating the address details
+    // No issues found while validating the payment method details
 	}</pre>
    
 3. Create a new PaymentMethod object and set the payment instrument, billing address and other information:
@@ -277,7 +277,7 @@ In the case where the profile does not contain any accepted payment instruments 
 	}
 	else
 	{
-    // No issues found while validating the address details
+    // No issues found while validating the profile details
 	}</pre>	
 	
    
