@@ -93,6 +93,10 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     <pre>PTKAddressDetails *modifiedAddress = [address editableCopy];
    modifiedAddress.alias = @"110 Bishopsgate";</pre>
 
+2. Validate the address details
+
+	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/ios/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
+   
 3. Use PTKProfileManager to update the address information:
 
     <pre>PTKProfileManager *pm = [PTKProfileManager sharedManager];
@@ -127,14 +131,39 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    paymentMethod.validFromDate = [PTKYearMonth yearMonthWithYear:2010 month:1];
    paymentMethod.expiryDate = [PTKYearMonth yearMonthWithYear:2020 month:1];</pre>
 
-2. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
+2. Validate the payment method details
+
+	Use <code>PaymentMethodDetailsValidator</code> to verify that all payment method details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>PaymentMethodDetails</code>:
+	
+	* <code>CardHolderNameValidator</code> - to check the card holder name.
+	* <code>CardNumberValidator</code> - to check the card number.
+	* <code>ExpiryDateValidator</code> - to check the expiry date.
+	* <code>ValidFromDateValidator</code> - to check valid from date.
+		
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the payment details
+	}</pre>	
+   
+3. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
 
 	<pre>[PTKPaymentInstrumentDetails *paymentInstrument = [PTKPaymentInstrumentDetails paymentInstrumentDetailsWithPaymentType:PTKCreditCardIssuerVisa
 	paymentMethod:paymentMethod
 	paymentType:PTKPaymentMethodTypeCard
 	billingAddressId:addressId];</pre>
 
-3. Add the payment instrument to the user profile using the PTKProfileManager:
+4. Add the payment instrument to the user profile using the PTKProfileManager:
 
     <pre>PTKProfileManager *pm = [PTKProfileManager sharedManager];
    [pm addPaymentInstrument:paymentInstrument completion:^(PTKPaymentInstrument *addedPaymentInstrument, NSError *error) {
@@ -143,7 +172,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
      }
    }];</pre>
 
- 4. The new payment method will also be available in the current profile:
+5. The new payment method will also be available in the current profile:
 
     <pre>NSArray *paymentInstruments = [PTKProfileManager sharedManager].currentProfile.paymentInstruments;</pre>
 

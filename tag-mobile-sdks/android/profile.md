@@ -148,7 +148,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 2. Validate the address details
 
-	Use the details described in step 2 of ['Adding an Address']({{site.baseurl}}/tag-mobile-sdks/android/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
+	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/android/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
    
 3. Use the ProfileManager to update the address information:
 

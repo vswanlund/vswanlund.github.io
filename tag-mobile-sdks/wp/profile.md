@@ -116,7 +116,11 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     <pre>AddressDetails modifiedAddress = address.EditableCopy();
    modifiedAddress.Alias = "110 Bishopsgate";</pre>
 
-2. Use the ProfileManager to update the address information:
+2. Validate the address details
+
+	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/wp/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
+   
+3. Use the ProfileManager to update the address information:
 
     <pre>ProfileManager pm = ProfileManager.GetInstance();
    Address updatedAddress = pm.UpdateAddressAsync(address, modifiedAddress);
@@ -144,7 +148,32 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    paymentMethod.ValidFromDate = new YearMonth(2010, 1);
    paymentMethod.ExpiryDate = new YearMonth(2020, 1);</pre>
 
-2. Create a new PaymentMethod object and set the payment instrument, billing address and other information:
+2. Validate the payment method details
+
+	Use <code>PaymentMethodDetailsValidator</code> to verify that all payment method details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>PaymentMethodDetails</code>:
+	
+	* <code>CardHolderNameValidator</code> - to check the card holder name.
+	* <code>CardNumberValidator</code> - to check the card number.
+	* <code>ExpiryDateValidator</code> - to check the expiry date.
+	* <code>ValidFromDateValidator</code> - to check valid from date.
+		
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the payment details
+	}</pre>	
+   
+3. Create a new PaymentMethod object and set the payment instrument, billing address and other information:
 
     <pre>PaymentInstrumentDetails paymentInstrument = new PaymentInstrumentDetails();
    paymentInstrument.Issuer = CreditCardIssuer.Visa;
@@ -153,13 +182,13 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    paymentInstrument.PaymentType = PaymentMethodType.PaymentCard;
    paymentInstrument.BillingAddressId = addressId;</pre>
 
-3. Add the payment instrument to the user profile using the ProfileManager:
+4. Add the payment instrument to the user profile using the ProfileManager:
 
     <pre>ProfileManager pm = ProfileManager.GetInstance();
    PaymentInstrument addedPaymentInstrument = await pm.AddPaymentInstrumentAsync(paymentInstrument);
    // Payment method was successfully added</pre>
 
- 4. The new payment instrument will also be available in the current profile:
+5. The new payment instrument will also be available in the current profile:
 
     <pre>IReadonlyCollection&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.GetInstance().GetCurrentProfile().PaymentInstruments;</pre>
 
@@ -218,13 +247,37 @@ In the case where the profile does not contain any accepted payment instruments 
    profile.Email = "support@powa.com";
    profile.MobileNumber = "01234567890";</pre>
 
-2. Use the ProfileManager to update the current profile:
+2. Validate the profile details
+
+	Use <code>ProfileDetailsValidator</code> to verify that all profile details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>ProfileDetails</code>:
+	
+	* <code>NameValidator</code> - to check the title, first and last names.
+	* <code>EmailValidator</code> - to check the email address.
+	* <code>MobileNumberValidator</code> - to check the mobile number.
+			
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profile);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the profile details
+	}</pre>	
+   
+3. Use the ProfileManager to update the current profile:
 
     <pre>ProfileManager pm = ProfileManager.GetInstance();
    Profile updatedProfile = await pm.UpdateProfileAsync(profile);
    // Profile information is updated</pre>
 
-3. The updated profile information will be reflected in the users current profile:
+4. The updated profile information will be reflected in the users current profile:
 
     <pre>Profile profile = ProfileManager.GetInstance().GetCurrentProfile();</pre>
 
