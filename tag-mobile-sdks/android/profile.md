@@ -200,10 +200,10 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	This validator uses property validators to validate each property of <code>PaymentMethodDetails</code>:
 	
 	* <code>CardHolderNameValidator</code> - to check the card holder name.
-	* <code>cardNumberValidator</code> - to check the card number.
-	* <code>expiryDateValidator</code> - to check the expiry date.
-	* <code>validFromDateValidator</code> - to check valid from date.
-	
+	* <code>CardNumberValidator</code> - to check the card number.
+	* <code>ExpiryDateValidator</code> - to check the expiry date.
+	* <code>ValidFromDateValidator</code> - to check valid from date.
+		
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
