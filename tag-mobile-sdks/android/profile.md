@@ -322,7 +322,33 @@ Before transacting with a merchant you should check if the profile contains all 
    profile.setEmail("support@powa.com");
    profile.setMobileNumber("01234567890");</pre>
 
-2. Use the ProfileManager to update the current profile:
+
+2. Validate the profile details
+
+	Use <code>ProfileDetailsValidator</code> to verify that all profile details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>ProfileDetails</code>:
+	
+	* <code>NameValidator</code> - to check the title, first and last names.
+	* <code>EmailValidator</code> - to check the email address.
+	* <code>MobileNumberValidator</code> - to check the mobile number.
+			
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profile);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the profile details
+	}</pre>	
+	
+	
+3. Use the ProfileManager to update the current profile:
 
     <pre>ProfileManager pm = ProfileManager.getInstance();
    pm.updateProfile(profile, new PowaTagCallback&lt;Profile&gt;) {
@@ -340,7 +366,7 @@ Before transacting with a merchant you should check if the profile contains all 
     
 <br/>
 
-3. The updated profile information will be reflected in the users current profile:
+4. The updated profile information will be reflected in the users current profile:
 
 	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();</pre>
 
