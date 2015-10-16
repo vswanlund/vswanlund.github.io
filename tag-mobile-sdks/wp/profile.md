@@ -85,16 +85,19 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
+	List<ValidationFailure> errors = addressDetailsValidator.Validate(address);
+	if (errors != null)
+	{
+		foreach (ValidationFailure validationFailure in errors)
+		{
+			String property = validationFailure.PropertyName;
+			ValidationErrors errorCode = validationFailure.ErrorCode;
 			// Display validation to user and obtain updated value
 		}
-	} else {
-		// No issues found while validating the address details
+	}
+	else
+	{
+    // No issues found while validating the address details
 	}</pre>	
 	
 3. Add the address to the user profile using the ProfileManager:
@@ -161,17 +164,20 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
-			// Display validation to user and obtain an updated value
+	List<ValidationFailure> errors = paymentMethodDetailsValidator.Validate(address);
+	if (errors != null)
+	{
+		foreach (ValidationFailure validationFailure in errors)
+		{
+			String property = validationFailure.PropertyName;
+			ValidationErrors errorCode = validationFailure.ErrorCode;
+			// Display validation to user and obtain updated value
 		}
-	} else {
-		// No issues found while validating the payment details
-	}</pre>	
+	}
+	else
+	{
+    // No issues found while validating the address details
+	}</pre>
    
 3. Create a new PaymentMethod object and set the payment instrument, billing address and other information:
 
@@ -259,17 +265,21 @@ In the case where the profile does not contain any accepted payment instruments 
 	For more information on each of these property validators please see the reference documentation.
 	
 	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profile);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
-			// Display validation to user and obtain an updated value
+	List<ValidationFailure> errors = profileDetailsValidator.Validate(address);
+	if (errors != null)
+	{
+		foreach (ValidationFailure validationFailure in errors)
+		{
+			String property = validationFailure.PropertyName;
+			ValidationErrors errorCode = validationFailure.ErrorCode;
+			// Display validation to user and obtain updated value
 		}
-	} else {
-		// No issues found while validating the profile details
+	}
+	else
+	{
+    // No issues found while validating the address details
 	}</pre>	
+	
    
 3. Use the ProfileManager to update the current profile:
 
