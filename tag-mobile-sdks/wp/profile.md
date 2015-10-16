@@ -70,14 +70,40 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	address.PostCode = "EC2N 4AY";
 	address.County = "London";
 	address.Country = Country.UnitedKingdom;</pre>
+	
+2. Validate the address details
 
-2. Add the address to the user profile using the ProfileManager:
+	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>AddressDetails</code>:
+	
+	* <code>AliasValidator</code> - to check the alias.
+	* <code>NameValidator</code> - to check the first name, last name and county.
+	* <code>UkPostcodeValidator</code> - to check the post code.
+	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
+	
+	
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain updated value
+		}
+	} else {
+		// No issues found while validating the address details
+	}</pre>	
+	
+3. Add the address to the user profile using the ProfileManager:
 
 	<pre>ProfileManager pm = ProfileManager.Instance;
 	Address addedAddress = await pm.AddAddressAsync(address);
 	// Address was successfully added</pre>
 
- 3. The new address will also be available in the current profile:
+4. The new address will also be available in the current profile:
 
     <pre>IReadonlyCollection&lt;Address&gt; addresses = ProfileManager.GetInstance().GetCurrentProfile().Addresses;</pre>
 

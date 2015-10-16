@@ -146,7 +146,11 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     <pre>AddressDetails modifiedAddress = address.editableCopy();
    modifiedAddress.setAlias("110 Bishopsgate");</pre>
 
-2. Use the ProfileManager to update the address information:
+2. Validate the address details
+
+	Use the steps described in ['Adding an Address']({{site.baseurl}}/tag-mobile-sdks/android/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
+   
+3. Use the ProfileManager to update the address information:
 
     <pre>ProfileManager pm = ProfileManager.getInstance();
    pm.updateAddress(address, modifiedAddress, new PowaTagCallback&lt;Address&gt;() {
