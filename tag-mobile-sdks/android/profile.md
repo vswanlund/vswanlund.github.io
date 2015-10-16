@@ -213,7 +213,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 		}
 	});</pre>
 
-The synchronous version of the <code>addPaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues.
+	The synchronous version of the <code>addPaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues.
 
 	<pre>PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails);</pre>
 	
