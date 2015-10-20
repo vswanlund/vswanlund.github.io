@@ -36,7 +36,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 1. Create a new Address object and set the address information:
 
-    <pre>PTKAddressDetails *address = [PTKAddressDetails addressDetailsWithAlias:@"Powa";
+    <pre>PTKAddressDetails *addressDetails = [PTKAddressDetails addressDetailsWithAlias:@"Powa";
 	firstName:@"Dan";
 	lastName:@"Wagner";
 	line1:@"110 Bishopsgate";
@@ -47,30 +47,30 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	
 2. Validate the address details
 
-	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly. 
-	This validator uses property validators to validate each property of <code>AddressDetails</code>:
+	Use <code>PTKAddressDetailsValidator</code> to verify that all address details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>PTKAddressDetails</code>:
 	
-	* <code>AliasValidator</code> - to check the alias.
-	* <code>NameValidator</code> - to check the first name, last name and county.
-	* <code>UkPostcodeValidator</code> - to check the post code.
-	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
+	* <code>PTKAliasValidator</code> - to check the alias.
+	* <code>PTKNameValidator</code> - to check the first name, last name and county.
+	* <code>PTKUKPostcodeValidator</code> - to check the post code.
+	* <code>PTKAddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 	
 	
 	For more information on each of these property validators please see the reference documentation.
 	
-	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
+	<pre>PTKAddressDetailsValidator *addressDetailsValidator = [PTKAddressDetailsValidator new];
+	NSError *errors = [addressDetailsValidator validate:addressDetails];
+	if (errors) {
+		for (PTKValidationFailure *validationFailure in invalidData) {
+			NSString *property = validationFailure.propertyName;
+			PTKValidationError *errorCode = validationFailure.errorCode;;
 			// Display validation to user and obtain updated value
 		}
 	} else {
 		// No issues found while validating the address details
 	}</pre>	
-
+	
+	
 3. Add the address to the user profile using the PTKProfileManager:
 
     <pre>PTKProfileManager *profileManager = [PTKProfileManager sharedManager];
@@ -133,28 +133,29 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 2. Validate the payment method details
 
-	Use <code>PaymentMethodDetailsValidator</code> to verify that all payment method details have been entered correctly. 
-	This validator uses property validators to validate each property of <code>PaymentMethodDetails</code>:
+	Use <code>PTKPaymentMethodDetailsValidator</code> to verify that all payment method details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>PTKPaymentMethodDetails</code>:
 	
-	* <code>CardHolderNameValidator</code> - to check the card holder name.
-	* <code>CardNumberValidator</code> - to check the card number.
-	* <code>ExpiryDateValidator</code> - to check the expiry date.
-	* <code>ValidFromDateValidator</code> - to check valid from date.
+	* <code>PTKCardHolderNameValidator</code> - to check the card holder name.
+	* <code>PTKCardNumberValidator</code> - to check the card number.
+	* <code>PTKExpiryDateValidator</code> - to check the expiry date.
+	* <code>PTKValidFromDateValidator</code> - to check valid from date.
 		
 	For more information on each of these property validators please see the reference documentation.
 	
-	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
+	<pre>PTKPaymentMethodDetailsValidator *paymentDetailsValidator = [PTKPaymentMethodDetailsValidator new];
+	NSError *errors = [paymentDetailsValidator validate:paymentMethodDetails];
+	if (errors) {
+		for (PTKValidationFailure *validationFailure in invalidData) {
+			NSString *property = validationFailure.propertyName;
+			PTKValidationError *errorCode = validationFailure.errorCode;
 			// Display validation to user and obtain an updated value
 		}
 	} else {
 		// No issues found while validating the payment details
 	}</pre>	
+	
+
    
 3. Create a new PaymentInstrumentDetails object and set the payment instrument, billing address and other information:
 
@@ -218,8 +219,32 @@ You can only change the billing address of a payment instrument once created.
 	defaultAddress:defaultAddress
 	defaultPaymentInstrument:paymentInstrument
 	customDataValues:@[customDataValue, customDataValue2]];</pre>
+	
+2. Validate the profile details
 
-2. Use the PTKProfileManager to update the current profile:
+	Use <code>PTKProfileDetailsValidator</code> to verify that all profile details have been entered correctly. 
+	This validator uses property validators to validate each property of <code>PTKProfileDetails</code>:
+	
+	* <code>PTKNameValidator</code> - to check the title, first and last names.
+	* <code>PTKEmailValidator</code> - to check the email address.
+	* <code>PTKMobileNumberValidator</code> - to check the mobile number.
+			
+	For more information on each of these property validators please see the reference documentation.
+	
+	<pre>PTKProfileDetailsValidator *profileDetailsValidator = [PTKProfileDetailsValidator new];
+	NSError *errors = [profileDetailsValidator validate:profileDetails];
+	if (errors) {
+		for (PTKValidationFailure *validationFailure in invalidData) {
+			NSString *property = validationFailure.propertyName;
+			PTKValidationError *errorCode = validationFailure.errorCode;
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the profile details
+	}</pre>	
+
+	
+3. Use the PTKProfileManager to update the current profile:
 
     <pre>PTKProfileManager *pm = [PTKProfileManager sharedManager];
    [pm updateProfileWithProfileDetails:profile completion:^(PTKProfile *updatedProfile, NSError *error) {
@@ -228,7 +253,7 @@ You can only change the billing address of a payment instrument once created.
      }
    }];</pre>
 
-3. The updated profile information will be reflected in the users current profile:
+4. The updated profile information will be reflected in the users current profile:
 
     <pre>PTKProfile *profile = [PTKProfileManager sharedManager].currentProfile;</pre>
 
