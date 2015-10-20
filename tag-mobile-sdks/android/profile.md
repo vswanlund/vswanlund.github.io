@@ -103,7 +103,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 	
 	
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
@@ -208,7 +208,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	* <code>ExpiryDateValidator</code> - to check the expiry date.
 	* <code>ValidFromDateValidator</code> - to check valid from date.
 		
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
@@ -336,7 +336,7 @@ Before transacting with a merchant you should check if the profile contains all 
 	* <code>EmailValidator</code> - to check the email address.
 	* <code>MobileNumberValidator</code> - to check the mobile number.
 			
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profile);

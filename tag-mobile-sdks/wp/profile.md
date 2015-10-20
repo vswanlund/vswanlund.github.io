@@ -82,7 +82,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 	
 	
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.Validate(address);
@@ -161,7 +161,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	* <code>ExpiryDateValidator</code> - to check the expiry date.
 	* <code>ValidFromDateValidator</code> - to check valid from date.
 		
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentationFor included as part of the SDK.
 	
 	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.Validate(address);
@@ -262,7 +262,7 @@ In the case where the profile does not contain any accepted payment instruments 
 	* <code>EmailValidator</code> - to check the email address.
 	* <code>MobileNumberValidator</code> - to check the mobile number.
 			
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.Validate(address);

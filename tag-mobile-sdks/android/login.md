@@ -71,7 +71,7 @@ There are three ways an existing user can log in using the SDK:
 	}</pre>
 
 	
-For details on the getter and setter methods available please see the {% if site.sdk_reference_android_url  %} <a href="{{site.sdk_reference_android_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
+For details on the getter and setter methods available please see the SDK Reference documentation that is included as part of the SDK.
 <br/>	
 
 # Log In and Create a Temporary Profile
@@ -91,7 +91,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
      }
    });</pre>
    
-   <b>Note:</b> The login manager also provides a synchronous <code>signInAsGuest()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
+   <b>Note:</b> The login manager also provides a synchronous <code>signInAsGuest()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation included in the SDK.
 
    
    
@@ -124,7 +124,7 @@ Log out from the current profile, removing the current AccessToken and other use
      }
    });</pre>
 
-	<b>Note:</b> The login manager also provides a synchronous <code>logout()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation in the SDK.
+	<b>Note:</b> The login manager also provides a synchronous <code>logout()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation included in the SDK.
 
 <br/>
 	

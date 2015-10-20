@@ -80,7 +80,7 @@ There are three ways an existing user can log in using the SDK:
 	}];</pre>
 
 	
-For details on the getter and setter methods available please see the {% if site.sdk_reference_ios_url  %} <a href="{{site.sdk_reference_ios_url}}" target="_blank">SDK Reference Documentation</a><br /> {% else %} SDK reference documentation{% endif %} 
+For details on the getter and setter methods available please see the SDK Reference documentation that is included as part of the SDK.
 
 
 # Log In and Create a Temporary Profile

@@ -56,7 +56,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	* <code>PTKAddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 	
 	
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>PTKAddressDetailsValidator *addressDetailsValidator = [PTKAddressDetailsValidator new];
 	NSError *errors = [addressDetailsValidator validate:addressDetails];
@@ -141,7 +141,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	* <code>PTKExpiryDateValidator</code> - to check the expiry date.
 	* <code>PTKValidFromDateValidator</code> - to check valid from date.
 		
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>PTKPaymentMethodDetailsValidator *paymentDetailsValidator = [PTKPaymentMethodDetailsValidator new];
 	NSError *errors = [paymentDetailsValidator validate:paymentMethodDetails];
@@ -229,7 +229,7 @@ You can only change the billing address of a payment instrument once created.
 	* <code>PTKEmailValidator</code> - to check the email address.
 	* <code>PTKMobileNumberValidator</code> - to check the mobile number.
 			
-	For more information on each of these property validators please see the reference documentation.
+	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 	
 	<pre>PTKProfileDetailsValidator *profileDetailsValidator = [PTKProfileDetailsValidator new];
 	NSError *errors = [profileDetailsValidator validate:profileDetails];
