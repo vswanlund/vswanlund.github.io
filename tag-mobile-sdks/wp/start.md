@@ -37,7 +37,7 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 # Initialize the SDK
 
-You need to initialize PowaTag SDK before you can use it. Please use the apiKey and secret that was provided to you during registration.
+You need to initialize PowaTag SDK before you can use it. Please use the API key and secret that was provided to you during registration.
 
 
 Add a call to <code>PowaTagKit.InitializeSdk</code> from the constructor of your `Application` subclass:

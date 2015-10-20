@@ -47,7 +47,10 @@ To use PowaTag SDK in a project, add it as a build dependency and import it.
 
 # Initialize the SDK
 
-You need to initialize PowaTag SDK before you can use it. Add a call to `[PowaTagSDK initializeSdkWithApiKey]` from application:didFinishLaunchingWithOptions: in UIApplicationDelegate or viewDidLoad in UIViewController:
+You need to initialize PowaTag SDK before you can use it.  Please use the API key and secret that was provided to you during registration.
+
+
+Add a call to `[PowaTagSDK initializeSdkWithApiKey]` from application:didFinishLaunchingWithOptions: in UIApplicationDelegate or viewDidLoad in UIViewController:
 	
 	- (void)viewDidLoad {
 		[PowaTagKit initializeSdkWithApiKey:@“apiKey”
