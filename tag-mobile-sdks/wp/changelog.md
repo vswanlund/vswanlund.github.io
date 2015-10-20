@@ -8,6 +8,23 @@ Change log and release notes for the PowaTag SDK for Windows Phone.
 
 <br />
 
+# 0.9.6 - Oct 13th, 2015
+
+**Added**
+        
+* CVV Management.
+* Payment using the EncryptedCvv object.
+* Saving a user profile.
+* Login as an existing user.
+
+		
+**Fixed**
+
+* Ability to add Long Numbers in Donation Amount field.
+* Scrolling issues on the Act Screen in the SampleApp.
+
+<br />
+
 # 0.9.5 - Sep 21st, 2015
 
 **Added**

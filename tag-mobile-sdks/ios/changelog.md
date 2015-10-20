@@ -8,6 +8,24 @@ Change log and release notes for the PowaTag SDK for iOS.
 
 <br />
 
+# 0.9.6 - Oct 13th, 2015
+
+**Added**
+        
+* CVV Management.
+* Payment using the EncryptedCvv object.
+* Saving a user profile.
+* Login as an existing user.
+
+		
+**Fixed**
+
+* Incorrect Item count in Basket.
+* Display Scanning Screen after clicking back in Act Summary screen in the SampleApp.
+
+
+<br />
+
 # 0.9.5 - Sep 21st, 2015
 
 **Added**

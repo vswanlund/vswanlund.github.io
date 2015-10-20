@@ -87,7 +87,7 @@ Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/w
 
 # Log Out
 
-Log out from the current profile, removing the current AccessToken and other user data from memory. If the current profile is a temporary profile, all personal user information associated with that account will be deleted.
+Log out from the current profile, removing the current AccessToken, baskets and profile data from memory. If the current profile is a temporary profile, all personal user information associated with that account will be deleted.
 
 1. Log out using LoginManager:
 
@@ -98,15 +98,6 @@ Log out from the current profile, removing the current AccessToken and other use
    
    <br/>
    
-# Clearing All Login Information 
- 
-Whenever you change an endpoint (e.g during development) you will need to clear all user information from the device including the current access token, profile and baskets. Use the <code>clearLogin</code> method to achieve this.
-
-	LoginManager.GetInstance().ClearLogin();
-	
-	
-<br/>	
-
 # Sample
 
 To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/wp/start/#importing-the-sample-app) app and review the <code>MainPageViewModel</code> class.
