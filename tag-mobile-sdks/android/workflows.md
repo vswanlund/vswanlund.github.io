@@ -67,7 +67,7 @@ The currently supported workflows are:
        
   	The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues 
     
-    <code>Workflow workflow = wm.getWorkflow(tag); </code>
+    Workflow workflow = wm.getWorkflow(tag); 
 
 <br />
 
