@@ -10,6 +10,15 @@ To facilitate seamless engagement, you can create an temporary profile for users
 
 The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 
+
+
+1. Create guest profile
+2. Update Profile (optional, email etc)
+3. Save the profile
+4. Login with profile id (or email/phone number if already added to the profile)
+but will change once the sdk is fixed
+as the last step should be done automatically after the profile is saved
+
 Use the <code>LoginManager</code> class to do the following:
 
 <br />
@@ -25,6 +34,33 @@ Use the <code>LoginManager</code> class to do the following:
    }</pre>
 
 <br />
+
+# Log In and Create a Temporary Profile
+
+A temporary or guest user profile lets you build a frictionless PowaTag experience by allowing users to start making payments without requiring a PowaTag account. Guest accounts are deleted after an hour of inactivity.
+
+1. Log in as an anonymous guest user using the LoginManager:
+	
+    <pre>LoginManager lm = LoginManager.getInstance();
+   lm.signInAsGuest(new PowaTagCallback&lt;AccessToken&gt;() {
+     public void onSuccess(AccessToken accessToken) {
+       // Guest user is now logged in
+       Profile profile = ProfileManager.getInstance().getCurrentProfile();
+       Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+     }
+     public void onError(PowaTagException exception) {
+     }
+   });</pre>
+   
+   <b>Note:</b> The login manager also provides a synchronous <code>signInAsGuest()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation included in the SDK.
+
+   
+   
+2. The access token for the currently authenticated user can be retrieved using:
+   
+    <pre>AccessToken accessToken = LoginManager.getInstance().getCurrentAccessToken();  </pre>
+
+<br/> 
 
 # Log into an Existing PowaTag Profile
 
@@ -73,34 +109,6 @@ There are three ways an existing user can log in using the SDK:
 	
 For details on the getter and setter methods available please see the SDK Reference documentation that is included as part of the SDK.
 <br/>	
-
-# Log In and Create a Temporary Profile
-
-A temporary or guest user profile lets you build a frictionless PowaTag experience by allowing users to start making payments without requiring a PowaTag account. Guest accounts are deleted after an hour of inactivity.
-
-1. Log in as an anonymous guest user using the LoginManager:
-	
-    <pre>LoginManager lm = LoginManager.getInstance();
-   lm.signInAsGuest(new PowaTagCallback&lt;AccessToken&gt;() {
-     public void onSuccess(AccessToken accessToken) {
-       // User is now logged in
-       Profile profile = ProfileManager.getInstance().getCurrentProfile();
-       Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
-     }
-     public void onError(PowaTagException exception) {
-     }
-   });</pre>
-   
-   <b>Note:</b> The login manager also provides a synchronous <code>signInAsGuest()</code> method which should only be used outside of the main thread to avoid performance bottlenecks. For more information please see the Reference documentation included in the SDK.
-
-   
-   
-2. The access token for the currently authenticated user can be retrieved using:
-   
-    <pre>AccessToken accessToken = LoginManager.getInstance().getCurrentAccessToken();  </pre>
-
-<br/>
-
 
 # After Logging In
 
