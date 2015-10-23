@@ -20,7 +20,7 @@ When saving the temporary profile use the following steps:
 	<b>Note:</b> Email and mobile login is only possible if these values have been set on the profile.
 
 	
-
+<br/>
 The <code>LoginManager</code> can be used to do the following:
 
 <br />
