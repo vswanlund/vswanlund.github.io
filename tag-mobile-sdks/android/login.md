@@ -10,12 +10,13 @@ To facilitate seamless engagement, you can create an temporary profile for users
 
 The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 
-The 
+When saving the temporary profile use the following steps:
 
-1. Create guest profile
-2. Update Profile (optional, email etc)
+1. [Create a guest profile]({{site.baseurl}}/tag-mobile-sdks/android/login/).
+2. Update Profile (optional) email, mobile
 3. Save the profile
-4. Login with profile id (or email/phone number if already added to the profile)
+4. Log into the profile using the id,email or phone with profile id (or email/phone number if already added to the profile)
+
 
 
 Use the <code>LoginManager</code> class to do the following:
