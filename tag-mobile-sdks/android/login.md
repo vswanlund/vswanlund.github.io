@@ -10,28 +10,15 @@ To facilitate seamless engagement, you can create an temporary profile for users
 
 The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 
-
+The 
 
 1. Create guest profile
 2. Update Profile (optional, email etc)
 3. Save the profile
 4. Login with profile id (or email/phone number if already added to the profile)
-but will change once the sdk is fixed
-as the last step should be done automatically after the profile is saved
+
 
 Use the <code>LoginManager</code> class to do the following:
-
-<br />
-
-# Checking if the User is Logged In
-
-1. Check if the user is logged in:
-
-    <pre>if (LoginManager.getInstance().isLoggedIn()) {
-     // User is already logged in
-   } else {
-     // Go to login screen
-   }</pre>
 
 <br />
 
@@ -113,6 +100,18 @@ For details on the getter and setter methods available please see the SDK Refere
 # After Logging In
 
 Once the user is logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/android/profile/) for the current user or get a [Workflow]({{site.baseurl}}/tag-mobile-sdks/android/workflows/) when a [Trigger]({{site.baseurl}}/tag-mobile-sdks/android/triggers/) detects a PowaTag.
+
+<br />
+
+# Checking if the User is Logged In
+
+1. Check if the user is logged in:
+
+    <pre>if (LoginManager.getInstance().isLoggedIn()) {
+     // User is already logged in
+   } else {
+     // Go to login screen
+   }</pre>
 
 <br />
 
