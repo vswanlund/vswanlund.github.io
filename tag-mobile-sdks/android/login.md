@@ -10,10 +10,10 @@ To facilitate seamless engagement, you can create an temporary profile for users
 
 The temporary profile can later be saved allowing the user to use their newly created PowaTag account across multiple devices. However, if the application is deleted or the data is cleared before the profile is saved the account will be irrevocably lost.
 
-When saving the temporary profile use the following steps:
+To save the temporary profile, making it permanent, use the following steps:
 
 1. Use the <code>LoginManager</code> to [create a temporary profile]({{site.baseurl}}/tag-mobile-sdks/android/login#log-in-and-create-a-temporary-profile).
-2. Use the <code>ProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/android/profile#updating-the-profile). E.g Email and Mobile number. This is an optional step that can be done later.
+2. Use the <code>ProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/android/profile#updating-the-profile). E.g Email and Mobile number. (An optional step that can be done later)
 3. Use the <code>ProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/android/profile#saving-a-temporary-profile).
 4. Use the <code>LoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/android/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number. 
 
