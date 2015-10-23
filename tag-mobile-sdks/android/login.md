@@ -17,8 +17,9 @@ When saving the temporary profile use the following steps:
 3. Use the <code>ProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/android/profile#saving-a-temporary-profile).
 4. Use the <code>LoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/android/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number. 
 
-	<b>Note:</b> Email and mobile login is only possible if these values were set during step 2. If they weren't set then use the profile ID to login.
+	<b>Note:</b> Email and mobile login is only possible if these values have been set on the profile.
 
+	
 
 The <code>LoginManager</code> can be used to do the following:
 
