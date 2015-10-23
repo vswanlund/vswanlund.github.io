@@ -13,11 +13,11 @@ The temporary profile can later be saved allowing the user to use their newly cr
 When saving the temporary profile use the following steps:
 
 1. Use the <code>LoginManager</code> to [create a temporary profile]({{site.baseurl}}/tag-mobile-sdks/android/login#log-in-and-create-a-temporary-profile).
-2. Use the <code>ProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/android/profile#updating-the-profile). E.g Email and Mobile number.
+2. Use the <code>ProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/android/profile#updating-the-profile). E.g Email and Mobile number. This is an optional step that can be done later.
 3. Use the <code>ProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/android/profile#saving-a-temporary-profile).
 4. Use the <code>LoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/android/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number. 
 
-<b>Note:</b> Email and mobile login is only possible if these values were set during step 2. If they weren't set then use the profile ID to login.
+	<b>Note:</b> Email and mobile login is only possible if these values were set during step 2. If they weren't set then use the profile ID to login.
 
 
 The <code>LoginManager</code> can be used to do the following:
