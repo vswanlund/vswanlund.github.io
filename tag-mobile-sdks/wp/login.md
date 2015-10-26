@@ -14,7 +14,7 @@ To save the temporary profile, making it permanent, use the following steps:
 
 1. Use the <code>LoginManager</code> to [create a temporary profile]({{site.baseurl}}/tag-mobile-sdks/wp/login#log-in-and-create-a-temporary-profile).
 2. Use the <code>ProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/wp/profile#updating-the-profile). E.g Email and Mobile number. (An optional step that can be done later)
-3. Use the <code>ProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/wp/profile#saving-a-temporary-profile).
+3. Use the <code>ProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/wp/profile#saving-the-profile).
 4. Use the <code>LoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/wp/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number. 
 
 	<b>Note:</b> Email and mobile login is only possible if these values have been set on the profile.

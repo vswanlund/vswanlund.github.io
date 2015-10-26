@@ -376,7 +376,7 @@ Before transacting with a merchant you should check if the profile contains all 
 
 <br/>
 	
-# Saving a Temporary Profile
+# Saving the Profile
 
 1. Use the ProfileManager to save the current profile:
 
