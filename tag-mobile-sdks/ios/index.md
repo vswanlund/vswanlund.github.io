@@ -62,5 +62,10 @@ Display and manage addresses in region-specific formats.
 
 # Other Resources
 
+**[Docset Output](/tag-mobile-sdks/0.9.6-javadoc/IOS/)**<br />
+Documentation of every method and parameter.
+
 **[FAQ & Troubleshooting](/tag-mobile-sdks/ios/faq/)**<br />
 Common questions and troubleshooting tips.
+
+

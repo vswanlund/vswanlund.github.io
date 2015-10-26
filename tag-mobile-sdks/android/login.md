@@ -18,7 +18,7 @@ To save the temporary profile, making it permanent, use the following steps:
 4. Use the <code>LoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/android/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number. 
 
 	<b>Note:</b> Email and mobile login is only possible if these values have been set on the profile.
-
+	
 <br/>
 The <code>LoginManager</code> can be used to do the following:
 
@@ -47,7 +47,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
    
     <pre>AccessToken accessToken = LoginManager.getInstance().getCurrentAccessToken();  </pre>
 
-<br/> 
+<br/>
 
 # Log into an Existing PowaTag Profile
 
@@ -80,6 +80,7 @@ There are three ways an existing user can log in using the SDK:
 		}
 	}</pre>
 
+	
 3. Using an Email Address
 
 	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails( signInDiag.getEmail(), signInDiag.getPassword());
@@ -91,10 +92,10 @@ There are three ways an existing user can log in using the SDK:
 			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
 		}
 	}</pre>
+
 	
 For details on the getter and setter methods available please see the SDK Reference documentation that is included as part of the SDK.
-
-<br/>	
+<br/>
 
 # After Logging In
 
