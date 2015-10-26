@@ -257,7 +257,7 @@ You can only change the billing address of a payment instrument once created.
 
     <pre>PTKProfile *profile = [PTKProfileManager sharedManager].currentProfile;</pre>
 
-# Saving the Profile
+# Saving a Temporary Profile
 
 1. Use the PTKProfileManager to save the current profile:
 
