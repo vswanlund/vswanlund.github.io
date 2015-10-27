@@ -15,15 +15,16 @@ This guide covers features that the PowaTag SDK provides to help you do this.
 
 # SDK Exceptions
 
-The [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides details of every method and parameters as well as the exceptoins thrown.
+The [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides details of every method and its parameters as well as the exceptions thrown.
 
 As and aid to help identify problems during development this centralised list of exceptions can also be referred to. 
 
-**[PowaTagException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_exception.html)
+**[PowaTagException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_exception.html)**<br />
 The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.
 
 <b>Classes explicitly throwing this Exception:</b>
+
 
 Class                  | Method                        | Description
 -----------------------|-------------------------------|---------------------------
@@ -31,7 +32,7 @@ ActManager   		   | submitTransaction             | If the request fails
 -----------------------|-------------------------------|---------------------------
 BasketsManager         | updateBasket                  | If basket to update cannot be found.
 -----------------------|-------------------------------|---------------------------
- BasketManager         | createInvoice                 | if the basket used to create the invoice cannot be found.
+BasketManager          | createInvoice                 | if the basket used to create the invoice cannot be found.
 
 	
 	<code>ActManager</code>: 
