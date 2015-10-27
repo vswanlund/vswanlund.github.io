@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Android SDK Error Handling
-permalink: /tag-mobile-sdks/android/errors/
+title: Windows Phone SDK Error Handling
+permalink: /tag-mobile-sdks/wp/errors/
 ---
+
 
 To build a robust and reliable app you want to make sure that it properly responds to errors.
 
@@ -20,8 +21,7 @@ As and aid to help identify problems during development this centralised list of
 The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.
 
-<b>Classes passing this exception :</b>
-passed to the client by callbacks
+<b>Classes throwing this Exception:</b>
 
 
 Class                  | Method                        | Description
@@ -34,7 +34,7 @@ BasketManager          | createInvoice                 | If the basket used to c
 -----------------------|-------------------------------|---------------------------
 BlockingPowaTagExecutor| await						   | If the thread is interrupted while waiting for result.
 -----------------------|-------------------------------|---------------------------
-LoginManager		   | signInAsGuest				   | Failure to create a profile ????????
+LoginManager		   | signInAsGues				   | Failure to create a profile ????????
 -----------------------|-------------------------------|---------------------------
 LoginManager           | logout						   | Failure to delete a temporary profile??????
 -----------------------|-------------------------------|---------------------------
@@ -45,6 +45,8 @@ ProfileManager		   | addPaymentInstrument		   | ???
 ProfileManager 		   | updateAddress				   | ????
 -----------------------|-------------------------------|---------------------------
 ProfileManager		   | deletePaymentInstrument	   | When the payment instrument cannot be found.
+-----------------------|-------------------------------|---------------------------
+ProfileManager		   | saveProfile				   | ??????
 -----------------------|-------------------------------|---------------------------
 AppLinkTagDetector	   | detectAppLink				   | If there is an error parsing the AppLink data. e.g a malformed or corrupt link
 -----------------------|-------------------------------|---------------------------
@@ -302,7 +304,7 @@ Indicates an error from a PowaTag API service in response to a request.
 
 To obtain additional information for the exceptions you use the <code>PowaTagServiceException.getErrors()</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
 
-	List<ServiceError> errorList = ((PowaTagServiceException) exception).getErrors();
+	<pre>List<ServiceError> errorList = ((PowaTagServiceException) exception).getErrors();
 	for (ServiceError serviceError: errorList) {
 		// A code uniquely identifying the error condition.
 		Integer errrorCode = serviceError.getCode();
@@ -324,7 +326,7 @@ To obtain additional information for the exceptions you use the <code>PowaTagSer
 
 		// A Map<String,String> of additional error fields.
 		Map<String,String> additionalFields = serviceError. getAdditionalFields ();
-	}
+	}</pre>
 
 <br />
 
