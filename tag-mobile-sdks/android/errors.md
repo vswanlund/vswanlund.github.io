@@ -27,7 +27,7 @@ As and aid to help identify problems during development this centralised list of
 The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.
 
-<b>Classes explicitly throwing this Exception:</b>
+<b>Classes throwing this Exception:</b>
 
 
 Class                  | Method                        | Description
@@ -95,46 +95,75 @@ ProfileManager			| getCurrentProfile				| Attempting to obtain the current profi
 ------------------------|-------------------------------|---------------------------
 WorkflowManager			| getWorkflow				 	| Attempting to obtain the current profile without user being logged in.
 			
+<br />		
 			
-1.2	PowaTagCancellationException
-	 Indicates an asynchronous operation was cancelled.
-	Classes throwing this Exception: NONE		    
-	
-1.3	PowaTagUnsupportedActDataTypeException
-	Indicates an Act campaign requires a data type that is not supported in the current version of the SDK.
-	 You should check for upgrades to the SDK to enable support for this Act campaign.
-		  
-	Classes throwing this Exception:NONE
-		    
+**[PowaTagCancellationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_cancellation_exception.html)**<br />
+Indicates an asynchronous operation was cancelled.
 
-1.4	PowaTagUnsupportedFeatureException
-	 Indicates an attempt to use a feature that is not supported in the current version of the SDK.
-	 You should check for upgrades to the SDK to enable support for this workflow type.
+	 		
+<b>Parent:</b> PowaTagException<br />
+
+<b>Classes throwing this Exception: None</b>
+
+
+	
+**[PowaTagUnsupportedActDataTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_act_data_type_exception.html)**<br />
+Indicates an Act campaign requires a data type that is not supported in the current version of the SDK.
+You should check for upgrades to the SDK to enable support for this Act campaign.
 		  
-	Classes throwing this Exception: NONE
+<b>Parent:</b> PowaTagException<br />
+
+<b>Classes throwing this Exception: None</b>
+
+<br />		    
+
+**[PowaTagUnsupportedFeatureException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_feature_exception.html)**<br />
+Indicates an attempt to use a feature that is not supported in the current version of the SDK.
+You should check for upgrades to the SDK to enable support for this workflow type.
+		  
+<b>Parent:</b> PowaTagException<br />
+
+<b>Classes throwing this Exception: None</b>
+
+<br />	
 		    					
-1.4.1	 PowaTagUnsupportedWorkflowTypeException
-	  Indicates a workflow type is not supported in the current version of the SDK.
-	  You should check for upgrades to the SDK to enable support for this workflow type.
-					  
- Classes throwing this Exception:
-	WorkflowManager: 
-getWorkflow? - if workflow type is unsupported.
-	
-	
-1.4.2	PowaTagUnsupportedCustomDataTypeException
-	       Indicates a merchant requires a custom data type that is not supported in the current version of the SDK.
-	       You should check for upgrades to the SDK to enable support for this merchant.
-					  
-       Classes throwing this Exception:  ??
-			
-1.5	PowaTagValidationException
-	 Indicates a generic validation issue with data provided to an SDK component.
-
-	Classes throwing this Exception: NONE
-		    
+**[PowaTagUnsupportedWorkflowTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_workflow_type_exception.html)**<br />
+Indicates a workflow type is not supported in the current version of the SDK.
+You should check for upgrades to the SDK to enable support for this workflow type.
 		
-1.5.1	PowaTagMissingRequiredActDataValuesException
+<b>Parent: </b>PowaTagUnsupportedFeatureException<br />
+
+<b>Classes throwing this Exception:</b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+WorkflowManager			| getWorkflow					| If the workflow type is unsupported.
+
+<br />
+	
+	
+**[PowaTagUnsupportedCustomDataTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_custom_data_type_exception.html)**<br />
+Indicates a merchant requires a custom data type that is not supported in the current version of the SDK.
+You should check for upgrades to the SDK to enable support for this merchant.
+
+<b>Parent: </b>PowaTagUnsupportedFeatureException<br />
+					  
+<b>Classes throwing this Exception: </b>  ??
+			
+
+<br />
+			
+**[PowaTagValidationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_validation_exception.html)**<br />
+Indicates a generic validation issue with data provided to an SDK component.
+
+<b>Parent: </b>PowaTagException<br />
+					  
+<b>Classes throwing this Exception: </b>None
+		    
+<br />
+
+		
+**[PowaTagMissingRequiredActDataValuesException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_custom_data_type_exception.html)**<br />
 Indicates an attempt to submit values for an act campaign "act" but one or more non-optional values, as specified by {@link Act#getActDataKeys} and {@link ActDataKey#isOptional}, were not present.
 Classes throwing this Exception:
  ActManager: 
