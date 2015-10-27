@@ -248,7 +248,7 @@ Tag						| parseAudio 					| If the audio reference is invalid
 <br />
 
 **[PowaTagInvalidWorkflowTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_invalid_workflow_type_exception.html)**<br /> 
-Indicates an attempt to convert a workflow object to an incorrect specific workflow type, e.g. attempting to convert a workflow object of type {@link WorkflowType#BASKET} to a {@link ProductWorkflow}.
+Indicates an attempt to convert a workflow object to an incorrect specific workflow type, e.g. attempting to convert a workflow object of type <code>WorkflowType.BASKET</code> to a <code> ProductWorkflow</code>.
 
 <b>Parent: </b>PowaTagException<br />
 
@@ -281,7 +281,7 @@ PowaTagKit				| checkSdkInitialized 			|
 <br />
 
 **[PowaTagHttpException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_http_exception.html)**<br /> 
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using {@code #getStatus()}.
+Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code.getStatus()</code>.
 
 <b>Parent: </b>PowaTagException<br />
 
