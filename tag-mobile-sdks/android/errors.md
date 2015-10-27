@@ -567,10 +567,7 @@ General 5xx 	| 500005 		| 500 				| Sending mail error
 
 
 
-
-
-
-
+<BR />
 
 # General Exceptions
 The following exceptions can be encountered at any time.
@@ -608,9 +605,3 @@ Indicates that a blocking method has been called in the main thread
 
 
 <br />
-
-
-
-
-
-
