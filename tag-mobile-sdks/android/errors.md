@@ -163,11 +163,18 @@ Indicates a generic validation issue with data provided to an SDK component.
 <br />
 
 		
-**[PowaTagMissingRequiredActDataValuesException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_custom_data_type_exception.html)**<br />
-Indicates an attempt to submit values for an act campaign "act" but one or more non-optional values, as specified by {@link Act#getActDataKeys} and {@link ActDataKey#isOptional}, were not present.
-Classes throwing this Exception:
- ActManager: 
-submitTransaction - when missing one or more required act data values
+**[PowaTagMissingRequiredActDataValuesException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_missing_required_act_data_values_exception.html)**<br />
+Indicates an attempt to submit values for an act campaign "act" but one or more non-optional values, as specified by <code>getActDataKeys</code> and <code>isOptional</code>, were not present.
+
+<b>Parent: </b>PowaTagException<br />
+					  
+<b>Classes throwing this Exception: </b>None
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------		    
+ActManager				| submitTransaction				| When missing one or more required act data values
+
+<br />
 
 1.6	PowaTagSerializationException
  Indicates a generic issue serializing or deserializing data.
