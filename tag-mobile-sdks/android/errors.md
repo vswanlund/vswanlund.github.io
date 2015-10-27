@@ -24,12 +24,20 @@ The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.
 
 <b>Classes explicitly throwing this Exception:</b>
+	Class                    | Method                         | Description
+-----------------------|-------------------------------|---------------------------
+ActManager   | submitTransaction                           | If the request fails
+-----------------------|-------------------------------|---------------------------
+BasketsManager     | updateBasket                          | If basket to update cannot be found.
+-----------------------|-------------------------------|---------------------------
+ BasketManager     | createInvoice                        | if the basket used to create the invoice cannot be found.
+-----------------------|-------------------------------|---------------------------
 	
 	<code>ActManager</code>: 
 		submitTransaction() -  if the request fails
 
-	BasketsManager: 
-updateBasket() if basket to update cannot be found.
+	<code>BasketsManager</code>: 
+		updateBasket if basket to update cannot be found.
 	createInvoice() if basket to create the invoice for cannot be found.
  BlockingPowaTagExecutor: 
 await() If the thread is interrupted while waiting for result
