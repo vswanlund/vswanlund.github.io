@@ -327,46 +327,68 @@ To obtain additional information for the exceptions you use the <code>PowaTagSer
 		Map<String,String> additionalFields = serviceError. getAdditionalFields ();
 	}</pre>
 
+<br />
 
-1.12.1.1	PowaTagServiceValidationException
+
+**[PowaTagServiceValidationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_service_validation_exception.html)**<br /> 
 Indicates a validation issue with a request sent to a service.						  
-		Use the getErrors(powatagexception) method to obtain a list of PowaTagServiceExceptions
-						  
-		Classes throwing this Exception:
-		ProfileManager: 
-addPaymentInstrument - if payment instrument details were invalid
-			addAddress - if address details were invalid.
-			updateAddress - if address details provided were invalid.
-											
-											
-1.12.1.2	PowaTagOutOfStockException
+
+<b>Parent: </b>PowaTagServiceException<br />
+
+<b>Classes throwing this Exception: </b> 
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+ProfileManager			| addPaymentInstrument			| If payment instrument details were invalid
+------------------------|-------------------------------|---------------------------
+ProfileManager			| addAddress					| If address details were invalid.
+------------------------|-------------------------------|---------------------------
+ProfileManager			| updateAddress					| If address details provided were invalid.
+
+<br />
+
+
+**[PowaTagOutOfStockException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_out_of_stock_exception.html)**<br /> 
 Indicates a product is out of stock.
-						  
-		Classes throwing this Exception:
-PaymentManager: 
-makePayment - item out of stock
-			
-1.12.1.3	PowaTagNotFoundException
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using {@code #getStatus()}.
-						  
-		Classes throwing this Exception:
-BasketsManager: 
-updateBasket - 	basket not found during update
-			createInvoice - basket not found during invoice creation
-		ProfileManager: 
-addPaymentInstrument - if profile or billing address not found
-			updatePaymentInstrument - if profile could not be found
-			addAddress ? - if profile could not be found  
-			getProfile - if profile could not be found
-			updateProfile - if profile could not be found
-			updateAddress - if profile could not be found
-			deleteAddress - if profile could not be found
-			deletePaymentInstrument = if profile could not be found
-		WorkflowManager:
- getWorkflow - if the workflow for the tag cannot be found.				
+
+<b>Parent: </b>PowaTagServiceException<br />
+
+<b>Classes throwing this Exception: </b> 
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+PaymentManager			| makePayment					| If the item is out of stock
+
+<br />
+
+**[PowaTagNotFoundException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_not_found_exception.html)**<br /> 
+Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>getStatus()</code>.
+
+<b>Parent: </b>PowaTagServiceException<br />
+
+<b>Classes throwing this Exception: </b> 
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+BasketsManager			| updateBasket					| Basket not found during update
+------------------------|-------------------------------|---------------------------
+ | createInvoice	| Basket not found during invoice creation
+------------------------|-------------------------------|---------------------------
+ProfileManager			| addPaymentInstrument			| If profile or billing address not found
+------------------------|-------------------------------|---------------------------
+ | updatePaymentInstrument |
+ | addAddress | 
+ | getProfile | 
+ | updateProfile |  - if the profile can not be found.
+ | updateAddress | 
+ | deleteAddress | 
+ | deletePaymentInstrument | 
+WorkflowManager		| getWorkflow					| If the workflow for the tag cannot be found.				
 
  
 <br />
+
+
 # Error Handling and Recovery
 
 LIST THE DIFF CATEGORY OF EXCEPTIONS AND SHOW SNIPPETS FOR INTERROGATING.<BR />
