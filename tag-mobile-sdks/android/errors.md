@@ -62,7 +62,7 @@ WorkflowManager		   | getWorkflow				   | If the request fails
     
 **[PowaTagAuthorizationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_authorization_exception.html)**<br />
 Indicates an attempt to make an API request without proper authorization, such as trying to access a protected API before logging in.
-		
+
 <b>Parent:</b> PowaTagException<br />
 
 <b>Classes throwing this Exception:</b>
@@ -84,33 +84,33 @@ Basketsmanager			| getCurrentBaskets				| If the returned Baskets object is null
 PaymentManager			| pay 							| Attempting to obtain the user's access token while not authorised.
 ------------------------|-------------------------------|---------------------------
 ProfileManager			| getCurrentProfile				| 
-						| addPaymentInstrument			|
-						| addAddress					|
-						| updateProfile					|
-						| deleteAddress					| Attempting to obtain the current profile without user being logged in.
-						| updateAddress					| 
-						| updatePaymentInstrument		| 
-						| deletePaymentInstrument		| 
-						| saveProfile					| 
+ | addPaymentInstrument			|
+ | addAddress					|
+ | updateProfile					|
+ | deleteAddress					| Attempting to obtain the current profile without user being logged in.
+ | updateAddress					| 
+ | updatePaymentInstrument		| 
+ | deletePaymentInstrument		| 
+ | saveProfile					| 
 ------------------------|-------------------------------|---------------------------
 WorkflowManager			| getWorkflow				 	| Attempting to obtain the current profile without user being logged in.
-			
+
 <br />		
-			
+
 **[PowaTagCancellationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_cancellation_exception.html)**<br />
 Indicates an asynchronous operation was cancelled.
 
-	 		
+
 <b>Parent:</b> PowaTagException<br />
 
 <b>Classes throwing this Exception: None</b>
 
-
+<br />
 	
 **[PowaTagUnsupportedActDataTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_act_data_type_exception.html)**<br />
 Indicates an Act campaign requires a data type that is not supported in the current version of the SDK.
 You should check for upgrades to the SDK to enable support for this Act campaign.
-		  
+
 <b>Parent:</b> PowaTagException<br />
 
 <b>Classes throwing this Exception: None</b>
@@ -120,17 +120,17 @@ You should check for upgrades to the SDK to enable support for this Act campaign
 **[PowaTagUnsupportedFeatureException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_feature_exception.html)**<br />
 Indicates an attempt to use a feature that is not supported in the current version of the SDK.
 You should check for upgrades to the SDK to enable support for this workflow type.
-		  
+
 <b>Parent:</b> PowaTagException<br />
 
 <b>Classes throwing this Exception: None</b>
 
 <br />	
-		    					
+
 **[PowaTagUnsupportedWorkflowTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_unsupported_workflow_type_exception.html)**<br />
 Indicates a workflow type is not supported in the current version of the SDK.
 You should check for upgrades to the SDK to enable support for this workflow type.
-		
+
 <b>Parent: </b>PowaTagUnsupportedFeatureException<br />
 
 <b>Classes throwing this Exception:</b>
@@ -147,27 +147,27 @@ Indicates a merchant requires a custom data type that is not supported in the cu
 You should check for upgrades to the SDK to enable support for this merchant.
 
 <b>Parent: </b>PowaTagUnsupportedFeatureException<br />
-					  
+
 <b>Classes throwing this Exception: </b>  ??
-			
+
 
 <br />
-			
+
 **[PowaTagValidationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_validation_exception.html)**<br />
 Indicates a generic validation issue with data provided to an SDK component.
 
 <b>Parent: </b>PowaTagException<br />
-					  
+
 <b>Classes throwing this Exception: </b>None
-		    
+
 <br />
 
-		
+
 **[PowaTagMissingRequiredActDataValuesException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_missing_required_act_data_values_exception.html)**<br />
 Indicates an attempt to submit values for an act campaign "act" but one or more non-optional values, as specified by <code>getActDataKeys</code> and <code>isOptional</code>, were not present.
 
 <b>Parent: </b>PowaTagValidationException<br />
-					  
+
 <b>Classes throwing this Exception: </b>
 
 Class                   | Method                        | Description
@@ -180,7 +180,7 @@ ActManager				| submitTransaction				| When missing one or more required act dat
 Indicates a generic issue serializing or deserializing data.
 
 <b>Parent: </b>PowaTagException<br />
-					  
+
 <b>Classes throwing this Exception: </b>
 
 Class                   | Method                        | Description
@@ -196,7 +196,7 @@ CampaignManager			| createInvoice					| If the invoice has an incorrect invoice 
 Indicates a response could not be deserialized because a required property is undefined.
 
 <b>Parent: </b>PowaTagSerializationException<br />
-					  
+
 <b>Classes throwing this Exception: </b>
 
 Class                   | Method                        | Description
@@ -208,39 +208,65 @@ CampaignManager			| createInvoice					| If the invoice is missing the required p
 WorkflowManager			| toWorkflow					| If a workflow is missing a reuired property type
 ------------------------|-------------------------------|---------------------------	
 WorkflowManager			| getProfile					| If the profile payment instrument is missing the properties: paymentType or issuer
-									 
+
 <br />									 
-									 
-1.7	PowaTagInvalidApiKeyException
+
+**[PowaTagInvalidApiKeyException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_invalid_api_key_exception.html)**<br /> 
 Indicates an attempt to initialize the SDK without a valid api key.
-		  
-	Classes throwing this Exception:
-PowaTagKit: 
-initializeSdk - if the api key used to initialize the SDK is either null or an empty string.
 
-1.8	PowaTagInvalidDonationAmountException
-Indicates an invalid donation amount, for instance when specifying an amount that is not one of {@link Campaign#getSuggestedAmounts()} when {@link Campaign#isCustomAmountAllowed()} is not true.
-		  
-	Classes throwing this Exception:
-CampaignManager: 
-createInvoice
+<b>Parent: </b>PowaTagException<br />
 
-1.9	PowaTagInvalidTagFormatException
-Indicates an attempt to create a {@link Tag} from an invalid label. You should use {@link Tag#isValidQrFormatUrl} to check if a string is a valid label before attempting to create a tag from it.
-	  
-	 Classes throwing this Exception:
-Tag: 
-parseQrUrl - 	If the tag label is invalid
-If the host name is not supported for QR tags
-					Invalid QR URL
-			 parseAudio - 	If the audio reference is invalid
+<b>Classes throwing this Exception: </b>
 
-1.10	PowaTagInvalidWorkflowTypeException
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------			  
+PowaTagKit				| initializeSdk					| If the api key used to initialize the SDK is either null or an empty string.
+
+<br />
+
+**[PowaTagInvalidDonationAmountException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_invalid_donation_amount_exception.html)**<br /> 
+Indicates an invalid donation amount, for instance when specifying an amount that is not one of <code>getSuggestedAmounts</code> when <code>isCustomAmountAllowed()</code> is not true.
+
+<b>Parent: </b>PowaTagException<br />
+
+<b>Classes throwing this Exception: </b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------			  
+CampaignManager			| createInvoice					| Indicates an invalid donation amount
+
+<br />
+
+**[PowaTagInvalidTagFormatException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_invalid_tag_format_exception.html)**<br /> 
+Indicates an attempt to create a <code>Tag</code> from an invalid label. You should use <code>Tag.isValidQrFormatUrl</code> to check if a string is a valid label before attempting to create a tag from it.
+
+<b>Parent: </b>PowaTagException<br />
+
+<b>Classes throwing this Exception: </b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+Tag						| parseQrUrl					| If the tag label is invalid
+ | | If the host name is not supported for QR tags
+ | | Invalid QR URL
+------------------------|-------------------------------|--------------------------- 
+Tag						| parseAudio 					| If the audio reference is invalid
+
+<br />
+
+**[PowaTagInvalidWorkflowTypeException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_invalid_workflow_type_exception.html)**<br /> 
 Indicates an attempt to convert a workflow object to an incorrect specific workflow type, e.g. attempting to convert a workflow object of type {@link WorkflowType#BASKET} to a {@link ProductWorkflow}.
-		  
-		Classes throwing this Exception:
-WorkflowType: 
-Thrown in methods asProductWorkflow, asBasketWorkflow, asCampaignWorkflow and asActWorkflow
+
+<b>Parent: </b>PowaTagException<br />
+
+<b>Classes throwing this Exception: </b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+WorkflowType			| asProductWorkflow |
+ | asBasketWorkflow |
+ | asCampaignWorkflow |
+ | asActWorkflow |
 
 1.11	PowaTagKitNotInitializedException
 Indicates an attempt to use an SDK component before properly initializing the SDK. Call {@link PowaTagKit#initializeSdk} when your application loads, before using any of the other SDK components.
