@@ -55,23 +55,26 @@ ProfileManager		   | saveProfile				   | ??????
 AppLinkTagDetector	   | detectAppLink				   | If there is an error parsing the AppLink data. e.g a malformed or corrupt link
 -----------------------|-------------------------------|---------------------------
 WorkflowManager		   | getWorkflow				   | If the request fails
-  
+
+<br />  
     
-1.1	PowaTagAuthorizationException
+**[PowaTagAuthorizationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_authorization_exception.html)**<br />
 Indicates an attempt to make an API request without proper authorization, such as trying to access a protected API before logging in.
 		
-<b>Parent:</b> PowaTagException
+<b>Parent:</b> PowaTagException<br />
 
 <b>Classes throwing this Exception:</b>
 
-Class                  | Method                        | Description
------------------------|-------------------------------|---------------------------
-LoginManager: 	
-signInAsGuest - if the user is already logged in.
-getCurrentAccessToken() - If the user is not logged in.
-		logout() - if the current profile can't be retrieved while trying to log out.
-BasketsManager: 
-updateBasket - can't obtain the access token or current basket due to user not being authorized.
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+LoginManager			| signInAsGuest					| If the user is already logged in.
+------------------------|-------------------------------|---------------------------
+LoginManager			| getCurrentAccessToken			| If the user is not logged in.
+------------------------|-------------------------------|---------------------------
+LoginManager			| logout						| If the current profile cannot be retrieved while trying to log out.
+------------------------|-------------------------------|---------------------------
+BasketsManager			| updateBasket 					| Can't obtain the access token or current basket due to user not being authorized.
+------------------------|-------------------------------|---------------------------
 createInvoice - can't obtain the access token or current basket due to user not being authorized.
 		getCurrentBaskets() - if the returned Baskets object is null
 PaymentManager: 	
