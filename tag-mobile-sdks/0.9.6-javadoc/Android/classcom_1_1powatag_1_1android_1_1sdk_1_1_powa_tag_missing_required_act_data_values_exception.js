@@ -1,0 +1,5 @@
+var classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_missing_required_act_data_values_exception =
+[
+    [ "PowaTagMissingRequiredActDataValuesException", "classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_missing_required_act_data_values_exception.html#ac997fb66d629d267f344b513d6b55f94", null ],
+    [ "getDataKeysForMissingRequiredValues", "classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_missing_required_act_data_values_exception.html#af4d63e50a9636dd4dee6056093c02443", null ]
+];

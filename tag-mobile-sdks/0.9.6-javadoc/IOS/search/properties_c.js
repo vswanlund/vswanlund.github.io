@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['name',['name',['../interface_p_t_k_act.html#ab3ef495e37de977773236e44bc5c7acb',1,'PTKAct::name()'],['../interface_p_t_k_act_data_key.html#a6a49d5823c073d79ba8820fcc571d102',1,'PTKActDataKey::name()'],['../interface_p_t_k_campaign.html#a50ef7c5cac5412fc99c78b3c34fe1fd2',1,'PTKCampaign::name()'],['../interface_p_t_k_custom_data_key.html#aa8bb10f9f17ba06ca98c4fc0ede93af5',1,'PTKCustomDataKey::name()'],['../interface_p_t_k_merchant.html#a94a0c11f19a3562b2b349ef7b9692cfe',1,'PTKMerchant::name()'],['../interface_p_t_k_product_attribute.html#a126789c3d3d079a1ab4b48c82715d80a',1,'PTKProductAttribute::name()'],['../interface_p_t_k_product_image.html#a0e3c77b866bbc8fcd5e6476767c8a04c',1,'PTKProductImage::name()'],['../interface_p_t_k_product_option.html#abdbd500976e8fe605b2c8531780ef003',1,'PTKProductOption::name()'],['../interface_p_t_k_shipping_option.html#abb5bdae5487903e7579e5471b0c958ad',1,'PTKShippingOption::name()']]],
+  ['numberrequired',['numberRequired',['../interface_p_t_k_merchant.html#a2583c28283217b02e942501fc22df761',1,'PTKMerchant']]]
+];
