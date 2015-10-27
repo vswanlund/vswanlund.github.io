@@ -265,14 +265,28 @@ Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
 WorkflowType			| asProductWorkflow |
  | asBasketWorkflow |
- | asCampaignWorkflow |
+ | asCampaignWorkflow | 
  | asActWorkflow |
 
-1.11	PowaTagKitNotInitializedException
-Indicates an attempt to use an SDK component before properly initializing the SDK. Call {@link PowaTagKit#initializeSdk} when your application loads, before using any of the other SDK components.
-		Classes throwing this Exception:
-PowaTagKit: 
-Thrown in methods checkSdkInitialized, getDeviceId, getApiKey and getSecret
+
+<br />
+ 
+**[PowaTagKitNotInitializedException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_kit_not_initialized_exception.html)**<br /> 
+Indicates an attempt to use an SDK component before properly initializing the SDK. Call PowaTagKit <code>initializeSdk</code> when your application loads, before using any of the other SDK components.
+
+<b>Parent: </b>PowaTagException<br />
+
+<b>Classes throwing this Exception: </b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------
+PowaTagKit				| checkSdkInitialized 			|
+ | getDeviceId |
+ | getApiKey |
+ | getSecret |
+
+<br />
+
 1.12	PowaTagHttpException
 Indicates an HTTP error response was received from the server. You can retrieve the response status code using {@code #getStatus()}.
 		Classes throwing this Exception: NONE		    
