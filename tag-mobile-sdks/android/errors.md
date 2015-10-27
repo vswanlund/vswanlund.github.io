@@ -24,14 +24,15 @@ The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.
 
 <b>Classes explicitly throwing this Exception:</b>
-	Class                    | Method                         | Description
+
+Class                  | Method                        | Description
 -----------------------|-------------------------------|---------------------------
-ActManager   | submitTransaction                           | If the request fails
+ActManager   		   | submitTransaction             | If the request fails
 -----------------------|-------------------------------|---------------------------
-BasketsManager     | updateBasket                          | If basket to update cannot be found.
+BasketsManager         | updateBasket                  | If basket to update cannot be found.
 -----------------------|-------------------------------|---------------------------
- BasketManager     | createInvoice                        | if the basket used to create the invoice cannot be found.
------------------------|-------------------------------|---------------------------
+ BasketManager         | createInvoice                 | if the basket used to create the invoice cannot be found.
+
 	
 	<code>ActManager</code>: 
 		submitTransaction() -  if the request fails
