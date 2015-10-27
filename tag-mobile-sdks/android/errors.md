@@ -29,19 +29,15 @@ ActManager   		   | submitTransaction             | If the request fails.
 -----------------------|-------------------------------|---------------------------
 BasketsManager         | updateBasket                  | If basket to update cannot be found.
 -----------------------|-------------------------------|---------------------------
-BasketManager          | createInvoice                 | If the basket used to create the invoice cannot be found.
+BasketsManager          | createInvoice                 | If the basket used to create the invoice cannot be found.
 -----------------------|-------------------------------|---------------------------
 BlockingPowaTagExecutor| await						   | If the thread is interrupted while waiting for result.
 -----------------------|-------------------------------|---------------------------
-LoginManager		   | signInAsGuest				   | Failure to create a profile ????????
+LoginManager		   | signInAsGuest				   | Failure to create a profile
 -----------------------|-------------------------------|---------------------------
-LoginManager           | logout						   | Failure to delete a temporary profile??????
+LoginManager           | logout						   | Failure to delete a temporary profile
 -----------------------|-------------------------------|---------------------------
 PaymentManager		   | pay						   | If the request fails
------------------------|-------------------------------|---------------------------
-ProfileManager		   | addPaymentInstrument		   | ???
------------------------|-------------------------------|---------------------------
-ProfileManager 		   | updateAddress				   | ????
 -----------------------|-------------------------------|---------------------------
 ProfileManager		   | deletePaymentInstrument	   | When the payment instrument cannot be found.
 -----------------------|-------------------------------|---------------------------
@@ -575,7 +571,7 @@ Indicates a generic network problem.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes passing this exception to the callback:</b> This exceptoin can be encountered at any time.
+<b>Classes passing this exception to the callback:</b> This exception can be encountered at any time.
 
 <br />		    
 
@@ -585,7 +581,7 @@ Indicates the network operation took too long to complete and was aborted.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes passing this exception to the callback:</b> This exceptoin can be encountered at any time.
+<b>Classes passing this exception to the callback:</b> This exception can be encountered at any time.
 
 <br />
 
@@ -594,7 +590,7 @@ Indicates no internet connection is available.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes passing this exception to the callback:</b> This exceptoin can be encountered at any time.
+<b>Classes passing this exception to the callback:</b> This exception can be encountered at any time.
 
 <br />
 
