@@ -10,13 +10,6 @@ This guide covers features that the PowaTag SDK provides to help you do this.
 
 <br />
 
-# Error Handling and Recovery
-
-LIST THE DIFF CATEGORY OF EXCEPTIONS AND SHOW SNIPPETS FOR INTERROGATING.<BR />
-E.G. SERVICEEXCEPTION.GETCODE()....
-
-<br />
-
 # SDK Exceptions
 
 The SDK [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides the details of every method including parameters and exceptions.
@@ -287,41 +280,54 @@ PowaTagKit				| checkSdkInitialized 			|
 
 <br />
 
-1.12	PowaTagHttpException
+**[PowaTagHttpException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_http_exception.html)**<br /> 
 Indicates an HTTP error response was received from the server. You can retrieve the response status code using {@code #getStatus()}.
-		Classes throwing this Exception: NONE		    
+
+<b>Parent: </b>PowaTagException<br />
+
+<b>Classes throwing this Exception: </b> None
 		
-1.12.1	PowaTagServiceException
-		Indicates an error from a PowaTag API service in response to a request.
-Information for each error reported by the service can be found in the list of errors provided by getErrors() method.
-Classes throwing this Exception: NONE 
-To obtain additional information for all sub classes you can use the PowaTagServiceException.getErrors() method to return a list of <code>ServiceException</code> that can be interrogated:
-List<ServiceError> errorList = ((PowaTagServiceException) exception).getErrors();		
-for (ServiceError serviceError: errorList) {
-// A code uniquely identifying the error condition.
-			 Integer errrorCode = serviceError.getCode();
-					 
-			 // The action to be taken as a result of this error.
-			 String action = serviceError.getAction();
-				 
-			 // Optional error message for the application developer. Should not be displayed to the 
-user.
-String devMsg =  serviceError.getDeveloperMessage();
-					 
-			 // Optional localized error message that may be displayed to the user.
-			String userMsg = serviceError.getUserMessage();
-					 
-			 // An optional URL containing more information about the error.
-			URI moreInfoUrl = serviceError. getMoreInfoUrl ();
-					 
-			 // Error debugging information.
-			 String debugInfo = serviceError. getDebugInfo ();
-				 
-			 // A Map<String,String> of additional error fields.
-			 Map<String,String> additionalFields = serviceError. getAdditionalFields ();
-		  }
-					 
-					 
+		
+<br />
+
+
+# Handling PowaTag Service Exceptions
+
+<br />
+**[PowaTagServiceException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_service_exception.html)**<br /> 
+Indicates an error from a PowaTag API service in response to a request.
+
+<b>Parent: </b>PowaTagHttpException<br />
+
+<b>Classes throwing this Exception: </b> None
+
+To obtain additional information for the exceptions you use the <code>PowaTagServiceException.getErrors()</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
+
+	<pre>List<ServiceError> errorList = ((PowaTagServiceException) exception).getErrors();
+	for (ServiceError serviceError: errorList) {
+		// A code uniquely identifying the error condition.
+		Integer errrorCode = serviceError.getCode();
+		
+		// The action to be taken as a result of this error.
+		String action = serviceError.getAction();
+
+		// Optional error message for the application developer. Should not be displayed to the user.
+		String devMsg =  serviceError.getDeveloperMessage();
+
+		// Optional localized error message that may be displayed to the user.
+		String userMsg = serviceError.getUserMessage();
+
+		// An optional URL containing more information about the error.
+		URI moreInfoUrl = serviceError. getMoreInfoUrl ();
+
+		// Error debugging information.
+		String debugInfo = serviceError. getDebugInfo ();
+
+		// A Map<String,String> of additional error fields.
+		Map<String,String> additionalFields = serviceError. getAdditionalFields ();
+	}</pre>
+
+
 1.12.1.1	PowaTagServiceValidationException
 Indicates a validation issue with a request sent to a service.						  
 		Use the getErrors(powatagexception) method to obtain a list of PowaTagServiceExceptions
@@ -358,9 +364,15 @@ addPaymentInstrument - if profile or billing address not found
 			deletePaymentInstrument = if profile could not be found
 		WorkflowManager:
  getWorkflow - if the workflow for the tag cannot be found.				
-											
 
+ 
+<br />
+# Error Handling and Recovery
 
+LIST THE DIFF CATEGORY OF EXCEPTIONS AND SHOW SNIPPETS FOR INTERROGATING.<BR />
+E.G. SERVICEEXCEPTION.GETCODE()....
+
+<br />
 
 
 General Exceptions
@@ -383,84 +395,6 @@ Classes throwing this Exception: None
 2.	IllegalStateException
 Indicates that a blocking method has been called in the main thread 
 
-
-# PowaTagAuthorizationException
-Indicates an attempt to make an API request without proper authorization such as trying to access a protected API before logging in.
-
-# PowaTagCancellationException
-Indicates an asynchronous operation was cancelled.
-
-# PowaTagException
-The base class for all exceptions indicating unexpected errors from the SDK.
-Other runtime exceptions such as {@code IllegalArgumentException} may be thrown by the SDK to indicate serious programming error.
-
-# PowaTagHttpException
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using {@code #getStatus()}.
-
-# PowaTagInvalidApiKeyException
-Indicates an attempt to initialize the SDK without a valid api key.
-
-# PowaTagInvalidDonationAmountException
-Indicates an invalid donation amount, for instance when specifying an amount that is not one of {@link Campaign#getSuggestedAmounts()} when {@link Campaign#isCustomAmountAllowed()} is not true.
-
-# PowaTagInvalidTagFormatException
-Indicates an attempt to create a {@link Tag} from an invalid label. You should use {@link Tag#isValidQrFormatUrl} to check if a string is a valid label before attempting to create a tag from it.
-
-# PowaTagInvalidWorkflowTypeException
-Indicates an attempt to convert a workflow object to an incorrect specific workflow type, e.g. attempting to convert a workflow object of type {@link WorkflowType#BASKET} to a {@link ProductWorkflow}.
-
-# PowaTagKitNotInitializedException
-Indicates an attempt to use an SDK component before properly initializing the SDK. Call {@link PowaTagKit#initializeSdk} when your application loads, before using any of the other SDK components.
-
-# PowaTagMissingRequiredActDataValuesException
-Indicates an attempt to submit values for an act campaign "act" but one or more non-optional values, as specified by {@link Act#getActDataKeys} and {@link ActDataKey#isOptional}, were not present.
-
-# PowaTagNetworkException
-Indicates a generic network problem.
-
-# PowaTagNetworkTimeoutException
-Indicates the network operation took too long to complete and was aborted.
-
-# PowaTagNoInternetConnectionException
-Indicates no internet connection is available.
-
-# PowaTagNotFoundException
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using {@code #getStatus()}.
-
-# PowaTagOutOfStockException
-Indicates a product is out of stock.
-
-# PowaTagSerializationException
-Indicates a generic issue serializing or deserializing data.
-
-# PowaTagServiceException
-Indicates an error from a PowaTag API service in response to a request.
-Information for each error reported by the service can be found in the list of errors provided by {@link #getErrors()}.
-
-# PowaTagServiceValidationException
-Indicates a validation issue with a request sent to a service.
-
-# PowaTagUndefinedPropertySerializationException
-Indicates a response could not be deserialized because a required property is undefined.
-
-# PowaTagUnsupportedActDataTypeException
-Indicates an Act campaign requires a data type that is not supported in the current version of the SDK.
-You should check for upgrades to the SDK to enable support for this Act campaign.
-
-# PowaTagUnsupportedCustomDataTypeException
-Indicates a merchant requires a custom data type that is not supported in the current version of the SDK.
-You should check for upgrades to the SDK to enable support for this merchant.
-
-# PowaTagUnsupportedFeatureException
-Indicates an attempt to use a feature that is not supported in the current version of the SDK.
-You should check for upgrades to the SDK to enable support for this workflow type.
-
-# PowaTagUnsupportedWorkflowTypeException
-Indicates a workflow type is not supported in the current version of the SDK.
-You should check for upgrades to the SDK to enable support for this workflow type.
-
-# PowaTagValidationException
-Indicates a generic validation issue with data provided to an SDK component.
 
 <br />
 
