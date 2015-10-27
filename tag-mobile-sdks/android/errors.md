@@ -20,8 +20,7 @@ As and aid to help identify problems during development this centralised list of
 The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.
 
-<b>Classes passing this exception :</b>
-passed to the client by callbacks
+<b>Classes passing this exception to the callback:</b>
 
 
 Class                  | Method                        | Description
@@ -57,7 +56,7 @@ Indicates an attempt to make an API request without proper authorization, such a
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes throwing this Exception:</b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -95,7 +94,7 @@ Indicates an asynchronous operation was cancelled.
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes throwing this Exception: None</b>
+<b>Classes passing this exception to the callback:</b> None
 
 <br />
 	
@@ -105,7 +104,7 @@ You should check for upgrades to the SDK to enable support for this Act campaign
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes throwing this Exception: None</b>
+<b>Classes passing this exception to the callback:</b> None
 
 <br />		    
 
@@ -115,7 +114,7 @@ You should check for upgrades to the SDK to enable support for this workflow typ
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes throwing this Exception: None</b>
+<b>Classes passing this exception to the callback:</b> None
 
 <br />	
 
@@ -125,7 +124,7 @@ You should check for upgrades to the SDK to enable support for this workflow typ
 
 <b>Parent: </b>PowaTagUnsupportedFeatureException<br />
 
-<b>Classes throwing this Exception:</b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -140,7 +139,7 @@ You should check for upgrades to the SDK to enable support for this merchant.
 
 <b>Parent: </b>PowaTagUnsupportedFeatureException<br />
 
-<b>Classes throwing this Exception: </b>  ??
+<b>Classes passing this exception to the callback:</b> 
 
 
 <br />
@@ -150,7 +149,7 @@ Indicates a generic validation issue with data provided to an SDK component.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>None
+<b>Classes passing this exception to the callback:</b> None
 
 <br />
 
@@ -160,7 +159,7 @@ Indicates an attempt to submit values for an act campaign "act" but one or more 
 
 <b>Parent: </b>PowaTagValidationException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------		    
@@ -173,7 +172,7 @@ Indicates a generic issue serializing or deserializing data.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------		    
@@ -189,7 +188,7 @@ Indicates a response could not be deserialized because a required property is un
 
 <b>Parent: </b>PowaTagSerializationException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------	
@@ -208,7 +207,7 @@ Indicates an attempt to initialize the SDK without a valid api key.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------			  
@@ -217,11 +216,11 @@ PowaTagKit				| initializeSdk					| If the api key used to initialize the SDK is
 <br />
 
 **[PowaTagInvalidDonationAmountException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_invalid_donation_amount_exception.html)**<br /> 
-Indicates an invalid donation amount, for instance when specifying an amount that is not one of <code>getSuggestedAmounts</code> when <code>isCustomAmountAllowed()</code> is not true.
+Indicates an invalid donation amount, for instance when specifying an amount that is not one of <code>getSuggestedAmounts</code> when <code>isCustomAmountAllowed</code> is not true.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------			  
@@ -234,7 +233,7 @@ Indicates an attempt to create a <code>Tag</code> from an invalid label. You sho
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -251,7 +250,7 @@ Indicates an attempt to convert a workflow object to an incorrect specific workf
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -268,7 +267,7 @@ Indicates an attempt to use an SDK component before properly initializing the SD
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b>
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -280,11 +279,11 @@ PowaTagKit				| checkSdkInitialized 			|
 <br />
 
 **[PowaTagHttpException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_http_exception.html)**<br /> 
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code.getStatus()</code>.
+Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>getStatus</code>.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b> None
+<b>Classes passing this exception to the callback:</b> None
 		
 		
 <br />
@@ -298,7 +297,7 @@ Indicates an error from a PowaTag API service in response to a request.
 
 <b>Parent: </b>PowaTagHttpException<br />
 
-<b>Classes throwing this Exception: </b> None
+<b>Classes passing this exception to the callback:</b> None
 
 To obtain additional information for the exceptions you use the <code>PowaTagServiceException.getErrors()</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
 
@@ -334,7 +333,7 @@ Indicates a validation issue with a request sent to a service.
 
 <b>Parent: </b>PowaTagServiceException<br />
 
-<b>Classes throwing this Exception: </b> 
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -352,7 +351,7 @@ Indicates a product is out of stock.
 
 <b>Parent: </b>PowaTagServiceException<br />
 
-<b>Classes throwing this Exception: </b> 
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -361,11 +360,11 @@ PaymentManager			| makePayment					| If the item is out of stock
 <br />
 
 **[PowaTagNotFoundException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_not_found_exception.html)**<br /> 
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>getStatus()</code>.
+Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>getStatus</code>.
 
 <b>Parent: </b>PowaTagServiceException<br />
 
-<b>Classes throwing this Exception: </b> 
+<b>Classes passing this exception to the callback:</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -576,7 +575,7 @@ Indicates a generic network problem.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b> This exceptoin can be encountered at any time.
+<b>Classes passing this exception to the callback:</b> This exceptoin can be encountered at any time.
 
 <br />		    
 
@@ -586,7 +585,7 @@ Indicates the network operation took too long to complete and was aborted.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b> This exceptoin can be encountered at any time.
+<b>Classes passing this exception to the callback:</b> This exceptoin can be encountered at any time.
 
 <br />
 
@@ -595,7 +594,7 @@ Indicates no internet connection is available.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes throwing this Exception: </b> This exceptoin can be encountered at any time.
+<b>Classes passing this exception to the callback:</b> This exceptoin can be encountered at any time.
 
 <br />
 
