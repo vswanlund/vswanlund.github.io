@@ -166,9 +166,9 @@ Indicates a generic validation issue with data provided to an SDK component.
 **[PowaTagMissingRequiredActDataValuesException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_missing_required_act_data_values_exception.html)**<br />
 Indicates an attempt to submit values for an act campaign "act" but one or more non-optional values, as specified by <code>getActDataKeys</code> and <code>isOptional</code>, were not present.
 
-<b>Parent: </b>PowaTagException<br />
+<b>Parent: </b>PowaTagValidationException<br />
 					  
-<b>Classes throwing this Exception: </b>None
+<b>Classes throwing this Exception: </b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------		    
