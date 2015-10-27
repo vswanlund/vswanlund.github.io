@@ -11,7 +11,9 @@ This guide covers features that the PowaTag SDK provides to help you do this.
 <br />
 
 # Error Handling and Recovery
-	list the different parent types of exceptions and describe how to handle them.
+
+LIST THE DIFF CATEGORY OF EXCEPTIONS AND SHOW SNIPPETS FOR INTERROGATING.<BR />
+E.G. SERVICEEXCEPTION.GETCODE()....
 
 <br />
 
@@ -75,22 +77,23 @@ LoginManager			| logout						| If the current profile cannot be retrieved while 
 ------------------------|-------------------------------|---------------------------
 BasketsManager			| updateBasket 					| Can't obtain the access token or current basket due to user not being authorized.
 ------------------------|-------------------------------|---------------------------
-createInvoice - can't obtain the access token or current basket due to user not being authorized.
-		getCurrentBaskets() - if the returned Baskets object is null
-PaymentManager: 	
-pay() - while trying to obtain the user's access token when not authorised.
-	ProfileManager: 
-getCurrentProfile() - trying to obtain current profile without user being logged in.
-		addPaymentInstrument() - trying to obtain current profile without user being logged in.
-		addAddress()- trying to obtain current profile without user being logged in.
-		updateProfile()- trying to obtain current profile without user being logged in.
-		deleteAddress()- trying to obtain current profile without user being logged in.
-		updateAddress- trying to obtain current profile without user being logged in.
-		updatePaymentInstrument- trying to obtain current profile without user being logged in.
-		deletePaymentInstrument- trying to obtain current profile without user being logged in.
-		saveProfile- trying to obtain current profile without user being logged in.
-	WorkflowManager: 
-getWorkflow() - trying to obtain current profile without user being logged in.
+BasketsManager			| createInvoice					| Can't obtain the access token or current basket due to user not being authorized.
+------------------------|-------------------------------|---------------------------
+Basketsmanager			| getCurrentBaskets				| If the returned Baskets object is null.
+------------------------|-------------------------------|---------------------------
+PaymentManager			| pay 							| Attempting to obtain the user's access token while not authorised.
+------------------------|-------------------------------|---------------------------
+ProfileManager			| getCurrentProfile				| Attempting to obtain the current profile without user being logged in.
+						| addPaymentInstrument			|
+						| addAddress					|
+						| updateProfile					|
+						| deleteAddress					|
+						| updateAddress					| 
+						| updatePaymentInstrument		| 
+						| deletePaymentInstrument		| 
+						| saveProfile					| 
+------------------------|-------------------------------|---------------------------
+WorkflowManager			| getWorkflow				 	| Attempting to obtain the current profile without user being logged in.
 			
 			
 1.2	PowaTagCancellationException
