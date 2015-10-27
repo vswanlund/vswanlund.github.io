@@ -83,11 +83,11 @@ Basketsmanager			| getCurrentBaskets				| If the returned Baskets object is null
 ------------------------|-------------------------------|---------------------------
 PaymentManager			| pay 							| Attempting to obtain the user's access token while not authorised.
 ------------------------|-------------------------------|---------------------------
-ProfileManager			| getCurrentProfile				| Attempting to obtain the current profile without user being logged in.
+ProfileManager			| getCurrentProfile				| 
 						| addPaymentInstrument			|
 						| addAddress					|
 						| updateProfile					|
-						| deleteAddress					|
+						| deleteAddress					| Attempting to obtain the current profile without user being logged in.
 						| updateAddress					| 
 						| updatePaymentInstrument		| 
 						| deletePaymentInstrument		| 
@@ -176,28 +176,40 @@ ActManager				| submitTransaction				| When missing one or more required act dat
 
 <br />
 
-1.6	PowaTagSerializationException
- Indicates a generic issue serializing or deserializing data.
-		  
-	Classes throwing this Exception:
-	BasketsManager: 
-createInvoice - if the created invoice has an incorrect invoice type. The only type acceptable is PAYMENT. 
-	CampaignManager: 
-createInvoice - if the created invoice has an incorrect invoice type. The only type acceptable is DONATION. 
-		
-1.6.1	PowaTagUndefinedPropertySerializationException
+**[PowaTagSerializationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_serialization_exception.html)**<br />
+Indicates a generic issue serializing or deserializing data.
+
+<b>Parent: </b>PowaTagException<br />
+					  
+<b>Classes throwing this Exception: </b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------		    
+BasketsManager			| createInvoice					| If the invoice has an incorrect invoice type. The only type acceptable is PAYMENT. 
+------------------------|-------------------------------|---------------------------		    
+CampaignManager			| createInvoice					| If the invoice has an incorrect invoice type. The only type acceptable is DONATION. 
+
+<br />		  
+ 
+
+**[PowaTagUndefinedPropertySerializationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_undefined_property_serialization_exception.html)**<br /> 
 Indicates a response could not be deserialized because a required property is undefined.
-				  
-	       Classes throwing this Exception:
-	       BasketsManager: 
-createInvoice - if the invoice is missing the required property: invoiceType
-       CampaignManager: 
-createInvoice - if the invoice is missing the required property: invoiceType
-       WorkflowManager: 
-toWorkflow - if a workflow is missing a reuired property type
-		getProfile - if the profile payment instrument is missing the properties: paymentType or issuer
+
+<b>Parent: </b>PowaTagSerializationException<br />
+					  
+<b>Classes throwing this Exception: </b>
+
+Class                   | Method                        | Description
+------------------------|-------------------------------|---------------------------	
+BasketsManager			| createInvoice					| If the invoice is missing the required property: invoiceType
+------------------------|-------------------------------|---------------------------	
+CampaignManager			| createInvoice					| If the invoice is missing the required property: invoiceType
+------------------------|-------------------------------|---------------------------	
+WorkflowManager			| toWorkflow					| If a workflow is missing a reuired property type
+------------------------|-------------------------------|---------------------------	
+WorkflowManager			| getProfile					| If the profile payment instrument is missing the properties: paymentType or issuer
 									 
-									 
+<br />									 
 									 
 1.7	PowaTagInvalidApiKeyException
 Indicates an attempt to initialize the SDK without a valid api key.
