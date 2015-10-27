@@ -13,9 +13,11 @@ This guide covers features that the PowaTag SDK provides to help you do this.
 # Error Handling and Recovery
 	list the different parent types of exceptions and describe how to handle them.
 
+<br />
+
 # SDK Exceptions
 
-The [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides details of every method and its parameters as well as the exceptions thrown.
+The SDK [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides the details of every method including parameters and exceptions.
 
 As and aid to help identify problems during development this centralised list of exceptions can also be referred to. 
 
@@ -28,41 +30,42 @@ Other runtime exceptions such as <code>IllegalArgumentException</code> may be th
 
 Class                  | Method                        | Description
 -----------------------|-------------------------------|---------------------------
-ActManager   		   | submitTransaction             | If the request fails
+ActManager   		   | submitTransaction             | If the request fails.
 -----------------------|-------------------------------|---------------------------
 BasketsManager         | updateBasket                  | If basket to update cannot be found.
 -----------------------|-------------------------------|---------------------------
-BasketManager          | createInvoice                 | if the basket used to create the invoice cannot be found.
-
-	
-	<code>ActManager</code>: 
-		submitTransaction() -  if the request fails
-
-	<code>BasketsManager</code>: 
-		updateBasket if basket to update cannot be found.
-	createInvoice() if basket to create the invoice for cannot be found.
- BlockingPowaTagExecutor: 
-await() If the thread is interrupted while waiting for result
- LoginManager: 
-signInAsGuest() failure to create a profile ?
-	 logout() failure during deletion of temporary profile?
- PaymentManager: 
-pay() if request fails
- ProfileManager: 
-addPaymentInstrument() ?
-	updateAddress()
-	deletePaymentInstrument() when the payment instrument cannot be found.
-	saveProfile() 
-  AppLinkTagDetector: 
-detectAppLink() if there is an error parsing the AppLink data. e.g a malformed or corrupt link
-  WorkflowManager: 
-getWorkflow() if the request fails
+BasketManager          | createInvoice                 | If the basket used to create the invoice cannot be found.
+-----------------------|-------------------------------|---------------------------
+BlockingPowaTagExecutor| await						   | If the thread is interrupted while waiting for result.
+-----------------------|-------------------------------|---------------------------
+LoginManager		   | signInAsGues				   | Failure to create a profile ????????
+-----------------------|-------------------------------|---------------------------
+LoginManager           | logout						   | Failure to delete a temporary profile??????
+-----------------------|-------------------------------|---------------------------
+PaymentManager		   | pay						   | If the request fails
+-----------------------|-------------------------------|---------------------------
+ProfileManager		   | addPaymentInstrument		   | ???
+-----------------------|-------------------------------|---------------------------
+ProfileManager 		   | updateAddress				   | ????
+-----------------------|-------------------------------|---------------------------
+ProfileManager		   | deletePaymentInstrument	   | When the payment instrument cannot be found.
+-----------------------|-------------------------------|---------------------------
+ProfileManager		   | saveProfile				   | ??????
+-----------------------|-------------------------------|---------------------------
+AppLinkTagDetector	   | detectAppLink				   | If there is an error parsing the AppLink data. e.g a malformed or corrupt link
+-----------------------|-------------------------------|---------------------------
+WorkflowManager		   | getWorkflow				   | If the request fails
   
     
 1.1	PowaTagAuthorizationException
 Indicates an attempt to make an API request without proper authorization, such as trying to access a protected API before logging in.
 		
-Classes throwing this Exception:
+<b>Parent:</b> PowaTagException
+
+<b>Classes throwing this Exception:</b>
+
+Class                  | Method                        | Description
+-----------------------|-------------------------------|---------------------------
 LoginManager: 	
 signInAsGuest - if the user is already logged in.
 getCurrentAccessToken() - If the user is not logged in.
@@ -287,26 +290,6 @@ Classes throwing this Exception: None
 Indicates that a blocking method has been called in the main thread 
 
 
-
-
-
-
-# Error Codes
-
-
-Key                    | Codes                         | Description
------------------------|-------------------------------|---------------------------
-NSUnderlyingErrorKey   | Any                           | Underlying NSError, if any
------------------------|-------------------------------|---------------------------
-PTKErrorMessageKey     | Any                           | Optional error message
------------------------|-------------------------------|---------------------------
-PTKErrorDescriptionKey | Any                           | Description of the error
------------------------|-------------------------------|---------------------------
-
-
-
-
-
 # PowaTagAuthorizationException
 Indicates an attempt to make an API request without proper authorization such as trying to access a protected API before logging in.
 
@@ -384,3 +367,22 @@ You should check for upgrades to the SDK to enable support for this workflow typ
 
 # PowaTagValidationException
 Indicates a generic validation issue with data provided to an SDK component.
+
+<br />
+
+# Error Codes
+
+
+Key                    | Codes                         | Description
+-----------------------|-------------------------------|---------------------------
+NSUnderlyingErrorKey   | Any                           | Underlying NSError, if any
+-----------------------|-------------------------------|---------------------------
+PTKErrorMessageKey     | Any                           | Optional error message
+-----------------------|-------------------------------|---------------------------
+PTKErrorDescriptionKey | Any                           | Description of the error
+-----------------------|-------------------------------|---------------------------
+
+
+
+
+
