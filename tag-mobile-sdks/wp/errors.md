@@ -211,7 +211,7 @@ PowaTagKit				| InitializeSdk					| If the api key used to initialize the SDK is
 <br />
 
 **[PowaTagInvalidDonationAmountException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_invalid_donation_amount_exception.html)**<br /> 
-Indicates an invalid donation amount, for instance when specifying an amount that is not one of <code>getSuggestedAmounts</code> when <code>isCustomAmountAllowed</code> is not true.
+Indicates an invalid donation amount, for instance when specifying an amount that is not one of <code>SuggestedAmounts</code> when <code>IsCustomAmountAllowed</code> is not true.
 
 <b>Parent: </b>PowaTagException<br />
 
