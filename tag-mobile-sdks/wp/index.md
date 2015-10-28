@@ -60,7 +60,7 @@ Display and manage addresses in region-specific formats.
 
 # Other Resources
 
-**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/WP/)**<br />
+**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/)**<br />
 Documentation of every method and parameter.
 
 **[FAQ & Troubleshooting]({{site.baseurl}}/tag-mobile-sdks/wp/faq/)**<br />
