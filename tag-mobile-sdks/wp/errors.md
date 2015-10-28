@@ -22,7 +22,7 @@ As and additional aid to help identify problems during development the centralis
 The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>ArgumentException</code>, <code>ArgumentNullException</code> or <code>ArgumentOutOfRangeException</code> may be thrown by the SDK to indicate serious programming errors.
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 
 Class                  | Method                        | Description
@@ -52,7 +52,7 @@ Indicates an attempt to make an API request without proper authorization, such a
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -90,7 +90,7 @@ Indicates an asynchronous operation was cancelled.
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes that use this exception:</b> None
+<b>Classes using this exception::</b> None
 
 <br />
 	
@@ -100,7 +100,7 @@ You should check for upgrades to the SDK to enable support for this Act campaign
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes that use this exception:</b> None
+<b>Classes using this exception::</b> None
 
 <br />		    
 
@@ -110,7 +110,7 @@ You should check for upgrades to the SDK to enable support for this workflow typ
 
 <b>Parent:</b> PowaTagException<br />
 
-<b>Classes that use this exception:</b> None
+<b>Classes using this exception::</b> None
 
 <br />	
 
@@ -120,7 +120,7 @@ You should check for upgrades to the SDK to enable support for this workflow typ
 
 <b>Parent: </b>PowaTagUnsupportedFeatureException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -135,7 +135,7 @@ You should check for upgrades to the SDK to enable support for this merchant.
 
 <b>Parent: </b>PowaTagUnsupportedFeatureException<br />
 
-<b>Classes that use this exception:</b> 
+<b>Classes using this exception::</b> 
 
 
 <br />
@@ -145,7 +145,7 @@ Indicates a generic validation issue with data provided to an SDK component.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b> None
+<b>Classes using this exception::</b> None
 
 <br />
 
@@ -155,7 +155,7 @@ Indicates an attempt to submit values for an act campaign "act" but one or more 
 
 <b>Parent: </b>PowaTagValidationException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------		    
@@ -168,7 +168,7 @@ Indicates a generic issue serializing or deserializing data.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------		    
@@ -184,7 +184,7 @@ Indicates a response could not be deserialized because a required property is un
 
 <b>Parent: </b>PowaTagSerializationException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------	
@@ -202,7 +202,7 @@ Indicates an attempt to initialize the SDK without a valid api key.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------			  
@@ -215,7 +215,7 @@ Indicates an invalid donation amount, for instance when specifying an amount tha
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------			  
@@ -228,7 +228,7 @@ Indicates an attempt to create a <code>Tag</code> from an invalid label. You sho
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -245,7 +245,7 @@ Indicates an attempt to convert a workflow object to an incorrect specific workf
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -262,7 +262,7 @@ Indicates an attempt to use an SDK component before properly initializing the SD
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -278,7 +278,7 @@ Indicates an HTTP error response was received from the server. You can retrieve 
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b> None
+<b>Classes using this exception::</b> None
 		
 		
 <br />
@@ -292,7 +292,7 @@ Indicates an error from a PowaTag API service in response to a request.
 
 <b>Parent: </b>PowaTagHttpException<br />
 
-<b>Classes that use this exception:</b> None
+<b>Classes using this exception::</b> None
 
 To obtain additional information for the exceptions you use the <code>PowaTagServiceException.getErrors()</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
 
@@ -328,7 +328,7 @@ Indicates a validation issue with a request sent to a service.
 
 <b>Parent: </b>PowaTagServiceException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -346,7 +346,7 @@ Indicates a product is out of stock.
 
 <b>Parent: </b>PowaTagServiceException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -359,7 +359,7 @@ Indicates an HTTP error response was received from the server. You can retrieve 
 
 <b>Parent: </b>PowaTagServiceException<br />
 
-<b>Classes that use this exception:</b>
+<b>Classes using this exception::</b>
 
 Class                   | Method                        | Description
 ------------------------|-------------------------------|---------------------------
@@ -570,7 +570,7 @@ Indicates a generic network problem.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b> This exception can be encountered at any time.
+<b>Classes using this exception::</b> This exception can be encountered at any time.
 
 <br />		    
 
@@ -580,7 +580,7 @@ Indicates the network operation took too long to complete and was aborted.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b> This exception can be encountered at any time.
+<b>Classes using this exception::</b> This exception can be encountered at any time.
 
 <br />
 
@@ -589,7 +589,7 @@ Indicates no internet connection is available.
 
 <b>Parent: </b>PowaTagException<br />
 
-<b>Classes that use this exception:</b> This exception can be encountered at any time.
+<b>Classes using this exception::</b> This exception can be encountered at any time.
 
 <br />
 
