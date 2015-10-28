@@ -258,7 +258,7 @@ WorkflowType			| AsProductWorkflow |
 <br />
  
 **[PowaTagKitNotInitializedException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/)**<br /> LINK NEEDED
-Indicates an attempt to use an SDK component before properly initializing the SDK. Call PowaTagKit <code>initializeSdk</code> when your application loads, before using any of the other SDK components.
+Indicates an attempt to use an SDK component before properly initializing the SDK. Call PowaTagKit <code>InitializeSdk</code> when your application loads, before using any of the other SDK components.
 
 <b>Parent: </b>PowaTagException<br />
 
