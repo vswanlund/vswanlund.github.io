@@ -355,7 +355,7 @@ PaymentManager			| PayAsync						| If the item is out of stock
 <br />
 
 **[PowaTagNotFoundException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_not_found_exception.html)**<br /> 
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>getStatus</code>.
+Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>HttpStatusCode</code>.
 
 <b>Parent: </b>PowaTagServiceException<br />
 
@@ -590,11 +590,5 @@ Indicates no internet connection is available.
 <b>Parent: </b>PowaTagException<br />
 
 <b>Classes using this exception:</b> This exception can be encountered at any time.
-
-<br />
-
-**IllegalStateException**<br/>
-Indicates that a blocking method has been called in the main thread 
-
 
 <br />
