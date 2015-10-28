@@ -18,13 +18,13 @@ As and additional aid to help identify problems during development the centralis
 
 <br />
 
-The  interface is used for callbacks which has two methods:
+The SDK uses the <code>PowaTagCallback</code> interface for handling callbacks which has two methods:
 
-1. <code>onSuccess</code>: which is called when the operation completes successfully passing the result of the operation.
+1. <code>onSuccess</code> is called with the result of the successfully completed operation.
 
-2. <code>onError</code>: which is called when the operation fails passing a <code>PowaTagException</code>
+2. <code>onError</code> is called with the <code>PowaTagException</code> generated from an unsuccessful operation.
 
-Please review the [PowaTagCallback]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/interfacecom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_callback.html) reference documentation for for details.
+Please review the [PowaTagCallback]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/interfacecom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_callback.html) reference documentation for more details.
 
 <br />
 
