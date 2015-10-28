@@ -419,7 +419,7 @@ WorkflowManager		| getWorkflow					| If the workflow for the tag cannot be found
 <br />
 
 # Error Codes
-The following table lists out the errors that you migh encounter when handling PowaTagServiceException exceptions.
+The following table lists out the errors that you might encounter when handling PowaTagServiceException exceptions.
 
 Group 			| Error Code	|  Response status 	| Info
 ----------------|---------------|-------------------|-------

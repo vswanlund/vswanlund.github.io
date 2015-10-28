@@ -386,7 +386,7 @@ ProfileManager			| addPaymentInstrument			| If profile or billing address not fo
  | updatePaymentInstrument |
  | addAddress | 
  | getProfile | 
- | updateProfile |  if the profile can not be found.
+ | updateProfile |  if the profile cannot be found.
  | updateAddress | 
  | deleteAddress | 
  | deletePaymentInstrument | 
@@ -396,7 +396,7 @@ WorkflowManager		| getWorkflow					| If the workflow for the tag cannot be found
 <br />
 
 # Error Codes
-The following table lists out the errors that you migh encounter when handling PowaTagServiceException exceptions.
+The following table lists out the errors that you might encounter when handling PowaTagServiceException exceptions.
 
 Group 			| Error Code	|  Response status 	| Info
 ----------------|---------------|-------------------|-------
