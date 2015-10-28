@@ -294,7 +294,7 @@ Indicates an error from a PowaTag API service in response to a request.
 
 <b>Classes using this exception:</b> None
 
-To obtain additional information for the exceptions you use the <code>PowaTagServiceException.getErrors()</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
+To obtain additional information for the exceptions you use the <code>PowaTagServiceException.Errors</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
 
 	List<ServiceError> errorList = ((PowaTagServiceException) exception).getErrors();
 	for (ServiceError serviceError: errorList) {
