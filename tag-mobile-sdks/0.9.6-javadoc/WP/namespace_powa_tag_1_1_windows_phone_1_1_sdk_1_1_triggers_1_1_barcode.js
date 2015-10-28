@@ -1,0 +1,10 @@
+var namespace_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode =
+[
+    [ "Barcode", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode" ],
+    [ "BarcodeTagDetectedEventArgs", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode_tag_detected_event_args.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode_tag_detected_event_args" ],
+    [ "BarcodeTagDetector", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode_tag_detector.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode_tag_detector" ],
+    [ "DetectorStartedEventArgs", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_detector_started_event_args.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_detector_started_event_args" ],
+    [ "DetectorStoppedEventArgs", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_detector_stopped_event_args.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_detector_stopped_event_args" ],
+    [ "Image", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_image.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_image" ],
+    [ "NonPowaTagBarcodeDetectedEventArgs", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_non_powa_tag_barcode_detected_event_args.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_non_powa_tag_barcode_detected_event_args" ]
+];

@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['barcode',['Barcode',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_non_powa_tag_barcode_detected_event_args.html#a83aa35ee995a3e4176fbdc8daafa37b3',1,'PowaTag::WindowsPhone::Sdk::Triggers::Barcode::NonPowaTagBarcodeDetectedEventArgs']]],
+  ['barcoderegion',['BarcodeRegion',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode_tag_detected_event_args.html#ac2bfeb007e2c91fc0250525089ebe779',1,'PowaTag.WindowsPhone.Sdk.Triggers.Barcode.BarcodeTagDetectedEventArgs.BarcodeRegion()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_non_powa_tag_barcode_detected_event_args.html#a3ba0cd6921fc9ebf60a94c148b13ade8',1,'PowaTag.WindowsPhone.Sdk.Triggers.Barcode.NonPowaTagBarcodeDetectedEventArgs.BarcodeRegion()']]],
+  ['barcodetag',['BarcodeTag',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode_tag_detected_event_args.html#a891b8e22d46fd8a3fe87ab1adb8cf551',1,'PowaTag::WindowsPhone::Sdk::Triggers::Barcode::BarcodeTagDetectedEventArgs']]],
+  ['basket',['Basket',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_payment_invoice.html#a661df6e5f72743be74c9897b5ddd6951',1,'PowaTag.WindowsPhone.Sdk.PaymentInvoice.Basket()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_temporary_basket_workflow.html#ac72466698afb489f9105fb6dd2ab69e5',1,'PowaTag.WindowsPhone.Sdk.TemporaryBasketWorkflow.Basket()']]],
+  ['basketendpoint',['BasketEndpoint',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_endpoint.html#ae689bb1fc689116edba5de7af3cf7db7',1,'PowaTag::WindowsPhone::Sdk::PowaTagEndpoint']]],
+  ['basketitems',['BasketItems',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_pos_basket.html#a79cd972c6446e58f84b3ff39e15beafb',1,'PowaTag::WindowsPhone::Sdk::PosBasket']]],
+  ['billingaddress',['BillingAddress',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_payment_instrument.html#a4065aa52a7ff23ca79268ecd4128cd0c',1,'PowaTag.WindowsPhone.Sdk.PaymentInstrument.BillingAddress()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_payment_instrument_details.html#ae0c6bb73b2801e71a7abd1f3e27ba132',1,'PowaTag.WindowsPhone.Sdk.PaymentInstrumentDetails.BillingAddress()']]],
+  ['brand',['Brand',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_product.html#a0be9d2b48fe419cda222615a56bfe430',1,'PowaTag::WindowsPhone::Sdk::Product']]],
+  ['buildsha',['BuildSha',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_kit.html#aa2fa0314fc9a450a9e1ababfcd67d1cd',1,'PowaTag::WindowsPhone::Sdk::PowaTagKit']]]
+];

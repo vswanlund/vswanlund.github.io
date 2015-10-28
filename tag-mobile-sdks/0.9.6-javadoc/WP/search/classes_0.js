@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['acceptedpaymentinstrument',['AcceptedPaymentInstrument',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_accepted_payment_instrument.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['accesstoken',['AccessToken',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_access_token.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['accesstokenchangedeventargs',['AccessTokenChangedEventArgs',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_access_token_changed_event_args.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['act',['Act',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_act.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['actdatakey',['ActDataKey',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_act_data_key.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['actmanager',['ActManager',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_act_manager.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['acttransaction',['ActTransaction',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_act_transaction.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['acttransactiondetails',['ActTransactionDetails',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_act_transaction_details.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['actworkflow',['ActWorkflow',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_act_workflow.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['address',['Address',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_address.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['addressdetails',['AddressDetails',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_address_details.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['addressdetailsvalidator',['AddressDetailsValidator',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_address_details_validator.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['addresslinevalidator',['AddressLineValidator',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_address_line_validator.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['aliasvalidator',['AliasValidator',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_alias_validator.html',1,'PowaTag::WindowsPhone::Sdk']]],
+  ['applink',['AppLink',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link.html',1,'PowaTag::WindowsPhone::Sdk::Triggers::AppLink']]],
+  ['applinktagdetector',['AppLinkTagDetector',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link_tag_detector.html',1,'PowaTag::WindowsPhone::Sdk::Triggers::AppLink']]],
+  ['audiotagdetectedeventargs',['AudioTagDetectedEventArgs',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_audio_1_1_audio_tag_detected_event_args.html',1,'PowaTag::WindowsPhone::Sdk::Triggers::Audio']]],
+  ['audiotagdetector',['AudioTagDetector',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_audio_1_1_audio_tag_detector.html',1,'PowaTag::WindowsPhone::Sdk::Triggers::Audio']]]
+];

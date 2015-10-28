@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['decimalvaluevalidator',['DecimalValueValidator',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_decimal_value_validator.html#aca105e459d1472a293ff1bd226d8dc77',1,'PowaTag::WindowsPhone::Sdk::DecimalValueValidator']]],
+  ['defaultendpointports',['DefaultEndpointPorts',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_endpoint.html#a91b279881f0aa72d1d48a46cbfd47541',1,'PowaTag::WindowsPhone::Sdk::PowaTagEndpoint']]],
+  ['deleteaddressasync',['DeleteAddressAsync',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_profile_manager.html#acaa2963873637afd73855c7a9a9a0841',1,'PowaTag::WindowsPhone::Sdk::ProfileManager']]],
+  ['deletepaymentinstrumentasync',['DeletePaymentInstrumentAsync',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_profile_manager.html#a5588f0d18e57579064649bd0b6ba0e9f',1,'PowaTag::WindowsPhone::Sdk::ProfileManager']]],
+  ['detectapplink',['DetectAppLink',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link_tag_detector.html#af58bba9db70329e53c58ae8e862c3185',1,'PowaTag::WindowsPhone::Sdk::Triggers::AppLink::AppLinkTagDetector']]],
+  ['detectorstartedeventargs',['DetectorStartedEventArgs',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_detector_started_event_args.html#a28702b9b6b8abb365eee7c998e32887c',1,'PowaTag::WindowsPhone::Sdk::Triggers::Barcode::DetectorStartedEventArgs']]],
+  ['detectorstoppedeventargs',['DetectorStoppedEventArgs',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_audio_1_1_detector_stopped_event_args.html#a633152fc57b158dea45da8f927b4935e',1,'PowaTag.WindowsPhone.Sdk.Triggers.Audio.DetectorStoppedEventArgs.DetectorStoppedEventArgs()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_detector_stopped_event_args.html#a4137d7c51dc5b1cf31a552e581379793',1,'PowaTag.WindowsPhone.Sdk.Triggers.Barcode.DetectorStoppedEventArgs.DetectorStoppedEventArgs()']]],
+  ['dispose',['Dispose',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_audio_1_1_audio_tag_detector.html#a31f5dcf8cf822eaa30ea31e249110b4d',1,'PowaTag::WindowsPhone::Sdk::Triggers::Audio::AudioTagDetector']]],
+  ['donationamountvalidator',['DonationAmountValidator',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_donation_amount_validator.html#a893ca38a9aa8a60a10e772cdbe554006',1,'PowaTag::WindowsPhone::Sdk::DonationAmountValidator']]],
+  ['donationinvoice',['DonationInvoice',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_donation_invoice.html#a1d412821fcc661d1995fe0cfe30b3f7c',1,'PowaTag::WindowsPhone::Sdk::DonationInvoice']]],
+  ['donationinvoicedetails',['DonationInvoiceDetails',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_donation_invoice_details.html#ab0a925186b4b533722fb2f2749ffca92',1,'PowaTag::WindowsPhone::Sdk::DonationInvoiceDetails']]]
+];

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['first',['First',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_collections_1_1_linked_hash_set.html#afee829d4a61a6cfa6ae1238923582be3',1,'PowaTag::WindowsPhone::Sdk::Collections::LinkedHashSet']]],
+  ['firstname',['FirstName',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_address.html#a971e1b5cff79d820df64ef7e1c791e05',1,'PowaTag.WindowsPhone.Sdk.Address.FirstName()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_address_details.html#ab965440599b2f04fb6f4f303ba1cfdfd',1,'PowaTag.WindowsPhone.Sdk.AddressDetails.FirstName()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_profile.html#a1ac1dc4f45b36298422f5d345850c3d5',1,'PowaTag.WindowsPhone.Sdk.Profile.FirstName()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_profile_details.html#a64e2d32e9fcd4e407ecf5ed52da6a57e',1,'PowaTag.WindowsPhone.Sdk.ProfileDetails.FirstName()']]],
+  ['format',['Format',['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_tag.html#aa6e163570612c1c00dfdbc9b1af3becc',1,'PowaTag.WindowsPhone.Sdk.Tag.Format()'],['../class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_barcode_1_1_barcode.html#a1f2f44e32fc4e8c794952b77d0ad54ee',1,'PowaTag.WindowsPhone.Sdk.Triggers.Barcode.Barcode.Format()']]]
+];

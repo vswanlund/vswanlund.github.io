@@ -1,0 +1,27 @@
+var class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant =
+[
+    [ "Merchant", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a7f8dca930a73fc076b1ecfef7cc0d8f7", null ],
+    [ "Equals", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a0d7bee1273da7502fa24a990ebd9d880", null ],
+    [ "Equals", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a322f0ef9e2f741eb16f70162cff65e97", null ],
+    [ "GetHashCode", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a970c0dd8c7a1a5f3612e657bdd4b3ee7", null ],
+    [ "ToString", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#aa36bd124ad8c7fb6c5a798d27263f94e", null ],
+    [ "CharityNumber", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a7007e845d29663c5351e62c767fc8a9f", null ],
+    [ "Currency", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#aa355cf24213116029336a5cf6d8ad37b", null ],
+    [ "CustomDataKeys", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a377280fe0570d5c2a14e2d8bcf72fc80", null ],
+    [ "Email", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#ae1525261cf0f59c42b13d336905c3995", null ],
+    [ "IsCharity", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a5ca08ca775df10b5899701a37aede1c1", null ],
+    [ "IsEmailRequired", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a2417491ad8402769116be402cffccbf4", null ],
+    [ "IsFirstNameRequired", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#ae138b7cdd7b5050ff7c0dc069ec41669", null ],
+    [ "IsLastNameRequired", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a9cc3c8a99e41ca08e921268101a2da24", null ],
+    [ "IsMultipleProductsAllowed", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a2a69c8328f6205f5ed0810a4d24720ac", null ],
+    [ "IsNumberRequired", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a11c3869303512eccae6aa70411df93de", null ],
+    [ "LogoUrl", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a877000a5a5de0164a0b5788911f9683b", null ],
+    [ "MerchantId", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a30b4af9104f16a13b7400d60a22e78e7", null ],
+    [ "MobileNumber", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#ae13d812c3259400f02fd6af8fc30b3d6", null ],
+    [ "Name", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a7ca98292e7bc0f85baf34550085d9955", null ],
+    [ "PaymentInstruments", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a1d4a3fd5d3cb3faa0c5363bd1c1091a5", null ],
+    [ "ShippingOptions", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a30e73c221d56decf85b4f000eea0bbcf", null ],
+    [ "ShopId", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#a66117f2cdb6bd28d358d6be0609b393a", null ],
+    [ "TermsAndConditions", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#adab801386955aa6c3314bbd680d44d81", null ],
+    [ "Url", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_merchant.html#ac1dd9eff6938e765851a93c0618023a1", null ]
+];

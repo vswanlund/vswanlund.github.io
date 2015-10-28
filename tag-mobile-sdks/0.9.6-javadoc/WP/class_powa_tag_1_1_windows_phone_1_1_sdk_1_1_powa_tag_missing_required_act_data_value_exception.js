@@ -1,0 +1,5 @@
+var class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_missing_required_act_data_value_exception =
+[
+    [ "PowaTagMissingRequiredActDataValueException", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_missing_required_act_data_value_exception.html#acaa862b3baf5f7591b7e0288f0317ced", null ],
+    [ "DataKeysForMissingRequiredValues", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_missing_required_act_data_value_exception.html#aace1167af83a6558aaa2024e986d6f10", null ]
+];

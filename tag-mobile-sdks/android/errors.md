@@ -14,8 +14,9 @@ This guide covers features that the PowaTag SDK provides to help you do this.
 
 The SDK [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides the details of every method including parameters and exceptions.
 
-As and aid to help identify problems during development this centralised list of exceptions can also be referred to. 
+As and additional aid to help identify problems during development the centralised list of exceptions you see below can also be referred to. 
 
+<br>
 **[PowaTagException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_exception.html)**<br />
 The base class for all exceptions indicating unexpected errors from the SDK.
 Other runtime exceptions such as <code>IllegalArgumentException</code> may be thrown by the SDK to indicate serious programming errors.

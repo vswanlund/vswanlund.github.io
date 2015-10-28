@@ -1,0 +1,5 @@
+var class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_undefined_property_serialization_exception =
+[
+    [ "PowaTagUndefinedPropertySerializationException", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_undefined_property_serialization_exception.html#ad8f406eb1506a3da5432dbc6add25d9e", null ],
+    [ "PowaTagUndefinedPropertySerializationException", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_undefined_property_serialization_exception.html#a4402ace5811c995875aa74314980ed43", null ]
+];

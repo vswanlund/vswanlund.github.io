@@ -1,0 +1,5 @@
+var namespace_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link =
+[
+    [ "AppLink", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link" ],
+    [ "AppLinkTagDetector", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link_tag_detector.html", "class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_triggers_1_1_app_link_1_1_app_link_tag_detector" ]
+];
