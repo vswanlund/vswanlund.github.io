@@ -296,32 +296,39 @@ Indicates an error from a PowaTag API service in response to a request.
 
 To obtain additional information for the exceptions you use the <code>PowaTagServiceException.Errors</code> to retrieve a list of <code>ServiceException</code> that can be interrogated:
 
-	List<ServiceError> errorList = ((PowaTagServiceException) exception).getErrors();
-	for (ServiceError serviceError: errorList) {
-		// A code uniquely identifying the error condition.
-		Integer errrorCode = serviceError.getCode();
-		
-		// The action to be taken as a result of this error.
-		String action = serviceError.getAction();
-
-		// Optional error message for the application developer. Should not be displayed to the user.
-		String devMsg =  serviceError.getDeveloperMessage();
-
-		// Optional localized error message that may be displayed to the user.
-		String userMsg = serviceError.getUserMessage();
-
-		// An optional URL containing more information about the error.
-		URI moreInfoUrl = serviceError. getMoreInfoUrl ();
-
-		// Error debugging information.
-		String debugInfo = serviceError. getDebugInfo ();
-
-		// A Map<String,String> of additional error fields.
-		Map<String,String> additionalFields = serviceError. getAdditionalFields ();
+	try
+	{
+		// do something that throws exception
 	}
+	catch (PowaTagServiceException ex)
+	{
+		List<ServiceError> errorList = ex.Errors;
+		foreach (ServiceError serviceError in errorList)
+		{
+			// Optional code uniquely identifying the error condition.
+			int errrorCode = serviceError.Code;
 
+			// Optional action to be taken as a result of this error.
+			String action = serviceError.Action;
+
+			// Optional error message for the application developer. Should not be displayed to the user.
+			String devMsg = serviceError.DeveloperMessage;
+
+			// Optional localized error message that may be displayed to the user.
+			String userMsg = serviceError.UserMessage;
+
+			// Optional URL containing more information about the error.
+			String moreInfoUrl = serviceError.MoreInfoUrl;
+
+			// Optional error debugging information.
+			String debugInfo = serviceError.DebugInfo;
+
+			// Optional additional error information.
+			Dictionary<String, String> additionalFields = serviceError.AdditionalFields;
+		}
+	}
+	
 <br />
-
 
 **[PowaTagServiceValidationException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_service_validation_exception.html)**<br /> 
 Indicates a validation issue with a request sent to a service.						  
