@@ -50,6 +50,9 @@
 
     - title: "Payments"
       url: "/tag-mobile-sdks/android/payments/"
+	  
+    - title: "Exceptions"
+      url: "/tag-mobile-sdks/android/errors/"	  
 
     - title: "FAQ & Troubleshooting"
       url: "/tag-mobile-sdks/android/faq/"
