@@ -274,7 +274,7 @@ PowaTagKit				| IsSdkInitialized  			|
 <br />
 
 **[PowaTagHttpException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_http_exception.html)**<br /> 
-Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>getStatus</code>.
+Indicates an HTTP error response was received from the server. You can retrieve the response status code using <code>HttpStatusCode</code>.
 
 <b>Parent: </b>PowaTagException<br />
 
