@@ -298,7 +298,7 @@ To obtain additional information for the exceptions you use the <code>PowaTagSer
 
 	try
 	{
-		// do something that throws exception
+	 // do something that throws exception
 	}
 	catch (PowaTagServiceException ex)
 	{
