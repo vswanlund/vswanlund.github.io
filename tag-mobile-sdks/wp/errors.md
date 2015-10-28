@@ -224,7 +224,7 @@ CampaignManager			| CreateInvoiceAsync			| Indicates an invalid donation amount
 <br />
 
 **[PowaTagInvalidTagFormatException]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/windows_phone/class_powa_tag_1_1_windows_phone_1_1_sdk_1_1_powa_tag_invalid_tag_format_exception.html)**<br /> 
-Indicates an attempt to create a <code>Tag</code> from an invalid label. You should use <code>Tag.isValidQrFormatUrl</code> to check if a string is a valid label before attempting to create a tag from it.
+Indicates an attempt to create a <code>Tag</code> from an invalid label. You should use <code>Tag.IsValidQrFormatUrl</code> to check if a string is a valid label before attempting to create a tag from it.
 
 <b>Parent: </b>PowaTagException<br />
 
