@@ -14,7 +14,7 @@ This guide covers features that the PowaTag SDK provides to help you do this.
 
 The SDK [Javadoc]({{site.baseurl}}/tag-mobile-sdks/0.9.6-javadoc/Android/) provides the details of every method including parameters and exceptions.
 
-As and additional aid to help identify problems during development the centralised list of exceptions you see below can also be referred to. 
+As an additional aid to help identify problems during development the centralised list of exceptions below can also be referred to. 
 
 <br />
 
