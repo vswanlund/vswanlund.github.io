@@ -48,6 +48,9 @@
     - title: "Campaigns"
       url: "/tag-mobile-sdks/0.9.6/android/campaigns/"
 
+    - title: "Acts"
+      url: "/tag-mobile-sdks/0.9.6/android/acts/"
+
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.6/android/payments/"
 
@@ -101,6 +104,9 @@
     - title: "Campaigns"
       url: "/tag-mobile-sdks/0.9.6/ios/campaigns/"
 
+    - title: "Acts"
+      url: "/tag-mobile-sdks/0.9.6/ios/acts/"
+
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.6/ios/payments/"
 
@@ -146,6 +152,9 @@
 
     - title: "Campaigns"
       url: "/tag-mobile-sdks/0.9.6/wp/campaigns/"
+
+    - title: "Acts"
+      url: "/tag-mobile-sdks/0.9.6/wp/acts/"
 
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.6/wp/payments/"
