@@ -17,128 +17,150 @@
   url: "/tag-mobile-sdks/"
   pages:
 
-  - title: "Android SDK"
-    url: "/tag-mobile-sdks/android/"
+  - title: "Android SDK v0.9.6"
+    url: "/tag-mobile-sdks/0.9.6/android/"
     pages:
 
     - title: "Getting Started"
-      url: "/tag-mobile-sdks/android/start/"
+      url: "/tag-mobile-sdks/0.9.6/android/start/"
 
     - title: "Login"
-      url: "/tag-mobile-sdks/android/login/"
+      url: "/tag-mobile-sdks/0.9.6/android/login/"
 
     - title: "Profile"
-      url: "/tag-mobile-sdks/android/profile/"
+      url: "/tag-mobile-sdks/0.9.6/android/profile/"
 
     - title: "Addresses"
-      url: "/tag-mobile-sdks/android/addresses/"
+      url: "/tag-mobile-sdks/0.9.6/android/addresses/"
 
     - title: "Triggers"
-      url: "/tag-mobile-sdks/android/triggers/"
+      url: "/tag-mobile-sdks/0.9.6/android/triggers/"
 
     - title: "Workflows"
-      url: "/tag-mobile-sdks/android/workflows/"
+      url: "/tag-mobile-sdks/0.9.6/android/workflows/"
 
     - title: "Products"
-      url: "/tag-mobile-sdks/android/products/"
+      url: "/tag-mobile-sdks/0.9.6/android/products/"
 
     - title: "Baskets"
-      url: "/tag-mobile-sdks/android/baskets/"
+      url: "/tag-mobile-sdks/0.9.6/android/baskets/"
 
     - title: "Campaigns"
-      url: "/tag-mobile-sdks/android/campaigns/"
+      url: "/tag-mobile-sdks/0.9.6/android/campaigns/"
 
     - title: "Payments"
-      url: "/tag-mobile-sdks/android/payments/"
+      url: "/tag-mobile-sdks/0.9.6/android/payments/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.6/android/errors/"
+
+    - title: "Reference Documentation"
+      url:  /tag-mobile-sdks/0.9.6/refdocs/android
 
     - title: "FAQ & Troubleshooting"
-      url: "/tag-mobile-sdks/android/faq/"
+      url: "/tag-mobile-sdks/0.9.6/android/faq/"
 
     - title: "Changelog"
-      url: "/tag-mobile-sdks/android/changelog/"
+      url: "/tag-mobile-sdks/0.9.6/android/changelog/"
 
-  - title: "iOS SDK"
-    url: "/tag-mobile-sdks/ios/"
+  - title: "Android SDK v0.9.7"
+    url: "/tag-mobile-sdks/0.9.7/android/"
+    pages:
+
+    - title: "Reference Documentation"
+      url:  /tag-mobile-sdks/0.9.7/refdocs/android
+
+  - title: "iOS SDK v0.9.6"
+    url: "/tag-mobile-sdks/0.9.6/ios/"
     pages:
 
     - title: "Getting Started"
-      url: "/tag-mobile-sdks/ios/start/"
+      url: "/tag-mobile-sdks/0.9.6/ios/start/"
 
     - title: "Login"
-      url: "/tag-mobile-sdks/ios/login/"
+      url: "/tag-mobile-sdks/0.9.6/ios/login/"
 
     - title: "Profile"
-      url: "/tag-mobile-sdks/ios/profile/"
+      url: "/tag-mobile-sdks/0.9.6/ios/profile/"
 
     - title: "Addresses"
-      url: "/tag-mobile-sdks/ios/addresses/"
+      url: "/tag-mobile-sdks/0.9.6/ios/addresses/"
 
     - title: "Triggers"
-      url: "/tag-mobile-sdks/ios/triggers/"
+      url: "/tag-mobile-sdks/0.9.6/ios/triggers/"
 
     - title: "Workflows"
-      url: "/tag-mobile-sdks/ios/workflows/"
+      url: "/tag-mobile-sdks/0.9.6/ios/workflows/"
 
     - title: "Products"
-      url: "/tag-mobile-sdks/ios/products/"
+      url: "/tag-mobile-sdks/0.9.6/ios/products/"
 
     - title: "Baskets"
-      url: "/tag-mobile-sdks/ios/baskets/"
+      url: "/tag-mobile-sdks/0.9.6/ios/baskets/"
 
     - title: "Campaigns"
-      url: "/tag-mobile-sdks/ios/campaigns/"
+      url: "/tag-mobile-sdks/0.9.6/ios/campaigns/"
 
     - title: "Payments"
-      url: "/tag-mobile-sdks/ios/payments/"
+      url: "/tag-mobile-sdks/0.9.6/ios/payments/"
 
-    - title: "Errors"
-      url: "/tag-mobile-sdks/ios/errors/"
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.6/ios/errors/"
+
+    - title: "Reference Documentation"
+      url:  /tag-mobile-sdks/0.9.6/refdocs/ios
 
     - title: "FAQ & Troubleshooting"
-      url: "/tag-mobile-sdks/ios/faq/"
+      url: "/tag-mobile-sdks/0.9.6/ios/faq/"
 
     - title: "Changelog"
-      url: "/tag-mobile-sdks/ios/changelog/"
+      url: "/tag-mobile-sdks/0.9.6/ios/changelog/"
 
-  - title: "Windows Phone SDK"
-    url: "/tag-mobile-sdks/wp/"
+  - title: "WP SDK v0.9.6"
+    url: "/tag-mobile-sdks/0.9.6/wp/"
     pages:
 
     - title: "Getting Started"
-      url: "/tag-mobile-sdks/wp/start/"
+      url: "/tag-mobile-sdks/0.9.6/wp/start/"
 
     - title: "Login"
-      url: "/tag-mobile-sdks/wp/login/"
+      url: "/tag-mobile-sdks/0.9.6/wp/login/"
 
     - title: "Profile"
-      url: "/tag-mobile-sdks/wp/profile/"
+      url: "/tag-mobile-sdks/0.9.6/wp/profile/"
 
     - title: "Addresses"
-      url: "/tag-mobile-sdks/wp/addresses/"
+      url: "/tag-mobile-sdks/0.9.6/wp/addresses/"
 
     - title: "Triggers"
-      url: "/tag-mobile-sdks/wp/triggers/"
+      url: "/tag-mobile-sdks/0.9.6/wp/triggers/"
 
     - title: "Workflows"
-      url: "/tag-mobile-sdks/wp/workflows/"
+      url: "/tag-mobile-sdks/0.9.6/wp/workflows/"
 
     - title: "Products"
-      url: "/tag-mobile-sdks/wp/products/"
+      url: "/tag-mobile-sdks/0.9.6/wp/products/"
 
     - title: "Baskets"
-      url: "/tag-mobile-sdks/wp/baskets/"
+      url: "/tag-mobile-sdks/0.9.6/wp/baskets/"
 
     - title: "Campaigns"
-      url: "/tag-mobile-sdks/wp/campaigns/"
+      url: "/tag-mobile-sdks/0.9.6/wp/campaigns/"
 
     - title: "Payments"
-      url: "/tag-mobile-sdks/wp/payments/"
+      url: "/tag-mobile-sdks/0.9.6/wp/payments/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.6/wp/errors/"
+
+    - title: "Reference Documentation"
+      url:  /tag-mobile-sdks/0.9.6/refdocs/windows_phone
 
     - title: "FAQ & Troubleshooting"
-      url: "/tag-mobile-sdks/wp/faq/"
+      url: "/tag-mobile-sdks/0.9.6/wp/faq/"
 
     - title: "Changelog"
-      url: "/tag-mobile-sdks/wp/changelog/"
+      url: "/tag-mobile-sdks/0.9.6/wp/changelog/"
 
 - title: "PowaAim"
 
