@@ -477,9 +477,9 @@ Act 			| 500292 		| 500 				| Act transaction was not created
 Act 			| 400298 		| 400 				| Act transaction values don't pass validation
 ----------------|---------------|-------------------|-------
 Category 		| 404220 		| 404 				| Category not found. Can occur when:
- |   |  |  Creating a workflow for non-existing categoryId
- |   |  |  Getting a category by ID
- |   |  |  Getting a category workflow by ID
+ |   |  |  - Creating a workflow for non-existing categoryId
+ |   |  |  - Getting a category by ID
+ |   |  |  - Getting a category workflow by ID
 ----------------|---------------|-------------------|-------
 Shipping 		| 404241 		| 404 				| Shipping option not found
 ----------------|---------------|-------------------|-------
