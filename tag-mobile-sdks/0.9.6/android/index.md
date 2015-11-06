@@ -55,6 +55,9 @@ Add payments functionality to your app simply and easily
 **[Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.6/android/addresses/)**<br />
 Display and manage addresses in region-specific formats.
 
+**[Error Handling]({{site.baseurl}}/tag-mobile-sdks/0.9.6/android/errors/)**<br />
+Handle exceptions and diagnose error conditions.
+
 <br />
 
 # Other Resources

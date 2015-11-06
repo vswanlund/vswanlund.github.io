@@ -15,8 +15,8 @@ Helps you build engaging payment and retail apps and get more customers.
 **[Get Started]({{site.baseurl}}/tag-mobile-sdks/0.9.6/ios/start/)**<br />
 Basic guide for iOS
 
-**[SDK Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.6/refdocs/IOS)**<br />
-Documentation of every method and parameter, SDK v 0.9.6.
+**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.6/refdocs/IOS/)**<br />
+Documentation of every method and parameter.
 
 <br />
 
@@ -56,12 +56,12 @@ Add payments functionality to your app simply and easily.
 **[Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.6/ios/addresses/)**<br />
 Display and manage addresses in region-specific formats.
 
+**[Error Handling]({{site.baseurl}}/tag-mobile-sdks/0.9.6/ios/errors/)**<br />
+Handle exceptions and diagnose error conditions.
+
 <br />
 
 # Other Resources
-
-**[Reference Docs](/tag-mobile-sdks/0.9.7refdoc/IOS/)**<br />
-Documentation of every method and parameter, sdk 0.9.7 (coming soon).
 
 **[FAQ & Troubleshooting](/tag-mobile-sdks/0.9.6/ios/faq/)**<br />
 Common questions and troubleshooting tips.

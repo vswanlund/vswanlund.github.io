@@ -1,7 +1,7 @@
 - title: "PowaTag"
 
 - title: "Web SDK"
-  url: "/tag-web-sdk-apis/"
+  url: "/tag-web-sdk/"
   pages:
 
   - title: "Getting Started"
@@ -13,11 +13,11 @@
   - title: "Changelog"
     url: "/tag-web-sdk/changelog/"
 
-- title: "Mobile SDKs"
+- title: "0.9.6 Mobile SDKs"
   url: "/tag-mobile-sdks/"
   pages:
 
-  - title: "Android SDK v0.9.6"
+  - title: "Android SDK 0.9.6"
     url: "/tag-mobile-sdks/0.9.6/android/"
     pages:
 
@@ -48,9 +48,6 @@
     - title: "Campaigns"
       url: "/tag-mobile-sdks/0.9.6/android/campaigns/"
 
-    - title: "Acts"
-      url: "/tag-mobile-sdks/0.9.6/android/acts/"
-
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.6/android/payments/"
 
@@ -58,7 +55,7 @@
       url: "/tag-mobile-sdks/0.9.6/android/errors/"
 
     - title: "Reference Documentation"
-      url:  /tag-mobile-sdks/0.9.6/refdocs/android
+      url:  "/tag-mobile-sdks/0.9.6/refdocs/Android/"
 
     - title: "FAQ & Troubleshooting"
       url: "/tag-mobile-sdks/0.9.6/android/faq/"
@@ -66,14 +63,7 @@
     - title: "Changelog"
       url: "/tag-mobile-sdks/0.9.6/android/changelog/"
 
-  - title: "Android SDK v0.9.7"
-    url: "/tag-mobile-sdks/0.9.7/android/"
-    pages:
-
-    - title: "Reference Documentation"
-      url:  /tag-mobile-sdks/0.9.7/refdocs/android
-
-  - title: "iOS SDK v0.9.6"
+  - title: "iOS SDK 0.9.6"
     url: "/tag-mobile-sdks/0.9.6/ios/"
     pages:
 
@@ -104,9 +94,6 @@
     - title: "Campaigns"
       url: "/tag-mobile-sdks/0.9.6/ios/campaigns/"
 
-    - title: "Acts"
-      url: "/tag-mobile-sdks/0.9.6/ios/acts/"
-
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.6/ios/payments/"
 
@@ -114,7 +101,7 @@
       url: "/tag-mobile-sdks/0.9.6/ios/errors/"
 
     - title: "Reference Documentation"
-      url:  /tag-mobile-sdks/0.9.6/refdocs/ios
+      url:  "/tag-mobile-sdks/0.9.6/refdocs/IOS/"
 
     - title: "FAQ & Troubleshooting"
       url: "/tag-mobile-sdks/0.9.6/ios/faq/"
@@ -122,7 +109,7 @@
     - title: "Changelog"
       url: "/tag-mobile-sdks/0.9.6/ios/changelog/"
 
-  - title: "WP SDK v0.9.6"
+  - title: "WP SDK 0.9.6"
     url: "/tag-mobile-sdks/0.9.6/wp/"
     pages:
 
@@ -153,9 +140,6 @@
     - title: "Campaigns"
       url: "/tag-mobile-sdks/0.9.6/wp/campaigns/"
 
-    - title: "Acts"
-      url: "/tag-mobile-sdks/0.9.6/wp/acts/"
-
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.6/wp/payments/"
 
@@ -163,13 +147,156 @@
       url: "/tag-mobile-sdks/0.9.6/wp/errors/"
 
     - title: "Reference Documentation"
-      url:  /tag-mobile-sdks/0.9.6/refdocs/windows_phone
+      url:  "/tag-mobile-sdks/0.9.6/refdocs/windows_phone/"
 
     - title: "FAQ & Troubleshooting"
       url: "/tag-mobile-sdks/0.9.6/wp/faq/"
 
     - title: "Changelog"
       url: "/tag-mobile-sdks/0.9.6/wp/changelog/"
+
+- title: "0.9.7 Mobile SDKs"
+  url: "/tag-mobile-sdks/"
+  pages:
+
+  - title: "Android SDK 0.9.7"
+    url: "/tag-mobile-sdks/0.9.7/android/"
+    pages:
+
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/0.9.7/android/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/0.9.7/android/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/0.9.7/android/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/0.9.7/android/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/0.9.7/android/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/0.9.7/android/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/0.9.7/android/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/0.9.7/android/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/0.9.7/android/campaigns/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/0.9.7/android/payments/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.7/android/errors/"
+
+    - title: "Reference Documentation"
+      url:  "/tag-mobile-sdks/0.9.7/refdocs/android/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/0.9.7/android/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/0.9.7/android/changelog/"
+
+  - title: "iOS SDK 0.9.7"
+    url: "/tag-mobile-sdks/0.9.7/ios/"
+    pages:
+
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/0.9.7/ios/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/0.9.7/ios/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/0.9.7/ios/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/0.9.7/ios/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/0.9.7/ios/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/0.9.7/ios/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/0.9.7/ios/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/0.9.7/ios/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/0.9.7/ios/campaigns/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/0.9.7/ios/payments/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.7/ios/errors/"
+
+    - title: "Reference Documentation"
+      url:  "/tag-mobile-sdks/0.9.7/refdocs/IOS/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/0.9.7/ios/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/0.9.7/ios/changelog/"
+
+  - title: "WP SDK 0.9.7"
+    url: "/tag-mobile-sdks/0.9.7/wp/"
+    pages:
+
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/0.9.7/wp/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/0.9.7/wp/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/0.9.7/wp/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/0.9.7/wp/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/0.9.7/wp/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/0.9.7/wp/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/0.9.7/wp/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/0.9.7/wp/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/0.9.7/wp/campaigns/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/0.9.7/wp/payments/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.7/wp/errors/"
+
+    - title: "Reference Documentation"
+      url:  "/tag-mobile-sdks/0.9.7/refdocs/windows_phone/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/0.9.7/wp/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/0.9.7/wp/changelog/"
+
 
 - title: "PowaAim"
 

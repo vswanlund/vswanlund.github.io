@@ -6,11 +6,26 @@ permalink: /tag-mobile-sdks/
 
 Use the PowaTag Mobile SDKs to build innovative and engaging retail experiences.
 
-**[PowaTag SDK v. 0.9.6 for Android]({{site.baseurl}}/tag-mobile-sdks/0.9.6/android)**<br />
+# PowaTag SDK 0.9.7
+
+**[PowaTag SDK for Android]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android)**<br />
 Add PowaTag to your Android app.
 
-**[PowaTag SDK v. 0.9.6 for iOS]({{site.baseurl}}/tag-mobile-sdks/0.9.6/ios/)**<br />
+**[PowaTag SDK for iOS]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/)**<br />
 Add PowaTag to your iOS app.
 
-**[PowaTag SDK v. 0.9.6 for Windows Phone]({{site.baseurl}}/tag-mobile-sdks/0.9.6/wp/)**<br />
+**[PowaTag SDK for Windows Phone]({{site.baseurl}}/tag-mobile-sdks/0.9.7/wp/)**<br />
 Add PowaTag to your Windows Phone app.
+
+# PowaTag SDK 0.9.6
+
+**[PowaTag SDK for Android]({{site.baseurl}}/tag-mobile-sdks/0.9.6/android)**<br />
+Add PowaTag to your Android app.
+
+**[PowaTag SDK for iOS]({{site.baseurl}}/tag-mobile-sdks/0.9.6/ios/)**<br />
+Add PowaTag to your iOS app.
+
+**[PowaTag SDK for Windows Phone]({{site.baseurl}}/tag-mobile-sdks/0.9.6/wp/)**<br />
+Add PowaTag to your Windows Phone app.
+
+

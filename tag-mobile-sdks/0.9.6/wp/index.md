@@ -15,8 +15,8 @@ Helps you build engaging payment and retail apps and get more customers.
 Basic guide for Windows Phone
 
 {% if false %}
-**[SDK Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.6/wp/reference/)**<br />
-Reference docs and sample code
+**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.6/wp/reference/)**<br />
+Documentation of every method and parameter, and sample code.
 {% endif %}
 
 <br />
@@ -55,6 +55,9 @@ Add payments functionality to your app.
 
 **[Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.6/wp/addresses/)**<br />
 Display and manage addresses in region-specific formats.
+
+**[Error Handling]({{site.baseurl}}/tag-mobile-sdks/0.9.6/wp/errors/)**<br />
+Handle exceptions and diagnose error conditions.
 
 <br />
 
