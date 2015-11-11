@@ -48,47 +48,47 @@ PTKUnsupportedTypeKey  | PTKPowaTagUnsupportedWorkflowTypeErrorCode, | The unsup
 
 The 
 
-Error                      | Code | Description
-PTKPowaTagGenericErrorCode | 1 | Generic error.
----------------------------|---|--------------
-PTKPowaTagNetworkErrorCode | 2 | Indicates a generic network problem.
----------------------------|---|--------------
+Error                      | Code 	| Description
+PTKPowaTagGenericErrorCode | 1 		| Generic error.
+---------------------------|--------|--------------
+PTKPowaTagNetworkErrorCode | 2 		| Indicates a generic network problem.
+---------------------------|--------|--------------
 PTKPowaTagHttpErrorCode    | 3 | Indicates an HTTP error response was received from the server.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagServiceErrorCode | 4 | Service specific error.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagNetworkTimeoutErrorCode | 8 | Indicates the network operation took too long to complete and was aborted.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagNoInternetConnectionErrorCode | 9 | Indicates no internet connection is available.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagAuthorizationErrorCode | 10 | Indicates an attempt to make an API request without proper authorization such as trying to access a protected API before logging in.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagInvalidTagFormatErrorCode | 11 | Indicates that the host name is not a supported host for QR format tags.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagNotFoundErrorCode | 12 | Indicates a resource could not be found.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagServiceValidationErrorCode | 13 | Indicates a validation issue with a request sent to a service.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagCancellationErrorCode | 14 | Indicates an asynchronous operation was cancelled.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagSerializationErrorCode | 15 |	Indicates a generic issue serializing or deserializing data.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagInvalidDonationAmountErrorCode | 16 | Indicates an invalid donation amount, for instance when specifying an amount that is not one of {@link PTKCampaign#suggestedAmounts} when {@link PTKCampaign#isCustomAmountAllowed} is not true.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagUndefinedPropertySerializationErrorCode | 17 | Indicates a response could not be deserialized because a required property is undefined.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagUnsupportedWorkflowTypeErrorCode | 18 | Indicates a workflow type is not supported in the current version of the SDK. You should check for upgrades to the SDK to enable support for this workflow type.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagUnsupportedCustomValueTypeErrorCode | 19 | Indicates a merchant requires a custom value type that is not supported in the current version of the SDK. You should check for upgrades to the SDK to enable support for this merchant.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagUnsupportedPaymentMethodTypeErrorCode | 20 | Indicates a payment method type that is not supported in the current version of the SDK.   You should check for upgrades to the SDK to enable support for this payment method type.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagUnsupportedCardIssuerErrorCode | 21 | Indicates a card issuer that is not supported in the current version of the SDK.   You should check for upgrades to the SDK to enable support for this card issuer.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagOutOfStockErrorCode | 22 | Indicates a product is out of stock.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagUnsupportedActValueTypeErrorCode | 23 | Indicates an Act campaign requires a data type that is not supported in the current version of the SDK.   You should check for upgrades to the SDK to enable support for this Act campaign.
----------------------------|---|--------------
+---------------------------|--------|--------------
 PTKPowaTagMissingRequiredActDataValueErrorCode | 24 | Indicates an attempt to submit values for an act campaign where one or more non-optional values are not present. Which values are optional is specified in {@link PTKAct#actDataKeys} and {@link PTKActDataKey#optional}.
 	
 
