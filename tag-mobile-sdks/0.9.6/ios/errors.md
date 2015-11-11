@@ -40,13 +40,15 @@ PTKUnsupportedTypeKey  | PTKPowaTagUnsupportedWorkflowTypeErrorCode, | The unsup
                        | PTKPowaTagUnsupportedPaymentMethodTypeErrorCode,
                        | PTKPowaTagUnsupportedCardIssuerErrorCode |
 
-					   <br />
+<br />
 
 
 
 # Error Codes
 
 The 
+
+Error                      | Code | Description
 PTKPowaTagGenericErrorCode | 1 | Generic error.
 ---------------------------|---|--------------
 PTKPowaTagNetworkErrorCode | 2 | Indicates a generic network problem.
