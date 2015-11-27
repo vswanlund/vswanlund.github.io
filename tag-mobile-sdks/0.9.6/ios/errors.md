@@ -93,7 +93,7 @@ PTKPowaTagMissingRequiredActDataValueErrorCode | 24 | Indicates an attempt to su
 
 The following code snippet provided an example of handling an error:
 
-	<pre>PTKProfileManager *profileManager = [PTKProfileManager sharedManager];
+	PTKProfileManager *profileManager = [PTKProfileManager sharedManager];
 	PTKSignUpDetails *signUpDetails = [PTKSignUpDetails signUpDetailsWithPassword:suppliedPassword];
 
 	[profileManager saveProfileWithPassword:signUpDetails
@@ -114,7 +114,7 @@ The following code snippet provided an example of handling an error:
 				}
 			}	
 		}
-	 }];</pre>
+	 }];
 
 	
 <br />
