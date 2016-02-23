@@ -8,10 +8,11 @@ The PowaTag SDK for Android is the easiest way to integrate your Android app wit
 
 It enables:
 
-* Triggers - Your app can react to PowaTag tags placed around the environment.
+* Triggers - Your app can react to PowaTag tags placed around the environment (QR Code, NFC, Audio Tags).
 * Workflows - Respond to tags by providing appropriate and contextual user journeys.
 * Baskets - Users can add products to a basket for purchase from PowaTag merchants to using your app.
 * Payments - Users can easily pay for the products they selected using your app.
+* POS Payments - Users can pay for their goods at a Point Of Service.
 
 
 <br />
