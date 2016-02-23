@@ -6,7 +6,7 @@ permalink: /tag-mobile-sdks/0.9.8/android/start/
 
 The PowaTag SDK for Android is the easiest way to integrate your Android app with PowaTag.
 
-It enables:
+It enables: 
 
 * Triggers - Your app can react to PowaTag tags placed around the environment (QR Code, NFC, Audio Tags).
 * Workflows - Respond to tags by providing appropriate and contextual user journeys.
