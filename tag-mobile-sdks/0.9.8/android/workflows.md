@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Workflows on Android
-permalink: /tag-mobile-sdks/0.9.7/android/workflows/
+permalink: /tag-mobile-sdks/0.9.8/android/workflows/
 ---
 
 A workflow defines the action(s) an application should offer the user for a particular tag, such as purchasing a product or claiming a coupon.
@@ -73,16 +73,16 @@ The currently supported workflows are:
 
 # Workflow Types
 
-**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/products/)**<br />
+**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/products/)**<br />
 Single product, that can be purchased immediately or added to a basket for later.
 
-**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/baskets/)**<br />
+**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/)**<br />
 TemporaryBasket containing a fixed set of items that can be purchased.
 
-**[Campaign]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/campaigns/)**<br />
+**[Campaign]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/campaigns/)**<br />
 Charity donation campaign, one time or recurring.
 
-**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/acts/)**<br />
+**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/acts/)**<br />
 Custom user information required to act on a merchant's act campaign.
 
 

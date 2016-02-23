@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Addresses on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/addresses/
+permalink: /tag-mobile-sdks/0.9.8/ios/addresses/
 ---
 
 Address formats, required fields and what address information can be publicly displayed varies across regions. For the best user experience you design address entry forms to collect address data in the native address format. The formats for all supported countries are listed below.

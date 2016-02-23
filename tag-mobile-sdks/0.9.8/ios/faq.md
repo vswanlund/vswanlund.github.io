@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS SDK FAQ & Troubleshooting
-permalink: /tag-mobile-sdks/0.9.7/ios/faq/
+permalink: /tag-mobile-sdks/0.9.8/ios/faq/
 ---
 
 In this document:

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS SDK Change Log
-permalink: /tag-mobile-sdks/0.9.7/ios/changelog/
+permalink: /tag-mobile-sdks/0.9.8/ios/changelog/
 ---
 
 Change log and release notes for the PowaTag SDK for iOS.

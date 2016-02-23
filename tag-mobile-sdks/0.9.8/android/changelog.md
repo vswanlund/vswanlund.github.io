@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Android SDK Change Log
-permalink: /tag-mobile-sdks/0.9.7/android/changelog/
+permalink: /tag-mobile-sdks/0.9.8/android/changelog/
 ---
 
 Change log and release notes for the PowaTag SDK for Android.

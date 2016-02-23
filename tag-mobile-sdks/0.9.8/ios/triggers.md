@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Triggers on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/triggers/
+permalink: /tag-mobile-sdks/0.9.8/ios/triggers/
 ---
 
 Triggers allow your application to detect and react to PowaTag Tags.
 
-Once a Tag has been detected your application must [retrieve the Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/workflows/) associated with the tag from the PowaTag API to determine the action(s) that should be surfaced to the user.
+Once a Tag has been detected your application must [retrieve the Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows/) associated with the tag from the PowaTag API to determine the action(s) that should be surfaced to the user.
 
 A number of triggers are currently supported:
 
@@ -171,16 +171,16 @@ A number of triggers are currently supported:
 
 # Sample
 
-To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/start/#importing-the-sample-app) app and review the <code>ScanController.swift</code> and <code>AppDelegate.swift</code> files.
+To see detailed examples of these three triggers, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/start/#importing-the-sample-app) app and review the <code>ScanController.swift</code> and <code>AppDelegate.swift</code> files.
 
 <br />
 
 # Next Get the Workflow for a Tag
 
-See [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/workflows/) for how to retrieve workflow information for a tag from the PowaTag API.
+See [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows/) for how to retrieve workflow information for a tag from the PowaTag API.
 
 <br />
 
 # Troubleshooting Sample Apps
 
-If you have a problem running a sample app, view the [FAQ]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/faq/) for solutions.
+If you have a problem running a sample app, view the [FAQ]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/faq/) for solutions.

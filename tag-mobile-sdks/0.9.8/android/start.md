@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started with Android SDK
-permalink: /tag-mobile-sdks/0.9.7/android/start/
+permalink: /tag-mobile-sdks/0.9.8/android/start/
 ---
 
 The PowaTag SDK for Android is the easiest way to integrate your Android app with PowaTag.
@@ -103,14 +103,14 @@ The sample has a project dependency rather than a central repository dependency 
 
 After you install PowaTag SDK for Android, you can see:
 
-* [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/login/)
-* [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/profile/)
-* [Triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/triggers/)
-* [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/workflows/)
-* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/baskets/)
-* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/campaigns/)
-* [Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/acts/)
-* [Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/payments/)
+* [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/login/)
+* [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/)
+* [Triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/triggers/)
+* [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflows/)
+* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/)
+* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/campaigns/)
+* [Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/acts/)
+* [Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/)
 
 <br />
 

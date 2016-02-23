@@ -1,18 +1,18 @@
 ---
 layout: page
 title: Campaigns on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/campaigns/
+permalink: /tag-mobile-sdks/0.9.8/ios/campaigns/
 ---
 
 A Campaign is a particular charity or even a specific cause or event that the user can donate to. Donations can be made on a single-time or on a recurring monthly basis. If the merchant (charity) and consumer are both eligible for a tax-reclaim scheme, such as Gift Aid in the UK, this can be offered through the app.
 
-To make a donation for a campaign create an invoice for the donation using `PTKCampaignManager`, then make a  [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/payments/) for that invoice.
+To make a donation for a campaign create an invoice for the donation using `PTKCampaignManager`, then make a  [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/) for that invoice.
 
 <br />
 
 # Creating an Invoice for a Campaign
 
-Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile/) has all required information for the merchant.
+Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile/) has all required information for the merchant.
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
@@ -36,7 +36,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 # Paying for a Donation Invoice
 
-Once you have created an invoice for a campaign donation you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/payments/) for that invoice.
+Once you have created an invoice for a campaign donation you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/) for that invoice.
 
 # Gift Aid
 

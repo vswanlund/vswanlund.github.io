@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Products on Android
-permalink: /tag-mobile-sdks/0.9.7/android/products/
+permalink: /tag-mobile-sdks/0.9.8/android/products/
 ---
 
 A product is an individual item for sale in a PowaTag store. Products can be physical goods which are shipped to your customers. You can also list digital download products or a service.
@@ -142,13 +142,13 @@ Variants are the individual styles of a product. If you have a product customers
 
 # Sample
 
-To explore this topic in detail, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/start/#importing-the-sample-app) app and review the <code>ProductDetailsActivity</code> class.
+To explore this topic in detail, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/start/#importing-the-sample-app) app and review the <code>ProductDetailsActivity</code> class.
 
 <br />
 
 
 # Adding a Product to a Basket
 
-Add a variant to the users [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/baskets/) then check out to to get shipping and taxes.
+Add a variant to the users [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) then check out to to get shipping and taxes.
 
 

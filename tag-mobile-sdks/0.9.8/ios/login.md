@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Login on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/login/
+permalink: /tag-mobile-sdks/0.9.8/ios/login/
 ---
 
 PowaTag Login is a secure and easy way for people to log in to your app and manage their PowaTag Profile.
@@ -12,10 +12,10 @@ The temporary profile can later be saved allowing the user to use their newly cr
 
 To save the temporary profile, making it permanent, use the following steps:
 
-1. Use the <code>PTKLoginManager</code> to [create a temporary profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/login#log-in-and-create-a-temporary-profile).
-2. Use the <code>PTKProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile#updating-the-profile). E.g Email and Mobile number. (An optional step that can be done later)
-3. Use the <code>PTKProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile#saving-the-profile).
-4. Use the <code>PTKLoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number.
+1. Use the <code>PTKLoginManager</code> to [create a temporary profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/login#log-in-and-create-a-temporary-profile).
+2. Use the <code>PTKProfileManager</code> to [update profile details]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile#updating-the-profile). E.g Email and Mobile number. (An optional step that can be done later)
+3. Use the <code>PTKProfileManager</code> to [save the temporary profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile#saving-the-profile).
+4. Use the <code>PTKLoginManager</code> to [log into the profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/login#log-into-an-existing-powatag-profile) using the profile ID, Email or Mobile number.
 
 	<b>Note:</b> Email and mobile login is only possible if these values have been set on the profile.
 
@@ -106,7 +106,7 @@ For details on the getter and setter methods available please see the SDK Refere
 
 # After Logging In
 
-Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile/) for the current user or get a [Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/workflows/) when a [Trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/triggers/) detects a PowaTag.
+Once logged in you can retrieve the [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile/) for the current user or get a [Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows/) when a [Trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/triggers/) detects a PowaTag.
 
 <br/>
 
@@ -141,6 +141,6 @@ Log out from the current profile, removing the current AccessToken, baskets and 
 
 # Sample
 
-To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/start/#importing-the-sample-app) app and review the <code>LoginController</code>.
+To see detailed examples of three methods, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/start/#importing-the-sample-app) app and review the <code>LoginController</code>.
 
 <br/>

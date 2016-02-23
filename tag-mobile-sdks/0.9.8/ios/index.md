@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PowaTag SDK for iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/
+permalink: /tag-mobile-sdks/0.9.8/ios/
 ---
 
 Helps you build engaging payment and retail apps and get more customers.
@@ -9,13 +9,13 @@ Helps you build engaging payment and retail apps and get more customers.
 {% if site.show_sdk_download_links %}
 <a class="download-link ios" href="{{site.data.mobilesdks.ios.url}}">Download the SDK</a><br />
 <small>Requires iOS 7.</small><br />
-<small>v{{site.data.mobilesdks.ios.version}}. See [Change Log]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/changelog/).</small>
+<small>v{{site.data.mobilesdks.ios.version}}. See [Change Log]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/changelog/).</small>
 {% endif %}
 
-**[Get Started]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/start/)**<br />
+**[Get Started]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/start/)**<br />
 Basic guide for iOS
 
-**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.7/refdocs/IOS)**<br />
+**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/IOS)**<br />
 Documentation of every method and parameter.
 
 <br />
@@ -26,47 +26,47 @@ While integrating the PowaTag SDK into your app will be useful to keep the follo
 <img src="{{ '/images/powatag_mobile_sdks_generic_workflow.png' | prepend: site.baseurl }}" height="120" />
 
 
-**[Login]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/login/)**<br />
+**[Login]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/login/)**<br />
 People can easily sign in to your app.
 
-**[Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile/)**<br />
+**[Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile/)**<br />
 Let a user view and manage their profile information, addresses and payment methods.
 
-**[Triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/triggers/)**<br />
+**[Triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/triggers/)**<br />
 React to PowaTag tags placed around the environment.
 
-**[Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/workflows/)**<br />
+**[Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows/)**<br />
 Display appropriate and contextual user journeys for tags.
 
-**[Products]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/products/)**<br />
+**[Products]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/products/)**<br />
 Show product information and let users pick product options.
 
-**[Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/baskets/)**<br />
+**[Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/baskets/)**<br />
 People using your application can add products to their basket, checkout or save for later.
 
-**[Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/campaigns/)**<br />
+**[Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/campaigns/)**<br />
 Provide fund-raising tools to charities, causes and events.
 
-**[Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/acts/)**<br />
+**[Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/acts/)**<br />
 Provide functionality to allow users to perform acts.
 
-**[Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/payments/)**<br />
+**[Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/)**<br />
 Add payments functionality to your app simply and easily.
 
-**[Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/addresses/)**<br />
+**[Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/addresses/)**<br />
 Display and manage addresses in region-specific formats.
 
-**[Error Handling]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/errors/)**<br />
+**[Error Handling]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/errors/)**<br />
 Handle exceptions and diagnose error conditions.
 
 <br />
 
 # Other Resources
 
-**[Reference Docs](/tag-mobile-sdks/0.9.7refdoc/IOS/)**<br />
-Documentation of every method and parameter, sdk 0.9.7 (coming soon).
+**[Reference Docs](/tag-mobile-sdks/0.9.8refdoc/IOS/)**<br />
+Documentation of every method and parameter, sdk 0.9.8 (coming soon).
 
-**[FAQ & Troubleshooting](/tag-mobile-sdks/0.9.7/ios/faq/)**<br />
+**[FAQ & Troubleshooting](/tag-mobile-sdks/0.9.8/ios/faq/)**<br />
 Common questions and troubleshooting tips.
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started with iOS SDK
-permalink: /tag-mobile-sdks/0.9.7/ios/start/
+permalink: /tag-mobile-sdks/0.9.8/ios/start/
 ---
 
 The PowaTag SDK for iOS is the easiest way to integrate your iOS app with PowaTag.
@@ -90,14 +90,14 @@ The sample has a project dependency rather than a central repository dependency 
 
 After you install PowaTag SDK for iOS, you can see:
 
-* [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/login/)
-* [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile/)
-* [Triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/triggers/)
-* [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/workflows/)
-* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/baskets/)
-* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/campaigns/)
-* [Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/acts/)
-* [Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/payments/)
+* [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/login/)
+* [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile/)
+* [Triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/triggers/)
+* [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows/)
+* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/baskets/)
+* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/campaigns/)
+* [Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/acts/)
+* [Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/)
 
 <br />
 

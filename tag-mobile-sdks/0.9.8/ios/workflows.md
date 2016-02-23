@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Workflows on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/workflows/
+permalink: /tag-mobile-sdks/0.9.8/ios/workflows/
 ---
 
 A workflow defines the action(s) an application should offer the user for a particular tag, such as purchasing a product or claiming a coupon.
@@ -62,14 +62,14 @@ The currently supported workflows are:
 
 # Workflow Types
 
-**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/products/)**<br />
+**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/products/)**<br />
 Single product, that can be purchased immediately or added to a basket for later.
 
-**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/baskets/)**<br />
+**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/baskets/)**<br />
 TemporaryBasket containing a fixed set of items that can be purchased.
 
-**[Campaign]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/campaigns/)**<br />
+**[Campaign]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/campaigns/)**<br />
 Charity donation campaign, one time or recurring.
 
-**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/acts/)**<br />
+**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/acts/)**<br />
 Custom user information required to act on a merchant's act campaign.

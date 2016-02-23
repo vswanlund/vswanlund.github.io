@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Profile on Android
-permalink: /tag-mobile-sdks/0.9.7/android/profile/
+permalink: /tag-mobile-sdks/0.9.8/android/profile/
 ---
 
-A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage a user's profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/login/).
+A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage a user's profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/login/).
 
 After logging in you can retrieve the current user's profile using <code>ProfileManager.getInstance().getCurrentProfile()</code>.
 
@@ -75,7 +75,7 @@ After logging in you can retrieve the current user's profile using <code>Profile
 
 # Adding an Address
 
-For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/addresses/).
+For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/addresses/).
 
 1. Create a new Address object and set the address information:
 
@@ -148,7 +148,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 2. Validate the address details
 
-	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
+	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
 
 3. Use the ProfileManager to update the address information:
 

@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Payments on Android
-permalink: /tag-mobile-sdks/0.9.7/android/payments/
+permalink: /tag-mobile-sdks/0.9.8/android/payments/
 ---
 
 PowaTag supports payments for a variety of different goods and services. In order to make a payment, you first need to create an invoice for one of the supported goods or service types:
 
-* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/baskets/) - PaymentInvoice
-* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/campaigns/) - DonationInvoice
+* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) - PaymentInvoice
+* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/campaigns/) - DonationInvoice
 
 <br />
 

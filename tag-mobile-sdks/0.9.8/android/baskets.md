@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Baskets on Android
-permalink: /tag-mobile-sdks/0.9.7/android/baskets/
+permalink: /tag-mobile-sdks/0.9.8/android/baskets/
 ---
 
 Baskets are a collection of a product variants (such as a small, black T Shirt). There are two different types of baskets: TemporaryBaskets and PersistentBaskets. The contents of a PersistentBasket are managed by the user and changes to the baskets are saved with the user profile, whereas the contents of a TemporaryBasket cannot be modified by the user and the basket is not saved with the user profile.
@@ -89,7 +89,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 # Creating an Invoice for a Basket
 
-Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/profile/) has all required information for the merchant.
+Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/) has all required information for the merchant.
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
@@ -123,7 +123,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 # Paying for a Payment Invoice
 
-Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/payments/) for that invoice.
+Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/) for that invoice.
 
 <br />
 

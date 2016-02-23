@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Acts on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/acts/
+permalink: /tag-mobile-sdks/0.9.8/ios/acts/
 ---
 
 The "Act Now" functionality provides users with a means to respond to a merchant's act campaign.
@@ -17,7 +17,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 # Retrieving the Act Data Keys
 
-1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/workflows) for more details):
+1. Get the act from the workflow. (see the [Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows) for more details):
 
 	<pre>PTKAct *act = workflow.act;</pre>
 

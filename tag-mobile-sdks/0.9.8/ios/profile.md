@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Profile on iOS
-permalink: /tag-mobile-sdks/0.9.7/ios/profile/
+permalink: /tag-mobile-sdks/0.9.8/ios/profile/
 ---
 
-A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage the users profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/login/).
+A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage the users profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/login/).
 
 After logging in you can retrieve the current user profile using `[PTKProfile currentProfile]`. You can then use PTKProfileManager to add addresses, cards or update the user profile.
 
@@ -32,7 +32,7 @@ After logging in you can retrieve the current user profile using `[PTKProfile cu
 
 # Adding an Address
 
-For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/addresses/).
+For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/addresses/).
 
 1. Create a new Address object and set the address information:
 
@@ -95,7 +95,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 2. Validate the address details
 
-	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/0.9.7/ios/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
+	Use the details described in step 2 of [Adding an Address]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile/#adding-an-address) to verify the properties of <code>AddressDetails</code>.
 
 3. Use PTKProfileManager to update the address information:
 

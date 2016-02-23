@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS SDK Error Handling
-permalink: /tag-mobile-sdks/0.9.7/ios/errors/
+permalink: /tag-mobile-sdks/0.9.8/ios/errors/
 ---
 
 To build a robust and reliable app you want to make sure that it properly responds to errors.

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Triggers on Android
-permalink: /tag-mobile-sdks/0.9.7/android/triggers/
+permalink: /tag-mobile-sdks/0.9.8/android/triggers/
 ---
 
 Triggers allow your application to detect and react to PowaTag Tags.
 
-Once a Tag has been detected your application must [retrieve the Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/workflows/) associated with the tag from the PowaTag API to determine the action(s) that should be surfaced to the user.
+Once a Tag has been detected your application must [retrieve the Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflows/) associated with the tag from the PowaTag API to determine the action(s) that should be surfaced to the user.
 
 A number of triggers are currently supported:
 
@@ -162,19 +162,19 @@ A number of triggers are currently supported:
 
 # Next Get the Workflow for a Tag
 
-See [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/workflows/) for how to retrieve workflow information for a tag from the PowaTag API.
+See [Workflows]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflows/) for how to retrieve workflow information for a tag from the PowaTag API.
 
 <br />
 
 
 # Sample
 
-To explore this topic in more detail, including package imports and trigger implementation, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/start/#importing-the-sample-app) app and review the <code>ScanActivity</code> class.
+To explore this topic in more detail, including package imports and trigger implementation, [import the HelloPowaTagSample]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/start/#importing-the-sample-app) app and review the <code>ScanActivity</code> class.
 
 <br />
 
 
 # Troubleshooting Sample Apps
 
-If you have a problem running a sample app, view the [FAQ]({{site.baseurl}}/tag-mobile-sdks/0.9.7/android/faq/) for solutions.
+If you have a problem running a sample app, view the [FAQ]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/faq/) for solutions.
 
