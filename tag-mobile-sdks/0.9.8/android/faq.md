@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Android SDK FAQ & Troubleshooting
-permalink: /tag-mobile-sdks/0.9.7/android/faq/
+permalink: /tag-mobile-sdks/0.9.8/android/faq/
 ---
 
 In this document:

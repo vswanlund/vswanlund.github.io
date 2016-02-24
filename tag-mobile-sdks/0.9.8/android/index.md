@@ -52,6 +52,9 @@ Provide functionality to allow users to perform acts.
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/)**<br />
 Add payments functionality to your app simply and easily
 
+**[POS Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/pospayments/)**<br />
+Add the ability to process payments at a Point Of Service
+
 **[Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/addresses/)**<br />
 Display and manage addresses in region-specific formats.
 
