@@ -4,15 +4,14 @@ title: Validators on Android
 permalink: /tag-mobile-sdks/0.9.8/android/validators/
 ---
 
-The SDK provides validators that should be used to ensure that the information entered by the user is valid.
+The SDK provides validators that can be used to ensure that the information entered by the user is valid.
 
+There are three types of validators available for use:
+* Low level validators - used for validating a aspects of a data type (e.g. not null, too long)
+* Property validators - validate a property by using multiple low level validators and returning a single error (e.g. address line1) 
+* Model validators - validates a model by using multiple property validators and returns a list of all properties that have errors(e.g. Address) 
 
-
-Low level validators (e.g. not null, too long)
-Second layer property validators (e.g. address line1) made up of multiple low level validators, return a single error
-Model validators (e.g. Address) made up of multiple property validators, returns a list of all properties that have errors
-
-The validators can be found at com.powatag.android.sdk.validators
+The validators can be found in the package <code>com.powatag.android.sdk.validators</code>
 
 
 * [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) - PaymentInvoice
