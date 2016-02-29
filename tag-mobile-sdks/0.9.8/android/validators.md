@@ -1,27 +1,19 @@
 ---
 layout: page
-title: Payments at a POS
-permalink: /tag-mobile-sdks/0.9.8/android/pospayments/
+title: Validators on Android
+permalink: /tag-mobile-sdks/0.9.8/android/validators/
 ---
 
-. 
-In order to make a POS payment, the following steps should be followed:
-
-1. Scan the PowaTag QR code or NFC tag
-Use the tag to obtain the workflow and POSBasket
-Get the list of all POS_PAIRING triggered coupons 
-obtain all coupon combinations    (couponmamanger.getpossiblediscounts()  (services return the possible combinations))
-use coupon picker to present valid discounts to the user and allow them to pick valid discounts (combinations of coupons) (this component automatically refreshes display based on couponstate objects )
-user clicks pay, and you create an POS Invoice (	POSManager.createInvoice (posinvoicedetails, )           -posinvoicedetails contains (20:00)
-POSINvoice object is returned (including terminal id,)
-if authorizationrequires = true then PaymentMethod.authorise(posinvoice) (24:00 - 28:30)   (two authorise methods, one for posinvoice and one for posinvoice + cvv)
-encrypting CVV(30:50)
-payment operation returns payment (including transaction ID for tracing transaction)
+The SDK provides validators that should be used to ensure that the information entered by the user is valid.
 
 
 
+Low level validators (e.g. not null, too long)
+Second layer property validators (e.g. address line1) made up of multiple low level validators, return a single error
+Model validators (e.g. Address) made up of multiple property validators, returns a list of all properties that have errors
 
-PowaTag supports payments for goods at an PowaTag enabled POS terminal. In order to make a payment, you first need to create an invoice for one of the supported goods or service types:
+The validators can be found at com.powatag.android.sdk.validators
+
 
 * [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) - PaymentInvoice
 * [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/campaigns/) - DonationInvoice
