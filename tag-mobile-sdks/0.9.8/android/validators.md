@@ -108,7 +108,7 @@ The following usage example shows how to use the `PaymentMethodDetailsValidator`
 	}</pre>
 	
 	
-<br /> <br /><br /><br />
+<br /> <br />
 
 ##  Property Validators
 
@@ -118,33 +118,29 @@ They implement the `PropertyValidator` interface which defines a method called `
 
 The following property validators are available:<br />
 
-* **TextValidator** - checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
-
-### TextValidator
-Checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
-
-* PostcodeValidator - checks if postcode is a valid format, Class extends TextValidator
-* UkPostcodeValidator - checks if a UK postcode is valid based on UK Format.  This class extends PostcodeValidator 
-* ChinaPostcodeValidator - checks for Chinese postcode format.Class extends PostcodeValidator
-* IssueNumberValidator - checks if issue number is 4 digits long and only digits 0-9 used. class extends TextValidator
-* AliasValidator - checks if Alisa is less than 256 characters long. Class extends TextValidator
-* TitleValidator - checks if title is valid. class extends TextValidator
-* EmailValidator - check if email address conforms to valid pattern. Class extends TextValidator
-* CardHolderNameValidator - checks if cardholdername is less than 256 chars and text pattern    .Class extends TextValidator
-* AddressLineValidator - checks if address line is less than 256 chars. Class extends TextValidator.
-* CountyValidator - checks if county is between 0 and 256 chars.Class extends TextValidator
-* CvvValidator - checks if CVV is correct length for issuer and that only digits 0-9 are used. Class extends TextValidator
-* NameValidator - checks if name is less than 256 char and has correct format. Class extends TextValidator
-* CountryValidator - checks if country has a 2 char length alpha2code. class extends TextValidator
-* CardDateValidator - checks if yearmonth is between a min and max range. Class extends PropertyValidator<YearMonth>
-* ValidFromDateValidator - checks if validFrom date is between -80 years and this month of this year. Class extends CardDateValidator
-* ExpiryDateValidator - checks if expiryDate is between this month and 20years from now   .Class extends CardDateValidator
-* MobileNumberValidator - checks if a mobile number is valid (!null and correct format) for a specific country. The countr code is set during instantiation of the object. This class extends PropertyValidator<String>
-* PasscodeValidator - checks if the passcode is digitsonly, length = 6. class implements PropertyValidator<String>
-* CardNumberValidator - checks if card number is not null, min length, max length, format based on card issuer. Class implements PropertyValidator<String>
-* DecimalValueValidator - abstract class providing logic for decimal values.  required, and between min max range.. Class implements PropertyValidator<Double> 
-* DonationAmountValidator - checks if donation amount is >= 0. Class extends DecimalValueValidator
-* IntValueValidator - abstract class providing logic for int values. required, minval, maxval. Class implements PropertyValidator<Integer>
+* **TextValidator** - checks if a string is within a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
+* **PostcodeValidator** - checks if postcode is a valid format, Class extends TextValidator
+* **UkPostcodeValidator** - checks if a UK postcode is valid based on UK Format.  This class extends PostcodeValidator 
+* **ChinaPostcodeValidator** - checks for Chinese postcode format.Class extends PostcodeValidator
+* **IssueNumberValidator** - checks if issue number is 4 digits long and only digits 0-9 used. class extends TextValidator
+* **AliasValidator** - checks if Alisa is less than 256 characters long. Class extends TextValidator
+* **TitleValidator** - checks if title is valid. class extends TextValidator
+* **EmailValidator** - check if email address conforms to valid pattern. Class extends TextValidator
+* **CardHolderNameValidator** - checks if cardholdername is less than 256 chars and text pattern    .Class extends TextValidator
+* **AddressLineValidator** - checks if address line is less than 256 chars. Class extends TextValidator.
+* **CountyValidator** - checks if county is between 0 and 256 chars.Class extends TextValidator
+* **CvvValidator** - checks if CVV is correct length for issuer and that only digits 0-9 are used. Class extends TextValidator
+* **NameValidator** - checks if name is less than 256 char and has correct format. Class extends TextValidator
+* **CountryValidator** - checks if country has a 2 char length alpha2code. class extends TextValidator
+* **CardDateValidator** - checks if yearmonth is between a min and max range. Class extends PropertyValidator<YearMonth>
+* **ValidFromDateValidator** - checks if validFrom date is between -80 years and this month of this year. Class extends CardDateValidator
+* **ExpiryDateValidator** - checks if expiryDate is between this month and 20years from now   .Class extends CardDateValidator
+* **MobileNumberValidator** - checks if a mobile number is valid (!null and correct format) for a specific country. The countr code is set during instantiation of the object. This class extends PropertyValidator<String>
+* **PasscodeValidator** - checks if the passcode is digitsonly, length = 6. class implements PropertyValidator<String>
+* **CardNumberValidator** - checks if card number is not null, min length, max length, format based on card issuer. Class implements PropertyValidator<String>
+* **DecimalValueValidator** - abstract class providing logic for decimal values.  required, and between min max range.. Class implements PropertyValidator<Double> 
+* **DonationAmountValidator** - checks if donation amount is >= 0. Class extends DecimalValueValidator
+* **IntValueValidator - abstract class providing logic for int values. required, minval, maxval. Class implements PropertyValidator<Integer>
 
 
 
