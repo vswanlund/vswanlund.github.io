@@ -11,13 +11,32 @@ There are three types of validators:
 # Model Validators
 
 These validators used to ensure that a model is valid by checking each of it properties using property validators(e.g. validating AddressDetails). 
+
 These validators implement the `ModelValidator` interface which defines a `validate` method which returns a list of `ValidationFailure` objects that identify the properties that have errors.
 
 The following model validators are available:
 
 * AddressDetailsValidator
 
-This is used to validate the `AddressDetails` object is 			Uses the CountryAwareAddressDetailContext to obtain the country specific validators for the AddressDetail 
+This is used to validate the `AddressDetails` object and confirm that the alias, country, postcode, city, state, line1, line2, county, first and last name properties are valid.
+
+Since address formats differ by country it is important to set the context so that correct property validators are used.
+
+Use the CountryAwareAddressDetailContext to obtain the country specific validators for the AddressDetail 
+
+Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.
+This validator uses property validators to validate each property of <code>AddressDetails</code>:
+
+* <code>AliasValidator</code> - to check the alias.
+* <code>NameValidator</code> - to check the first name, last name and county.
+* <code>UkPostcodeValidator</code> - to check the post code.
+* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
+
+
+
+
+
+
 			validators:
 				CountryValidator
 				AliasValidator 
@@ -26,15 +45,20 @@ This is used to validate the `AddressDetails` object is 			Uses the CountryAware
 				CountyValidator (country specific)
 				NameValidator (country specific) to validate firstName and lastName
 
-	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.
-	This validator uses property validators to validate each property of <code>AddressDetails</code>:
 
-	* <code>AliasValidator</code> - to check the alias.
-	* <code>NameValidator</code> - to check the first name, last name and county.
-	* <code>UkPostcodeValidator</code> - to check the post code.
-	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
-
-	
+	<pre>CountryAwareAddressDetailContext countryAwareContext
+	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain updated value
+		}
+	} else {
+		// No issues found while validating the address details
+	}</pre>
 	
 * ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
 	Uses 
@@ -181,19 +205,7 @@ The following example
 
 	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 
-	<pre>CountryAwareAddressDetailContext countryAwareContext
-	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
-			// Display validation to user and obtain updated value
-		}
-	} else {
-		// No issues found while validating the address details
-	}</pre>
+
 
 
 
