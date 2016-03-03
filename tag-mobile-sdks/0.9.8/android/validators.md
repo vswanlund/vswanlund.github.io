@@ -10,11 +10,50 @@ There are three types of validators:
 
 # Model Validators
 
-These validators implement the ModelValidator interface which defines one method called `validate` method. This method returns  which returns a 
-These are used to ensure that a model is valid by checking each of it properties using property validators(e.g. validating AddressDetails). 
+These validators used to ensure that a model is valid by checking each of it properties using property validators(e.g. validating AddressDetails). 
+These validators implement the `ModelValidator` interface which defines a `validate` method which returns a list of `ValidationFailure` objects that identify the properties that have errors.
 
+The following model validators are available:
 
-# Model Validators
+* AddressDetailsValidator
+
+This is used to validate the `AddressDetails` object is 			Uses the CountryAwareAddressDetailContext to obtain the country specific validators for the AddressDetail 
+			validators:
+				CountryValidator
+				AliasValidator 
+				PostcodeValidator (country specific)
+				AddressLineValidator (country specific) to validate state, city, line1 and line2 )
+				CountyValidator (country specific)
+				NameValidator (country specific) to validate firstName and lastName
+
+	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.
+	This validator uses property validators to validate each property of <code>AddressDetails</code>:
+
+	* <code>AliasValidator</code> - to check the alias.
+	* <code>NameValidator</code> - to check the first name, last name and county.
+	* <code>UkPostcodeValidator</code> - to check the post code.
+	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
+
+	
+	
+* ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
+	Uses 
+		nameValidator for firstname,lastname. 
+		emailvalidator for email, 
+		mobilenumbervalidator for mobile number 
+		passcodevalidator for passcode
+		
+* PaymentMethodDetailsValidator - validates a PaymentMethodDetails object. Class implements ModelValidator<PaymentMethodDetails>. 
+			uses 
+				CreditCardCardHolderNameValidator for cardHolderName 
+				CardNumberValidator for cardNumber 
+				ExpiryDateValidator for expiryDate
+				IssueNumberValidator for issueNumber
+				ValidFromDateValidator for validFrom dateg
+				
+				
+
+# Property Validators
 
 These validators are used to ensure that a property is valid, often using multiple low level validators (e.g. validating address line1).  
 
@@ -24,40 +63,12 @@ These low level validators are used to check aspects of a data type (e.g. NotNul
 
 
 
-* **Model validators** - 
-
-
-
-
-
 The following classes implement the <code>ModelValidator<\code> interface which defines one method <code>validate(T input)<\code>:
 
-DESCIBE AddressDetailsValidator, CountryAwareCardNumberValidator,CountryAwareAddressDetailValidators, CreditCardValidator, ProfileValidator
 
-* AddressDetailsValidator - .Class implements ModelValidator<AddressDetails>. Returns a list of ValidationFailure and if there were none it is an empty list.
-			Uses the CountryAwareAddressDetailContext to obtain the country specific validators for the AddressDetail 
-			validators:
-				CountryValidator
-				AliasValidator 
-				PostcodeValidator (country specific)
-				AddressLineValidator (country specific) to validate state, city, line1 and line2 )
-				CountyValidator (country specific)
-				NameValidator (country specific) to validate firstName and lastName
-				
-				
-* ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
-			Uses 
-				nameValidator for firstname,lastname. 
-				emailvalidator for email, 
-				mobilenumbervalidator for mobile number 
-				passcodevalidator for passcode
-* PaymentMethodDetailsValidator - validates a PaymentMethodDetails object. Class implements ModelValidator<PaymentMethodDetails>. 
-			uses 
-				CreditCardCardHolderNameValidator for cardHolderName 
-				CardNumberValidator for cardNumber 
-				ExpiryDateValidator for expiryDate
-				IssueNumberValidator for issueNumber
-				ValidFromDateValidator for validFrom date
+
+
+
 
 
 				
@@ -191,3 +202,4 @@ The following example
 
 
 ####? UKAddressValidator - checks if line1, county, city are less than 256char and that postcode is in correct format
+DESCIBE CountryAwareCardNumberValidator, CreditCardValidator, ProfileValidator
