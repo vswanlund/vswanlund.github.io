@@ -6,15 +6,15 @@ permalink: /tag-mobile-sdks/0.9.8/android/validators/
 
 The SDK provides validators that can be used to ensure that information entered by the user is valid.
 
-All validators can be found in the package <code>com.powatag.android.sdk.validators</code>
+All validators can be found in the<br /> package <code>com.powatag.android.sdk.validators</code>
 
 There are three types of validators:
 
 # Model Validators
 
-These validators used to ensure that all properties of a model are valid (e.g. validating AddressDetails). 
+These validators are used to ensure that all properties of a model are valid (e.g. validating AddressDetails). 
 
-These validators implement the `ModelValidator` interface which defines a `validate` method which returns a list of `ValidationFailure` objects which identify the properties that have errors.
+They implement the `ModelValidator` interface which defines a `validate` method which returns a list of `ValidationFailure` objects that identify the properties that have errors.
 
 The following model validators are available:
 
