@@ -34,10 +34,10 @@ Property validators are used to:
 
 The following usage example shows how to use the `AddressDetailsValidator`:
 
-	<pre>addressDetails has been populated with the values obtained from the user
+
+	<pre>// addressDetails has been populated with the values obtained from the user
 	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
 	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
-	// 
 	if(!errors.isEmpty()){
 		for (int s = 0; s < errors.size(); s++) {
 			ValidationFailure validationFailure = errors.get(s);
@@ -47,12 +47,11 @@ The following usage example shows how to use the `AddressDetailsValidator`:
 		}
 	} else {
 		// No issues found while validating the address details
-	}
+	}</pre>
 	
-## ProfileDetailsValidator
+### ProfileDetailsValidator
 		
 This is used to validate the `ProfileDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
-There are two address formats currently supported, namely UK and China.
 
 Property validators are used to: 
 
@@ -79,31 +78,23 @@ The following usage example shows how to use the `ProfileDetailsValidator`:
 	}</pre>		
 		
 		
-## PaymentMethodDetailsValidator - validates a PaymentMethodDetails object. Class implements ModelValidator<PaymentMethodDetails>. 
-			uses 
-				CreditCardCardHolderNameValidator for cardHolderName 
-				CardNumberValidator for cardNumber 
-				ExpiryDateValidator for expiryDate
-				IssueNumberValidator for issueNumber
-				ValidFromDateValidator for validFrom dateg
+### PaymentMethodDetailsValidator
 				
-This is used to validate the `PaymentMethodDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
-There are two address formats currently supported, namely UK and China.
+This is used to validate the `PaymentMethodDetails` object.<br />
 
 Property validators are used to: 
 
-* <code>EmailValidator</code> - to check the email address.
-* <code>MobileNumberValidator</code> - to check that the mobile number is valid for the selected country.
-* <code>PasscodeValidator</code> - to check that the passcode is valid.
-* <code>NameValidator</code> - to check the first and last name are in a valid format.
+* <code>CardHolderNameValidator</code> - to check the card holder name.
+* <code>CardNumberValidator</code> - to check that the card number is valid.
+* <code>ExpiryDateValidator</code> - to check that the expiry date is valid.
+* <code>IssueNumberValidator</code> - to check the issue number based on the card issuer rules.
+* <code>ValidFromDateValidator</code> - to check the first and last name are in a valid format.
 
-The following usage example shows how to use the `ProfileDetailsValidator`:
+The following usage example shows how to use the `PaymentMethodDetailsValidator`:
 
-	<pre>// The user's country is obtained and set in userCountry
-	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
-	// Use the profileDetails obtain in an earlier step
-	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
-	if(!errors.isEmpty()){
+	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
+	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
+	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
 			ValidationFailure validationFailure = errors.get(s);
 			String property = validationFailure.getPropertyName();
@@ -111,8 +102,8 @@ The following usage example shows how to use the `ProfileDetailsValidator`:
 			// Display validation to user and obtain an updated value
 		}
 	} else {
-		// No issues found while validating the profile details
-	}</pre>		
+		// No issues found while validating the payment details
+	}</pre>
 
 ##  Property Validators
 
