@@ -8,8 +8,8 @@ The SDK provides validators that can be used to ensure that information entered 
 
 There are three types of validators:
 
-* **Low level validators** - validate aspects of a data type (e.g. NotNull, MinLength etc.)
-* **Property validators** - validate a property by using multiple low level validators and returns a single error (e.g. validating address line1) 
+* **Validators** - low level validators that check aspects of a data type (e.g. NotNull, MinLength etc.)
+* **Property validators** - check that a property is valid, often using multiple low level validators (e.g. validating address line1).  
 * **Model validators** - validate a model by using multiple property validators and return a list<ValidationFailure> of all properties that have errors(e.g. validating AddressDetails) 
 
 The validators can be found in the package <code>com.powatag.android.sdk.validators</code>
