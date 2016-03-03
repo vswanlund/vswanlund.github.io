@@ -48,6 +48,7 @@ The following usage example shows how to use the `AddressDetailsValidator`:
 	} else {
 		// No issues found while validating the address details
 	}</pre>
+<br />
 	
 ### ProfileDetailsValidator
 		
@@ -77,6 +78,7 @@ The following usage example shows how to use the `ProfileDetailsValidator`:
 		// No issues found while validating the profile details
 	}</pre>		
 		
+<br />
 		
 ### PaymentMethodDetailsValidator
 				
