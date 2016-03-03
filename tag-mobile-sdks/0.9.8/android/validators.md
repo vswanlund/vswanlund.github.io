@@ -4,9 +4,8 @@ title: Validators
 permalink: /tag-mobile-sdks/0.9.8/android/validators/
 ---
 
-The SDK provides validators that can be used to ensure that information entered by the user is valid.
-
-All validators can be found in the<br /> package <code>com.powatag.android.sdk.validators</code>
+The SDK provides validators that can be used to ensure that information entered by the user is valid.<br />
+All validators can be found in the package <code>com.powatag.android.sdk.validators</code>
 
 There are three types of validators:
 
@@ -18,7 +17,8 @@ They implement the `ModelValidator` interface which defines a `validate` method 
 
 The following model validators are available:
 
-* AddressDetailsValidator
+## AddressDetailsValidator
+ 
 
 This is used to validate the `AddressDetails` object and confirm that the alias, country, postcode, city, state, line1, line2, county, first and last name properties are valid.
 
@@ -62,14 +62,14 @@ This validator uses property validators to validate each property of <code>Addre
 		// No issues found while validating the address details
 	}</pre>
 	
-* ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
+## ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
 	Uses 
 		nameValidator for firstname,lastname. 
 		emailvalidator for email, 
 		mobilenumbervalidator for mobile number 
 		passcodevalidator for passcode
 		
-* PaymentMethodDetailsValidator - validates a PaymentMethodDetails object. Class implements ModelValidator<PaymentMethodDetails>. 
+## PaymentMethodDetailsValidator - validates a PaymentMethodDetails object. Class implements ModelValidator<PaymentMethodDetails>. 
 			uses 
 				CreditCardCardHolderNameValidator for cardHolderName 
 				CardNumberValidator for cardNumber 
