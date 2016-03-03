@@ -8,9 +8,9 @@ The SDK provides validators that can be used to ensure that information entered 
 
 There are three types of validators:
 
-* Low level validators - validate aspects of a data type (e.g. not null, too long)
-* Property validators - validate a property by using multiple low level validators and returns a single error (e.g. validating address line1) 
-* Model validators - validate a model by using multiple property validators and return a list<ValidationFailure> of all properties that have errors(e.g. validating AddressDetails) 
+* **Low level validators** - validate aspects of a data type (e.g. NotNull, MinLength etc.)
+* **Property validators** - validate a property by using multiple low level validators and returns a single error (e.g. validating address line1) 
+* **Model validators** - validate a model by using multiple property validators and return a list<ValidationFailure> of all properties that have errors(e.g. validating AddressDetails) 
 
 The validators can be found in the package <code>com.powatag.android.sdk.validators</code>
 
@@ -22,8 +22,16 @@ The following classes implement the <code>ModelValidator<T><\code> interface whi
 
 DESCIBE AddressDetailsValidator, CountryAwareCardNumberValidator,CountryAwareAddressDetailValidators, CreditCardValidator, ProfileValidator
 
-* AddressDetailsValidator - .Class implements ModelValidator<AddressDetails>
-			Uses
+* AddressDetailsValidator - .Class implements ModelValidator<AddressDetails>. Returns a list of ValidationFailure and if there were none it is an empty list.
+			Uses the CountryAwareAddressDetailContext to obtain the country specific validators for the AddressDetail 
+			validators:
+				CountryValidator
+				AliasValidator 
+				PostcodeValidator (country specific)
+				AddressLineValidator (country specific) to validate state, city, line1 and line2 )
+				CountyValidator (country specific)
+				NameValidator (country specific) to validate firstName and lastName
+				
 				
 * ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
 			Uses 
@@ -149,7 +157,8 @@ The following example
 
 	For more information on each of these property validators please see the reference documentation included as part of the SDK.
 
-	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
+	<pre>CountryAwareAddressDetailContext countryAwareContext
+	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
