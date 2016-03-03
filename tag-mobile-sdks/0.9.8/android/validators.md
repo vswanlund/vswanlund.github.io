@@ -61,7 +61,7 @@ Property validators are used to:
 * <code>PasscodeValidator</code> - to check that the passcode is valid.
 * <code>NameValidator</code> - to check the first and last name are in a valid format.<br />
 
-The following usage example shows how to use the `ProfileDetailsValidator`:
+The following usage example shows how to use the `ProfileDetailsValidator`:<br />
 
 	<pre>// The user's country is obtained and set in userCountry
 	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
