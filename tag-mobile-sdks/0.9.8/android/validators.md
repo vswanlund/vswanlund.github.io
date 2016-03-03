@@ -4,21 +4,33 @@ title: Validators
 permalink: /tag-mobile-sdks/0.9.8/android/validators/
 ---
 
-The SDK provides validators that can be used to ensure that information entered by the user is valid.
+The SDK provides validators that can be used to ensure that information entered by the user is valid. All validators can be found in the package <code>com.powatag.android.sdk.validators</code>
 
 There are three types of validators:
 
-* **Validators** - low level validators that check aspects of a data type (e.g. NotNull, MinLength etc.)
-* **Property validators** - check that a property is valid, often using multiple low level validators (e.g. validating address line1).  
-* **Model validators** - validate a model by using multiple property validators and return a list<ValidationFailure> of all properties that have errors(e.g. validating AddressDetails) 
+# Model Validators
 
-The validators can be found in the package <code>com.powatag.android.sdk.validators</code>
-
-
-####? UKAddressValidator - checks if line1, county, city are less than 256char and that postcode is in correct format
+These validators implement the ModelValidator interface which defines one method called `validate` method. This method returns  which returns a 
+These are used to ensure that a model is valid by checking each of it properties using property validators(e.g. validating AddressDetails). 
 
 
-The following classes implement the <code>ModelValidator<T><\code> interface which defines one method <code>validate(T input)<\code>:
+# Model Validators
+
+These validators are used to ensure that a property is valid, often using multiple low level validators (e.g. validating address line1).  
+
+
+# Validators
+These low level validators are used to check aspects of a data type (e.g. NotNull, MinLength)
+
+
+
+* **Model validators** - 
+
+
+
+
+
+The following classes implement the <code>ModelValidator<\code> interface which defines one method <code>validate(T input)<\code>:
 
 DESCIBE AddressDetailsValidator, CountryAwareCardNumberValidator,CountryAwareAddressDetailValidators, CreditCardValidator, ProfileValidator
 
@@ -52,28 +64,29 @@ DESCIBE AddressDetailsValidator, CountryAwareCardNumberValidator,CountryAwareAdd
 The classes implement the PropertyValidator interface providing one method 'validate' returns validationError:
 
 * TextValidator - checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
+* PostcodeValidator - checks if postcode is a valid format, Class extends TextValidator
 * UkPostcodeValidator - checks if a UK postcode is valid based on UK Format.  This class extends PostcodeValidator 
 * ChinaPostcodeValidator - checks for Chinese postcode format.Class extends PostcodeValidator
-* PostcodeValidator - checks if postcode is a valid format, Class extends TextValidator
-* MobileNumberValidator - checks if a mobile number is valid (!null and correct format) for a specific country. The countr code is set during instantiation of the object. This class extends PropertyValidator<String>
-* PasscodeValidator - checks if the passcode is digitsonly, length = 6. class implements PropertyValidator<String>
 * IssueNumberValidator - checks if issue number is 4 digits long and only digits 0-9 used. class extends TextValidator
-* ValidFromDateValidator - checks if validFrom date is between -80 years and this month of this year. Class extends CardDateValidator
-* ExpiryDateValidator - checks if expiryDate is between this month and 20years from now   .Class extends CardDateValidator
-* CardDateValidator - checks if yearmonth is between a min and max range. Class extends PropertyValidator<YearMonth>
 * AliasValidator - checks if Alisa is less than 256 characters long. Class extends TextValidator
 * TitleValidator - checks if title is valid. class extends TextValidator
 * EmailValidator - check if email address conforms to valid pattern. Class extends TextValidator
 * CardHolderNameValidator - checks if cardholdername is less than 256 chars and text pattern    .Class extends TextValidator
 * AddressLineValidator - checks if address line is less than 256 chars. Class extends TextValidator.
-* CardNumberValidator - checks if card number is not null, min length, max length, format based on card issuer. Class implements PropertyValidator<String>
 * CountyValidator - checks if county is between 0 and 256 chars.Class extends TextValidator
 * CvvValidator - checks if CVV is correct length for issuer and that only digits 0-9 are used. Class extends TextValidator
+* NameValidator - checks if name is less than 256 char and has correct format. Class extends TextValidator
+* CountryValidator - checks if country has a 2 char length alpha2code. class extends TextValidator
+* CardDateValidator - checks if yearmonth is between a min and max range. Class extends PropertyValidator<YearMonth>
+* ValidFromDateValidator - checks if validFrom date is between -80 years and this month of this year. Class extends CardDateValidator
+* ExpiryDateValidator - checks if expiryDate is between this month and 20years from now   .Class extends CardDateValidator
+* MobileNumberValidator - checks if a mobile number is valid (!null and correct format) for a specific country. The countr code is set during instantiation of the object. This class extends PropertyValidator<String>
+* PasscodeValidator - checks if the passcode is digitsonly, length = 6. class implements PropertyValidator<String>
+* CardNumberValidator - checks if card number is not null, min length, max length, format based on card issuer. Class implements PropertyValidator<String>
 * DecimalValueValidator - abstract class providing logic for decimal values.  required, and between min max range.. Class implements PropertyValidator<Double> 
 * DonationAmountValidator - checks if donation amount is >= 0. Class extends DecimalValueValidator
 * IntValueValidator - abstract class providing logic for int values. required, minval, maxval. Class implements PropertyValidator<Integer>
-* NameValidator - checks if name is less than 256 char and has correct format. Class extends TextValidator
-* CountryValidator - checks if country has a 2 char length alpha2code. class extends TextValidator
+
 
 
 
@@ -177,3 +190,4 @@ The following example
 
 
 
+####? UKAddressValidator - checks if line1, county, city are less than 256char and that postcode is in correct format
