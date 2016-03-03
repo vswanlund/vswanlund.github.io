@@ -38,7 +38,7 @@ The following usage example shows how to use the `AddressDetailsValidator`:
 	<pre>// addressDetails has been populated with the values obtained from the user
 	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
 	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
-	if(!errors.isEmpty()){
+	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
 			ValidationFailure validationFailure = errors.get(s);
 			String property = validationFailure.getPropertyName();
@@ -58,7 +58,7 @@ Property validators are used to:
 * <code>EmailValidator</code> - to check the email address.
 * <code>MobileNumberValidator</code> - to check that the mobile number is valid for the selected country.
 * <code>PasscodeValidator</code> - to check that the passcode is valid.
-* <code>NameValidator</code> - to check the first and last name are in a valid format.
+* <code>NameValidator</code> - to check the first and last name are in a valid format.<br />
 
 The following usage example shows how to use the `ProfileDetailsValidator`:
 
@@ -90,7 +90,7 @@ Property validators are used to:
 * <code>IssueNumberValidator</code> - to check the issue number based on the card issuer rules.
 * <code>ValidFromDateValidator</code> - to check the first and last name are in a valid format.
 
-The following usage example shows how to use the `PaymentMethodDetailsValidator`:
+The following usage example shows how to use the `PaymentMethodDetailsValidator`:<br />
 
 	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
@@ -104,29 +104,21 @@ The following usage example shows how to use the `PaymentMethodDetailsValidator`
 	} else {
 		// No issues found while validating the payment details
 	}</pre>
+<br />
 
 ##  Property Validators
 
-These validators are used to ensure that a property is valid, often using multiple low level validators (e.g. validating address line1).  
+These validators are used to ensure that a single property is valid, often using multiple low level validators (e.g. validating the address line1 property).  
 
+They implement the `PropertyValidator` interface which defines a method called `validate` which returns a single `ValidationError`.
 
-##  Validators
-These low level validators are used to check aspects of a data type (e.g. NotNull, MinLength)
-
-
-
-The following classes implement the <code>ModelValidator<\code> interface which defines one method <code>validate(T input)<\code>:
-
-
-
-
-
-
-
-				
-The classes implement the PropertyValidator interface providing one method 'validate' returns validationError:
+The following property validators are available:<br />
 
 * TextValidator - checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
+
+### TextValidator
+Checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
+
 * PostcodeValidator - checks if postcode is a valid format, Class extends TextValidator
 * UkPostcodeValidator - checks if a UK postcode is valid based on UK Format.  This class extends PostcodeValidator 
 * ChinaPostcodeValidator - checks for Chinese postcode format.Class extends PostcodeValidator
@@ -151,6 +143,16 @@ The classes implement the PropertyValidator interface providing one method 'vali
 * IntValueValidator - abstract class providing logic for int values. required, minval, maxval. Class implements PropertyValidator<Integer>
 
 
+
+
+
+
+##  Validators
+These low level validators are used to check aspects of a data type (e.g. NotNull, MinLength)
+
+
+
+				
 
 
 
@@ -214,21 +216,7 @@ public enum ValidationError {
 
 
 
-The following example 
 
-<br />
-
-# Paying for an Invoice using CVV
-
-1. Validate the address details
-
-	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.
-	This validator uses property validators to validate each property of <code>AddressDetails</code>:
-
-	* <code>AliasValidator</code> - to check the alias.
-	* <code>NameValidator</code> - to check the first name, last name and county.
-	* <code>UkPostcodeValidator</code> - to check the post code.
-	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
 
 
 	For more information on each of these property validators please see the reference documentation included as part of the SDK.
