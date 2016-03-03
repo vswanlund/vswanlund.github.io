@@ -106,7 +106,9 @@ The following usage example shows how to use the `PaymentMethodDetailsValidator`
 	} else {
 		// No issues found while validating the payment details
 	}</pre>
-<br />
+	
+	
+<br /> <br /><br /><br />
 
 ##  Property Validators
 
