@@ -17,13 +17,17 @@ They implement the `ModelValidator` interface which defines a `validate` method 
 
 The following model validators are available:
 
+# h2 AddressDetailsValidator
+
 ## h2 AddressDetailsValidator
 
 ### h3 AddressDetailsValidator
 
 #### h4 AddressDetailsValidator
  
-
+##### h5 AddressDetailsValidator
+ 
+ 
 This is used to validate the `AddressDetails` object and confirm that the alias, country, postcode, city, state, line1, line2, county, first and last name properties are valid.
 
 Since address formats differ by country it is important to set the context so that correct property validators are used.
