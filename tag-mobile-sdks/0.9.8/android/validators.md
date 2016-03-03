@@ -112,13 +112,13 @@ The following usage example shows how to use the `PaymentMethodDetailsValidator`
 
 ##  Property Validators
 
-These validators are used to ensure that a single property is valid, often using multiple low level validators (e.g. validating the address line1 property).  
+These validators are used to ensure that a single property is valid, often using multiple low level validators (e.g. validating the address `line1` property).  
 
 They implement the `PropertyValidator` interface which defines a method called `validate` which returns a single `ValidationError`.
 
 The following property validators are available:<br />
 
-* **TextValidator** - checks if a string is within a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
+* **TextValidator** - checks if a string is within a min max length and conforms to a (optional) format. Extends PropertyValidator<String><br />
 * **PostcodeValidator** - checks if postcode is a valid format, Class extends TextValidator
 * **UkPostcodeValidator** - checks if a UK postcode is valid based on UK Format.  This class extends PostcodeValidator 
 * **ChinaPostcodeValidator** - checks for Chinese postcode format.Class extends PostcodeValidator
