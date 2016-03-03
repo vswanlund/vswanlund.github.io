@@ -32,7 +32,7 @@ Property validators are used to:
 * <code>CountyValidator</code> - to check the county is valid for the selected country.
 * <code>NameValidator</code> - to check the first and last name are in a valid format.
 
-The following usage example shows how to use the `AddressDetailsValidator`:
+The following usage example shows how to use the `AddressDetailsValidator`:<br />
 
 
 	<pre>// addressDetails has been populated with the values obtained from the user
@@ -116,7 +116,7 @@ They implement the `PropertyValidator` interface which defines a method called `
 
 The following property validators are available:<br />
 
-* TextValidator - checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
+* **TextValidator** - checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
 
 ### TextValidator
 Checks if a string is withing a min max length and conforms to a (optional) format. Extends PropertyValidator<String>
