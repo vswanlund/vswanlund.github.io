@@ -9,57 +9,36 @@ All validators can be found in the package <code>com.powatag.android.sdk.validat
 
 There are three types of validators:
 
-# Model Validators
+## Model Validators
 
 These validators are used to ensure that all properties of a model are valid (e.g. validating AddressDetails). 
 
-They implement the `ModelValidator` interface which defines a `validate` method which returns a list of `ValidationFailure` objects that identify the properties that have errors.
+They implement the `ModelValidator` interface which defines the `validate` method that returns a list of `ValidationFailure` objects, one for each property that has an error.
 
 The following model validators are available:
 
-# h2 AddressDetailsValidator
+### AddressDetailsValidator
 
-## h2 AddressDetailsValidator
+This is used to validate the `AddressDetails` object. Since address formats differ by country the context is set during initialisation of the validator through the use of the `CountryAwareAddressDetailContext` which will provide country specific property validators.<br />
+There are two address formats currently supported, namely UK and China.
 
-### h3 AddressDetailsValidator
-
-#### h4 AddressDetailsValidator
- 
-##### h5 AddressDetailsValidator
- 
- 
-This is used to validate the `AddressDetails` object and confirm that the alias, country, postcode, city, state, line1, line2, county, first and last name properties are valid.
-
-Since address formats differ by country it is important to set the context so that correct property validators are used.
-
-Use the CountryAwareAddressDetailContext to obtain the country specific validators for the AddressDetail 
-
-Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.
-This validator uses property validators to validate each property of <code>AddressDetails</code>:
+Property validators are used to: 
 
 * <code>AliasValidator</code> - to check the alias.
 * <code>NameValidator</code> - to check the first name, last name and county.
-* <code>UkPostcodeValidator</code> - to check the post code.
-* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
+* <code>PostcodeValidator</code> - to check that the post code is valid for the selected country.
+* <code>CountryValidator</code> - to check the country.
+* <code>AddressLineValidator</code> - to check the State, City, line1 and line2 are valid for the selected country.
+* <code>CountyValidator</code> - to check the county is valid for the selected country.
+* <code>NameValidator</code> - to check the first and last name are in a valid format.
 
+The following usage example shows how to use the `AddressDetailsValidator`:
 
-
-
-
-
-			validators:
-				CountryValidator
-				AliasValidator 
-				PostcodeValidator (country specific)
-				AddressLineValidator (country specific) to validate state, city, line1 and line2 )
-				CountyValidator (country specific)
-				NameValidator (country specific) to validate firstName and lastName
-
-
-	<pre>CountryAwareAddressDetailContext countryAwareContext
-	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
-	if(errors != null){
+	<pre>// addressDetails has been populated with the values obtained from the user
+	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
+	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
+	// 
+	if(!errors.isEmpty()){
 		for (int s = 0; s < errors.size(); s++) {
 			ValidationFailure validationFailure = errors.get(s);
 			String property = validationFailure.getPropertyName();
@@ -71,11 +50,34 @@ This validator uses property validators to validate each property of <code>Addre
 	}</pre>
 	
 ## ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
-	Uses 
-		nameValidator for firstname,lastname. 
-		emailvalidator for email, 
-		mobilenumbervalidator for mobile number 
-		passcodevalidator for passcode
+		
+This is used to validate the `ProfileDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
+There are two address formats currently supported, namely UK and China.
+
+Property validators are used to: 
+
+* <code>EmailValidator</code> - to check the email address.
+* <code>MobileNumberValidator</code> - to check that the mobile number is valid for the selected country.
+* <code>PasscodeValidator</code> - to check that the passcode is valid.
+* <code>NameValidator</code> - to check the first and last name are in a valid format.
+
+The following usage example shows how to use the `ProfileDetailsValidator`:
+
+	<pre>// The user's country is obtained and set in userCountry
+	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
+	// Use the profileDetails obtain in an earlier step
+	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
+	if(!errors.isEmpty()){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the profile details
+	}</pre>		
+		
 		
 ## PaymentMethodDetailsValidator - validates a PaymentMethodDetails object. Class implements ModelValidator<PaymentMethodDetails>. 
 			uses 
@@ -85,14 +87,39 @@ This validator uses property validators to validate each property of <code>Addre
 				IssueNumberValidator for issueNumber
 				ValidFromDateValidator for validFrom dateg
 				
-				
+				This is used to validate the `ProfileDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
+There are two address formats currently supported, namely UK and China.
 
-# Property Validators
+Property validators are used to: 
+
+* <code>EmailValidator</code> - to check the email address.
+* <code>MobileNumberValidator</code> - to check that the mobile number is valid for the selected country.
+* <code>PasscodeValidator</code> - to check that the passcode is valid.
+* <code>NameValidator</code> - to check the first and last name are in a valid format.
+
+The following usage example shows how to use the `ProfileDetailsValidator`:
+
+	<pre>// The user's country is obtained and set in userCountry
+	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
+	// Use the profileDetails obtain in an earlier step
+	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
+	if(!errors.isEmpty()){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain an updated value
+		}
+	} else {
+		// No issues found while validating the profile details
+	}</pre>		
+
+##  Property Validators
 
 These validators are used to ensure that a property is valid, often using multiple low level validators (e.g. validating address line1).  
 
 
-# Validators
+##  Validators
 These low level validators are used to check aspects of a data type (e.g. NotNull, MinLength)
 
 
@@ -224,4 +251,4 @@ The following example
 
 
 ####? UKAddressValidator - checks if line1, county, city are less than 256char and that postcode is in correct format
-DESCIBE CountryAwareCardNumberValidator, CreditCardValidator, ProfileValidator
+DESCIBE CountryAwareCardNumberValidator, CreditCardValidator 
