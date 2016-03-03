@@ -4,7 +4,9 @@ title: Validators
 permalink: /tag-mobile-sdks/0.9.8/android/validators/
 ---
 
-The SDK provides validators that can be used to ensure that information entered by the user is valid.\\  All validators can be found in the package <code>com.powatag.android.sdk.validators</code>
+The SDK provides validators that can be used to ensure that information entered by the user is valid.
+
+All validators can be found in the package <code>com.powatag.android.sdk.validators</code>
 
 There are three types of validators:
 
