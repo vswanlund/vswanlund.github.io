@@ -18,7 +18,9 @@ They implement the `ModelValidator` interface which defines a `validate` method 
 The following model validators are available:
 
 ## h2 AddressDetailsValidator
+
 ### h3 AddressDetailsValidator
+
 #### h4 AddressDetailsValidator
  
 
