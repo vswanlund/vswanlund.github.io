@@ -49,7 +49,7 @@ The following usage example shows how to use the `AddressDetailsValidator`:
 		// No issues found while validating the address details
 	}
 	
-## ProfileDetailsValidator - validates a ProfileDetails object. This class extends ModelValidator<ProfileDetails>.   
+## ProfileDetailsValidator
 		
 This is used to validate the `ProfileDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
 There are two address formats currently supported, namely UK and China.
@@ -87,7 +87,7 @@ The following usage example shows how to use the `ProfileDetailsValidator`:
 				IssueNumberValidator for issueNumber
 				ValidFromDateValidator for validFrom dateg
 				
-				This is used to validate the `ProfileDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
+This is used to validate the `PaymentMethodDetails` object. During instantiation the country code is set so that the country specific property validators are used.<br />
 There are two address formats currently supported, namely UK and China.
 
 Property validators are used to: 
