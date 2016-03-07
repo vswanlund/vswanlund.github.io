@@ -75,7 +75,7 @@ After logging in you can retrieve the current user's profile using <code>Profile
 
 	The following usage example shows how to use the `AddressDetailsValidator` :
 
-    <pre>code.coxe.code</pre>
+	<pre> code.coxe.code </pre>
 	
 	<pre>// addressDetails has been populated with the values obtained from the user
 	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
