@@ -32,22 +32,22 @@ Property validators are used to:
 * <code>CountyValidator</code> - to check the county is valid for the selected country.
 * <code>NameValidator</code> - to check the first and last name are in a valid format.
 
-1. The following usage example shows how to use the `AddressDetailsValidator`:<br />
-
-
-	<pre>// addressDetails has been populated with the values obtained from the user
-	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
-			// Display validation to user and obtain updated value
-		}
-	} else {
-		// No issues found while validating the address details
-	}</pre>
+>The following usage example shows how to use the `AddressDetailsValidator`:<br />
+>
+>
+>	<pre>// addressDetails has been populated with the values obtained from the user
+>	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
+>	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
+>	if(errors != null){
+>		for (int s = 0; s < errors.size(); s++) {
+>			ValidationFailure validationFailure = errors.get(s);
+>			String property = validationFailure.getPropertyName();
+>			ValidationError errorCode = validationFailure.getErrorCode();
+>			// Display validation to user and obtain updated value
+>		}
+>	} else {
+>		// No issues found while validating the address details
+>	}</pre>
 <br />
 
 
