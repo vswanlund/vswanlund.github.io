@@ -52,7 +52,7 @@ The following usage example shows how to use the `AddressDetailsValidator`:<br /
 <br />
 
 
-1. The latest profile information for the current user can be retrieved using:
+
 
     <pre>ProfileManager pm = ProfileManager.getInstance();
    pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
