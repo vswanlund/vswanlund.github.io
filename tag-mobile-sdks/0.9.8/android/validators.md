@@ -49,6 +49,20 @@ The following usage example shows how to use the `AddressDetailsValidator`:<br /
 		// No issues found while validating the address details
 	}</pre>
 <br />
+
+
+1. The latest profile information for the current user can be retrieved using:
+
+    <pre>ProfileManager pm = ProfileManager.getInstance();
+   pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
+     public void onSuccess(Profile latestProfile) {
+       // Profile was successfully retrieved
+     }
+     public void onError(PowaTagException exception) {
+     }
+   });</pre>
+
+
 	
 ### ProfileDetailsValidator
 		
@@ -171,67 +185,20 @@ The following property validators are available:<br />
 * **MinLengthValidator** - Checks whether the input string is not shorter than the minimum length.
 * **LuhnValidator** - Checks a credit card number using the Luhn algorithm.
 * **MaxDecimalValueValidator** - Checks that an input value is not greater than the maximum allowed decimal value.
-* **MaxIntValueValidator** - Checks whether the input is not greater than the maximum value. Class implements Validator<Integer>
-* **NotEmptyValidator** - checks if the input is an empty string. Class implements Validator<String> 
-* **NotNullValidator** - checks if input object is not null. Class implements Validator<Object>
+* **MaxIntValueValidator** - Checks that an input value is not greater than the maximum allowed int value.
+* **NotEmptyValidator** - checks if the input is an empty string.
+* **NotNullValidator** - checks if input object is not null.
 
 
-public ValidationFailure
-constructor ValidationFailure(String propertyName , ValidationError validationError)
+Here is an example of using one of the validators:<br />
 
+	<pre>MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
+	// Validate the the supplied int number 
+	if(!maxIntValueValidator.isValid(input.getQuantity()){
+		ValidationError error = maxIntValueValidator.getError();
+		// handle error		
+	}</pre>
+	
+For more details on each validator please review the reference documentation.
+<br /> <br />
 
-public enum ValidationError {
-
-    /**     * Is null or empty.     */
-    IS_NULL_OR_EMPTY,
-
-    /**     * Too short.     */
-    TOO_SHORT,
-
-    /**     * Too long.     */
-    TOO_LONG,
-
-    /**     * Too low.     */
-    TOO_LOW,
-
-    /**     * Too high.     */
-    TOO_HIGH,
-
-    /**     * Invalid format.     */
-    INVALID_FORMAT,
-
-    /**     * Invalid Luhn checksum.     */
-    INVALID_CHECKSUM,
-
-    /**     * Is null.     */
-    IS_NULL,
-
-    /**     * Before the minimum date.     */
-    BEFORE_MIN_DATE,
-
-    /**     * After the maximum date.     */
-    AFTER_MAX_DATE,
-
-    /** Credit card issuer is not one of the supported issuers. */
-    ISSUER_NOT_SUPPORTED
-
-}
-
-
-
-
-
-
-
-	For more information on each of these property validators please see the reference documentation included as part of the SDK.
-
-
-
-
-
-
-
-
-
-####? UKAddressValidator - checks if line1, county, city are less than 256char and that postcode is in correct format
-DESCIBE CountryAwareCardNumberValidator, CreditCardValidator 
