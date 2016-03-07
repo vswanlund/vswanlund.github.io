@@ -73,6 +73,25 @@ After logging in you can retrieve the current user's profile using <code>Profile
 
 <br/>
 
+The following usage example shows how to use the `AddressDetailsValidator`:<br />
+
+
+	<pre>// addressDetails has been populated with the values obtained from the user
+	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
+	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
+	if(errors != null){
+		for (int s = 0; s < errors.size(); s++) {
+			ValidationFailure validationFailure = errors.get(s);
+			String property = validationFailure.getPropertyName();
+			ValidationError errorCode = validationFailure.getErrorCode();
+			// Display validation to user and obtain updated value
+		}
+	} else {
+		// No issues found while validating the address details
+	}</pre>
+<br />
+
+
 # Adding an Address
 
 For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/addresses/).
