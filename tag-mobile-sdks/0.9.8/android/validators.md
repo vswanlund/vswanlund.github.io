@@ -118,58 +118,62 @@ They implement the `PropertyValidator` interface which defines a method called `
 
 The following property validators are available:<br />
 
-* **TextValidator** - checks if a string is within a min max length and conforms to a (optional) format. Extends PropertyValidator<String><br />
-* **PostcodeValidator** - checks if postcode is a valid format, Class extends TextValidator
-* **UkPostcodeValidator** - checks if a UK postcode is valid based on UK Format.  This class extends PostcodeValidator 
-* **ChinaPostcodeValidator** - checks for Chinese postcode format.Class extends PostcodeValidator
-* **IssueNumberValidator** - checks if issue number is 4 digits long and only digits 0-9 used. class extends TextValidator
-* **AliasValidator** - checks if Alisa is less than 256 characters long. Class extends TextValidator
-* **TitleValidator** - checks if title is valid. class extends TextValidator
-* **EmailValidator** - check if email address conforms to valid pattern. Class extends TextValidator
-* **CardHolderNameValidator** - checks if cardholdername is less than 256 chars and text pattern    .Class extends TextValidator
-* **AddressLineValidator** - checks if address line is less than 256 chars. Class extends TextValidator.
-* **CountyValidator** - checks if county is between 0 and 256 chars.Class extends TextValidator
-* **CvvValidator** - checks if CVV is correct length for issuer and that only digits 0-9 are used. Class extends TextValidator
-* **NameValidator** - checks if name is less than 256 char and has correct format. Class extends TextValidator
-* **CountryValidator** - checks if country has a 2 char length alpha2code. class extends TextValidator
-* **CardDateValidator** - checks if yearmonth is between a min and max range. Class extends PropertyValidator<YearMonth>
-* **ValidFromDateValidator** - checks if validFrom date is between -80 years and this month of this year. Class extends CardDateValidator
-* **ExpiryDateValidator** - checks if expiryDate is between this month and 20years from now   .Class extends CardDateValidator
-* **MobileNumberValidator** - checks if a mobile number is valid (!null and correct format) for a specific country. The countr code is set during instantiation of the object. This class extends PropertyValidator<String>
-* **PasscodeValidator** - checks if the passcode is digitsonly, length = 6. class implements PropertyValidator<String>
-* **CardNumberValidator** - checks if card number is not null, min length, max length, format based on card issuer. Class implements PropertyValidator<String>
-* **DecimalValueValidator** - abstract class providing logic for decimal values.  required, and between min max range.. Class implements PropertyValidator<Double> 
-* **DonationAmountValidator** - checks if donation amount is >= 0. Class extends DecimalValueValidator
-* **IntValueValidator - abstract class providing logic for int values. required, minval, maxval. Class implements PropertyValidator<Integer>
+* **TextValidator** - checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
+* **IssueNumberValidator** - checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
+* **AliasValidator** - checks if the alias is less than 256 characters long. 
+* **TitleValidator** - checks if title is not an empty string. 
+* **EmailValidator** - checks if an email address is in the correct format. 
+* **CardHolderNameValidator** - checks if card holder name is less than 256 characters and in the correct format.
+* **AddressLineValidator** - checks if an address line is less than 256 characters. 
+* **CountyValidator** - checks if county is less than 256 characters. 
+* **CvvValidator** - checks if CVV is correct length for the card issuer and that only digits 0-9 are used.
+* **NameValidator** - checks if the name is less than 256 characters and is in the correct format.
+* **CountryValidator** - checks if country is 2 characters in length. 
+* **PostcodeValidator** - abstract class that provides logic for country specific post code validators to check if the postcode conforms to a supplied format. 
+* **UkPostcodeValidator** - checks if a UK postcode is valid based on the UK Format
+* **ChinaPostcodeValidator** - checks if a UK postcode is valid based on the Chinese Format
+* **CardDateValidator** - abstract class that provides logic for card date validators. checks if a YearMonth is between a specified minimum and maximum date range. 
+* **ValidFromDateValidator** - checks if "Valid From" date is valid.
+* **ExpiryDateValidator** - checks if expiry date is valid.
+* **MobileNumberValidator** - checks if a mobile number is valid for a specific country.  
+* **PasscodeValidator** - checks if the passcode is 6 digits long. 
+* **CardNumberValidator** - checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
+* **DecimalValueValidator** - abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
+* **DonationAmountValidator** - checks if donation amount is greater than zero.
+* **IntValueValidator - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. 
 
+Here is an example of using one of the validators:<br />
 
-
-
-
+	<pre>// Set the conditions for the validator
+	TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
+	// Validate the the supplied card number 
+	ValidationFailure error = cardNumberValidator.validate(input.getCardNumber());
+	if(error != null){
+		// handle error
+	} else {
+		// No issues found while validating the card number
+	}</pre>
+	
+For more details on each validator please review the reference documentation.
+<br /> <br />
 
 ##  Validators
-These low level validators are used to check aspects of a data type (e.g. NotNull, MinLength)
+These are low level validators which are used to check aspects of a data type (e.g. NotNull, MinLength).
 
+They implement the `Validator` interface which defines methods `isValid` and `getError`.
 
+The following property validators are available:<br />
 
-				
-
-
-
-
-
-The following classes implement the Validator<T> interface with one method 'isValid' low level validators are available:
-
-* FormatValidator - checks if input is in specified regular expression. Class implements Validator<String> 
-* MaxLengthValidator - set the max length during isntatiation and then use isValid (string) to check if string legnth is less than maxLength. class implements Validator<String>
-* MinDecimalValueValidator - checks that the input is not less thatn the min allowed value (which is set during instantiation). Class implements Validator<Double> 
-* MinIntValueValidator -  checks whether the input is not lower than the min value (which is set during instantiation). Class implements Validator<Integer> 
-* MinLengthValidator - checks whether the input is not shorter than the minimum length (set during instantiation). Class implements Validator<String>
-* LuhnValidator - uses Luhn algorithm to verify . class implements Validator<String>
-* MaxDecimalValueValidator - Checks that an input is not greater than the maximum allowed value. Class implements Validator<Double>
-* MaxIntValueValidator - Checks whether the input is not greater than the maximum value. Class implements Validator<Integer>
-* NotEmptyValidator - checks if the input is an empty string. Class implements Validator<String> 
-* NotNullValidator - checks if input object is not null. Class implements Validator<Object>
+* **FormatValidator** - checks if a input string matches the specified regular expression. 
+* **MaxLengthValidator** - Checks whether the input string is not longer than the maximum length.
+* **MinDecimalValueValidator** - Checks that the input value is not less than the minimum allowed decimal value. 
+* **MinIntValueValidator** -  Checks that the input value is not less than the minimum allowed int value. 
+* **MinLengthValidator** - Checks whether the input string is not shorter than the minimum length.
+* **LuhnValidator** - Checks a credit card number using the Luhn algorithm.
+* **MaxDecimalValueValidator** - Checks that an input value is not greater than the maximum allowed decimal value.
+* **MaxIntValueValidator** - Checks whether the input is not greater than the maximum value. Class implements Validator<Integer>
+* **NotEmptyValidator** - checks if the input is an empty string. Class implements Validator<String> 
+* **NotNullValidator** - checks if input object is not null. Class implements Validator<Object>
 
 
 public ValidationFailure
