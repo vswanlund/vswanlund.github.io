@@ -51,7 +51,7 @@ The currently supported workflows are:
 
 1. Retrieve an instance of `WorkflowManager`:
 
-    <pre>WorkflowManager wm = WorkflowManager.getInstance();</pre>
+    <pre>WorkflowManager wm = ManagerFactory.getInstance().getWorkflowManager();</pre>
 
 2. Request the workflow information for a tag:
 

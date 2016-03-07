@@ -19,7 +19,7 @@ PowaTag supports payments for a variety of different goods and services. In orde
 
 2. Use the PaymentManager to pay for the invoice:
 
-    <pre>PaymentManager pm = PaymentManager.getInstance();
+    <pre>PaymentManager pm = ManagerFactory.getInstance().getPaymentManager();
 	pm.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
 		public void onSuccess(Payment payment) {
 		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
@@ -38,13 +38,13 @@ PowaTag supports payments for a variety of different goods and services. In orde
 
 1. Create EncryptedCVV with the CVV:
 
-	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
+	<pre>Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
 	PaymentInstrument paymentInstrument = profile.getDefaultPaymentInstrument();
 	EncryptedCVV encryptedCvv = EncryptedCvvStorage.getInstance().getCvv(paymentInstrument);
 
 2. Use the PaymentManager to pay for the invoice:
 
-	<pre>PaymentManager pm = PaymentManager.getInstance();
+	<pre>PaymentManager pm = ManagerFactory.getInstance().getPaymentManager();
 	pm.pay(invoice, encryptedCvv, new PowaTagCallback&lt;Payment&gt;() {
 		public void onSuccess(Payment payment) {
 		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.

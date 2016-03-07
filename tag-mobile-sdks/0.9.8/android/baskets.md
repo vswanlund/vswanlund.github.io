@@ -30,7 +30,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. Get the list of baskets for the current user:
 
-	<pre>Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();</pre>
+	<pre>Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();</pre>
 
 2. Get the user's basket for a specific merchant:
 
@@ -43,7 +43,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 1. Add a product variant to the basket for the merchant:
 
     <pre>ProductVariant variant = workflow.getProduct().getVariants().get(0);
-   BasketsManager bm = BasketsManager.getInstance();
+   BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
    bm.addVariant(workflow.getMerchant(), variant);</pre>
 
 2. Or you can add a specific quantity of the product variant to the basket:
@@ -110,7 +110,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
 
-    <pre>BasketsManager bm = BasketsManager.getInstance();
+    <pre>BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
    bm.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
      public void onSuccess(PaymentInvoice invoice) {
        Cost cost = invoice.getCost();
@@ -131,7 +131,7 @@ Once you have created an invoice for a basket you can make a [Payment]({{site.ba
 
 1. To make Basket information available to other devices or between logins you need to update the Basket on the server using the BasketsManager:
 
-    <pre>BasketsManager bm = BasketsManager.getInstance();
+    <pre>BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
    bm.updateBasket(merchant, new PowaTagCallback&lt;Basket&gt;() {
     public void onSuccess(Basket basket) {
       // Basket is now accessible from other devices

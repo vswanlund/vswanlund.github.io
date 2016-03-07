@@ -30,12 +30,12 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
 
 1. Log in as an anonymous guest user using the LoginManager:
 
-    <pre>LoginManager lm = LoginManager.getInstance();
+    <pre>LoginManager lm = ManagerFactory.getInstance().getLoginManager();
    lm.signInAsGuest(new PowaTagCallback&lt;AccessToken&gt;() {
      public void onSuccess(AccessToken accessToken) {
        // Guest user is now logged in
-       Profile profile = ProfileManager.getInstance().getCurrentProfile();
-       Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+       Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
+       Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();
      }
      public void onError(PowaTagException exception) {
      }
@@ -45,7 +45,7 @@ A temporary or guest user profile lets you build a frictionless PowaTag experien
 
 2. The access token for the currently authenticated user can be retrieved using:
 
-    <pre>AccessToken accessToken = LoginManager.getInstance().getCurrentAccessToken();  </pre>
+    <pre>AccessToken accessToken = ManagerFactory.getInstance().getLoginManager().getCurrentAccessToken();  </pre>
 
 <br/>
 
@@ -58,12 +58,12 @@ There are three ways an existing user can log in using the SDK:
 1. Using a Profile ID
 
 	<pre>ProfileIdSignInDetails profileIdSignInDetails = new ProfileIdSignInDetails( signInDiag.getProfileId(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
+	LoginManager loginManager = ManagerFactory.getInstance().getLoginManager();
 	loginManager.signIn(profileIdSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
 		public void onSuccess(Profile profile) {
 			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+			Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
+			Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();
 		}
 	}</pre>
 
@@ -71,12 +71,12 @@ There are three ways an existing user can log in using the SDK:
 2. Using a Mobile Number
 
 	<pre>MobileNumberSignInDetails mobileNumberSignInDetails = new MobileNumberSignInDetails( signInDiag.getMobileNumber(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
+	LoginManager loginManager = ManagerFactory.getInstance().getLoginManager();
 	loginManager.signIn(mobileNumberSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
 		public void onSuccess(Profile profile) {
 			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+			Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
+			Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();
 		}
 	}</pre>
 
@@ -84,12 +84,12 @@ There are three ways an existing user can log in using the SDK:
 3. Using an Email Address
 
 	<pre>EmailSignInDetails emailSignInDetails = new EmailSignInDetails( signInDiag.getEmail(), signInDiag.getPassword());
-	LoginManager loginManager = LoginManager.getInstance();
+	LoginManager loginManager = ManagerFactory.getInstance().getLoginManager();
 	loginManager.signIn(emailSignInDetails, new PowaTagCallback&lt;Profile&gt;() {
 		public void onSuccess(Profile profile) {
 			// User is now logged in
-			Profile profile = ProfileManager.getInstance().getCurrentProfile();
-			Baskets baskets = BasketsManager.getInstance().getCurrentBaskets();
+			Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
+			Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();
 		}
 	}</pre>
 
@@ -107,7 +107,7 @@ Once the user is logged in you can retrieve the [Profile]({{site.baseurl}}/tag-m
 
 1. Check if the user is logged in:
 
-    <pre>if (LoginManager.getInstance().isLoggedIn()) {
+    <pre>if (ManagerFactory.getInstance().getLoginManager().isLoggedIn()) {
      // User is already logged in
    } else {
      // Go to login screen
@@ -122,7 +122,7 @@ Log out from the current profile, removing the current AccessToken, baskets and 
 
 1. Log out using LoginManager:
 
-    <pre>LoginManager loginManager = LoginManager.getInstance();
+    <pre>LoginManager loginManager = ManagerFactory.getInstance().getLoginManager();
    loginManager.logout(new PowaTagCallback&lt;Void&gt;() {
      public void onSuccess(Void result) {
        // User is now logged out and you can log in as another user

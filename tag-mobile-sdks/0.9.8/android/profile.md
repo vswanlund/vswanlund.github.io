@@ -6,7 +6,7 @@ permalink: /tag-mobile-sdks/0.9.8/android/profile/
 
 A PowaTag user profile stores the personal user information, cards and addresses of the user. To retrieve or manage a user's profile you must first [Login]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/login/).
 
-After logging in you can retrieve the current user's profile using <code>ProfileManager.getInstance().getCurrentProfile()</code>.
+After logging in you can retrieve the current user's profile using <code>ManagerFactory.getInstance().getProfileManager().getCurrentProfile()</code>.
 
 <br />
 
@@ -14,7 +14,7 @@ After logging in you can retrieve the current user's profile using <code>Profile
 
 1. The current authenticated user's profile, which reflects any successful modifications, can be retrieved using:
 
-    <pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();</pre>
+    <pre>Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();</pre>
 
 2. Check whether the current profile is temporary using:
 
@@ -58,7 +58,7 @@ After logging in you can retrieve the current user's profile using <code>Profile
 
 1. The latest profile information for the current user can be retrieved using:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
      public void onSuccess(Profile latestProfile) {
        // Profile was successfully retrieved
@@ -140,7 +140,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 3. Add the address to the user profile using the ProfileManager:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.addAddress(address, new PowaTagCallback&lt;String&gt;() {
      public void onSuccess(Address addedAddress) {
        // Address was successfully added
@@ -155,7 +155,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
  4. The new address will also be available in the current profile:
 
-     <pre>List&lt;Address&gt; addresses = ProfileManager.getInstance().getCurrentProfile().getAddresses();</pre>
+     <pre>List&lt;Address&gt; addresses = ManagerFactory.getInstance().getProfileManager().getCurrentProfile().getAddresses();</pre>
 
 <br />
 
@@ -172,7 +172,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 3. Use the ProfileManager to update the address information:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.updateAddress(address, modifiedAddress, new PowaTagCallback&lt;Address&gt;() {
      public void onSuccess(Address updatedAddress) {
        // Address was successfully updated
@@ -192,7 +192,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 1. Use the ProfileManager to delete an existing address:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.deleteAddress(address, new PowaTagCallback&lt;Profile&gt;() {
      public void onSuccess(Profile updatedProfile) {
        // Address was successfully deleted from profile
@@ -255,7 +255,7 @@ paymentInstrumentDetails.setBillingAddressId(addressId);</pre>
 
 4. Add the payment instrument to the user profile using the ProfileManager:
 
-	<pre>ProfileManager pm = ProfileManager.getInstance();
+	<pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
 	pm.addPaymentInstrument(paymentInstrument, new PowaTagCallback&lt;PaymentInstrument&gt;() {
 		public void onSuccess(PaymentInstrument addedPaymentInstrument) {
 		// Payment instrument was successfully added
@@ -268,10 +268,31 @@ paymentInstrumentDetails.setBillingAddressId(addressId);</pre>
 
 	<pre>PaymentInstrument addedPaymentInstrument = pm.addPaymentInstrument(paymentInstrumentDetails);</pre>
 
+5. If the payment instrument needs to be activated, send an activation code to the user.
 
-5. The new payment instrument will also be available in the current profile:
+    <pre>
+        ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
+        
+        // Check whether the payment instrument requires activation
+        if (paymentInstrument.activationStatus != NOT_REQUIRED)
+        {
+            pm.sendActivationCode(paymentInstrument);
+        }
+    </pre>
+    
+    The activation code is saved, referencing the user's profile and the payment instrument.
+    
+6. Once the user inputs the activation code, activate the payment instrument.
 
-    <pre>List&lt;PaymentInstrument&gt; paymentInstruments = ProfileManager.getInstance().getCurrentProfile().getPaymentInstruments();</pre>
+    <pre>
+        string activationCode = "123456";
+    
+        pm.activatePaymentInstrument(activationCode, paymentInstrument);
+    </pre>
+ 
+7. The new payment instrument will also be available in the current profile:
+
+    <pre>List&lt;PaymentInstrument&gt; paymentInstruments = ManagerFactory.getInstance().getProfileManager().getCurrentProfile().getPaymentInstruments();</pre>
 
 <br />
 
@@ -281,7 +302,7 @@ You can only change the billing address of a payment instrument once created.
 
 1. Use the ProfileManager to update the billing address of a payment instrument:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.updatePaymentInstrument(paymentInstrument, newBillingAddress, new PowaTagCallback&lt;Address&gt;() {
      public void onSuccess(PaymentInstrument updatedPaymentInstrument) {
        // Payment instrument was successfully updated
@@ -300,7 +321,7 @@ You can only change the billing address of a payment instrument once created.
 
 1. Use the ProfileManager to delete an existing payment instrument:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.deletePaymentInstrument(paymentInstrument, new PowaTagCallback&lt;Profile&gt;() {
      public void onSuccess(Profile updatedProfile) {
        // Payment instrument was successfully deleted from profile
@@ -319,7 +340,7 @@ You can only change the billing address of a payment instrument once created.
 
 To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code>:
 
-	Profile profile = ProfileManager.getInstance().getCurrentProfile();
+	Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
 	List<PaymentInstrument> acceptedPaymentInstruments = profile.getAcceptedPaymentInstruments(merchant);
 
 
@@ -377,7 +398,7 @@ Before transacting with a merchant you should check if the profile contains all 
 
 3. Use the ProfileManager to update the current profile:
 
-    <pre>ProfileManager pm = ProfileManager.getInstance();
+    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
    pm.updateProfile(profile, new PowaTagCallback&lt;Profile&gt;) {
      public void onSuccess(Profile updatedProfile) {
        // Profile information is updated
@@ -395,7 +416,7 @@ Before transacting with a merchant you should check if the profile contains all 
 
 4. The updated profile information will be reflected in the users current profile:
 
-	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();</pre>
+	<pre>Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();</pre>
 
 <br/>
 
@@ -405,7 +426,7 @@ Before transacting with a merchant you should check if the profile contains all 
 
 	Saving a temporary profile makes it permanent which will allow the user to log into the same profile at a later time or on another device.
 
-	<pre>ProfileManager pm = ProfileManager.getInstance();
+	<pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
 	pm.saveProfile(new PowaTagCallback&lt;Profile&gt;() {
 		public void onSuccess(Profile savedProfile) {
 		// Profile is no longer temporary

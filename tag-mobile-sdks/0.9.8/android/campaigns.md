@@ -16,7 +16,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
-    <pre>List<PaymentMethodAlias> acceptedPaymentInstruments = ProfileManager.getInstance().getCurrentProfile().getAcceptedPaymentInstruments(merchant);
+    <pre>List<PaymentMethodAlias> acceptedPaymentInstruments = ManagerFactory.getInstance().getProfileManager().getCurrentProfile().getAcceptedPaymentInstruments(merchant);
    PaymentInstrument paymentInstrument = acceptedPaymentInstruments.get(0);</pre>
 
 2. Create an DonationInvoiceDetails to provide correct amount, payment instrument, gift aid address for crating an donation invoice. You can also specify if the donation repeats every month.

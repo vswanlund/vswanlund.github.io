@@ -87,7 +87,7 @@ When a user interacts with the PowaTag trigger for the act campaign they need to
 
 1. Submit the act transaction details using the <code>ActManager</code>:
 
-	<pre>ActManager actManager = ActManager.getinstance();
+	<pre>ActManager actManager = ManagerFactory.getInstance().getActManager();
 	// submit the transaction and keep the transaction ID stored in actTransaction
 	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());</pre>
 
