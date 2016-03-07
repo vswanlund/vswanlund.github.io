@@ -32,7 +32,7 @@ Property validators are used to:
 * <code>CountyValidator</code> - to check the county is valid for the selected country.
 * <code>NameValidator</code> - to check the first and last name are in a valid format.
 
-The following usage example shows how to use the `AddressDetailsValidator`:<br />
+1. The following usage example shows how to use the `AddressDetailsValidator`:<br />
 
 
 	<pre>// addressDetails has been populated with the values obtained from the user
