@@ -146,6 +146,12 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <li>date
 : <a class="el" href="interface_p_t_k_year_month.html#a966e0684d7321749cb494ba2534cc745">PTKYearMonth</a>
 </li>
+<li>dateAsStringFromUTCFormattedDate:
+: <a class="el" href="interface_p_t_k_date_handler.html#af36ee033bb34cb39a34857e85082aa56">PTKDateHandler</a>
+</li>
+<li>dateInMilisecondsFromDate:
+: <a class="el" href="interface_p_t_k_date_handler.html#ab4e341a592f1cb67ab81b1c7ae3a7aa7">PTKDateHandler</a>
+</li>
 <li>debugInfo
 : <a class="el" href="interface_p_t_k_service_error.html#ada65c5afc45783d00153a4b6e1852dfb">PTKServiceError</a>
 </li>
@@ -156,8 +162,8 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <li>defaultEndpoint
 : <a class="el" href="interface_powa_tag_endpoint.html#acc0ad04fa3d8fae26558cdfb110425d4">PowaTagEndpoint</a>
 </li>
-<li>defaultEndpointPortsWithURL:
-: <a class="el" href="interface_powa_tag_endpoint.html#ac91ef30ed1bb871da3211bcebba0ac63">PowaTagEndpoint</a>
+<li>defaultEndpointPortsWithURL:addPorts:
+: <a class="el" href="interface_powa_tag_endpoint.html#ac7ef7d30af06c932b3947ad9ba724b11">PowaTagEndpoint</a>
 </li>
 <li>defaultPaymentInstrument
 : <a class="el" href="interface_p_t_k_profile.html#ad338d0137f6e991cc3e9e7942f3f99ab">PTKProfile</a>
@@ -170,8 +176,14 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <li>deleteAddress:completion:
 : <a class="el" href="interface_p_t_k_profile_manager.html#a1f601ba010772eca48931a25521f22ae">PTKProfileManager</a>
 </li>
+<li>deleteCoupon:withCompletion:
+: <a class="el" href="interface_p_t_k_coupon_manager.html#af02735e5941cfb32509feada30197aae">PTKCouponManager</a>
+</li>
 <li>deletePaymentInstrument:completion:
 : <a class="el" href="interface_p_t_k_profile_manager.html#a95939f53918bf7b4f6f097657f4079cb">PTKProfileManager</a>
+</li>
+<li>deselectCoupon:
+: <a class="el" href="interface_p_t_k_coupon_picker.html#a243595c3206ebd77d8dfadf5c71ca223">PTKCouponPicker</a>
 </li>
 <li>destinationApplicationName
 : <a class="el" href="interface_p_t_k_app_link.html#a3165b342f44f0a76e44dc04e1cba2f27">PTKAppLink</a>
@@ -186,18 +198,26 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="interface_powa_tag_kit.html#a87e043a9d80758b43fa8ca7a395a7b21">PowaTagKit</a>
 , <a class="el" href="interface_p_t_k_profile.html#a695112d0b07bcd35203ffc34e03113a9">PTKProfile</a>
 </li>
+<li>discount
+: <a class="el" href="interface_p_t_k_cost.html#a3361b8cfb2e94f3f97db11e2b4d24b65">PTKCost</a>
+</li>
+<li>discounts
+: <a class="el" href="interface_p_t_k_coupon_picker.html#acc4eb56687959e38ec12f9a865409a28">PTKCouponPicker</a>
+</li>
+<li>discountWithCoupons:saving:
+: <a class="el" href="interface_p_t_k_discount.html#a4987c9a36982100115c2eaa2bc7cdb56">PTKDiscount</a>
+</li>
 <li>donationAmountValidatorWithRequired:
 : <a class="el" href="interface_p_t_k_donation_amount_validator.html#ae83f504d71d64a7f577193749aaf7977">PTKDonationAmountValidator</a>
 </li>
 <li>donationEndpoint
 : <a class="el" href="interface_powa_tag_endpoint.html#a7dafa2b117ad877ebdfac9f85b160775">PowaTagEndpoint</a>
-, <a class="el" href="interface_powa_tag_endpoint_components.html#a09b0df4f7f6670d4b2a7d505b410036f">PowaTagEndpointComponents</a>
 </li>
 <li>donationInvoiceDetailsWithAmount:isRepeated:paymentInstrument:giftAidAddress:
 : <a class="el" href="interface_p_t_k_donation_invoice_details.html#a520e39d0e636b5e7ce2da52ccd1a9f22">PTKDonationInvoiceDetails</a>
 </li>
-<li>donationInvoiceWithId:profileId:paymentInstrument:amount:campaign:giftAidAddress:repeated:
-: <a class="el" href="interface_p_t_k_donation_invoice.html#a44f4de6257c72c645e92101eec21c1e9">PTKDonationInvoice</a>
+<li>donationInvoiceWithId:profileId:paymentInstrument:authorizationRequired:amount:campaign:giftAidAddress:repeated:
+: <a class="el" href="interface_p_t_k_donation_invoice.html#ad4156bb8885c70092c1e273333040ad2">PTKDonationInvoice</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -205,7 +225,7 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

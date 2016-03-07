@@ -110,47 +110,53 @@ $(document).ready(function(){initNavTree('_p_t_k_login_manager_8h_source.html','
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_email_sign_in_details.html">PTKEmailSignInDetails</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_mobile_number_sign_in_details.html">PTKMobileNumberSignInDetails</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_profile_id_sign_in_details.html">PTKProfileIdSignInDetails</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;@<span class="keyword">import</span> Foundation;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerSignInAsGuestCompletion)(<a class="code" href="interface_p_t_k_access_token.html">PTKAccessToken</a> *__nullable accessToken, NSError *__nullable error);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerLogoutCompletion)(NSError *__nullable error);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerSignInCompletion)(<a class="code" href="interface_p_t_k_profile.html">PTKProfile</a> *__nullable currentProfile, NSError *__nullable error);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span>  NSString * __nonnull <span class="keyword">const</span> PTKAccessTokenDidChangeNotificationName;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">extern</span>  NSString * __nonnull <span class="keyword">const</span> PTKAccessTokenKey;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="interface_p_t_k_login_manager.html">   25</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_login_manager.html">PTKLoginManager</a> : NSObject</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_p_t_k_login_manager.html#a4c6f793f8a4ac9a49b6c84cd9e8cd8eb">   31</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, nullable) <a class="code" href="interface_p_t_k_access_token.html">PTKAccessToken</a> *<a class="code" href="interface_p_t_k_login_manager.html#a4c6f793f8a4ac9a49b6c84cd9e8cd8eb">currentAccessToken</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;+ (nonnull instancetype)<a class="code" href="interface_p_t_k_login_manager.html#a327e574e234fc55b79d530d31cc02c1a">sharedManager</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (BOOL)<a class="code" href="interface_p_t_k_login_manager.html#a01b1aa04c01f859a64aa5958866193a7">isLoggedIn</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;- (void)signInAsGuestWithCompletion:(nonnull PTKLoginManagerSignInAsGuestCompletion)completion;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;- (void)logoutWithCompletion:(nonnull PTKLoginManagerLogoutCompletion)completion;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (void)<a class="code" href="interface_p_t_k_login_manager.html#a5202d22102407eee79e54b08912ed358">clearLogin</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;- (void)signInWithProfileId:(nonnull <a class="code" href="interface_p_t_k_profile_id_sign_in_details.html">PTKProfileIdSignInDetails</a> *)profileSignInDetails</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                 completion:(nonnull PTKLoginManagerSignInCompletion)completion;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;- (void)signInWithEmail:(nonnull <a class="code" href="interface_p_t_k_email_sign_in_details.html">PTKEmailSignInDetails</a> *)emailSignInDetails</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;             completion:(nonnull PTKLoginManagerSignInCompletion)completion;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (void)signInWithMobileNumber:(nonnull <a class="code" href="interface_p_t_k_mobile_number_sign_in_details.html">PTKMobileNumberSignInDetails</a> *)mobileNumberSignInDetails</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    completion:(nonnull PTKLoginManagerSignInCompletion)completion;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;@<span class="keyword">import</span> Foundation;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerSignInAsGuestCompletion)(<a class="code" href="interface_p_t_k_access_token.html">PTKAccessToken</a> *__nullable accessToken, NSError *__nullable error);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerLogoutCompletion)(NSError *__nullable error);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerSignInCompletion)(<a class="code" href="interface_p_t_k_profile.html">PTKProfile</a> *__nullable currentProfile, NSError *__nullable error);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">typedef</span> void (^PTKLoginManagerResetPasscodeCompletion)(NSError *__nullable error);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span>  NSString * __nonnull <span class="keyword">const</span> PTKAccessTokenDidChangeNotificationName;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span>  NSString * __nonnull <span class="keyword">const</span> PTKAccessTokenKey;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="interface_p_t_k_login_manager.html">   27</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_login_manager.html">PTKLoginManager</a> : NSObject</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_p_t_k_login_manager.html#a4c6f793f8a4ac9a49b6c84cd9e8cd8eb">   33</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, nullable) <a class="code" href="interface_p_t_k_access_token.html">PTKAccessToken</a> *<a class="code" href="interface_p_t_k_login_manager.html#a4c6f793f8a4ac9a49b6c84cd9e8cd8eb">currentAccessToken</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;+ (nonnull instancetype)<a class="code" href="interface_p_t_k_login_manager.html#a327e574e234fc55b79d530d31cc02c1a">sharedManager</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;- (BOOL)<a class="code" href="interface_p_t_k_login_manager.html#a01b1aa04c01f859a64aa5958866193a7">isLoggedIn</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (void)signInAsGuestWithCompletion:(nonnull PTKLoginManagerSignInAsGuestCompletion)completion;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (void)logoutWithCompletion:(nonnull PTKLoginManagerLogoutCompletion)completion;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (void)<a class="code" href="interface_p_t_k_login_manager.html#a5202d22102407eee79e54b08912ed358">clearLogin</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;- (void)signInWithProfileId:(nonnull <a class="code" href="interface_p_t_k_profile_id_sign_in_details.html">PTKProfileIdSignInDetails</a> *)profileSignInDetails</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                 completion:(nonnull PTKLoginManagerSignInCompletion)completion;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (void)signInWithEmail:(nonnull <a class="code" href="interface_p_t_k_email_sign_in_details.html">PTKEmailSignInDetails</a> *)emailSignInDetails</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;             completion:(nonnull PTKLoginManagerSignInCompletion)completion;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;- (void)signInWithMobileNumber:(nonnull <a class="code" href="interface_p_t_k_mobile_number_sign_in_details.html">PTKMobileNumberSignInDetails</a> *)mobileNumberSignInDetails</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    completion:(nonnull PTKLoginManagerSignInCompletion)completion;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (void)resetPasscodeWithPassword:(nonnull NSString *)password</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                      newPasscode:(nonnull NSString *)newPasscode</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                       completion:(nonnull PTKLoginManagerResetPasscodeCompletion)completion;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_login_manager_html_a327e574e234fc55b79d530d31cc02c1a"><div class="ttname"><a href="interface_p_t_k_login_manager.html#a327e574e234fc55b79d530d31cc02c1a">+[PTKLoginManager sharedManager]</a></div><div class="ttdeci">nonnull instancetype sharedManager()</div><div class="ttdoc">The. </div></div>
-<div class="ttc" id="interface_p_t_k_login_manager_html_a4c6f793f8a4ac9a49b6c84cd9e8cd8eb"><div class="ttname"><a href="interface_p_t_k_login_manager.html#a4c6f793f8a4ac9a49b6c84cd9e8cd8eb">PTKLoginManager::currentAccessToken</a></div><div class="ttdeci">PTKAccessToken * currentAccessToken</div><div class="ttdoc">The access token for the currently authenticated user. </div><div class="ttdef"><b>Definition:</b> PTKLoginManager.h:31</div></div>
-<div class="ttc" id="interface_p_t_k_login_manager_html"><div class="ttname"><a href="interface_p_t_k_login_manager.html">PTKLoginManager</a></div><div class="ttdoc">Manages login and authentication for PowaTag. </div><div class="ttdef"><b>Definition:</b> PTKLoginManager.h:25</div></div>
+<div class="ttc" id="interface_p_t_k_login_manager_html_a4c6f793f8a4ac9a49b6c84cd9e8cd8eb"><div class="ttname"><a href="interface_p_t_k_login_manager.html#a4c6f793f8a4ac9a49b6c84cd9e8cd8eb">PTKLoginManager::currentAccessToken</a></div><div class="ttdeci">PTKAccessToken * currentAccessToken</div><div class="ttdoc">The access token for the currently authenticated user. </div><div class="ttdef"><b>Definition:</b> PTKLoginManager.h:33</div></div>
+<div class="ttc" id="interface_p_t_k_login_manager_html"><div class="ttname"><a href="interface_p_t_k_login_manager.html">PTKLoginManager</a></div><div class="ttdoc">Manages login and authentication for PowaTag. </div><div class="ttdef"><b>Definition:</b> PTKLoginManager.h:27</div></div>
 <div class="ttc" id="interface_p_t_k_access_token_html"><div class="ttname"><a href="interface_p_t_k_access_token.html">PTKAccessToken</a></div><div class="ttdoc">An access token identifies a user and provides temporary, secure access to PowaTag APIs...</div><div class="ttdef"><b>Definition:</b> PTKAccessToken.h:13</div></div>
 <div class="ttc" id="interface_p_t_k_profile_id_sign_in_details_html"><div class="ttname"><a href="interface_p_t_k_profile_id_sign_in_details.html">PTKProfileIdSignInDetails</a></div><div class="ttdoc">Represents editable sign-in details using the profile ID. </div><div class="ttdef"><b>Definition:</b> PTKProfileIdSignInDetails.h:14</div></div>
 <div class="ttc" id="interface_p_t_k_mobile_number_sign_in_details_html"><div class="ttname"><a href="interface_p_t_k_mobile_number_sign_in_details.html">PTKMobileNumberSignInDetails</a></div><div class="ttdoc">Represents editable sign-in details using the profile&#39;s mobile number. </div><div class="ttdef"><b>Definition:</b> PTKMobileNumberSignInDetails.h:14</div></div>
 <div class="ttc" id="interface_p_t_k_login_manager_html_a01b1aa04c01f859a64aa5958866193a7"><div class="ttname"><a href="interface_p_t_k_login_manager.html#a01b1aa04c01f859a64aa5958866193a7">-[PTKLoginManager isLoggedIn]</a></div><div class="ttdeci">BOOL isLoggedIn()</div></div>
-<div class="ttc" id="interface_p_t_k_profile_html"><div class="ttname"><a href="interface_p_t_k_profile.html">PTKProfile</a></div><div class="ttdoc">Represents a basic PowaTag user profile. </div><div class="ttdef"><b>Definition:</b> PTKProfile.h:23</div></div>
+<div class="ttc" id="interface_p_t_k_profile_html"><div class="ttname"><a href="interface_p_t_k_profile.html">PTKProfile</a></div><div class="ttdoc">Represents a basic PowaTag user profile. </div><div class="ttdef"><b>Definition:</b> PTKProfile.h:24</div></div>
 <div class="ttc" id="interface_p_t_k_login_manager_html_a5202d22102407eee79e54b08912ed358"><div class="ttname"><a href="interface_p_t_k_login_manager.html#a5202d22102407eee79e54b08912ed358">-[PTKLoginManager clearLogin]</a></div><div class="ttdeci">void clearLogin()</div><div class="ttdoc">Clears the currently authenticated user by clearing all login information from the device including t...</div></div>
 <div class="ttc" id="interface_p_t_k_email_sign_in_details_html"><div class="ttname"><a href="interface_p_t_k_email_sign_in_details.html">PTKEmailSignInDetails</a></div><div class="ttdoc">Represents editable sign-in details using the profile email address. </div><div class="ttdef"><b>Definition:</b> PTKEmailSignInDetails.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -159,7 +165,7 @@ $(document).ready(function(){initNavTree('_p_t_k_login_manager_8h_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><b>PTKLoginManager.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

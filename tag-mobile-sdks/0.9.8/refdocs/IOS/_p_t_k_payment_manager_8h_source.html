@@ -113,34 +113,42 @@ $(document).ready(function(){initNavTree('_p_t_k_payment_manager_8h_source.html'
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;@<span class="keyword">import</span> Foundation;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">typedef</span> void (^PTKPaymentManagerCompletion)(<a class="code" href="interface_p_t_k_payment.html">PTKPayment</a> *__nullable payment, NSError *__nullable  error);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="interface_p_t_k_payment_manager.html">   20</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_payment_manager.html">PTKPaymentManager</a> : NSObject</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;+ (nonnull instancetype)<a class="code" href="interface_p_t_k_payment_manager.html#a92be3d66ed7a09429c3d698c6726b513">sharedManager</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;- (void)payForInvoice:(nonnull <a class="code" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)invoice</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;       paymentDetails:(nonnull <a class="code" href="interface_p_t_k_payment_details.html">PTKPaymentDetails</a> *)paymentDetails</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;           completion:(nonnull PTKPaymentManagerCompletion)completion;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;- (void)payForInvoice:(nonnull <a class="code" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)invoice</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;         encryptedCvv:(nonnull <a class="code" href="interface_p_t_k_encrypted_cvv.html">PTKEncryptedCvv</a> *)encryptedCvv</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;           completion:(nonnull PTKPaymentManagerCompletion)completion;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> void (^PTKPaymentManagerAuthorizationCompletion)(NSError *__nullable error);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interface_p_t_k_payment_manager.html">   21</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_payment_manager.html">PTKPaymentManager</a> : NSObject</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;+ (nonnull instancetype)<a class="code" href="interface_p_t_k_payment_manager.html#a92be3d66ed7a09429c3d698c6726b513">sharedManager</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;- (void)payForInvoice:(nonnull <a class="code" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)invoice</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;       paymentDetails:(nonnull <a class="code" href="interface_p_t_k_payment_details.html">PTKPaymentDetails</a> *)paymentDetails</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;           completion:(nonnull PTKPaymentManagerCompletion)completion;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (void)payForInvoice:(nonnull <a class="code" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)invoice</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;         encryptedCvv:(nonnull <a class="code" href="interface_p_t_k_encrypted_cvv.html">PTKEncryptedCvv</a> *)encryptedCvv</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;           completion:(nonnull PTKPaymentManagerCompletion)completion;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (void)payForInvoice:(nonnull <a class="code" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)invoice</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;           completion:(nonnull PTKPaymentManagerCompletion)completion;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;- (void)authorizeForInvoice:(nonnull <a class="code" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)invoice</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                   passcode:(nonnull NSString *)passcode</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                 completion:(nonnull PTKPaymentManagerAuthorizationCompletion)completion;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_encrypted_cvv_html"><div class="ttname"><a href="interface_p_t_k_encrypted_cvv.html">PTKEncryptedCvv</a></div><div class="ttdoc">Stores the encrypted CVV for a payment instrument. </div><div class="ttdef"><b>Definition:</b> PTKEncryptedCvv.h:13</div></div>
 <div class="ttc" id="interface_p_t_k_payment_invoice_html"><div class="ttname"><a href="interface_p_t_k_payment_invoice.html">PTKPaymentInvoice</a></div><div class="ttdoc">Invoice for a payment. </div><div class="ttdef"><b>Definition:</b> PTKPaymentInvoice.h:17</div></div>
 <div class="ttc" id="interface_p_t_k_payment_details_html"><div class="ttname"><a href="interface_p_t_k_payment_details.html">PTKPaymentDetails</a></div><div class="ttdoc">Represents editable payment details. </div><div class="ttdef"><b>Definition:</b> PTKPaymentDetails.h:12</div></div>
 <div class="ttc" id="interface_p_t_k_payment_manager_html_a92be3d66ed7a09429c3d698c6726b513"><div class="ttname"><a href="interface_p_t_k_payment_manager.html#a92be3d66ed7a09429c3d698c6726b513">+[PTKPaymentManager sharedManager]</a></div><div class="ttdeci">nonnull instancetype sharedManager()</div><div class="ttdoc">The. </div></div>
 <div class="ttc" id="interface_p_t_k_invoice_html"><div class="ttname"><a href="interface_p_t_k_invoice.html">PTKInvoice</a></div><div class="ttdoc">An invoice is a document issued by a merchant to a consumer, relating to a sale transaction and indic...</div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:18</div></div>
-<div class="ttc" id="interface_p_t_k_payment_html"><div class="ttname"><a href="interface_p_t_k_payment.html">PTKPayment</a></div><div class="ttdoc">Represents a completed payment. </div><div class="ttdef"><b>Definition:</b> PTKPayment.h:14</div></div>
-<div class="ttc" id="interface_p_t_k_payment_manager_html"><div class="ttname"><a href="interface_p_t_k_payment_manager.html">PTKPaymentManager</a></div><div class="ttdoc">Manages payments. </div><div class="ttdef"><b>Definition:</b> PTKPaymentManager.h:20</div></div>
+<div class="ttc" id="interface_p_t_k_payment_html"><div class="ttname"><a href="interface_p_t_k_payment.html">PTKPayment</a></div><div class="ttdoc">Represents a completed payment. </div><div class="ttdef"><b>Definition:</b> PTKPayment.h:16</div></div>
+<div class="ttc" id="interface_p_t_k_payment_manager_html"><div class="ttname"><a href="interface_p_t_k_payment_manager.html">PTKPaymentManager</a></div><div class="ttdoc">Manages payments. </div><div class="ttdef"><b>Definition:</b> PTKPaymentManager.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><b>PTKPaymentManager.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

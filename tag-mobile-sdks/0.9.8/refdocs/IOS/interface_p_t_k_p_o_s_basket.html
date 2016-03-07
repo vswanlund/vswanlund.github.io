@@ -122,45 +122,85 @@ Inheritance diagram for PTKPOSBasket:</div>
  <div class="center">
   <img src="interface_p_t_k_p_o_s_basket.png" usemap="#PTKPOSBasket_map" alt=""/>
   <map id="PTKPOSBasket_map" name="PTKPOSBasket_map">
-<area href="interface_p_t_k_model.html" title="Base superclass for all PowaTag models. " alt="PTKModel" shape="rect" coords="108,56,206,80"/>
+<area href="interface_p_t_k_model.html" title="Base superclass for all PowaTag models. " alt="PTKModel" shape="rect" coords="149,56,288,80"/>
+<area href="interface_p_t_k_invoice_p_o_s_basket.html" title="An unmodifiable copy of the POS basket to be purchased. " alt="PTKInvoicePOSBasket" shape="rect" coords="149,168,288,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:a373607aa69048480389ebebda0eb8256"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_p_o_s_basket.html#a373607aa69048480389ebebda0eb8256">posBasketWithMerchantId:items:</a></td></tr>
-<tr class="memdesc:a373607aa69048480389ebebda0eb8256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#a373607aa69048480389ebebda0eb8256">More...</a><br /></td></tr>
-<tr class="separator:a373607aa69048480389ebebda0eb8256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6356f73703c63494a33ad32df32fb39"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_p_o_s_basket.html#ae6356f73703c63494a33ad32df32fb39">posBasketWithPairedId:terminalId:merchant:items:price:availableCoupons:</a></td></tr>
+<tr class="memdesc:ae6356f73703c63494a33ad32df32fb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#ae6356f73703c63494a33ad32df32fb39">More...</a><br /></td></tr>
+<tr class="separator:ae6356f73703c63494a33ad32df32fb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a6ca10f031761df2c94357a7265a6c4b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ca10f031761df2c94357a7265a6c4b9"></a>
-NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#a6ca10f031761df2c94357a7265a6c4b9">merchantId</a></td></tr>
-<tr class="memdesc:a6ca10f031761df2c94357a7265a6c4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The merchant ID. <br /></td></tr>
-<tr class="separator:a6ca10f031761df2c94357a7265a6c4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37cefbdf55aa75fb415a795524f2f0d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37cefbdf55aa75fb415a795524f2f0d8"></a>
-NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#a37cefbdf55aa75fb415a795524f2f0d8">basketItems</a></td></tr>
-<tr class="memdesc:a37cefbdf55aa75fb415a795524f2f0d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The basket items. <br /></td></tr>
-<tr class="separator:a37cefbdf55aa75fb415a795524f2f0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9e3ab76ae6b962e38f156acea99b71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca9e3ab76ae6b962e38f156acea99b71"></a>
+NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#aca9e3ab76ae6b962e38f156acea99b71">pairedPosBasketId</a></td></tr>
+<tr class="memdesc:aca9e3ab76ae6b962e38f156acea99b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The POS basket ID. <br /></td></tr>
+<tr class="separator:aca9e3ab76ae6b962e38f156acea99b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f69e1c0262c9b02f4a974d62c40ed85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f69e1c0262c9b02f4a974d62c40ed85"></a>
+NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#a0f69e1c0262c9b02f4a974d62c40ed85">terminalId</a></td></tr>
+<tr class="memdesc:a0f69e1c0262c9b02f4a974d62c40ed85"><td class="mdescLeft">&#160;</td><td class="mdescRight">The terminal ID. <br /></td></tr>
+<tr class="separator:a0f69e1c0262c9b02f4a974d62c40ed85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a209e78374490199afed7a608cb77f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_p_t_k_merchant.html">PTKMerchant</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#a8a209e78374490199afed7a608cb77f2">merchant</a></td></tr>
+<tr class="memdesc:a8a209e78374490199afed7a608cb77f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The merchant this basket is for.  <a href="#a8a209e78374490199afed7a608cb77f2">More...</a><br /></td></tr>
+<tr class="separator:a8a209e78374490199afed7a608cb77f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0caf38c629f681162993065b058fda7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0caf38c629f681162993065b058fda7d"></a>
+NSArray&lt; <a class="el" href="interface_p_t_k_basket_item.html">PTKBasketItem</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#a0caf38c629f681162993065b058fda7d">items</a></td></tr>
+<tr class="memdesc:a0caf38c629f681162993065b058fda7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The basket items. <br /></td></tr>
+<tr class="separator:a0caf38c629f681162993065b058fda7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4294b1cf3746b3776a6cfa249fdc73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc4294b1cf3746b3776a6cfa249fdc73"></a>
+<a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#abc4294b1cf3746b3776a6cfa249fdc73">price</a></td></tr>
+<tr class="memdesc:abc4294b1cf3746b3776a6cfa249fdc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The price it will cost to purchase this basket. <br /></td></tr>
+<tr class="separator:abc4294b1cf3746b3776a6cfa249fdc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5030dda4c7773b7808a68265ef4e72d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5030dda4c7773b7808a68265ef4e72d8"></a>
+NSArray&lt; <a class="el" href="interface_p_t_k_coupon.html">PTKCoupon</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_p_o_s_basket.html#a5030dda4c7773b7808a68265ef4e72d8">availableCoupons</a></td></tr>
+<tr class="memdesc:a5030dda4c7773b7808a68265ef4e72d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The available coupons. <br /></td></tr>
+<tr class="separator:a5030dda4c7773b7808a68265ef4e72d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mutable basket tag structure that can be used for creating basket tags. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a373607aa69048480389ebebda0eb8256"></a>
+<a class="anchor" id="ae6356f73703c63494a33ad32df32fb39"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">+ (nonnull instancetype) posBasketWithMerchantId: </td>
+          <td class="memname">+ (nonnull instancetype) posBasketWithPairedId: </td>
           <td></td>
           <td class="paramtype">(nonnull NSString *)&#160;</td>
-          <td class="paramname"><em>merchantId</em></td>
+          <td class="paramname"><em>pairedPosBasketId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">terminalId:</td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>terminalId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">merchant:</td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)&#160;</td>
+          <td class="paramname"><em>merchant</em></td>
         </tr>
         <tr>
           <td class="paramkey">items:</td>
           <td></td>
-          <td class="paramtype">(nonnull NSArray *)&#160;</td>
-          <td class="paramname"><em>items</em>&#160;</td>
+          <td class="paramtype">(nonnull NSArray&lt; <a class="el" href="interface_p_t_k_basket_item.html">PTKBasketItem</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>items</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">price:</td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *)&#160;</td>
+          <td class="paramname"><em>price</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">availableCoupons:</td>
+          <td></td>
+          <td class="paramtype">(nullable NSArray&lt; <a class="el" href="interface_p_t_k_coupon.html">PTKCoupon</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>availableCoupons</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -174,11 +214,39 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div class="fragment"><div class="line"><a class="code" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a> </div>
 </div><!-- fragment --><p> instance with the specified items. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">merchantId</td><td>The merchant ID. </td></tr>
+    <tr><td class="paramname">pairedPosBasketId</td><td>The POS basket paired ID. </td></tr>
+    <tr><td class="paramname">terminalId</td><td>The terminal ID. </td></tr>
+    <tr><td class="paramname">merchant</td><td>The merchant. </td></tr>
     <tr><td class="paramname">items</td><td>The basket items. </td></tr>
+    <tr><td class="paramname">price</td><td>The price basket. </td></tr>
+    <tr><td class="paramname">availableCoupons</td><td>The available coupons </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a8a209e78374490199afed7a608cb77f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_p_t_k_merchant.html">PTKMerchant</a>*) merchant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The merchant this basket is for. </p>
+<p>All product variants in this basket must come from this merchant. </p>
 
 </div>
 </div>
@@ -188,7 +256,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

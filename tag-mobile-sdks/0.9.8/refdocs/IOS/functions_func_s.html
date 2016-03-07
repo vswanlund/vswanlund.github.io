@@ -87,6 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_c.html#index_c"><span>c</span></a></li>
       <li><a href="functions_func_d.html#index_d"><span>d</span></a></li>
       <li><a href="functions_func_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_func_f.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_func_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_func_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_func_i.html#index_i"><span>i</span></a></li>
       <li><a href="functions_func_l.html#index_l"><span>l</span></a></li>
@@ -140,6 +142,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>save:
 : <a class="el" href="interface_p_t_k_baskets_cache.html#a4cd72dccd7fe9e87d3ee25bdb335b2a1">PTKBasketsCache</a>
 </li>
+<li>saveCoupon:withCompletion:
+: <a class="el" href="interface_p_t_k_coupon_manager.html#ae677681321a6ba59a2e194dfb247bba8">PTKCouponManager</a>
+</li>
 <li>saveProfileWithPassword:completion:
 : <a class="el" href="interface_p_t_k_profile_manager.html#a18a8ffdc081db2f28310fdb2aa914aee">PTKProfileManager</a>
 </li>
@@ -152,11 +157,26 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>securityCodeLength
 : <a class="el" href="interface_p_t_k_credit_card_issuer.html#a6a1e50d36cc823d7c0129108ce373664">PTKCreditCardIssuer</a>
 </li>
+<li>selectCoupon:
+: <a class="el" href="interface_p_t_k_coupon_picker.html#a009cdc737a3c1e6482dd60b14bd295da">PTKCouponPicker</a>
+</li>
+<li>sendActivationCodeForPaymentInstrument:completion:
+: <a class="el" href="interface_p_t_k_profile_manager.html#ab9b67798aa872c9bad0ba842d0e8f3fd">PTKProfileManager</a>
+</li>
+<li>service
+: <a class="el" href="interface_local_profile_storage_service.html#ad06a535242ac5ff42dc9410240efa8aa">LocalProfileStorageService</a>
+</li>
 <li>serviceErrorWithDictionary:
 : <a class="el" href="interface_p_t_k_service_error.html#ae77294ab78cc1ddece761f74f172c586">PTKServiceError</a>
 </li>
 <li>setCustomDataValueForCustomDataKey:value:
 : <a class="el" href="interface_p_t_k_profile_details.html#a4693a4af4cf4d4e7ff4a7a755449661e">PTKProfileDetails</a>
+</li>
+<li>setPage:
+: <a class="el" href="interface_p_t_k_page.html#aa2fc23335412f7b6b2a9f370eee107ba">PTKPage</a>
+</li>
+<li>setPasscode:password:completion:
+: <a class="el" href="interface_p_t_k_profile_manager.html#a2b5f0f770ebc0e088794984723de60f5">PTKProfileManager</a>
 </li>
 <li>setTorch:
 : <a class="el" href="interface_p_t_k_barcode_tag_detector_view.html#ac94230e58ab47a8082a5adb3b4abe81d">PTKBarcodeTagDetectorView</a>
@@ -167,15 +187,14 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>sharedManager
 : <a class="el" href="interface_p_t_k_act_manager.html#a785ce0f00de91ef760bd784964e47f0b">PTKActManager</a>
 , <a class="el" href="interface_p_t_k_campaign_manager.html#a70b2a880f585cb21daf0919d81b79ccc">PTKCampaignManager</a>
+, <a class="el" href="interface_p_t_k_coupon_manager.html#a54b3172539b19738225803fbe3839d52">PTKCouponManager</a>
 , <a class="el" href="interface_p_t_k_encrypted_cvv_storage.html#a4785b248209cad6aeb39f24b20d34323">PTKEncryptedCvvStorage</a>
 , <a class="el" href="interface_p_t_k_login_manager.html#a327e574e234fc55b79d530d31cc02c1a">PTKLoginManager</a>
 , <a class="el" href="interface_p_t_k_payment_manager.html#a92be3d66ed7a09429c3d698c6726b513">PTKPaymentManager</a>
 , <a class="el" href="interface_p_t_k_p_o_s_manager.html#aead2ca4fcab5a0ce811357961cf70ec3">PTKPOSManager</a>
+, <a class="el" href="interface_p_t_k_product_manager.html#a52fdc3105786edb015fdbb01c43e98eb">PTKProductManager</a>
 , <a class="el" href="interface_p_t_k_profile_manager.html#afa5decb88ac19cff67820ba61dba61ce">PTKProfileManager</a>
 , <a class="el" href="interface_p_t_k_workflow_manager.html#ac84f0953683b348183224c2cf955d2b8">PTKWorkflowManager</a>
-</li>
-<li>shippingOptionWithId:name:shippingOptionDescription:price:
-: <a class="el" href="interface_p_t_k_shipping_option.html#ac963703df0c65bcefb2e5a6b295cfb35">PTKShippingOption</a>
 </li>
 <li>signInAsGuestWithCompletion:
 : <a class="el" href="interface_p_t_k_login_manager.html#a1210680c43c8b839ce702a25151b879a">PTKLoginManager</a>
@@ -200,6 +219,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="interface_p_t_k_audio_tag_detector.html#ad3a076beb4746f1d5b1a7a64d10b5119">PTKAudioTagDetector</a>
 , <a class="el" href="interface_p_t_k_barcode_tag_detector_view.html#afa059608ac2855da6e1e066351617ad7">PTKBarcodeTagDetectorView</a>
 </li>
+<li>storeProfile:withAccessToken:
+: <a class="el" href="protocol_profile_storage_service-p.html#a42331da2c40e6068e12bdfeaac9d0f52">&lt;ProfileStorageService&gt;</a>
+</li>
 <li>stringForHttpMethod
 : <a class="el" href="interface_p_t_k_request.html#a7699c63d3e5b3cbb28c4b80cf1c85cf2">PTKRequest</a>
 </li>
@@ -215,7 +237,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -124,18 +124,22 @@ $(document).ready(function(){initNavTree('_p_t_k_invoice_8h_source.html','');});
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="interface_p_t_k_invoice.html#ae0be819be990db7e6992d728fc8faa93">   43</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) PTKInvoiceType <a class="code" href="interface_p_t_k_invoice.html#ae0be819be990db7e6992d728fc8faa93">invoiceType</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;+ (nonnull instancetype)invoiceWithId:(nonnull NSString *)invoiceId</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            profileId:(nonnull NSString *)profileId</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    paymentInstrument:(nonnull <a class="code" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)paymentInstrument</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                             merchant:(nonnull <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)merchant</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                          invoiceType:(PTKInvoiceType)invoiceType;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="interface_p_t_k_invoice.html#a2e1e7d5cf8d11937b6d16babb2600f1e">   48</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) BOOL <a class="code" href="interface_p_t_k_invoice.html#a2e1e7d5cf8d11937b6d16babb2600f1e">authorizationRequired</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;+ (nonnull instancetype)invoiceWithId:(nonnull NSString *)invoiceId</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                            profileId:(nonnull NSString *)profileId</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    paymentInstrument:(nonnull <a class="code" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)paymentInstrument</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                             merchant:(nonnull <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)merchant</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                authorizationRequired:(BOOL)authorizationRequired</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                          invoiceType:(PTKInvoiceType)invoiceType;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_invoice_html"><div class="ttname"><a href="interface_p_t_k_invoice.html">PTKInvoice</a></div><div class="ttdoc">An invoice is a document issued by a merchant to a consumer, relating to a sale transaction and indic...</div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:18</div></div>
-<div class="ttc" id="interface_p_t_k_payment_instrument_html"><div class="ttname"><a href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a></div><div class="ttdoc">Payment Instrument identifier. </div><div class="ttdef"><b>Definition:</b> PTKPaymentInstrument.h:16</div></div>
+<div class="ttc" id="interface_p_t_k_payment_instrument_html"><div class="ttname"><a href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a></div><div class="ttdoc">Payment Instrument identifier. </div><div class="ttdef"><b>Definition:</b> PTKPaymentInstrument.h:17</div></div>
+<div class="ttc" id="interface_p_t_k_invoice_html_a2e1e7d5cf8d11937b6d16babb2600f1e"><div class="ttname"><a href="interface_p_t_k_invoice.html#a2e1e7d5cf8d11937b6d16babb2600f1e">PTKInvoice::authorizationRequired</a></div><div class="ttdeci">BOOL authorizationRequired</div><div class="ttdoc">Indicates if that invoice should be authorized. </div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:48</div></div>
 <div class="ttc" id="interface_p_t_k_invoice_html_ab6147d0aa8395f3d4e91741c2660a79e"><div class="ttname"><a href="interface_p_t_k_invoice.html#ab6147d0aa8395f3d4e91741c2660a79e">PTKInvoice::invoiceId</a></div><div class="ttdeci">NSString * invoiceId</div><div class="ttdoc">The invoice ID. </div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:23</div></div>
 <div class="ttc" id="interface_p_t_k_invoice_html_a59f95701c629bc67192b2bc8d06a570a"><div class="ttname"><a href="interface_p_t_k_invoice.html#a59f95701c629bc67192b2bc8d06a570a">PTKInvoice::merchant</a></div><div class="ttdeci">PTKMerchant * merchant</div><div class="ttdoc">The merchant selling the goods. </div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:38</div></div>
-<div class="ttc" id="interface_p_t_k_merchant_html"><div class="ttname"><a href="interface_p_t_k_merchant.html">PTKMerchant</a></div><div class="ttdoc">Represents a merchant or seller/shop. </div><div class="ttdef"><b>Definition:</b> PTKMerchant.h:14</div></div>
+<div class="ttc" id="interface_p_t_k_merchant_html"><div class="ttname"><a href="interface_p_t_k_merchant.html">PTKMerchant</a></div><div class="ttdoc">Represents a merchant or seller/shop. </div><div class="ttdef"><b>Definition:</b> PTKMerchant.h:17</div></div>
 <div class="ttc" id="interface_p_t_k_model_html"><div class="ttname"><a href="interface_p_t_k_model.html">PTKModel</a></div><div class="ttdoc">Base superclass for all PowaTag models. </div><div class="ttdef"><b>Definition:</b> PTKModel.h:12</div></div>
 <div class="ttc" id="interface_p_t_k_invoice_html_ae0be819be990db7e6992d728fc8faa93"><div class="ttname"><a href="interface_p_t_k_invoice.html#ae0be819be990db7e6992d728fc8faa93">PTKInvoice::invoiceType</a></div><div class="ttdeci">PTKInvoiceType invoiceType</div><div class="ttdoc">The type of invoice. </div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:43</div></div>
 <div class="ttc" id="interface_p_t_k_cost_html"><div class="ttname"><a href="interface_p_t_k_cost.html">PTKCost</a></div><div class="ttdoc">Represents the cost of a basket. </div><div class="ttdef"><b>Definition:</b> PTKCost.h:15</div></div>
@@ -147,7 +151,7 @@ $(document).ready(function(){initNavTree('_p_t_k_invoice_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKInvoice.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -109,31 +109,39 @@ $(document).ready(function(){initNavTree('_p_t_k_workflow_8h_source.html','');})
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_product_workflow.html">PTKProductWorkflow</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_temporary_basket_workflow.html">PTKTemporaryBasketWorkflow</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &quot;PTKModel.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &quot;PTKWorkflowType.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interface_p_t_k_workflow.html">   21</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> : <a class="code" href="interface_p_t_k_model.html">PTKModel</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;+ (nonnull instancetype)workflowWithWorkflowType:(PTKWorkflowType)workflowType</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                        merchant:(nonnull <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)merchant;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_p_t_k_workflow.html#aabab53f5c590514fd9c1dbf6e4bd2d40">   34</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly, nonnull) <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a> *merchant;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interface_p_t_k_workflow.html#a4b6ec25d8ed39d1bd3e7b63a397be712">   39</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) PTKWorkflowType <a class="code" href="interface_p_t_k_workflow.html#a4b6ec25d8ed39d1bd3e7b63a397be712">workflowType</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_product_workflow.html">PTKProductWorkflow</a> *)asProductWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_temporary_basket_workflow.html">PTKTemporaryBasketWorkflow</a> *)asTemporaryBasketWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_campaign_workflow.html">PTKCampaignWorkflow</a> *)asCampaignWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_p_t_k_workflow_html"><div class="ttname"><a href="interface_p_t_k_workflow.html">PTKWorkflow</a></div><div class="ttdoc">Represents an application workflow. </div><div class="ttdef"><b>Definition:</b> PTKWorkflow.h:21</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_p_o_s_basket_workflow.html">PTKPOSBasketWorkflow</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_catalog_workflow.html">PTKCatalogWorkflow</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#import &quot;PTKModel.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &quot;PTKWorkflowType.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_p_t_k_workflow.html">   23</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> : <a class="code" href="interface_p_t_k_model.html">PTKModel</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;+ (nonnull instancetype)workflowWithWorkflowType:(PTKWorkflowType)workflowType</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                        merchant:(nonnull <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)merchant;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interface_p_t_k_workflow.html#aabab53f5c590514fd9c1dbf6e4bd2d40">   36</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, readonly, nonnull) <a class="code" href="interface_p_t_k_merchant.html">PTKMerchant</a> *merchant;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="interface_p_t_k_workflow.html#a4b6ec25d8ed39d1bd3e7b63a397be712">   41</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) PTKWorkflowType <a class="code" href="interface_p_t_k_workflow.html#a4b6ec25d8ed39d1bd3e7b63a397be712">workflowType</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_product_workflow.html">PTKProductWorkflow</a> *)asProductWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_temporary_basket_workflow.html">PTKTemporaryBasketWorkflow</a> *)asTemporaryBasketWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_p_o_s_basket_workflow.html">PTKPOSBasketWorkflow</a> *)asPOSBasketWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_campaign_workflow.html">PTKCampaignWorkflow</a> *)asCampaignWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_catalog_workflow.html">PTKCatalogWorkflow</a> *)asCatalogWorkflow:(nonnull <a class="code" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)workflow;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_p_t_k_workflow_html"><div class="ttname"><a href="interface_p_t_k_workflow.html">PTKWorkflow</a></div><div class="ttdoc">Represents an application workflow. </div><div class="ttdef"><b>Definition:</b> PTKWorkflow.h:23</div></div>
+<div class="ttc" id="interface_p_t_k_catalog_workflow_html"><div class="ttname"><a href="interface_p_t_k_catalog_workflow.html">PTKCatalogWorkflow</a></div><div class="ttdoc">Represents a catalog workflow. </div><div class="ttdef"><b>Definition:</b> PTKCatalogWorkflow.h:20</div></div>
 <div class="ttc" id="interface_p_t_k_product_workflow_html"><div class="ttname"><a href="interface_p_t_k_product_workflow.html">PTKProductWorkflow</a></div><div class="ttdoc">Represents an application workflow. </div><div class="ttdef"><b>Definition:</b> PTKProductWorkflow.h:19</div></div>
 <div class="ttc" id="interface_p_t_k_temporary_basket_workflow_html"><div class="ttname"><a href="interface_p_t_k_temporary_basket_workflow.html">PTKTemporaryBasketWorkflow</a></div><div class="ttdoc">Represents an application workflow. </div><div class="ttdef"><b>Definition:</b> PTKTemporaryBasketWorkflow.h:17</div></div>
-<div class="ttc" id="interface_p_t_k_workflow_html_a4b6ec25d8ed39d1bd3e7b63a397be712"><div class="ttname"><a href="interface_p_t_k_workflow.html#a4b6ec25d8ed39d1bd3e7b63a397be712">PTKWorkflow::workflowType</a></div><div class="ttdeci">PTKWorkflowType workflowType</div><div class="ttdoc">The workflow type. </div><div class="ttdef"><b>Definition:</b> PTKWorkflow.h:39</div></div>
-<div class="ttc" id="interface_p_t_k_merchant_html"><div class="ttname"><a href="interface_p_t_k_merchant.html">PTKMerchant</a></div><div class="ttdoc">Represents a merchant or seller/shop. </div><div class="ttdef"><b>Definition:</b> PTKMerchant.h:14</div></div>
+<div class="ttc" id="interface_p_t_k_workflow_html_a4b6ec25d8ed39d1bd3e7b63a397be712"><div class="ttname"><a href="interface_p_t_k_workflow.html#a4b6ec25d8ed39d1bd3e7b63a397be712">PTKWorkflow::workflowType</a></div><div class="ttdeci">PTKWorkflowType workflowType</div><div class="ttdoc">The workflow type. </div><div class="ttdef"><b>Definition:</b> PTKWorkflow.h:41</div></div>
+<div class="ttc" id="interface_p_t_k_merchant_html"><div class="ttname"><a href="interface_p_t_k_merchant.html">PTKMerchant</a></div><div class="ttdoc">Represents a merchant or seller/shop. </div><div class="ttdef"><b>Definition:</b> PTKMerchant.h:17</div></div>
+<div class="ttc" id="interface_p_t_k_p_o_s_basket_workflow_html"><div class="ttname"><a href="interface_p_t_k_p_o_s_basket_workflow.html">PTKPOSBasketWorkflow</a></div><div class="ttdoc">Represents an application workflow. </div><div class="ttdef"><b>Definition:</b> PTKPOSBasketWorkflow.h:18</div></div>
 <div class="ttc" id="interface_p_t_k_model_html"><div class="ttname"><a href="interface_p_t_k_model.html">PTKModel</a></div><div class="ttdoc">Base superclass for all PowaTag models. </div><div class="ttdef"><b>Definition:</b> PTKModel.h:12</div></div>
 <div class="ttc" id="interface_p_t_k_campaign_workflow_html"><div class="ttname"><a href="interface_p_t_k_campaign_workflow.html">PTKCampaignWorkflow</a></div><div class="ttdoc">Represents an application workflow. </div><div class="ttdef"><b>Definition:</b> PTKCampaignWorkflow.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -142,7 +150,7 @@ $(document).ready(function(){initNavTree('_p_t_k_workflow_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKWorkflow.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

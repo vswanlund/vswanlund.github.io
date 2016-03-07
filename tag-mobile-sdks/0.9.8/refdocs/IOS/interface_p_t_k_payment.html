@@ -128,16 +128,16 @@ Inheritance diagram for PTKPayment:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:accdec604eaa87278ef0fbcd51f16bbab"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_payment.html#accdec604eaa87278ef0fbcd51f16bbab">paymentWithPaymentId:merchantPaymentId:invoice:</a></td></tr>
-<tr class="memdesc:accdec604eaa87278ef0fbcd51f16bbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#accdec604eaa87278ef0fbcd51f16bbab">More...</a><br /></td></tr>
-<tr class="separator:accdec604eaa87278ef0fbcd51f16bbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c61de564fec237f9a743486d2fa3192"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_payment.html#a6c61de564fec237f9a743486d2fa3192">paymentWithTransactionId:merchantPaymentId:triggeredCoupons:invoice:</a></td></tr>
+<tr class="memdesc:a6c61de564fec237f9a743486d2fa3192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#a6c61de564fec237f9a743486d2fa3192">More...</a><br /></td></tr>
+<tr class="separator:a6c61de564fec237f9a743486d2fa3192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a3bf8bb7f03f280d70750c0c9ff63451a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bf8bb7f03f280d70750c0c9ff63451a"></a>
-NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment.html#a3bf8bb7f03f280d70750c0c9ff63451a">paymentId</a></td></tr>
-<tr class="memdesc:a3bf8bb7f03f280d70750c0c9ff63451a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The payment ID. <br /></td></tr>
-<tr class="separator:a3bf8bb7f03f280d70750c0c9ff63451a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa55c5782817fe37987b3af22adbaa05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa55c5782817fe37987b3af22adbaa05"></a>
+NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment.html#aaa55c5782817fe37987b3af22adbaa05">transactionId</a></td></tr>
+<tr class="memdesc:aaa55c5782817fe37987b3af22adbaa05"><td class="mdescLeft">&#160;</td><td class="mdescRight">The payment transaction ID. <br /></td></tr>
+<tr class="separator:aaa55c5782817fe37987b3af22adbaa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b31037880bc3a4d3ceded4cb788013"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98b31037880bc3a4d3ceded4cb788013"></a>
 NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment.html#a98b31037880bc3a4d3ceded4cb788013">merchantPaymentId</a></td></tr>
 <tr class="memdesc:a98b31037880bc3a4d3ceded4cb788013"><td class="mdescLeft">&#160;</td><td class="mdescRight">The merchant's payment ID. <br /></td></tr>
@@ -146,25 +146,39 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <a class="el" href="interface_p_t_k_invoice.html">PTKInvoice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment.html#a989611179569abde22819da425ac6230">invoice</a></td></tr>
 <tr class="memdesc:a989611179569abde22819da425ac6230"><td class="mdescLeft">&#160;</td><td class="mdescRight">The invoice that was paid for. <br /></td></tr>
 <tr class="separator:a989611179569abde22819da425ac6230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8340fde10218b005d810a736d67b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c8340fde10218b005d810a736d67b72"></a>
+NSOrderedSet&lt; <a class="el" href="interface_p_t_k_coupon.html">PTKCoupon</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment.html#a1c8340fde10218b005d810a736d67b72">triggeredCoupons</a></td></tr>
+<tr class="memdesc:a1c8340fde10218b005d810a736d67b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The coupon list. <br /></td></tr>
+<tr class="separator:a1c8340fde10218b005d810a736d67b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5a443b28215ce9ecb8fc7f84906aeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a5a443b28215ce9ecb8fc7f84906aeb"></a>
+NSDate *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment.html#a6a5a443b28215ce9ecb8fc7f84906aeb">paymentDate</a></td></tr>
+<tr class="memdesc:a6a5a443b28215ce9ecb8fc7f84906aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The payment date. <br /></td></tr>
+<tr class="separator:a6a5a443b28215ce9ecb8fc7f84906aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a completed payment. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="accdec604eaa87278ef0fbcd51f16bbab"></a>
+<a class="anchor" id="a6c61de564fec237f9a743486d2fa3192"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">+ (nonnull instancetype) paymentWithPaymentId: </td>
+          <td class="memname">+ (nonnull instancetype) paymentWithTransactionId: </td>
           <td></td>
           <td class="paramtype">(nonnull NSString *)&#160;</td>
-          <td class="paramname"><em>paymentId</em></td>
+          <td class="paramname"><em>transactionId</em></td>
         </tr>
         <tr>
           <td class="paramkey">merchantPaymentId:</td>
           <td></td>
           <td class="paramtype">(nonnull NSString *)&#160;</td>
           <td class="paramname"><em>merchantPaymentId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">triggeredCoupons:</td>
+          <td></td>
+          <td class="paramtype">(nullable NSOrderedSet&lt; PTKCouponResponseJSON * &gt; *)&#160;</td>
+          <td class="paramname"><em>triggeredCoupons</em></td>
         </tr>
         <tr>
           <td class="paramkey">invoice:</td>
@@ -184,8 +198,9 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="fragment"><div class="line"><a class="code" href="interface_p_t_k_payment.html">PTKPayment</a> </div>
 </div><!-- fragment --><p> instance. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">paymentId</td><td>The payment ID. </td></tr>
+    <tr><td class="paramname">transactionId</td><td>The payment transaction ID. </td></tr>
     <tr><td class="paramname">merchantPaymentId</td><td>The merchant's payment ID. </td></tr>
+    <tr><td class="paramname">triggeredCoupons</td><td>The coupon list. </td></tr>
     <tr><td class="paramname">invoice</td><td>The invoice that was paid for. </td></tr>
   </table>
   </dd>
@@ -199,7 +214,7 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_payment.html">PTKPayment</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

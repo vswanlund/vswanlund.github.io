@@ -1,6 +1,5 @@
 var interface_p_t_k_profile =
 [
-    [ "acceptedPaymentInstrumentsForMerchant:", "interface_p_t_k_profile.html#a96a87e7dd4962b0143a143d7013f3ada", null ],
     [ "editableCopy", "interface_p_t_k_profile.html#a68d4a9d43a7330929a92de1b34b79293", null ],
     [ "hasRequiredInfoForMerchant:", "interface_p_t_k_profile.html#a080b9d8bd23180c2c6b1e41e3832fa85", null ],
     [ "addresses", "interface_p_t_k_profile.html#abe4272eae7c21a0dc19ac73e08a256d7", null ],

@@ -162,6 +162,9 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>cancelAllRequests
 : <a class="el" href="interface_p_t_k_client.html#abddeb5d5b69afeb096c7171b53d5b081">PTKClient</a>
 </li>
+<li>cardHolderIdentityNumber
+: <a class="el" href="interface_p_t_k_payment_method_details.html#a435ef43ffa31973ca6887880be78242d">PTKPaymentMethodDetails</a>
+</li>
 <li>cardHolderName
 : <a class="el" href="interface_p_t_k_payment_method_details.html#a96dd14dfdc5ae29d5ba85c7ebf703c63">PTKPaymentMethodDetails</a>
 </li>
@@ -198,8 +201,31 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>cardNumberMinLengthWithIssuer:
 : <a class="el" href="interface_p_t_k_credit_card_validator.html#a3af902633a3c007f76253db30cbf3fd7">PTKCreditCardValidator</a>
 </li>
-<li>charityNumber
-: <a class="el" href="interface_p_t_k_merchant.html#a3a41a8405f5ddc73a6da506827c861a8">PTKMerchant</a>
+<li>catalog
+: <a class="el" href="interface_p_t_k_catalog_workflow.html#a97b6a25b0b94df532bb5ed742d74b0fd">PTKCatalogWorkflow</a>
+</li>
+<li>catalogId
+: <a class="el" href="interface_p_t_k_category.html#affa91e080a4820de16da8610adc2122e">PTKCategory</a>
+, <a class="el" href="interface_p_t_k_product_category.html#a445d7a9779c32069ecdf1980e5e866c8">PTKProductCategory</a>
+</li>
+<li>catalogWithCategories:merchant:
+: <a class="el" href="interface_p_t_k_catalog.html#a834f785bce6d84f7cb412fe38be68a2d">PTKCatalog</a>
+</li>
+<li>catalogWorkflowWithMerchant:catalog:
+: <a class="el" href="interface_p_t_k_catalog_workflow.html#af66b95aea2806654371f52c722cb853a">PTKCatalogWorkflow</a>
+</li>
+<li>categories
+: <a class="el" href="interface_p_t_k_catalog.html#a070eb0de97affdf41f4a8b8311d94f65">PTKCatalog</a>
+, <a class="el" href="interface_p_t_k_coupon.html#a40f3d3f275f5e8a5e1de5bb2556c2e96">PTKCoupon</a>
+</li>
+<li>categoryDescription
+: <a class="el" href="interface_p_t_k_category.html#ac200b1a328e7a2f5be3d908193134c34">PTKCategory</a>
+</li>
+<li>categoryWithMerchantId:catalogId:path:name:description:images:
+: <a class="el" href="interface_p_t_k_category.html#a14e064abb36dda3a8b4cf0a399c484fc">PTKCategory</a>
+</li>
+<li>China
+: <a class="el" href="interface_p_t_k_country.html#a5becab40d205c80f97769578123c531b">PTKCountry</a>
 </li>
 <li>choosable
 : <a class="el" href="interface_p_t_k_product_option_state.html#a7f271ed5c26ff1e8f81c70762643e4ab">PTKProductOptionState</a>
@@ -210,6 +236,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>city
 : <a class="el" href="interface_p_t_k_address.html#a025c290712420b5c91272e11afcdfe82">PTKAddress</a>
 , <a class="el" href="interface_p_t_k_address_details.html#a458f358a2d9552a5678a9088d4984eca">PTKAddressDetails</a>
+, <a class="el" href="interface_p_t_k_geo_restriction.html#a9ab70dc716dd6431c20c19ee359a2393">PTKGeoRestriction</a>
 </li>
 <li>clear
 : <a class="el" href="interface_p_t_k_baskets_cache.html#aba7e459dee67554b915b515ccbfe687e">PTKBasketsCache</a>
@@ -226,6 +253,9 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>client
 : <a class="el" href="interface_p_t_k_client.html#a14185dce8afc094d61ce432fc962339e">PTKClient</a>
 </li>
+<li>cnPostcodeValidator
+: <a class="el" href="interface_p_t_k_c_n_postcode_validator.html#a8575ee535dad201e40733e64f151026e">PTKCNPostcodeValidator</a>
+</li>
 <li>code
 : <a class="el" href="interface_p_t_k_service_error.html#a1e55bb79ebc0761a06ee3c89e9c935a4">PTKServiceError</a>
 , <a class="el" href="interface_p_t_k_barcode.html#ad10a599757bfed3de7c2fec22f68f462">PTKBarcode</a>
@@ -235,16 +265,19 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 </li>
 <li>cost
 : <a class="el" href="interface_p_t_k_payment_invoice.html#aa8b318d598f221ca820b6cdbfeaab188">PTKPaymentInvoice</a>
+, <a class="el" href="interface_p_t_k_payment_p_o_s_basket_invoice.html#a2ac14bd1e51135551df4e3e13ffa05d9">PTKPaymentPOSBasketInvoice</a>
+, <a class="el" href="interface_p_t_k_p_o_s_basket_invoice.html#a5bb8ff4ba597f773bb1f4ca796b0a308">PTKPOSBasketInvoice</a>
 </li>
 <li>costPrice
 : <a class="el" href="interface_p_t_k_product_variant.html#a213bbf029367a351494d958c46652fbb">PTKProductVariant</a>
 </li>
-<li>costWithSubtotal:total:shipping:tax:
-: <a class="el" href="interface_p_t_k_cost.html#a132dd5c098c9c0e150903a3e551b3f9a">PTKCost</a>
+<li>costWithSubtotal:total:shipping:tax:discount:
+: <a class="el" href="interface_p_t_k_cost.html#ad50b03e74e7d1c193ab10b1c32da5c54">PTKCost</a>
 </li>
 <li>country
 : <a class="el" href="interface_p_t_k_address.html#a2a39da83317e487fecb74b714be87dc3">PTKAddress</a>
 , <a class="el" href="interface_p_t_k_address_details.html#ac73b9d67d58e47ddcc526e3fc47324c3">PTKAddressDetails</a>
+, <a class="el" href="interface_p_t_k_geo_restriction.html#a96660f3d929a6837c268aea6115b25c3">PTKGeoRestriction</a>
 </li>
 <li>countryForCode:
 : <a class="el" href="interface_p_t_k_country.html#af4c8fdba3422b909ea3f26320b8a3fc5">PTKCountry</a>
@@ -252,12 +285,40 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>county
 : <a class="el" href="interface_p_t_k_address.html#ae1b00c071fd0eb7ef061ef541eb19adf">PTKAddress</a>
 , <a class="el" href="interface_p_t_k_address_details.html#a54f40b6483ad39e53a498a2fca0fbc8a">PTKAddressDetails</a>
+, <a class="el" href="interface_p_t_k_geo_restriction.html#aab3575e17cf71fa195ffe7420c66ec33">PTKGeoRestriction</a>
+</li>
+<li>coupon
+: <a class="el" href="interface_p_t_k_coupon_state.html#a9ad629a6fc4f5ca7f1e100cae81fcc5a">PTKCouponState</a>
+</li>
+<li>couponDescription
+: <a class="el" href="interface_p_t_k_coupon.html#a92e36ab006d6130ce4dcadb6b925f618">PTKCoupon</a>
+</li>
+<li>couponEndpoint
+: <a class="el" href="interface_powa_tag_endpoint.html#a5082e9f18abb0a6512f6d22a64252b9c">PowaTagEndpoint</a>
+</li>
+<li>couponId
+: <a class="el" href="interface_p_t_k_coupon.html#ada31fe7673dbcb45afcc249ecec63749">PTKCoupon</a>
+</li>
+<li>couponPickerWithPOSBasket:andDiscounts:
+: <a class="el" href="interface_p_t_k_coupon_picker.html#a160ca38e43dc9f3575a4d3098dea53bd">PTKCouponPicker</a>
+</li>
+<li>coupons
+: <a class="el" href="interface_p_t_k_p_o_s_basket_invoice.html#a2db0d08db930a08c774cb5cc45b76389">PTKPOSBasketInvoice</a>
+</li>
+<li>couponWithId:profileId:merchantId:promotionId:name:description:percentageDiscount:fixedDiscount:scope:usageCount:startDate:endDate:products:promotionCode:categories:imageUrl:
+: <a class="el" href="interface_p_t_k_coupon.html#a89664eb40532efb1d86a5d0844b5d1e6">PTKCoupon</a>
 </li>
 <li>createBasketTagWithBasket:completion:
 : <a class="el" href="interface_p_t_k_p_o_s_manager.html#adeba3ea5249acd48104133e62005c25f">PTKPOSManager</a>
 </li>
 <li>createInvoiceWithCampaign:donationInvoiceDetails:completion:
 : <a class="el" href="interface_p_t_k_campaign_manager.html#ab4defd1f68a5a7f993f3009c1d6907cf">PTKCampaignManager</a>
+</li>
+<li>createInvoiceWithPosBasket:paymentInstrument:coupons:completion:
+: <a class="el" href="interface_p_t_k_p_o_s_manager.html#a6a20406248ae4623939969036d7b14b6">PTKPOSManager</a>
+</li>
+<li>createWithReason:
+: <a class="el" href="interface_storage_exception.html#a2055021783fc7b7e8bfab94e4b690d7e">StorageException</a>
 </li>
 <li>creditCardIssuer
 : <a class="el" href="interface_p_t_k_payment_instrument.html#a5a9b0184cee90f4fbd7d449e64054c4f">PTKPaymentInstrument</a>
@@ -275,7 +336,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="interface_p_t_k_profile_manager.html#ab3598fbdab68f57c53ba47b76b8299f1">PTKProfileManager</a>
 </li>
 <li>customDataKeys
-: <a class="el" href="interface_p_t_k_merchant.html#a8cd32cbabd4de5918b1e693a560f3643">PTKMerchant</a>
+: <a class="el" href="interface_p_t_k_merchant.html#adfb2d12894e5d95c61074b6c98cf223b">PTKMerchant</a>
 </li>
 <li>customDataValues
 : <a class="el" href="interface_p_t_k_profile_details.html#aa84923d801e87539be5e24d7802be9e8">PTKProfileDetails</a>
@@ -284,8 +345,8 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>customDataValueWithKey:value:
 : <a class="el" href="interface_p_t_k_custom_data_value.html#a675dde462889f78b73e8299f4c7c0c07">PTKCustomDataValue</a>
 </li>
-<li>customDataWithKey:name:type:
-: <a class="el" href="interface_p_t_k_custom_data_key.html#a85f8b8d9db7433b76f4eb7e2107d8bba">PTKCustomDataKey</a>
+<li>customDataWithKey:name:type:optionsListItems:
+: <a class="el" href="interface_p_t_k_custom_data_key.html#a051d2c04697a4cc70f1b385f504113e3">PTKCustomDataKey</a>
 </li>
 <li>cvv
 : <a class="el" href="interface_p_t_k_payment_details.html#a24378b5dda98c68ab89a5b050ac702c9">PTKPaymentDetails</a>
@@ -302,7 +363,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

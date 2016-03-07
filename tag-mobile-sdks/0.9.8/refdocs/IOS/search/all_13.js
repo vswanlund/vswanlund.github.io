@@ -7,6 +7,9 @@ var searchData=
   ['updateaddress_3aaddressdetails_3acompletion_3a',['updateAddress:addressDetails:completion:',['../interface_p_t_k_profile_manager.html#a9b26c336edaf2d6f85f96a810b04a476',1,'PTKProfileManager']]],
   ['updatepaymentinstrument_3abillingaddress_3acompletion_3a',['updatePaymentInstrument:billingAddress:completion:',['../interface_p_t_k_profile_manager.html#a2a8bf710c099ad58d467caadbfb1b3ed',1,'PTKProfileManager']]],
   ['updateprofilewithdetails_3acompletion_3a',['updateProfileWithDetails:completion:',['../interface_p_t_k_profile_manager.html#adb175288d52a47c66bc6af230c4ac621',1,'PTKProfileManager']]],
-  ['url',['url',['../interface_p_t_k_merchant.html#a79878ac4fffc15724331919d44fa6a1a',1,'PTKMerchant::url()'],['../interface_p_t_k_product_image.html#a442cf3a0966983c9bc1b62d7305da067',1,'PTKProductImage::url()'],['../interface_p_t_k_request.html#a30b888f487e1125638920e3450efb19b',1,'PTKRequest::URL()']]],
-  ['usermessage',['userMessage',['../interface_p_t_k_service_error.html#a0f896ec6a4b0317902166a9f2f2002a9',1,'PTKServiceError']]]
+  ['url',['url',['../interface_p_t_k_product_image.html#a442cf3a0966983c9bc1b62d7305da067',1,'PTKProductImage::url()'],['../interface_p_t_k_request.html#a30b888f487e1125638920e3450efb19b',1,'PTKRequest::URL()']]],
+  ['usagecount',['usageCount',['../interface_p_t_k_coupon.html#a090ba3da69fd68ccf7129acd61a600b6',1,'PTKCoupon']]],
+  ['usermessage',['userMessage',['../interface_p_t_k_service_error.html#a0f896ec6a4b0317902166a9f2f2002a9',1,'PTKServiceError']]],
+  ['utcformatteddatefrommiliseconds_3a',['utcFormattedDateFromMiliseconds:',['../interface_p_t_k_date_handler.html#a00a582896bc15c104805224cea8c0420',1,'PTKDateHandler']]],
+  ['utcformatteddatefromutcstring_3a',['utcFormattedDateFromUTCString:',['../interface_p_t_k_date_handler.html#ac655a6e0bd96900de5e96258afefd329',1,'PTKDateHandler']]]
 ];

@@ -17,8 +17,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"interface_p_t_k_invoice.html#ab6147d0aa8395f3d4e91741c2660a79e",
-"interface_powa_tag_endpoint.html#a709daa45a1ca96b58c5d34a9b319c971"
+"interface_p_t_k_coupon_state.html",
+"interface_p_t_k_product_variant.html#aeb7b1d87f540b4cba5b1b23e9adece0a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -128,9 +128,9 @@ Inheritance diagram for PTKPaymentMethodDetails:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:a296aea7834eba0510e0008f0614e521a"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_payment_method_details.html#a296aea7834eba0510e0008f0614e521a">paymentMethodDetailsWithCardHolderName:cardNumber:expiryDate:issueNumber:validFromDate:</a></td></tr>
-<tr class="memdesc:a296aea7834eba0510e0008f0614e521a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#a296aea7834eba0510e0008f0614e521a">More...</a><br /></td></tr>
-<tr class="separator:a296aea7834eba0510e0008f0614e521a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c201be47298145408c51444700e4d9"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_payment_method_details.html#a69c201be47298145408c51444700e4d9">paymentMethodDetailsWithCardHolderName:cardNumber:expiryDate:cardHolderIndentityNumber:issueNumber:validFromDate:</a></td></tr>
+<tr class="memdesc:a69c201be47298145408c51444700e4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#a69c201be47298145408c51444700e4d9">More...</a><br /></td></tr>
+<tr class="separator:a69c201be47298145408c51444700e4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -142,6 +142,9 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment_method_details.html#a2b96c7744fb7a616049d08584fafb5ec">cardNumber</a></td></tr>
 <tr class="memdesc:a2b96c7744fb7a616049d08584fafb5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The card primary account number (PAN). <br /></td></tr>
 <tr class="separator:a2b96c7744fb7a616049d08584fafb5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435ef43ffa31973ca6887880be78242d"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment_method_details.html#a435ef43ffa31973ca6887880be78242d">cardHolderIdentityNumber</a></td></tr>
+<tr class="memdesc:a435ef43ffa31973ca6887880be78242d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the identity number of the cardholder (e.g.  <a href="#a435ef43ffa31973ca6887880be78242d">More...</a><br /></td></tr>
+<tr class="separator:a435ef43ffa31973ca6887880be78242d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77901c7e893a7ccfbbd3ae20f2ca7a21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77901c7e893a7ccfbbd3ae20f2ca7a21"></a>
 <a class="el" href="interface_p_t_k_year_month.html">PTKYearMonth</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_payment_method_details.html#a77901c7e893a7ccfbbd3ae20f2ca7a21">validFromDate</a></td></tr>
 <tr class="memdesc:a77901c7e893a7ccfbbd3ae20f2ca7a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The valid from (issue) date of the payment method. <br /></td></tr>
@@ -159,7 +162,7 @@ NSNumber *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="textblock"><p>Payment method details. </p>
 <p>This class is immutable and thread-safe. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a296aea7834eba0510e0008f0614e521a"></a>
+<a class="anchor" id="a69c201be47298145408c51444700e4d9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -180,6 +183,12 @@ NSNumber *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
           <td></td>
           <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_year_month.html">PTKYearMonth</a> *)&#160;</td>
           <td class="paramname"><em>expiryDate</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">cardHolderIndentityNumber:</td>
+          <td></td>
+          <td class="paramtype">(nullable NSString *)&#160;</td>
+          <td class="paramname"><em>cardHolderIndentityNumber</em></td>
         </tr>
         <tr>
           <td class="paramkey">issueNumber:</td>
@@ -208,11 +217,36 @@ NSNumber *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
     <tr><td class="paramname">cardHolderName</td><td>The cardholders name. </td></tr>
     <tr><td class="paramname">cardNumber</td><td>The card primary account number (PAN). </td></tr>
     <tr><td class="paramname">expiryDate</td><td>The expiry (end) date for the payment method. </td></tr>
+    <tr><td class="paramname">cardHolderIndentityNumber</td><td>The identity number of the cardholder (e.g. China National ID). </td></tr>
     <tr><td class="paramname">issueNumber</td><td>The issue number, if the payment method has one. </td></tr>
     <tr><td class="paramname">validFromDate</td><td>The date the payment method is valid from. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a435ef43ffa31973ca6887880be78242d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) cardHolderIdentityNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the identity number of the cardholder (e.g. </p>
+<p>China National ID). </p>
 
 </div>
 </div>
@@ -222,7 +256,7 @@ NSNumber *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_payment_method_details.html">PTKPaymentMethodDetails</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -116,29 +116,31 @@ $(document).ready(function(){initNavTree('_powa_tag_kit_8h_source.html','');});
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;+ (void)initializeSdkWithApiKey:(nonnull NSString *)apiKey</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                         secret:(nonnull NSString *)secret;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;+ (void)initializeSdkWithEndpoint:(nonnull <a class="code" href="interface_powa_tag_endpoint.html">PowaTagEndpoint</a> *)endpoint</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                           apiKey:(nonnull NSString *)apiKey</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                           secret:(nonnull NSString *)secret;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;+ (void)initializeSdkWithPowaTagHostName:(nonnull NSString *)powaTagHostName</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                  apiKey:(nonnull NSString *)apiKey</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                  secret:(nonnull NSString *)secret;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (BOOL)<a class="code" href="interface_powa_tag_kit.html#a5f0210ea178a4a461a6b1caa70e4e0d9">isSdkInitialized</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;+ (nonnull <a class="code" href="interface_powa_tag_endpoint.html">PowaTagEndpoint</a> *)<a class="code" href="interface_powa_tag_kit.html#ad3cf477958c45725633d23c2f7d573a0">powaTagEndpoint</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#ab21bae408d098693aa4584467f95677e">sdkVersion</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#a8efa10b27524e5ca534e7c13169f6a7e">sdkPlatform</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#a87e043a9d80758b43fa8ca7a395a7b21">deviceId</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#a814bb794bacbae01063472237637160c">buildSha</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;+ (void)initializeSdkWithPowaTagHostName:(nonnull NSString *)powaTagHostName</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                addPorts:(BOOL)addPorts</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                  apiKey:(nonnull NSString *)apiKey</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                  secret:(nonnull NSString *)secret;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;+ (BOOL)<a class="code" href="interface_powa_tag_kit.html#a5f0210ea178a4a461a6b1caa70e4e0d9">isSdkInitialized</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;+ (nonnull <a class="code" href="interface_powa_tag_endpoint.html">PowaTagEndpoint</a> *)<a class="code" href="interface_powa_tag_kit.html#ad3cf477958c45725633d23c2f7d573a0">powaTagEndpoint</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#ab21bae408d098693aa4584467f95677e">sdkVersion</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#a8efa10b27524e5ca534e7c13169f6a7e">sdkPlatform</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;+ (nonnull NSString *)<a class="code" href="interface_powa_tag_kit.html#a87e043a9d80758b43fa8ca7a395a7b21">deviceId</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_powa_tag_kit_html_a5f0210ea178a4a461a6b1caa70e4e0d9"><div class="ttname"><a href="interface_powa_tag_kit.html#a5f0210ea178a4a461a6b1caa70e4e0d9">+[PowaTagKit isSdkInitialized]</a></div><div class="ttdeci">BOOL isSdkInitialized()</div><div class="ttdoc">Whether the SDK has been initialized. </div></div>
 <div class="ttc" id="interface_powa_tag_kit_html"><div class="ttname"><a href="interface_powa_tag_kit.html">PowaTagKit</a></div><div class="ttdoc">Contains SDK information such as the version. </div><div class="ttdef"><b>Definition:</b> PowaTagKit.h:16</div></div>
 <div class="ttc" id="interface_powa_tag_kit_html_ab21bae408d098693aa4584467f95677e"><div class="ttname"><a href="interface_powa_tag_kit.html#ab21bae408d098693aa4584467f95677e">+[PowaTagKit sdkVersion]</a></div><div class="ttdeci">nonnull NSString * sdkVersion()</div><div class="ttdoc">The version identifying the release of the SDK. </div></div>
 <div class="ttc" id="interface_powa_tag_kit_html_a8efa10b27524e5ca534e7c13169f6a7e"><div class="ttname"><a href="interface_powa_tag_kit.html#a8efa10b27524e5ca534e7c13169f6a7e">+[PowaTagKit sdkPlatform]</a></div><div class="ttdeci">nonnull NSString * sdkPlatform()</div><div class="ttdoc">A string identifying the platform the SDK was built for. </div></div>
-<div class="ttc" id="interface_powa_tag_kit_html_a814bb794bacbae01063472237637160c"><div class="ttname"><a href="interface_powa_tag_kit.html#a814bb794bacbae01063472237637160c">+[PowaTagKit buildSha]</a></div><div class="ttdeci">nonnull NSString * buildSha()</div></div>
-<div class="ttc" id="interface_powa_tag_endpoint_html"><div class="ttname"><a href="interface_powa_tag_endpoint.html">PowaTagEndpoint</a></div><div class="ttdoc">Host name and port configuration for the PowaTag SDK. </div><div class="ttdef"><b>Definition:</b> PowaTagEndpoint.h:17</div></div>
+<div class="ttc" id="interface_powa_tag_endpoint_html"><div class="ttname"><a href="interface_powa_tag_endpoint.html">PowaTagEndpoint</a></div><div class="ttdoc">Host name and port configuration for the PowaTag SDK. </div><div class="ttdef"><b>Definition:</b> PowaTagEndpoint.h:18</div></div>
 <div class="ttc" id="interface_powa_tag_kit_html_ad3cf477958c45725633d23c2f7d573a0"><div class="ttname"><a href="interface_powa_tag_kit.html#ad3cf477958c45725633d23c2f7d573a0">+[PowaTagKit powaTagEndpoint]</a></div><div class="ttdeci">nonnull PowaTagEndpoint * powaTagEndpoint()</div><div class="ttdoc">Gets the PowaTag endpoint to use when making API requests; in production code this will always be "po...</div></div>
 <div class="ttc" id="interface_powa_tag_kit_html_a87e043a9d80758b43fa8ca7a395a7b21"><div class="ttname"><a href="interface_powa_tag_kit.html#a87e043a9d80758b43fa8ca7a395a7b21">+[PowaTagKit deviceId]</a></div><div class="ttdeci">nonnull NSString * deviceId()</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -147,7 +149,7 @@ $(document).ready(function(){initNavTree('_powa_tag_kit_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><b>PowaTagKit.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -122,11 +122,13 @@ Inheritance diagram for PTKWorkflow:</div>
  <div class="center">
   <img src="interface_p_t_k_workflow.png" usemap="#PTKWorkflow_map" alt=""/>
   <map id="PTKWorkflow_map" name="PTKWorkflow_map">
-<area href="interface_p_t_k_model.html" title="Base superclass for all PowaTag models. " alt="PTKModel" shape="rect" coords="292,56,477,80"/>
+<area href="interface_p_t_k_model.html" title="Base superclass for all PowaTag models. " alt="PTKModel" shape="rect" coords="487,56,672,80"/>
 <area href="interface_p_t_k_act_workflow.html" title="Represents an application act workflow. " alt="PTKActWorkflow" shape="rect" coords="0,168,185,192"/>
 <area href="interface_p_t_k_campaign_workflow.html" title="Represents an application workflow. " alt="PTKCampaignWorkflow" shape="rect" coords="195,168,380,192"/>
-<area href="interface_p_t_k_product_workflow.html" title="Represents an application workflow. " alt="PTKProductWorkflow" shape="rect" coords="390,168,575,192"/>
-<area href="interface_p_t_k_temporary_basket_workflow.html" title="Represents an application workflow. " alt="PTKTemporaryBasketWorkflow" shape="rect" coords="585,168,770,192"/>
+<area href="interface_p_t_k_catalog_workflow.html" title="Represents a catalog workflow. " alt="PTKCatalogWorkflow" shape="rect" coords="390,168,575,192"/>
+<area href="interface_p_t_k_p_o_s_basket_workflow.html" title="Represents an application workflow. " alt="PTKPOSBasketWorkflow" shape="rect" coords="585,168,770,192"/>
+<area href="interface_p_t_k_product_workflow.html" title="Represents an application workflow. " alt="PTKProductWorkflow" shape="rect" coords="780,168,965,192"/>
+<area href="interface_p_t_k_temporary_basket_workflow.html" title="Represents an application workflow. " alt="PTKTemporaryBasketWorkflow" shape="rect" coords="975,168,1160,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -141,9 +143,15 @@ Class Methods</h2></td></tr>
 <tr class="memitem:ad5953d5193236292cda38dea21d629d3"><td class="memItemLeft" align="right" valign="top">(nonnull <a class="el" href="interface_p_t_k_temporary_basket_workflow.html">PTKTemporaryBasketWorkflow</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_workflow.html#ad5953d5193236292cda38dea21d629d3">asTemporaryBasketWorkflow:</a></td></tr>
 <tr class="memdesc:ad5953d5193236292cda38dea21d629d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a generic workflow object to a temporary basket workflow.  <a href="#ad5953d5193236292cda38dea21d629d3">More...</a><br /></td></tr>
 <tr class="separator:ad5953d5193236292cda38dea21d629d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631df664fd1652e13afae202e5980e55"><td class="memItemLeft" align="right" valign="top">(nonnull <a class="el" href="interface_p_t_k_p_o_s_basket_workflow.html">PTKPOSBasketWorkflow</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_workflow.html#a631df664fd1652e13afae202e5980e55">asPOSBasketWorkflow:</a></td></tr>
+<tr class="memdesc:a631df664fd1652e13afae202e5980e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a generic workflow object to a POS basket workflow.  <a href="#a631df664fd1652e13afae202e5980e55">More...</a><br /></td></tr>
+<tr class="separator:a631df664fd1652e13afae202e5980e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abff0d4a542f00aa5d610b51f0006a5a4"><td class="memItemLeft" align="right" valign="top">(nonnull <a class="el" href="interface_p_t_k_campaign_workflow.html">PTKCampaignWorkflow</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_workflow.html#abff0d4a542f00aa5d610b51f0006a5a4">asCampaignWorkflow:</a></td></tr>
 <tr class="memdesc:abff0d4a542f00aa5d610b51f0006a5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a generic workflow object to a campaign workflow.  <a href="#abff0d4a542f00aa5d610b51f0006a5a4">More...</a><br /></td></tr>
 <tr class="separator:abff0d4a542f00aa5d610b51f0006a5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fcbd49828970b70269f0250f06117a"><td class="memItemLeft" align="right" valign="top">(nonnull <a class="el" href="interface_p_t_k_catalog_workflow.html">PTKCatalogWorkflow</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_workflow.html#aa3fcbd49828970b70269f0250f06117a">asCatalogWorkflow:</a></td></tr>
+<tr class="memdesc:aa3fcbd49828970b70269f0250f06117a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a generic workflow object to a catalog workflow.  <a href="#aa3fcbd49828970b70269f0250f06117a">More...</a><br /></td></tr>
+<tr class="separator:aa3fcbd49828970b70269f0250f06117a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -186,7 +194,69 @@ PTKWorkflowType&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <dl class="section return"><dt>Returns</dt><dd>This workflow as a <a class="el" href="interface_p_t_k_campaign_workflow.html">PTKCampaignWorkflow</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">If</td><td>the workflow is a not {@link PTKWorkflowType::PTKWorkflowTypeCampaign} workflow. </td></tr>
+    <tr><td class="paramname">If</td><td>the workflow is a not {@link PTKWorkflowType::PTKWorkflowTypeAppeal} workflow. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa3fcbd49828970b70269f0250f06117a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (nonnull <a class="el" href="interface_p_t_k_catalog_workflow.html">PTKCatalogWorkflow</a> *) asCatalogWorkflow: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)&#160;</td>
+          <td class="paramname"><em>workflow</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a generic workflow object to a catalog workflow. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workflow</td><td>The workflow to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This workflow as a <a class="el" href="interface_p_t_k_catalog_workflow.html">PTKCatalogWorkflow</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the workflow is a not {@link PTKWorkflowType::PTKWorkflowTypeCatalog} workflow. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a631df664fd1652e13afae202e5980e55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (nonnull <a class="el" href="interface_p_t_k_p_o_s_basket_workflow.html">PTKPOSBasketWorkflow</a> *) asPOSBasketWorkflow: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_workflow.html">PTKWorkflow</a> *)&#160;</td>
+          <td class="paramname"><em>workflow</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a generic workflow object to a POS basket workflow. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workflow</td><td>The workflow to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This workflow as a <a class="el" href="interface_p_t_k_p_o_s_basket_workflow.html">PTKPOSBasketWorkflow</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the workflow is a not {@link PTKWorkflowType::PTKWorkflowTypePOSBasket} workflow. </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,7 +391,7 @@ PTKWorkflowType&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_workflow.html">PTKWorkflow</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

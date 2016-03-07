@@ -123,20 +123,20 @@ $(document).ready(function(){initNavTree('_p_t_k_donation_invoice_8h_source.html
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interface_p_t_k_donation_invoice.html#a3f7998186e7e1a5773caf1dfc5bf4ff0">   38</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) BOOL <a class="code" href="interface_p_t_k_donation_invoice.html#a3f7998186e7e1a5773caf1dfc5bf4ff0">repeated</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;+ (nonnull instancetype)donationInvoiceWithId:(nonnull NSString *)invoiceId</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                    profileId:(nonnull NSString *)profileId</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            paymentInstrument:(nonnull <a class="code" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)paymentInstrument</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                       amount:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)amount</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                     campaign:(nonnull <a class="code" href="interface_p_t_k_campaign.html">PTKCampaign</a> *)campaign</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                               giftAidAddress:(nullable <a class="code" href="interface_p_t_k_address.html">PTKAddress</a> *)giftAidAddress</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                     repeated:(BOOL)repeated;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        authorizationRequired:(BOOL)authorizationRequired</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                       amount:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)amount</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                     campaign:(nonnull <a class="code" href="interface_p_t_k_campaign.html">PTKCampaign</a> *)campaign</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                               giftAidAddress:(nullable <a class="code" href="interface_p_t_k_address.html">PTKAddress</a> *)giftAidAddress</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                     repeated:(BOOL)repeated;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_address_html"><div class="ttname"><a href="interface_p_t_k_address.html">PTKAddress</a></div><div class="ttdoc">Address identifier. </div><div class="ttdef"><b>Definition:</b> PTKAddress.h:16</div></div>
 <div class="ttc" id="interface_p_t_k_invoice_html"><div class="ttname"><a href="interface_p_t_k_invoice.html">PTKInvoice</a></div><div class="ttdoc">An invoice is a document issued by a merchant to a consumer, relating to a sale transaction and indic...</div><div class="ttdef"><b>Definition:</b> PTKInvoice.h:18</div></div>
 <div class="ttc" id="interface_p_t_k_donation_invoice_html_aa4aa5a8e7cf58208bd7bb21d84713337"><div class="ttname"><a href="interface_p_t_k_donation_invoice.html#aa4aa5a8e7cf58208bd7bb21d84713337">PTKDonationInvoice::amount</a></div><div class="ttdeci">PTKMoney * amount</div><div class="ttdoc">Amount to donate. </div><div class="ttdef"><b>Definition:</b> PTKDonationInvoice.h:33</div></div>
-<div class="ttc" id="interface_p_t_k_payment_instrument_html"><div class="ttname"><a href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a></div><div class="ttdoc">Payment Instrument identifier. </div><div class="ttdef"><b>Definition:</b> PTKPaymentInstrument.h:16</div></div>
+<div class="ttc" id="interface_p_t_k_payment_instrument_html"><div class="ttname"><a href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a></div><div class="ttdoc">Payment Instrument identifier. </div><div class="ttdef"><b>Definition:</b> PTKPaymentInstrument.h:17</div></div>
 <div class="ttc" id="interface_p_t_k_campaign_html"><div class="ttname"><a href="interface_p_t_k_campaign.html">PTKCampaign</a></div><div class="ttdoc">Charity campaign that a user can make a donation to. </div><div class="ttdef"><b>Definition:</b> PTKCampaign.h:14</div></div>
 <div class="ttc" id="interface_p_t_k_donation_invoice_html_a74a6a96f5df25081c8636ad0ff8d5a0b"><div class="ttname"><a href="interface_p_t_k_donation_invoice.html#a74a6a96f5df25081c8636ad0ff8d5a0b">PTKDonationInvoice::campaign</a></div><div class="ttdeci">PTKCampaign * campaign</div><div class="ttdoc">The campaign the donation is made out to. </div><div class="ttdef"><b>Definition:</b> PTKDonationInvoice.h:23</div></div>
 <div class="ttc" id="interface_p_t_k_money_html"><div class="ttname"><a href="interface_p_t_k_money.html">PTKMoney</a></div><div class="ttdoc">An amount of money with the decimal places defined by the currency. </div><div class="ttdef"><b>Definition:</b> PTKMoney.h:16</div></div>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('_p_t_k_donation_invoice_8h_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKDonationInvoice.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

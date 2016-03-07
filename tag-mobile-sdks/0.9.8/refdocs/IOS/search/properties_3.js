@@ -6,5 +6,7 @@ var searchData=
   ['delegate',['delegate',['../interface_p_t_k_audio_tag_detector.html#a12f59185e3d7a4c090a1c615351b89e9',1,'PTKAudioTagDetector::delegate()'],['../interface_p_t_k_barcode_tag_detector_view.html#a128c650361ca7cd999ce144e10fb7212',1,'PTKBarcodeTagDetectorView::delegate()']]],
   ['destinationapplicationname',['destinationApplicationName',['../interface_p_t_k_app_link.html#a3165b342f44f0a76e44dc04e1cba2f27',1,'PTKAppLink']]],
   ['deviceid',['deviceId',['../interface_p_t_k_profile.html#a695112d0b07bcd35203ffc34e03113a9',1,'PTKProfile']]],
-  ['donationendpoint',['donationEndpoint',['../interface_powa_tag_endpoint.html#a7dafa2b117ad877ebdfac9f85b160775',1,'PowaTagEndpoint::donationEndpoint()'],['../interface_powa_tag_endpoint_components.html#a09b0df4f7f6670d4b2a7d505b410036f',1,'PowaTagEndpointComponents::donationEndpoint()']]]
+  ['discount',['discount',['../interface_p_t_k_cost.html#a3361b8cfb2e94f3f97db11e2b4d24b65',1,'PTKCost']]],
+  ['discounts',['discounts',['../interface_p_t_k_coupon_picker.html#acc4eb56687959e38ec12f9a865409a28',1,'PTKCouponPicker']]],
+  ['donationendpoint',['donationEndpoint',['../interface_powa_tag_endpoint.html#a7dafa2b117ad877ebdfac9f85b160775',1,'PowaTagEndpoint']]]
 ];

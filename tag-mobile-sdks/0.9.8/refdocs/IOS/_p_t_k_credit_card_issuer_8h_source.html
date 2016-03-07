@@ -129,38 +129,41 @@ $(document).ready(function(){initNavTree('_p_t_k_credit_card_issuer_8h_source.ht
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="interface_p_t_k_credit_card_issuer.html#ad934a55be35580dbd8c2a92c18276932">   50</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) BOOL <a class="code" href="interface_p_t_k_credit_card_issuer.html#ad934a55be35580dbd8c2a92c18276932">isIssueNumberRequired</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;+ (nonnull instancetype)cardIssuerWithString:(nullable NSString *)string;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)cardIssuerWithNumber:(nullable NSString *)number;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;+ (nonnull NSArray *)cardNumberLengthsForIssuer:(nullable <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)issuer;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;+ (NSInteger)cardNumberMaxLengthForIssuer:(nullable <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)issuer;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;+ (NSInteger)cardNumberMinLengthForIssuer:(nullable <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)issuer;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;+ (BOOL)isValidNumber:(nonnull NSString *)number;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (BOOL)isValidSecurityCode:(nonnull NSString *)securityCode;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;- (BOOL)isValidNumber:(nonnull NSString *)number;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;- (NSInteger)<a class="code" href="interface_p_t_k_credit_card_issuer.html#a6a1e50d36cc823d7c0129108ce373664">securityCodeLength</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="interface_p_t_k_credit_card_issuer.html#abc53a033ca57883fd0a7101d3d9f2a2b">   55</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) BOOL <a class="code" href="interface_p_t_k_credit_card_issuer.html#abc53a033ca57883fd0a7101d3d9f2a2b">isCVVRequired</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;+ (nonnull instancetype)cardIssuerWithString:(nullable NSString *)string;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)cardIssuerWithNumber:(nullable NSString *)number;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;+ (nonnull NSArray *)cardNumberLengthsForIssuer:(nullable <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)issuer;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;+ (NSInteger)cardNumberMaxLengthForIssuer:(nullable <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)issuer;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;+ (NSInteger)cardNumberMinLengthForIssuer:(nullable <a class="code" href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a> *)issuer;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;+ (BOOL)isValidNumber:(nonnull NSString *)number;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (BOOL)isValidSecurityCode:(nonnull NSString *)securityCode;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;- (BOOL)isValidNumber:(nonnull NSString *)number;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;- (NSInteger)<a class="code" href="interface_p_t_k_credit_card_issuer.html#a6a1e50d36cc823d7c0129108ce373664">securityCodeLength</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_credit_card_issuer_html"><div class="ttname"><a href="interface_p_t_k_credit_card_issuer.html">PTKCreditCardIssuer</a></div><div class="ttdoc">The credit card issuer object. </div><div class="ttdef"><b>Definition:</b> PTKCreditCardIssuer.h:35</div></div>
 <div class="ttc" id="interface_p_t_k_credit_card_issuer_html_ad934a55be35580dbd8c2a92c18276932"><div class="ttname"><a href="interface_p_t_k_credit_card_issuer.html#ad934a55be35580dbd8c2a92c18276932">PTKCreditCardIssuer::isIssueNumberRequired</a></div><div class="ttdeci">BOOL isIssueNumberRequired</div><div class="ttdoc">Whether an issue number is required when entering card information. </div><div class="ttdef"><b>Definition:</b> PTKCreditCardIssuer.h:50</div></div>
 <div class="ttc" id="interface_p_t_k_model_html"><div class="ttname"><a href="interface_p_t_k_model.html">PTKModel</a></div><div class="ttdoc">Base superclass for all PowaTag models. </div><div class="ttdef"><b>Definition:</b> PTKModel.h:12</div></div>
 <div class="ttc" id="interface_p_t_k_credit_card_issuer_html_a6a1e50d36cc823d7c0129108ce373664"><div class="ttname"><a href="interface_p_t_k_credit_card_issuer.html#a6a1e50d36cc823d7c0129108ce373664">-[PTKCreditCardIssuer securityCodeLength]</a></div><div class="ttdeci">NSInteger securityCodeLength()</div></div>
 <div class="ttc" id="interface_p_t_k_credit_card_issuer_html_a5f768ed75546fd12f3b7e3795f67a482"><div class="ttname"><a href="interface_p_t_k_credit_card_issuer.html#a5f768ed75546fd12f3b7e3795f67a482">PTKCreditCardIssuer::cardIssuerString</a></div><div class="ttdeci">NSString * cardIssuerString</div><div class="ttdoc">The string representing credit card issuer. </div><div class="ttdef"><b>Definition:</b> PTKCreditCardIssuer.h:40</div></div>
 <div class="ttc" id="interface_p_t_k_credit_card_issuer_html_a144d62c9999c067454321f8a03e0f33c"><div class="ttname"><a href="interface_p_t_k_credit_card_issuer.html#a144d62c9999c067454321f8a03e0f33c">PTKCreditCardIssuer::isStartDateRequired</a></div><div class="ttdeci">BOOL isStartDateRequired</div><div class="ttdoc">Whether a start date is required when entering card information. </div><div class="ttdef"><b>Definition:</b> PTKCreditCardIssuer.h:45</div></div>
+<div class="ttc" id="interface_p_t_k_credit_card_issuer_html_abc53a033ca57883fd0a7101d3d9f2a2b"><div class="ttname"><a href="interface_p_t_k_credit_card_issuer.html#abc53a033ca57883fd0a7101d3d9f2a2b">PTKCreditCardIssuer::isCVVRequired</a></div><div class="ttdeci">BOOL isCVVRequired</div><div class="ttdoc">Whether a CVV required for this issuer. </div><div class="ttdef"><b>Definition:</b> PTKCreditCardIssuer.h:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKCreditCardIssuer.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

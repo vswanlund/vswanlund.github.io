@@ -133,6 +133,12 @@ Instance Methods</h2></td></tr>
 <tr class="memitem:a7f9d63d67ce78c697896f382cd0f0d0d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_payment_manager.html#a7f9d63d67ce78c697896f382cd0f0d0d">payForInvoice:encryptedCvv:completion:</a></td></tr>
 <tr class="memdesc:a7f9d63d67ce78c697896f382cd0f0d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pay for an invoice.  <a href="#a7f9d63d67ce78c697896f382cd0f0d0d">More...</a><br /></td></tr>
 <tr class="separator:a7f9d63d67ce78c697896f382cd0f0d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4e9eb696678cb888bf070d233a1127"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_payment_manager.html#aac4e9eb696678cb888bf070d233a1127">payForInvoice:completion:</a></td></tr>
+<tr class="memdesc:aac4e9eb696678cb888bf070d233a1127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pay for an invoice.  <a href="#aac4e9eb696678cb888bf070d233a1127">More...</a><br /></td></tr>
+<tr class="separator:aac4e9eb696678cb888bf070d233a1127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad534c13f5285eb2f3c7dbe081f419f6e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_payment_manager.html#ad534c13f5285eb2f3c7dbe081f419f6e">authorizeForInvoice:passcode:completion:</a></td></tr>
+<tr class="memdesc:ad534c13f5285eb2f3c7dbe081f419f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mandatory authorization for payment if invoice was not authorized by default.  <a href="#ad534c13f5285eb2f3c7dbe081f419f6e">More...</a><br /></td></tr>
+<tr class="separator:ad534c13f5285eb2f3c7dbe081f419f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
@@ -144,6 +150,83 @@ Class Methods</h2></td></tr>
 <div class="textblock"><p>Manages payments. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="interface_p_t_k_invoice.html" title="An invoice is a document issued by a merchant to a consumer, relating to a sale transaction and indic...">PTKInvoice</a> </dd></dl>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="ad534c13f5285eb2f3c7dbe081f419f6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) authorizeForInvoice: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)&#160;</td>
+          <td class="paramname"><em>invoice</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">passcode:</td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>passcode</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull PTKPaymentManagerAuthorizationCompletion)&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mandatory authorization for payment if invoice was not authorized by default. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invoice</td><td>Invoice for payment. </td></tr>
+    <tr><td class="paramname">passcode</td><td>User entered passcode </td></tr>
+    <tr><td class="paramname">completion</td><td>The completion block to be invoked when the operation completes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aac4e9eb696678cb888bf070d233a1127"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) payForInvoice: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_invoice.html">PTKInvoice</a> *)&#160;</td>
+          <td class="paramname"><em>invoice</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull PTKPaymentManagerCompletion)&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pay for an invoice. </p>
+<p>Method doesn't require CVV. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invoice</td><td>The invoice to make a payment for. </td></tr>
+    <tr><td class="paramname">completion</td><td>The completion block to be invoked when the operation completes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a7f9d63d67ce78c697896f382cd0f0d0d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +336,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_payment_manager.html">PTKPaymentManager</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -107,29 +107,42 @@ $(document).ready(function(){initNavTree('_p_t_k_p_o_s_manager_8h_source.html','
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_qr_code.html">PTKQrCode</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;@<span class="keyword">import</span> Foundation;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">typedef</span> void (^PTKPOSManagerCreateBasketTagCompletion)(<a class="code" href="interface_p_t_k_qr_code.html">PTKQrCode</a> *__nullable qrCode, NSError *__nullable error);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_p_o_s_basket_invoice.html">PTKPOSBasketInvoice</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_p_t_k_coupon.html">PTKCoupon</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="interface_p_t_k_p_o_s_manager.html">   16</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_p_o_s_manager.html">PTKPOSManager</a> : NSObject</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;@<span class="keyword">import</span> Foundation;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> void (^PTKPOSManagerCreateBasketTagCompletion)(<a class="code" href="interface_p_t_k_qr_code.html">PTKQrCode</a> *__nullable qrCode, NSError *__nullable error);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> void (^PTKPOSManagerCreateInvoiceCompletion)(<a class="code" href="interface_p_t_k_p_o_s_basket_invoice.html">PTKPOSBasketInvoice</a> *__nullable invoice, NSError *__nullable error);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;+ (nonnull instancetype)<a class="code" href="interface_p_t_k_p_o_s_manager.html#aead2ca4fcab5a0ce811357961cf70ec3">sharedManager</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interface_p_t_k_p_o_s_manager.html">   21</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_p_o_s_manager.html">PTKPOSManager</a> : NSObject</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;- (void)createBasketTagWithBasket:(nonnull <a class="code" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a> *)basket</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                       completion:(nonnull PTKPOSManagerCreateBasketTagCompletion)completion;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_p_t_k_p_o_s_basket_html"><div class="ttname"><a href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a></div><div class="ttdoc">Mutable basket tag structure that can be used for creating basket tags. </div><div class="ttdef"><b>Definition:</b> PTKPOSBasket.h:12</div></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;+ (nonnull instancetype)<a class="code" href="interface_p_t_k_p_o_s_manager.html#aead2ca4fcab5a0ce811357961cf70ec3">sharedManager</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;- (void)createBasketTagWithBasket:(nonnull <a class="code" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a> *)basket</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                       completion:(nonnull PTKPOSManagerCreateBasketTagCompletion)completion;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;- (void)createInvoiceWithPosBasket:(nonnull <a class="code" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a> *)posBasket</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                 paymentInstrument:(nonnull <a class="code" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)paymentInstrument</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                           coupons:(nullable NSArray&lt;<a class="code" href="interface_p_t_k_coupon.html">PTKCoupon</a> * &gt; *)coupons</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        completion:(nonnull PTKPOSManagerCreateInvoiceCompletion)completion;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_p_t_k_p_o_s_basket_html"><div class="ttname"><a href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a></div><div class="ttdoc">Mutable basket tag structure that can be used for creating basket tags. </div><div class="ttdef"><b>Definition:</b> PTKPOSBasket.h:17</div></div>
+<div class="ttc" id="interface_p_t_k_payment_instrument_html"><div class="ttname"><a href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a></div><div class="ttdoc">Payment Instrument identifier. </div><div class="ttdef"><b>Definition:</b> PTKPaymentInstrument.h:17</div></div>
 <div class="ttc" id="interface_p_t_k_qr_code_html"><div class="ttname"><a href="interface_p_t_k_qr_code.html">PTKQrCode</a></div><div class="ttdoc">A PowaTag QR Code. </div><div class="ttdef"><b>Definition:</b> PTKQrCode.h:15</div></div>
+<div class="ttc" id="interface_p_t_k_coupon_html"><div class="ttname"><a href="interface_p_t_k_coupon.html">PTKCoupon</a></div><div class="ttdoc">Coupon details for Coupon operations. </div><div class="ttdef"><b>Definition:</b> PTKCoupon.h:13</div></div>
 <div class="ttc" id="interface_p_t_k_p_o_s_manager_html_aead2ca4fcab5a0ce811357961cf70ec3"><div class="ttname"><a href="interface_p_t_k_p_o_s_manager.html#aead2ca4fcab5a0ce811357961cf70ec3">+[PTKPOSManager sharedManager]</a></div><div class="ttdeci">nonnull instancetype sharedManager()</div><div class="ttdoc">The. </div></div>
-<div class="ttc" id="interface_p_t_k_p_o_s_manager_html"><div class="ttname"><a href="interface_p_t_k_p_o_s_manager.html">PTKPOSManager</a></div><div class="ttdoc">Manages the interactions with POS terminals. </div><div class="ttdef"><b>Definition:</b> PTKPOSManager.h:16</div></div>
+<div class="ttc" id="interface_p_t_k_p_o_s_manager_html"><div class="ttname"><a href="interface_p_t_k_p_o_s_manager.html">PTKPOSManager</a></div><div class="ttdoc">Manages the interactions with POS terminals. </div><div class="ttdef"><b>Definition:</b> PTKPOSManager.h:21</div></div>
+<div class="ttc" id="interface_p_t_k_p_o_s_basket_invoice_html"><div class="ttname"><a href="interface_p_t_k_p_o_s_basket_invoice.html">PTKPOSBasketInvoice</a></div><div class="ttdoc">Invoice for a POS basket. </div><div class="ttdef"><b>Definition:</b> PTKPOSBasketInvoice.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><b>PTKPOSManager.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

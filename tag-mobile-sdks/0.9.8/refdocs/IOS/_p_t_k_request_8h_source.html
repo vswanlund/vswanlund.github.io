@@ -125,32 +125,36 @@ $(document).ready(function(){initNavTree('_p_t_k_request_8h_source.html','');});
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="interface_p_t_k_request.html#a4d27eb404e41552f99a85887c8b4e606">   47</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) id &lt;PTKRequestBody&gt; <a class="code" href="interface_p_t_k_request.html#a4d27eb404e41552f99a85887c8b4e606">requestBody</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interface_p_t_k_request.html#a5967b8abcbb09d2c9f598b3f008428eb">   52</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) Class <a class="code" href="interface_p_t_k_request.html#a5967b8abcbb09d2c9f598b3f008428eb">responseBodyClass</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="interface_p_t_k_request.html#a1c73b36da997bcd5a64c050eff2f9518">   52</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) NSString *<a class="code" href="interface_p_t_k_request.html#a1c73b36da997bcd5a64c050eff2f9518">authorizationHeader</a>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;+ (instancetype)requestWithURL:(NSURL *)url</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    httpMethod:(PTKRequestHttpMethod)httpMethod</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;              acceptParameters:(NSString *)acceptParameters</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;             responseBodyClass:(Class)responseBodyClass</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                   requestBody:(<span class="keywordtype">id</span> &lt;<a class="code" href="protocol_p_t_k_request_body-p.html">PTKRequestBody</a>&gt;)requestBody;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;- (NSString *)<a class="code" href="interface_p_t_k_request.html#a7699c63d3e5b3cbb28c4b80cf1c85cf2">stringForHttpMethod</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="interface_p_t_k_request.html#a5967b8abcbb09d2c9f598b3f008428eb">   57</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) Class <a class="code" href="interface_p_t_k_request.html#a5967b8abcbb09d2c9f598b3f008428eb">responseBodyClass</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;+ (instancetype)requestWithURL:(NSURL *)url</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    httpMethod:(PTKRequestHttpMethod)httpMethod</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;              acceptParameters:(NSString *)acceptParameters</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;             responseBodyClass:(Class)responseBodyClass</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                   requestBody:(<span class="keywordtype">id</span> &lt;<a class="code" href="protocol_p_t_k_request_body-p.html">PTKRequestBody</a>&gt;)requestBody</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;           authorizationHeader:(NSString *)authorizationHeader;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;- (NSString *)<a class="code" href="interface_p_t_k_request.html#a7699c63d3e5b3cbb28c4b80cf1c85cf2">stringForHttpMethod</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_request_html_addc79e4a0ceda2d7a0ce38060dbefe59"><div class="ttname"><a href="interface_p_t_k_request.html#addc79e4a0ceda2d7a0ce38060dbefe59">PTKRequest::httpMethod</a></div><div class="ttdeci">PTKRequestHttpMethod httpMethod</div><div class="ttdoc">The HTTP method the raw API request should be made with. </div><div class="ttdef"><b>Definition:</b> PTKRequest.h:37</div></div>
 <div class="ttc" id="interface_p_t_k_request_html_a7699c63d3e5b3cbb28c4b80cf1c85cf2"><div class="ttname"><a href="interface_p_t_k_request.html#a7699c63d3e5b3cbb28c4b80cf1c85cf2">-[PTKRequest stringForHttpMethod]</a></div><div class="ttdeci">NSString * stringForHttpMethod()</div></div>
 <div class="ttc" id="interface_p_t_k_request_html_a4d27eb404e41552f99a85887c8b4e606"><div class="ttname"><a href="interface_p_t_k_request.html#a4d27eb404e41552f99a85887c8b4e606">PTKRequest::requestBody</a></div><div class="ttdeci">id&lt; PTKRequestBody &gt; requestBody</div><div class="ttdoc">The request body object. </div><div class="ttdef"><b>Definition:</b> PTKRequest.h:47</div></div>
-<div class="ttc" id="interface_p_t_k_request_html_a5967b8abcbb09d2c9f598b3f008428eb"><div class="ttname"><a href="interface_p_t_k_request.html#a5967b8abcbb09d2c9f598b3f008428eb">PTKRequest::responseBodyClass</a></div><div class="ttdeci">Class responseBodyClass</div><div class="ttdef"><b>Definition:</b> PTKRequest.h:52</div></div>
+<div class="ttc" id="interface_p_t_k_request_html_a5967b8abcbb09d2c9f598b3f008428eb"><div class="ttname"><a href="interface_p_t_k_request.html#a5967b8abcbb09d2c9f598b3f008428eb">PTKRequest::responseBodyClass</a></div><div class="ttdeci">Class responseBodyClass</div><div class="ttdef"><b>Definition:</b> PTKRequest.h:57</div></div>
 <div class="ttc" id="protocol_p_t_k_request_body-p_html"><div class="ttname"><a href="protocol_p_t_k_request_body-p.html">PTKRequestBody-p</a></div><div class="ttdoc">Represents the body or content of a PowaTag API request. </div><div class="ttdef"><b>Definition:</b> PTKRequestBody.h:13</div></div>
 <div class="ttc" id="interface_p_t_k_request_html_a65d614f8b9ecf8f3ed7d40196a2b5df4"><div class="ttname"><a href="interface_p_t_k_request.html#a65d614f8b9ecf8f3ed7d40196a2b5df4">PTKRequest::acceptParameters</a></div><div class="ttdeci">NSString * acceptParameters</div><div class="ttdoc">If present, a string containing information that should be added to the HTTP Accept header...</div><div class="ttdef"><b>Definition:</b> PTKRequest.h:42</div></div>
 <div class="ttc" id="interface_p_t_k_request_html"><div class="ttname"><a href="interface_p_t_k_request.html">PTKRequest</a></div><div class="ttdoc">Represents a PowaTag API request. </div><div class="ttdef"><b>Definition:</b> PTKRequest.h:27</div></div>
 <div class="ttc" id="interface_p_t_k_request_html_a30b888f487e1125638920e3450efb19b"><div class="ttname"><a href="interface_p_t_k_request.html#a30b888f487e1125638920e3450efb19b">PTKRequest::URL</a></div><div class="ttdeci">NSURL * URL</div><div class="ttdoc">The URL or server the request will be sent to. </div><div class="ttdef"><b>Definition:</b> PTKRequest.h:32</div></div>
+<div class="ttc" id="interface_p_t_k_request_html_a1c73b36da997bcd5a64c050eff2f9518"><div class="ttname"><a href="interface_p_t_k_request.html#a1c73b36da997bcd5a64c050eff2f9518">PTKRequest::authorizationHeader</a></div><div class="ttdeci">NSString * authorizationHeader</div><div class="ttdoc">The request Authorization Header. </div><div class="ttdef"><b>Definition:</b> PTKRequest.h:52</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_e6c6f8d766671c84697c48c46e2ff651.html">API</a></li><li class="navelem"><b>PTKRequest.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

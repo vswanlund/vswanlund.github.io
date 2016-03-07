@@ -129,9 +129,12 @@ Class Methods</h2></td></tr>
 <tr class="memitem:af4670d1f3a16a0ee08393774f4c06923"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#af4670d1f3a16a0ee08393774f4c06923">initializeSdkWithApiKey:secret:</a></td></tr>
 <tr class="memdesc:af4670d1f3a16a0ee08393774f4c06923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the PowaTag SDK library, the behavior of SDK functions are undetermined if this function is not called.  <a href="#af4670d1f3a16a0ee08393774f4c06923">More...</a><br /></td></tr>
 <tr class="separator:af4670d1f3a16a0ee08393774f4c06923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb0a183a9474c564e1047cdcbd6b37d6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#adb0a183a9474c564e1047cdcbd6b37d6">initializeSdkWithEndpoint:apiKey:secret:</a></td></tr>
-<tr class="memdesc:adb0a183a9474c564e1047cdcbd6b37d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the PowaTag SDK library, the behavior of SDK functions are undetermined if this function is not called.  <a href="#adb0a183a9474c564e1047cdcbd6b37d6">More...</a><br /></td></tr>
-<tr class="separator:adb0a183a9474c564e1047cdcbd6b37d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ae9cce895266277f4c07f9111a4a56"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#a44ae9cce895266277f4c07f9111a4a56">initializeSdkWithPowaTagHostName:apiKey:secret:</a></td></tr>
+<tr class="memdesc:a44ae9cce895266277f4c07f9111a4a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the PowaTag SDK library, the behavior of SDK functions are undetermined if this function is not called.  <a href="#a44ae9cce895266277f4c07f9111a4a56">More...</a><br /></td></tr>
+<tr class="separator:a44ae9cce895266277f4c07f9111a4a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef7d2471cb39c92b713e1adac7796d1"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#a0ef7d2471cb39c92b713e1adac7796d1">initializeSdkWithPowaTagHostName:addPorts:apiKey:secret:</a></td></tr>
+<tr class="memdesc:a0ef7d2471cb39c92b713e1adac7796d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the PowaTag SDK library, the behavior of SDK functions are undetermined if this function is not called.  <a href="#a0ef7d2471cb39c92b713e1adac7796d1">More...</a><br /></td></tr>
+<tr class="separator:a0ef7d2471cb39c92b713e1adac7796d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f0210ea178a4a461a6b1caa70e4e0d9"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#a5f0210ea178a4a461a6b1caa70e4e0d9">isSdkInitialized</a></td></tr>
 <tr class="memdesc:a5f0210ea178a4a461a6b1caa70e4e0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the SDK has been initialized.  <a href="#a5f0210ea178a4a461a6b1caa70e4e0d9">More...</a><br /></td></tr>
 <tr class="separator:a5f0210ea178a4a461a6b1caa70e4e0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,28 +151,10 @@ Class Methods</h2></td></tr>
 <tr class="separator:a8efa10b27524e5ca534e7c13169f6a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e043a9d80758b43fa8ca7a395a7b21"><td class="memItemLeft" align="right" valign="top">(nonnull NSString *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#a87e043a9d80758b43fa8ca7a395a7b21">deviceId</a></td></tr>
 <tr class="separator:a87e043a9d80758b43fa8ca7a395a7b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814bb794bacbae01063472237637160c"><td class="memItemLeft" align="right" valign="top">(nonnull NSString *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_powa_tag_kit.html#a814bb794bacbae01063472237637160c">buildSha</a></td></tr>
-<tr class="separator:a814bb794bacbae01063472237637160c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains SDK information such as the version. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a814bb794bacbae01063472237637160c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">+ (nonnull NSString *) buildSha </td>
-          <td></td>
-          <td class="paramname"></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The library build SHA. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a87e043a9d80758b43fa8ca7a395a7b21"></a>
 <div class="memitem">
 <div class="memproto">
@@ -221,15 +206,21 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adb0a183a9474c564e1047cdcbd6b37d6"></a>
+<a class="anchor" id="a0ef7d2471cb39c92b713e1adac7796d1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">+ (void) initializeSdkWithEndpoint: </td>
+          <td class="memname">+ (void) initializeSdkWithPowaTagHostName: </td>
           <td></td>
-          <td class="paramtype">(nonnull <a class="el" href="interface_powa_tag_endpoint.html">PowaTagEndpoint</a> *)&#160;</td>
-          <td class="paramname"><em>endpoint</em></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>powaTagHostName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">addPorts:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>addPorts</em></td>
         </tr>
         <tr>
           <td class="paramkey">apiKey:</td>
@@ -254,7 +245,50 @@ Class Methods</h2></td></tr>
 <p>Initializes the PowaTag SDK library, the behavior of SDK functions are undetermined if this function is not called. </p>
 <p>It should be called as early as possible, ideally in the <code>application:didFinishLaunchingWithOptions:</code> of your app delegate. It is safe to call this method multiple times, if called more than once subsequent calls have no effect. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">endpoint</td><td>The new PowaTag endpoint to use for managers and services instead of the default host name "https://powatag.com" and ports. The endpoint should never be changed in production code. </td></tr>
+    <tr><td class="paramname">powaTagHostName</td><td>The host name, not including the port, e.g. "https://powatag.com". to use for managers and services instead of the default host name "https://powatag.com". The endpoint should never be changed in production code. </td></tr>
+    <tr><td class="paramname">addPorts</td><td>Weather to add or not ports to the url. </td></tr>
+    <tr><td class="paramname">apiKey</td><td>The API key for the application. </td></tr>
+    <tr><td class="paramname">secret</td><td>The secret for the application. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a44ae9cce895266277f4c07f9111a4a56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (void) initializeSdkWithPowaTagHostName: </td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>powaTagHostName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">apiKey:</td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>apiKey</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">secret:</td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>secret</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the PowaTag SDK library, the behavior of SDK functions are undetermined if this function is not called. </p>
+<p>It should be called as early as possible, ideally in the <code>application:didFinishLaunchingWithOptions:</code> of your app delegate. It is safe to call this method multiple times, if called more than once subsequent calls have no effect. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">powaTagHostName</td><td>The host name, not including the port, e.g. "https://powatag.com". to use for managers and services instead of the default host name "https://powatag.com" and ports. The endpoint should never be changed in production code. </td></tr>
     <tr><td class="paramname">apiKey</td><td>The API key for the application. </td></tr>
     <tr><td class="paramname">secret</td><td>The secret for the application. </td></tr>
   </table>
@@ -306,7 +340,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_powa_tag_kit.html">PowaTagKit</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

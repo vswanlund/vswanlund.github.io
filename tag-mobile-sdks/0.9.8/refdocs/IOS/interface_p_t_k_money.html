@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('interface_p_t_k_money.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
 <a href="#pub-static-methods">Class Methods</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_p_t_k_money-members.html">List of all members</a>  </div>
@@ -126,6 +127,20 @@ Inheritance diagram for PTKMoney:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:ad10a425a0a6f82e8fba235094bb84b11"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_money.html#ad10a425a0a6f82e8fba235094bb84b11">isLessThan:</a></td></tr>
+<tr class="memdesc:ad10a425a0a6f82e8fba235094bb84b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare instance amount of money with parameter instance money instance amount.  <a href="#ad10a425a0a6f82e8fba235094bb84b11">More...</a><br /></td></tr>
+<tr class="separator:ad10a425a0a6f82e8fba235094bb84b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ed48e8add515e8e4343a8b537f111c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02ed48e8add515e8e4343a8b537f111c"></a>
+(nonnull NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_money.html#a02ed48e8add515e8e4343a8b537f111c">getCurrencyAsString</a></td></tr>
+<tr class="memdesc:a02ed48e8add515e8e4343a8b537f111c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return currency. <br /></td></tr>
+<tr class="separator:a02ed48e8add515e8e4343a8b537f111c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0efe64bf1ba84bdf8c2613532f0c5f3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0efe64bf1ba84bdf8c2613532f0c5f3d"></a>
+(nonnull NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_money.html#a0efe64bf1ba84bdf8c2613532f0c5f3d">getAmountAsString</a></td></tr>
+<tr class="memdesc:a0efe64bf1ba84bdf8c2613532f0c5f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return amount in string format. <br /></td></tr>
+<tr class="separator:a0efe64bf1ba84bdf8c2613532f0c5f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:acc28b8c1c82f80c6f4434485bafe2ad6"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_money.html#acc28b8c1c82f80c6f4434485bafe2ad6">moneyWithCurrency:amount:</a></td></tr>
@@ -149,6 +164,30 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><!-- fragment --><p> amount in a single currency unit. Every currency has a certain standard number of decimal places. The</p><div class="fragment"><div class="line">Money </div>
 </div><!-- fragment --><p> class is fixed to this number of decimal places. Calculations on fractions of a cent are not permitted by this class. This class is immutable and thread-safe. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="ad10a425a0a6f82e8fba235094bb84b11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isLessThan: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *)&#160;</td>
+          <td class="paramname"><em>money</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare instance amount of money with parameter instance money instance amount. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">money</td><td>The money. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="acc28b8c1c82f80c6f4434485bafe2ad6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +229,7 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_money.html">PTKMoney</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>acceptedPaymentInstrumentsForMerchant:
-: <a class="el" href="interface_p_t_k_profile.html#a96a87e7dd4962b0143a143d7013f3ada">PTKProfile</a>
+: <a class="el" href="interface_p_t_k_profile_manager.html#a11a10b57e391bb512ab0171d58cd2175">PTKProfileManager</a>
 </li>
 <li>acceptedPaymentInstrumentWithType:isssuer:
 : <a class="el" href="interface_p_t_k_accepted_payment_instrument.html#ad154bcca69afbfa745fada802d62fbef">PTKAcceptedPaymentInstrument</a>
@@ -149,8 +149,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>acceptParameters
 : <a class="el" href="interface_p_t_k_request.html#a65d614f8b9ecf8f3ed7d40196a2b5df4">PTKRequest</a>
 </li>
-<li>accessTokenWithProfileId:paymentToken:
-: <a class="el" href="interface_p_t_k_access_token.html#a385169f7b35bbd583939fa49ea3b7939">PTKAccessToken</a>
+<li>accessToken
+: <a class="el" href="interface_p_t_k_access_token.html#a5e09cb4fa3adad2a243087ebaeb76431">PTKAccessToken</a>
+, <a class="el" href="interface_storable_profile_details.html#ad4427a378a16d6d7cce752bc6ec82fe1">StorableProfileDetails</a>
+, <a class="el" href="protocol_storable_profile_details_builder-p.html#acc20e585c71fba1cae432f7ea9ec89ca">&lt;StorableProfileDetailsBuilder&gt;</a>
+</li>
+<li>accessTokenWithProfileId:accessToken:
+: <a class="el" href="interface_p_t_k_access_token.html#aa577c1ceee36040d81ea870e4a103df4">PTKAccessToken</a>
 </li>
 <li>act
 : <a class="el" href="interface_p_t_k_act_workflow.html#afdd267f3ed2933d67d4f33ce4e0a2f80">PTKActWorkflow</a>
@@ -166,13 +171,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>actEndpoint
 : <a class="el" href="interface_powa_tag_endpoint.html#a737fc423061757d9b0563abb23ec7199">PowaTagEndpoint</a>
-, <a class="el" href="interface_powa_tag_endpoint_components.html#a9da2fceea15dfde2c228423c814a7b60">PowaTagEndpointComponents</a>
 </li>
 <li>actId
 : <a class="el" href="interface_p_t_k_act.html#a80c513ed5405bcf1d4a7acf66ed9d4d6">PTKAct</a>
 </li>
 <li>action
 : <a class="el" href="interface_p_t_k_service_error.html#a44b0e2fecc09f4381a00e3006e2d0f25">PTKServiceError</a>
+</li>
+<li>activatePaymentInstrument:withActivationCode:completion:
+: <a class="el" href="interface_p_t_k_profile_manager.html#a2f006460085dbcd5d5611a9af2f6f641">PTKProfileManager</a>
+</li>
+<li>activationStatus
+: <a class="el" href="interface_p_t_k_payment_instrument.html#ad75dba25b50ee33c7fed6d8af2174310">PTKPaymentInstrument</a>
 </li>
 <li>actTransactionDetails
 : <a class="el" href="interface_p_t_k_act_transaction_details.html#aea5812a64ffc9a83563c63ccf5d292ed">PTKActTransactionDetails</a>
@@ -226,6 +236,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>aliasValidator
 : <a class="el" href="interface_p_t_k_alias_validator.html#a8ebd994ec4f553e88665180d445463b2">PTKAliasValidator</a>
 </li>
+<li>allCouponsWithCompletion:
+: <a class="el" href="interface_p_t_k_coupon_manager.html#a392963a3a57a04b9f75704f86f542087">PTKCouponManager</a>
+</li>
 <li>alpha2Code
 : <a class="el" href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">PTKCountry</a>
 </li>
@@ -234,11 +247,20 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="interface_p_t_k_donation_invoice_details.html#a8a8a7e38e20efb905088b343a6ce5866">PTKDonationInvoiceDetails</a>
 , <a class="el" href="interface_p_t_k_money.html#a184929976b4f396b7b107306a23f42f6">PTKMoney</a>
 </li>
+<li>appliedCoupons
+: <a class="el" href="interface_p_t_k_discount.html#a515a897fc7ac12c3c59e48a0135abe7c">PTKDiscount</a>
+</li>
 <li>appLinkTagDetectorWithURLSchemes:
 : <a class="el" href="interface_p_t_k_app_link_tag_detector.html#a9482a2761241a4aed14f2058922267e2">PTKAppLinkTagDetector</a>
 </li>
 <li>asCampaignWorkflow:
 : <a class="el" href="interface_p_t_k_workflow.html#abff0d4a542f00aa5d610b51f0006a5a4">PTKWorkflow</a>
+</li>
+<li>asCatalogWorkflow:
+: <a class="el" href="interface_p_t_k_workflow.html#aa3fcbd49828970b70269f0250f06117a">PTKWorkflow</a>
+</li>
+<li>asPOSBasketWorkflow:
+: <a class="el" href="interface_p_t_k_workflow.html#a631df664fd1652e13afae202e5980e55">PTKWorkflow</a>
 </li>
 <li>asProductWorkflow:
 : <a class="el" href="interface_p_t_k_workflow.html#a584570a21328b7f1f91514ab366f6c2b">PTKWorkflow</a>
@@ -260,7 +282,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>authorizationEndpoint
 : <a class="el" href="interface_powa_tag_endpoint.html#a8f5d56d202c421cc07567d2e6db37c81">PowaTagEndpoint</a>
-, <a class="el" href="interface_powa_tag_endpoint_components.html#ac41c9a98956b0a3ae4322ed16c032a4b">PowaTagEndpointComponents</a>
+</li>
+<li>authorizationHeader
+: <a class="el" href="interface_p_t_k_request.html#a1c73b36da997bcd5a64c050eff2f9518">PTKRequest</a>
+</li>
+<li>authorizationRequired
+: <a class="el" href="interface_p_t_k_invoice.html#a2e1e7d5cf8d11937b6d16babb2600f1e">PTKInvoice</a>
+</li>
+<li>authorizeForInvoice:passcode:completion:
+: <a class="el" href="interface_p_t_k_payment_manager.html#ad534c13f5285eb2f3c7dbe081f419f6e">PTKPaymentManager</a>
+</li>
+<li>availableCoupons
+: <a class="el" href="interface_p_t_k_p_o_s_basket.html#a5030dda4c7773b7808a68265ef4e72d8">PTKPOSBasket</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -268,7 +301,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

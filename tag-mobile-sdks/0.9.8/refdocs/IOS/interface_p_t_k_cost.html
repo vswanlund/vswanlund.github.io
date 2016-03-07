@@ -128,9 +128,9 @@ Inheritance diagram for PTKCost:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:a132dd5c098c9c0e150903a3e551b3f9a"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_cost.html#a132dd5c098c9c0e150903a3e551b3f9a">costWithSubtotal:total:shipping:tax:</a></td></tr>
-<tr class="memdesc:a132dd5c098c9c0e150903a3e551b3f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Cost instance.  <a href="#a132dd5c098c9c0e150903a3e551b3f9a">More...</a><br /></td></tr>
-<tr class="separator:a132dd5c098c9c0e150903a3e551b3f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50b03e74e7d1c193ab10b1c32da5c54"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_cost.html#ad50b03e74e7d1c193ab10b1c32da5c54">costWithSubtotal:total:shipping:tax:discount:</a></td></tr>
+<tr class="memdesc:ad50b03e74e7d1c193ab10b1c32da5c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Cost instance.  <a href="#ad50b03e74e7d1c193ab10b1c32da5c54">More...</a><br /></td></tr>
+<tr class="separator:ad50b03e74e7d1c193ab10b1c32da5c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -142,12 +142,14 @@ Properties</h2></td></tr>
 <tr class="separator:aef3d4d6ebeffa5ecf9c2387f470191bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722cdb625d39f1fe456644c32bda004f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_cost.html#a722cdb625d39f1fe456644c32bda004f">tax</a></td></tr>
 <tr class="separator:a722cdb625d39f1fe456644c32bda004f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3361b8cfb2e94f3f97db11e2b4d24b65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_cost.html#a3361b8cfb2e94f3f97db11e2b4d24b65">discount</a></td></tr>
+<tr class="separator:a3361b8cfb2e94f3f97db11e2b4d24b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the cost of a basket. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="interface_p_t_k_basket.html" title="A basket is a collection of items, each of which is a quantity of a specific product variant...">PTKBasket</a> </dd></dl>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a132dd5c098c9c0e150903a3e551b3f9a"></a>
+<a class="anchor" id="ad50b03e74e7d1c193ab10b1c32da5c54"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -173,7 +175,13 @@ Properties</h2></td></tr>
           <td class="paramkey">tax:</td>
           <td></td>
           <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *)&#160;</td>
-          <td class="paramname"><em>tax</em>&#160;</td>
+          <td class="paramname"><em>tax</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">discount:</td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_money.html">PTKMoney</a> *)&#160;</td>
+          <td class="paramname"><em>discount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,6 +198,7 @@ Properties</h2></td></tr>
     <tr><td class="paramname">total</td><td>The total cost, including tax and shipping. </td></tr>
     <tr><td class="paramname">shipping</td><td>The shipping cost. </td></tr>
     <tr><td class="paramname">tax</td><td>The tax cost. </td></tr>
+    <tr><td class="paramname">discount</td><td>The discount cost. </td></tr>
   </table>
   </dd>
 </dl>
@@ -197,6 +206,27 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a3361b8cfb2e94f3f97db11e2b4d24b65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_p_t_k_money.html">PTKMoney</a>*) discount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The discount. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aef3d4d6ebeffa5ecf9c2387f470191bb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +317,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_cost.html">PTKCost</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

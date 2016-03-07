@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['acceptedpaymentinstrumentsformerchant_3a',['acceptedPaymentInstrumentsForMerchant:',['../interface_p_t_k_profile.html#a96a87e7dd4962b0143a143d7013f3ada',1,'PTKProfile']]],
+  ['acceptedpaymentinstrumentsformerchant_3a',['acceptedPaymentInstrumentsForMerchant:',['../interface_p_t_k_profile_manager.html#a11a10b57e391bb512ab0171d58cd2175',1,'PTKProfileManager']]],
   ['acceptedpaymentinstrumentwithtype_3aisssuer_3a',['acceptedPaymentInstrumentWithType:isssuer:',['../interface_p_t_k_accepted_payment_instrument.html#ad154bcca69afbfa745fada802d62fbef',1,'PTKAcceptedPaymentInstrument']]],
-  ['accesstokenwithprofileid_3apaymenttoken_3a',['accessTokenWithProfileId:paymentToken:',['../interface_p_t_k_access_token.html#a385169f7b35bbd583939fa49ea3b7939',1,'PTKAccessToken']]],
+  ['accesstokenwithprofileid_3aaccesstoken_3a',['accessTokenWithProfileId:accessToken:',['../interface_p_t_k_access_token.html#aa577c1ceee36040d81ea870e4a103df4',1,'PTKAccessToken']]],
   ['actdatakeywithkey_3aname_3apredefinedvalue_3atype_3aoptional_3a',['actDataKeyWithKey:name:predefinedValue:type:optional:',['../interface_p_t_k_act_data_key.html#a62e64c59008012492891f0833a407423',1,'PTKActDataKey']]],
   ['actdatavalues',['actDataValues',['../interface_p_t_k_act_transaction_details.html#a4320247a92b92366d73149e51bc03733',1,'PTKActTransactionDetails']]],
   ['action',['action',['../interface_p_t_k_service_error.html#a44b0e2fecc09f4381a00e3006e2d0f25',1,'PTKServiceError']]],
+  ['activatepaymentinstrument_3awithactivationcode_3acompletion_3a',['activatePaymentInstrument:withActivationCode:completion:',['../interface_p_t_k_profile_manager.html#a2f006460085dbcd5d5611a9af2f6f641',1,'PTKProfileManager']]],
   ['acttransactiondetails',['actTransactionDetails',['../interface_p_t_k_act_transaction_details.html#aea5812a64ffc9a83563c63ccf5d292ed',1,'PTKActTransactionDetails']]],
   ['acttransactionwithid_3a',['actTransactionWithId:',['../interface_p_t_k_act_transaction.html#a607b1208130cbc5c923a118144561c70',1,'PTKActTransaction']]],
   ['actwithactid_3aname_3amerchant_3aactdatakeys_3a',['actWithActId:name:merchant:actDataKeys:',['../interface_p_t_k_act.html#ac24b58f6600f48765f43d53de58e409d',1,'PTKAct']]],
@@ -20,11 +21,15 @@ var searchData=
   ['addresslinevalidatorwithrequired_3a',['addressLineValidatorWithRequired:',['../interface_p_t_k_address_line_validator.html#a6fe34acebdefb39a2be92a41e7b606be',1,'PTKAddressLineValidator']]],
   ['addresswithaddressid_3aalias_3astate_3acounty_3apostcode_3acity_3aline1_3aline2_3acountry_3afirstname_3alastname_3a',['addressWithAddressId:alias:state:county:postCode:city:line1:line2:country:firstName:lastName:',['../interface_p_t_k_address.html#aafb7e2c71d26b7e0bf75d0840b1e0ba3',1,'PTKAddress']]],
   ['aliasvalidator',['aliasValidator',['../interface_p_t_k_alias_validator.html#a8ebd994ec4f553e88665180d445463b2',1,'PTKAliasValidator']]],
+  ['allcouponswithcompletion_3a',['allCouponsWithCompletion:',['../interface_p_t_k_coupon_manager.html#a392963a3a57a04b9f75704f86f542087',1,'PTKCouponManager']]],
   ['applinktagdetectorwithurlschemes_3a',['appLinkTagDetectorWithURLSchemes:',['../interface_p_t_k_app_link_tag_detector.html#a9482a2761241a4aed14f2058922267e2',1,'PTKAppLinkTagDetector']]],
   ['ascampaignworkflow_3a',['asCampaignWorkflow:',['../interface_p_t_k_workflow.html#abff0d4a542f00aa5d610b51f0006a5a4',1,'PTKWorkflow']]],
+  ['ascatalogworkflow_3a',['asCatalogWorkflow:',['../interface_p_t_k_workflow.html#aa3fcbd49828970b70269f0250f06117a',1,'PTKWorkflow']]],
+  ['asposbasketworkflow_3a',['asPOSBasketWorkflow:',['../interface_p_t_k_workflow.html#a631df664fd1652e13afae202e5980e55',1,'PTKWorkflow']]],
   ['asproductworkflow_3a',['asProductWorkflow:',['../interface_p_t_k_workflow.html#a584570a21328b7f1f91514ab366f6c2b',1,'PTKWorkflow']]],
   ['astemporarybasketworkflow_3a',['asTemporaryBasketWorkflow:',['../interface_p_t_k_workflow.html#ad5953d5193236292cda38dea21d629d3',1,'PTKWorkflow']]],
   ['audiotagdetector_3adiddetectaudiotag_3a',['audioTagDetector:didDetectAudioTag:',['../protocol_p_t_k_audio_tag_detector_delegate-p.html#a3840287b3355e7f8ee29abfe49f0cd86',1,'PTKAudioTagDetectorDelegate-p']]],
   ['audiotagdetector_3adiddetectvolumechange_3a',['audioTagDetector:didDetectVolumeChange:',['../protocol_p_t_k_audio_tag_detector_delegate-p.html#a012397341fd74bb469a8f04b436dc25b',1,'PTKAudioTagDetectorDelegate-p']]],
-  ['audiotagdetector_3adidstopwitherror_3a',['audioTagDetector:didStopWithError:',['../protocol_p_t_k_audio_tag_detector_delegate-p.html#a7f0ae514c3c905f19ee60ab536728434',1,'PTKAudioTagDetectorDelegate-p']]]
+  ['audiotagdetector_3adidstopwitherror_3a',['audioTagDetector:didStopWithError:',['../protocol_p_t_k_audio_tag_detector_delegate-p.html#a7f0ae514c3c905f19ee60ab536728434',1,'PTKAudioTagDetectorDelegate-p']]],
+  ['authorizeforinvoice_3apasscode_3acompletion_3a',['authorizeForInvoice:passcode:completion:',['../interface_p_t_k_payment_manager.html#ad534c13f5285eb2f3c7dbe081f419f6e',1,'PTKPaymentManager']]]
 ];

@@ -147,12 +147,24 @@ Instance Methods</h2></td></tr>
 <tr class="memitem:a95939f53918bf7b4f6f097657f4079cb"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#a95939f53918bf7b4f6f097657f4079cb">deletePaymentInstrument:completion:</a></td></tr>
 <tr class="memdesc:a95939f53918bf7b4f6f097657f4079cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a payment instrument from the users profile and returns the updated profile information.  <a href="#a95939f53918bf7b4f6f097657f4079cb">More...</a><br /></td></tr>
 <tr class="separator:a95939f53918bf7b4f6f097657f4079cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f006460085dbcd5d5611a9af2f6f641"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#a2f006460085dbcd5d5611a9af2f6f641">activatePaymentInstrument:withActivationCode:completion:</a></td></tr>
+<tr class="memdesc:a2f006460085dbcd5d5611a9af2f6f641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates pending payment instrument.  <a href="#a2f006460085dbcd5d5611a9af2f6f641">More...</a><br /></td></tr>
+<tr class="separator:a2f006460085dbcd5d5611a9af2f6f641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b67798aa872c9bad0ba842d0e8f3fd"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#ab9b67798aa872c9bad0ba842d0e8f3fd">sendActivationCodeForPaymentInstrument:completion:</a></td></tr>
+<tr class="memdesc:ab9b67798aa872c9bad0ba842d0e8f3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends activation code again if user lost it or it expired.  <a href="#ab9b67798aa872c9bad0ba842d0e8f3fd">More...</a><br /></td></tr>
+<tr class="separator:ab9b67798aa872c9bad0ba842d0e8f3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb175288d52a47c66bc6af230c4ac621"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#adb175288d52a47c66bc6af230c4ac621">updateProfileWithDetails:completion:</a></td></tr>
 <tr class="memdesc:adb175288d52a47c66bc6af230c4ac621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the profile information of the current user.  <a href="#adb175288d52a47c66bc6af230c4ac621">More...</a><br /></td></tr>
 <tr class="separator:adb175288d52a47c66bc6af230c4ac621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18a8ffdc081db2f28310fdb2aa914aee"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#a18a8ffdc081db2f28310fdb2aa914aee">saveProfileWithPassword:completion:</a></td></tr>
 <tr class="memdesc:a18a8ffdc081db2f28310fdb2aa914aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a temporary profile and makes it permanent, allowing the user to log into the same profile at a later time or on another device.  <a href="#a18a8ffdc081db2f28310fdb2aa914aee">More...</a><br /></td></tr>
 <tr class="separator:a18a8ffdc081db2f28310fdb2aa914aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5f0f770ebc0e088794984723de60f5"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#a2b5f0f770ebc0e088794984723de60f5">setPasscode:password:completion:</a></td></tr>
+<tr class="memdesc:a2b5f0f770ebc0e088794984723de60f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the passcode for the current profile.  <a href="#a2b5f0f770ebc0e088794984723de60f5">More...</a><br /></td></tr>
+<tr class="separator:a2b5f0f770ebc0e088794984723de60f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a10b57e391bb512ab0171d58cd2175"><td class="memItemLeft" align="right" valign="top">(nonnull NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile_manager.html#a11a10b57e391bb512ab0171d58cd2175">acceptedPaymentInstrumentsForMerchant:</a></td></tr>
+<tr class="memdesc:a11a10b57e391bb512ab0171d58cd2175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the list of payment instruments for the current user which are accepted by the specified merchant.  <a href="#a11a10b57e391bb512ab0171d58cd2175">More...</a><br /></td></tr>
+<tr class="separator:a11a10b57e391bb512ab0171d58cd2175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
@@ -164,6 +176,73 @@ Class Methods</h2></td></tr>
 <div class="textblock"><p>Manages the users current profile. </p>
 <dl class="section see"><dt>See also</dt><dd>Profile </dd></dl>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a11a10b57e391bb512ab0171d58cd2175"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (nonnull NSArray *) acceptedPaymentInstrumentsForMerchant: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)&#160;</td>
+          <td class="paramname"><em>merchant</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the list of payment instruments for the current user which are accepted by the specified merchant. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">merchant</td><td>The merchant these accepted methods are for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The list of payment instruments for the user which are accepted by the specified merchant, as defined by {@link <a class="el" href="interface_p_t_k_merchant.html#a31f4d94ebe37025fc2b8f7380acaf834" title="The payment methods accepted by the merchant. ">PTKMerchant::paymentInstruments</a>}, or an empty list if none of the users payment methods are accepted. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f006460085dbcd5d5611a9af2f6f641"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) activatePaymentInstrument: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)&#160;</td>
+          <td class="paramname"><em>paymentInstrument</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withActivationCode:</td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>activationCode</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull PTKProfileManagerActivatePaymentInstrumentCompletion)&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activates pending payment instrument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paymentInstrument</td><td>The payment instrument to activate. </td></tr>
+    <tr><td class="paramname">activationCode</td><td>The activation code. </td></tr>
+    <tr><td class="paramname">completion</td><td>The completion block to be invoked when the operation completes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="adf3de32bcdcab86883f0fab8557c1741"></a>
 <div class="memitem">
 <div class="memproto">
@@ -355,6 +434,83 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab9b67798aa872c9bad0ba842d0e8f3fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) sendActivationCodeForPaymentInstrument: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)&#160;</td>
+          <td class="paramname"><em>paymentInstrument</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull PTKProfileManagerResendActivationCodeCompletion)&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends activation code again if user lost it or it expired. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paymentInstrument</td><td>The payment instrument to activate. </td></tr>
+    <tr><td class="paramname">completion</td><td>The completion block to be invoked when the operation completes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b5f0f770ebc0e088794984723de60f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setPasscode: </td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>passcode</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">password:</td>
+          <td></td>
+          <td class="paramtype">(nonnull NSString *)&#160;</td>
+          <td class="paramname"><em>password</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull PTKProfileManagerSetPasscodeCompletion)&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the passcode for the current profile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passcode</td><td>The new passcode to set. </td></tr>
+    <tr><td class="paramname">password</td><td>The password for the current profile. </td></tr>
+    <tr><td class="paramname">completion</td><td>The completion block to be invoked when the operation completes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="afa5decb88ac19cff67820ba61dba61ce"></a>
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +656,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_profile_manager.html">PTKProfileManager</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

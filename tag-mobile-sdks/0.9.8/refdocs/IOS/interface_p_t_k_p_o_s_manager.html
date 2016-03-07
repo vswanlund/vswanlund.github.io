@@ -130,6 +130,9 @@ Instance Methods</h2></td></tr>
 <tr class="memitem:adeba3ea5249acd48104133e62005c25f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_p_o_s_manager.html#adeba3ea5249acd48104133e62005c25f">createBasketTagWithBasket:completion:</a></td></tr>
 <tr class="memdesc:adeba3ea5249acd48104133e62005c25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a basket workflow tag.  <a href="#adeba3ea5249acd48104133e62005c25f">More...</a><br /></td></tr>
 <tr class="separator:adeba3ea5249acd48104133e62005c25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a20406248ae4623939969036d7b14b6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_p_o_s_manager.html#a6a20406248ae4623939969036d7b14b6">createInvoiceWithPosBasket:paymentInstrument:coupons:completion:</a></td></tr>
+<tr class="memdesc:a6a20406248ae4623939969036d7b14b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an invoice for the POS basket using the selected payment instrument.  <a href="#a6a20406248ae4623939969036d7b14b6">More...</a><br /></td></tr>
+<tr class="separator:a6a20406248ae4623939969036d7b14b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
@@ -175,6 +178,55 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6a20406248ae4623939969036d7b14b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) createInvoiceWithPosBasket: </td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_p_o_s_basket.html">PTKPOSBasket</a> *)&#160;</td>
+          <td class="paramname"><em>posBasket</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">paymentInstrument:</td>
+          <td></td>
+          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_payment_instrument.html">PTKPaymentInstrument</a> *)&#160;</td>
+          <td class="paramname"><em>paymentInstrument</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">coupons:</td>
+          <td></td>
+          <td class="paramtype">(nullable NSArray&lt; <a class="el" href="interface_p_t_k_coupon.html">PTKCoupon</a> * &gt; *)&#160;</td>
+          <td class="paramname"><em>coupons</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">completion:</td>
+          <td></td>
+          <td class="paramtype">(nonnull PTKPOSManagerCreateInvoiceCompletion)&#160;</td>
+          <td class="paramname"><em>completion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an invoice for the POS basket using the selected payment instrument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">posBasket</td><td>The POS basket to create the invoice for. </td></tr>
+    <tr><td class="paramname">paymentInstrument</td><td>The selected payment instrument. </td></tr>
+    <tr><td class="paramname">coupons</td><td>The selected coupons. </td></tr>
+    <tr><td class="paramname">completion</td><td>The completion block to be invoked when the operation completes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aead2ca4fcab5a0ce811357961cf70ec3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +252,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_p_o_s_manager.html">PTKPOSManager</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -119,13 +119,17 @@ $(document).ready(function(){initNavTree('_p_t_k_cost_8h_source.html','');});
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="interface_p_t_k_cost.html#a722cdb625d39f1fe456644c32bda004f">   35</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, nonnull, readonly) <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *<a class="code" href="interface_p_t_k_cost.html#a722cdb625d39f1fe456644c32bda004f">tax</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (nonnull instancetype)costWithSubtotal:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)subtotal</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                   total:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)total</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                shipping:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)shipping</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                     tax:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)tax;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="interface_p_t_k_cost.html#a3361b8cfb2e94f3f97db11e2b4d24b65">   40</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, nonnull, readonly) <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *<a class="code" href="interface_p_t_k_cost.html#a3361b8cfb2e94f3f97db11e2b4d24b65">discount</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;+ (nonnull instancetype)costWithSubtotal:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)subtotal</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                   total:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)total</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                shipping:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)shipping</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                     tax:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)tax</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                discount:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)discount;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_cost_html_aef3d4d6ebeffa5ecf9c2387f470191bb"><div class="ttname"><a href="interface_p_t_k_cost.html#aef3d4d6ebeffa5ecf9c2387f470191bb">PTKCost::shipping</a></div><div class="ttdeci">PTKMoney * shipping</div><div class="ttdef"><b>Definition:</b> PTKCost.h:30</div></div>
+<div class="ttc" id="interface_p_t_k_cost_html_a3361b8cfb2e94f3f97db11e2b4d24b65"><div class="ttname"><a href="interface_p_t_k_cost.html#a3361b8cfb2e94f3f97db11e2b4d24b65">PTKCost::discount</a></div><div class="ttdeci">PTKMoney * discount</div><div class="ttdef"><b>Definition:</b> PTKCost.h:40</div></div>
 <div class="ttc" id="interface_p_t_k_money_html"><div class="ttname"><a href="interface_p_t_k_money.html">PTKMoney</a></div><div class="ttdoc">An amount of money with the decimal places defined by the currency. </div><div class="ttdef"><b>Definition:</b> PTKMoney.h:16</div></div>
 <div class="ttc" id="interface_p_t_k_cost_html_a541c5ead2b3a0b1242c32f7a2885f5d8"><div class="ttname"><a href="interface_p_t_k_cost.html#a541c5ead2b3a0b1242c32f7a2885f5d8">PTKCost::subtotal</a></div><div class="ttdeci">PTKMoney * subtotal</div><div class="ttdef"><b>Definition:</b> PTKCost.h:20</div></div>
 <div class="ttc" id="interface_p_t_k_model_html"><div class="ttname"><a href="interface_p_t_k_model.html">PTKModel</a></div><div class="ttdoc">Base superclass for all PowaTag models. </div><div class="ttdef"><b>Definition:</b> PTKModel.h:12</div></div>
@@ -138,7 +142,7 @@ $(document).ready(function(){initNavTree('_p_t_k_cost_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKCost.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

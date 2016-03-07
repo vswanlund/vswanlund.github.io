@@ -20,31 +20,42 @@ var hierarchy =
         [ "PTKBasketItem", "interface_p_t_k_basket_item.html", null ],
         [ "PTKBaskets", "interface_p_t_k_baskets.html", null ],
         [ "PTKCampaign", "interface_p_t_k_campaign.html", null ],
+        [ "PTKCatalog", "interface_p_t_k_catalog.html", null ],
+        [ "PTKCategory", "interface_p_t_k_category.html", null ],
         [ "PTKCost", "interface_p_t_k_cost.html", null ],
         [ "PTKCountry", "interface_p_t_k_country.html", null ],
+        [ "PTKCoupon", "interface_p_t_k_coupon.html", null ],
+        [ "PTKCouponState", "interface_p_t_k_coupon_state.html", null ],
         [ "PTKCreditCardIssuer", "interface_p_t_k_credit_card_issuer.html", null ],
         [ "PTKCustomDataKey", "interface_p_t_k_custom_data_key.html", null ],
         [ "PTKCustomDataValue", "interface_p_t_k_custom_data_value.html", null ],
+        [ "PTKDiscount", "interface_p_t_k_discount.html", null ],
         [ "PTKDonationInvoiceDetails", "interface_p_t_k_donation_invoice_details.html", null ],
         [ "PTKEmailSignInDetails", "interface_p_t_k_email_sign_in_details.html", null ],
+        [ "PTKFulfillmentOption", "interface_p_t_k_fulfillment_option.html", null ],
+        [ "PTKGeoRestriction", "interface_p_t_k_geo_restriction.html", null ],
         [ "PTKInventory", "interface_p_t_k_inventory.html", null ],
         [ "PTKInvoice", "interface_p_t_k_invoice.html", [
           [ "PTKDonationInvoice", "interface_p_t_k_donation_invoice.html", null ],
-          [ "PTKPaymentInvoice", "interface_p_t_k_payment_invoice.html", null ]
+          [ "PTKPaymentInvoice", "interface_p_t_k_payment_invoice.html", null ],
+          [ "PTKPaymentPOSBasketInvoice", "interface_p_t_k_payment_p_o_s_basket_invoice.html", null ],
+          [ "PTKPOSBasketInvoice", "interface_p_t_k_p_o_s_basket_invoice.html", null ]
         ] ],
         [ "PTKMerchant", "interface_p_t_k_merchant.html", null ],
         [ "PTKMobileNumberSignInDetails", "interface_p_t_k_mobile_number_sign_in_details.html", null ],
         [ "PTKMoney", "interface_p_t_k_money.html", null ],
+        [ "PTKPage", "interface_p_t_k_page.html", null ],
         [ "PTKPayment", "interface_p_t_k_payment.html", null ],
         [ "PTKPaymentDetails", "interface_p_t_k_payment_details.html", null ],
         [ "PTKPaymentInstrument", "interface_p_t_k_payment_instrument.html", null ],
         [ "PTKPaymentInstrumentDetails", "interface_p_t_k_payment_instrument_details.html", null ],
         [ "PTKPaymentInvoiceDetails", "interface_p_t_k_payment_invoice_details.html", null ],
         [ "PTKPaymentMethodDetails", "interface_p_t_k_payment_method_details.html", null ],
-        [ "PTKPOSBasket", "interface_p_t_k_p_o_s_basket.html", null ],
-        [ "PTKPOSBasketItem", "interface_p_t_k_p_o_s_basket_item.html", null ],
-        [ "PTKPOSProductVariant", "interface_p_t_k_p_o_s_product_variant.html", null ],
+        [ "PTKPOSBasket", "interface_p_t_k_p_o_s_basket.html", [
+          [ "PTKInvoicePOSBasket", "interface_p_t_k_invoice_p_o_s_basket.html", null ]
+        ] ],
         [ "PTKProductAttribute", "interface_p_t_k_product_attribute.html", null ],
+        [ "PTKProductCategory", "interface_p_t_k_product_category.html", null ],
         [ "PTKProductImage", "interface_p_t_k_product_image.html", null ],
         [ "PTKProductOption", "interface_p_t_k_product_option.html", null ],
         [ "PTKProductOptionState", "interface_p_t_k_product_option_state.html", null ],
@@ -53,16 +64,20 @@ var hierarchy =
         [ "PTKProfileDetails", "interface_p_t_k_profile_details.html", null ],
         [ "PTKProfileIdSignInDetails", "interface_p_t_k_profile_id_sign_in_details.html", null ],
         [ "PTKQrCode", "interface_p_t_k_qr_code.html", null ],
-        [ "PTKShippingOption", "interface_p_t_k_shipping_option.html", null ],
         [ "PTKSignUpDetails", "interface_p_t_k_sign_up_details.html", null ],
         [ "PTKTag", "interface_p_t_k_tag.html", null ],
         [ "PTKWorkflow", "interface_p_t_k_workflow.html", [
           [ "PTKActWorkflow", "interface_p_t_k_act_workflow.html", null ],
           [ "PTKCampaignWorkflow", "interface_p_t_k_campaign_workflow.html", null ],
+          [ "PTKCatalogWorkflow", "interface_p_t_k_catalog_workflow.html", null ],
+          [ "PTKPOSBasketWorkflow", "interface_p_t_k_p_o_s_basket_workflow.html", null ],
           [ "PTKProductWorkflow", "interface_p_t_k_product_workflow.html", null ],
           [ "PTKTemporaryBasketWorkflow", "interface_p_t_k_temporary_basket_workflow.html", null ]
         ] ],
         [ "PTKYearMonth", "interface_p_t_k_year_month.html", null ]
+      ] ],
+      [ "<Storable>", "protocol_storable-p.html", [
+        [ "StorableProfileDetails", "interface_storable_profile_details.html", null ]
       ] ]
     ] ],
     [ "<NSCopying>", null, [
@@ -71,9 +86,13 @@ var hierarchy =
     [ "NSError", null, [
       [ "PTKServiceError", "interface_p_t_k_service_error.html", null ]
     ] ],
+    [ "NSException", null, [
+      [ "StorageException", "interface_storage_exception.html", null ]
+    ] ],
     [ "NSObject", null, [
+      [ "LocalProfileStorageService", "interface_local_profile_storage_service.html", null ],
+      [ "LocalStorageService", "interface_local_storage_service.html", null ],
       [ "PowaTagEndpoint", "interface_powa_tag_endpoint.html", null ],
-      [ "PowaTagEndpointComponents", "interface_powa_tag_endpoint_components.html", null ],
       [ "PowaTagKit", "interface_powa_tag_kit.html", null ],
       [ "PTKActManager", "interface_p_t_k_act_manager.html", null ],
       [ "PTKAddressDetailsValidator", "interface_p_t_k_address_details_validator.html", null ],
@@ -86,20 +105,26 @@ var hierarchy =
         [ "PTKValidFromDateValidator", "interface_p_t_k_valid_from_date_validator.html", null ]
       ] ],
       [ "PTKClient", "interface_p_t_k_client.html", null ],
+      [ "PTKCouponManager", "interface_p_t_k_coupon_manager.html", null ],
+      [ "PTKCouponPicker", "interface_p_t_k_coupon_picker.html", null ],
       [ "PTKCreditCardNumberValidator", "interface_p_t_k_credit_card_number_validator.html", null ],
       [ "PTKCreditCardValidator", "interface_p_t_k_credit_card_validator.html", null ],
+      [ "PTKDateHandler", "interface_p_t_k_date_handler.html", null ],
       [ "PTKDecimalValueValidator", "interface_p_t_k_decimal_value_validator.html", [
         [ "PTKDonationAmountValidator", "interface_p_t_k_donation_amount_validator.html", null ]
       ] ],
       [ "PTKEncryptedCvv", "interface_p_t_k_encrypted_cvv.html", null ],
       [ "PTKEncryptedCvvStorage", "interface_p_t_k_encrypted_cvv_storage.html", null ],
       [ "PTKIntValueValidator", "interface_p_t_k_int_value_validator.html", null ],
+      [ "PTKLoggingHandler", "interface_p_t_k_logging_handler.html", null ],
       [ "PTKLoginManager", "interface_p_t_k_login_manager.html", null ],
+      [ "PTKMerchantLocation", "interface_p_t_k_merchant_location.html", null ],
       [ "PTKMobileNumberValidator", "interface_p_t_k_mobile_number_validator.html", null ],
       [ "PTKModel", "interface_p_t_k_model.html", null ],
       [ "PTKPaymentManager", "interface_p_t_k_payment_manager.html", null ],
       [ "PTKPaymentMethodDetailsValidator", "interface_p_t_k_payment_method_details_validator.html", null ],
       [ "PTKPOSManager", "interface_p_t_k_p_o_s_manager.html", null ],
+      [ "PTKProductManager", "interface_p_t_k_product_manager.html", null ],
       [ "PTKProfileDetailsValidator", "interface_p_t_k_profile_details_validator.html", null ],
       [ "PTKProfileManager", "interface_p_t_k_profile_manager.html", null ],
       [ "PTKProfileValidator", "interface_p_t_k_profile_validator.html", null ],
@@ -114,6 +139,7 @@ var hierarchy =
         [ "PTKIssueNumberValidator", "interface_p_t_k_issue_number_validator.html", null ],
         [ "PTKNameValidator", "interface_p_t_k_name_validator.html", null ],
         [ "PTKPostcodeValidator", "interface_p_t_k_postcode_validator.html", [
+          [ "PTKCNPostcodeValidator", "interface_p_t_k_c_n_postcode_validator.html", null ],
           [ "PTKUKPostcodeValidator", "interface_p_t_k_u_k_postcode_validator.html", null ]
         ] ],
         [ "PTKTitleValidator", "interface_p_t_k_title_validator.html", null ]
@@ -131,9 +157,13 @@ var hierarchy =
         [ "PTKNotEmptyValidator", "interface_p_t_k_not_empty_validator.html", null ],
         [ "PTKNotNullValidator", "interface_p_t_k_not_null_validator.html", null ]
       ] ],
-      [ "PTKWorkflowManager", "interface_p_t_k_workflow_manager.html", null ]
+      [ "PTKWorkflowManager", "interface_p_t_k_workflow_manager.html", null ],
+      [ "StorableProfileDetails", "interface_storable_profile_details.html", null ]
     ] ],
     [ "<NSObject>", null, [
+      [ "<ProfileStorageService>", "protocol_profile_storage_service-p.html", [
+        [ "LocalProfileStorageService", "interface_local_profile_storage_service.html", null ]
+      ] ],
       [ "<PTKAudioTagDetectorDelegate>", "protocol_p_t_k_audio_tag_detector_delegate-p.html", null ],
       [ "<PTKBarcodeTagDetectorViewDelegate>", "protocol_p_t_k_barcode_tag_detector_view_delegate-p.html", null ],
       [ "<PTKModelValidator>", "protocol_p_t_k_model_validator-p.html", [
@@ -160,7 +190,11 @@ var hierarchy =
         ] ]
       ] ],
       [ "<PTKRequestBody>", "protocol_p_t_k_request_body-p.html", null ],
-      [ "<PTKResponseBody>", "protocol_p_t_k_response_body-p.html", null ]
+      [ "<PTKResponseBody>", "protocol_p_t_k_response_body-p.html", null ],
+      [ "<StorableProfileDetailsBuilder>", "protocol_storable_profile_details_builder-p.html", null ],
+      [ "<StorageService>", "protocol_storage_service-p.html", [
+        [ "LocalStorageService", "interface_local_storage_service.html", null ]
+      ] ]
     ] ],
     [ "UIView", null, [
       [ "PTKBarcodeTagDetectorView", "interface_p_t_k_barcode_tag_detector_view.html", null ]

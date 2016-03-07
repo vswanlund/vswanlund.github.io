@@ -11,5 +11,6 @@ var interface_p_t_k_profile_details =
     [ "firstName", "interface_p_t_k_profile_details.html#adfdf61f7098277870e0a475201c17e68", null ],
     [ "lastName", "interface_p_t_k_profile_details.html#a3b18193a1bbae718f8adc540b36ce40a", null ],
     [ "mobileNumber", "interface_p_t_k_profile_details.html#accc618401c62f7ec71496ba351b3fba6", null ],
+    [ "passcode", "interface_p_t_k_profile_details.html#a3b83079e2cc4339a22e63e303895e155", null ],
     [ "title", "interface_p_t_k_profile_details.html#acdbc2800c1ab9bc1a77ddfede5e88c04", null ]
 ];

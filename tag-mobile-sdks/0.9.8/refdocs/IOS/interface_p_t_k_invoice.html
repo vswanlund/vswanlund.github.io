@@ -122,17 +122,19 @@ Inheritance diagram for PTKInvoice:</div>
  <div class="center">
   <img src="interface_p_t_k_invoice.png" usemap="#PTKInvoice_map" alt=""/>
   <map id="PTKInvoice_map" name="PTKInvoice_map">
-<area href="interface_p_t_k_model.html" title="Base superclass for all PowaTag models. " alt="PTKModel" shape="rect" coords="136,56,262,80"/>
-<area href="interface_p_t_k_donation_invoice.html" title="Invoice for a charitable donation. " alt="PTKDonationInvoice" shape="rect" coords="68,168,194,192"/>
-<area href="interface_p_t_k_payment_invoice.html" title="Invoice for a payment. " alt="PTKPaymentInvoice" shape="rect" coords="204,168,330,192"/>
+<area href="interface_p_t_k_model.html" title="Base superclass for all PowaTag models. " alt="PTKModel" shape="rect" coords="295,56,482,80"/>
+<area href="interface_p_t_k_donation_invoice.html" title="Invoice for a charitable donation. " alt="PTKDonationInvoice" shape="rect" coords="0,168,187,192"/>
+<area href="interface_p_t_k_payment_invoice.html" title="Invoice for a payment. " alt="PTKPaymentInvoice" shape="rect" coords="197,168,384,192"/>
+<area href="interface_p_t_k_payment_p_o_s_basket_invoice.html" title="Invoice for a payment. " alt="PTKPaymentPOSBasketInvoice" shape="rect" coords="394,168,581,192"/>
+<area href="interface_p_t_k_p_o_s_basket_invoice.html" title="Invoice for a POS basket. " alt="PTKPOSBasketInvoice" shape="rect" coords="591,168,778,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:ad5d1c5b7dbd8ecc8bbe9005c80368322"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_invoice.html#ad5d1c5b7dbd8ecc8bbe9005c80368322">invoiceWithId:profileId:paymentInstrument:merchant:invoiceType:</a></td></tr>
-<tr class="memdesc:ad5d1c5b7dbd8ecc8bbe9005c80368322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#ad5d1c5b7dbd8ecc8bbe9005c80368322">More...</a><br /></td></tr>
-<tr class="separator:ad5d1c5b7dbd8ecc8bbe9005c80368322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19316821d1e730271a3d447ea2b8a999"><td class="memItemLeft" align="right" valign="top">(nonnull instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_p_t_k_invoice.html#a19316821d1e730271a3d447ea2b8a999">invoiceWithId:profileId:paymentInstrument:merchant:authorizationRequired:invoiceType:</a></td></tr>
+<tr class="memdesc:a19316821d1e730271a3d447ea2b8a999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new.  <a href="#a19316821d1e730271a3d447ea2b8a999">More...</a><br /></td></tr>
+<tr class="separator:a19316821d1e730271a3d447ea2b8a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -156,12 +158,16 @@ NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 PTKInvoiceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_invoice.html#ae0be819be990db7e6992d728fc8faa93">invoiceType</a></td></tr>
 <tr class="memdesc:ae0be819be990db7e6992d728fc8faa93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of invoice. <br /></td></tr>
 <tr class="separator:ae0be819be990db7e6992d728fc8faa93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1e7d5cf8d11937b6d16babb2600f1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e1e7d5cf8d11937b6d16babb2600f1e"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_p_t_k_invoice.html#a2e1e7d5cf8d11937b6d16babb2600f1e">authorizationRequired</a></td></tr>
+<tr class="memdesc:a2e1e7d5cf8d11937b6d16babb2600f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if that invoice should be authorized. <br /></td></tr>
+<tr class="separator:a2e1e7d5cf8d11937b6d16babb2600f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An invoice is a document issued by a merchant to a consumer, relating to a sale transaction and indicating the product variants, quantities, and agreed prices for products or services. </p>
 <p>To make a payment for a basket, you must first create an invoice for the basket; you can then make a payment for that invoice. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="ad5d1c5b7dbd8ecc8bbe9005c80368322"></a>
+<a class="anchor" id="a19316821d1e730271a3d447ea2b8a999"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -190,6 +196,12 @@ PTKInvoiceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
           <td class="paramname"><em>merchant</em></td>
         </tr>
         <tr>
+          <td class="paramkey">authorizationRequired:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>authorizationRequired</em></td>
+        </tr>
+        <tr>
           <td class="paramkey">invoiceType:</td>
           <td></td>
           <td class="paramtype">(PTKInvoiceType)&#160;</td>
@@ -211,6 +223,7 @@ PTKInvoiceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
     <tr><td class="paramname">profileId</td><td>The profile ID of the consumer who is purchasing the goods. </td></tr>
     <tr><td class="paramname">paymentInstrument</td><td>The payment instrument that should be charged when paying for this invoice. </td></tr>
     <tr><td class="paramname">merchant</td><td>The merchant who is selling the goods. </td></tr>
+    <tr><td class="paramname">authorizationRequired</td><td>Indicates if that invoice should be authorized. </td></tr>
     <tr><td class="paramname">invoiceType</td><td>The type of this invoice. </td></tr>
   </table>
   </dd>
@@ -224,7 +237,7 @@ PTKInvoiceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_invoice.html">PTKInvoice</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

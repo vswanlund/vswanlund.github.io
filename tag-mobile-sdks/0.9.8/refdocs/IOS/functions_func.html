@@ -87,6 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_c.html#index_c"><span>c</span></a></li>
       <li><a href="functions_func_d.html#index_d"><span>d</span></a></li>
       <li><a href="functions_func_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_func_f.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_func_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_func_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_func_i.html#index_i"><span>i</span></a></li>
       <li><a href="functions_func_l.html#index_l"><span>l</span></a></li>
@@ -138,13 +140,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>acceptedPaymentInstrumentsForMerchant:
-: <a class="el" href="interface_p_t_k_profile.html#a96a87e7dd4962b0143a143d7013f3ada">PTKProfile</a>
+: <a class="el" href="interface_p_t_k_profile_manager.html#a11a10b57e391bb512ab0171d58cd2175">PTKProfileManager</a>
 </li>
 <li>acceptedPaymentInstrumentWithType:isssuer:
 : <a class="el" href="interface_p_t_k_accepted_payment_instrument.html#ad154bcca69afbfa745fada802d62fbef">PTKAcceptedPaymentInstrument</a>
 </li>
-<li>accessTokenWithProfileId:paymentToken:
-: <a class="el" href="interface_p_t_k_access_token.html#a385169f7b35bbd583939fa49ea3b7939">PTKAccessToken</a>
+<li>accessTokenWithProfileId:accessToken:
+: <a class="el" href="interface_p_t_k_access_token.html#aa577c1ceee36040d81ea870e4a103df4">PTKAccessToken</a>
 </li>
 <li>actDataKeyWithKey:name:predefinedValue:type:optional:
 : <a class="el" href="interface_p_t_k_act_data_key.html#a62e64c59008012492891f0833a407423">PTKActDataKey</a>
@@ -154,6 +156,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>action
 : <a class="el" href="interface_p_t_k_service_error.html#a44b0e2fecc09f4381a00e3006e2d0f25">PTKServiceError</a>
+</li>
+<li>activatePaymentInstrument:withActivationCode:completion:
+: <a class="el" href="interface_p_t_k_profile_manager.html#a2f006460085dbcd5d5611a9af2f6f641">PTKProfileManager</a>
 </li>
 <li>actTransactionDetails
 : <a class="el" href="interface_p_t_k_act_transaction_details.html#aea5812a64ffc9a83563c63ccf5d292ed">PTKActTransactionDetails</a>
@@ -197,11 +202,20 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>aliasValidator
 : <a class="el" href="interface_p_t_k_alias_validator.html#a8ebd994ec4f553e88665180d445463b2">PTKAliasValidator</a>
 </li>
+<li>allCouponsWithCompletion:
+: <a class="el" href="interface_p_t_k_coupon_manager.html#a392963a3a57a04b9f75704f86f542087">PTKCouponManager</a>
+</li>
 <li>appLinkTagDetectorWithURLSchemes:
 : <a class="el" href="interface_p_t_k_app_link_tag_detector.html#a9482a2761241a4aed14f2058922267e2">PTKAppLinkTagDetector</a>
 </li>
 <li>asCampaignWorkflow:
 : <a class="el" href="interface_p_t_k_workflow.html#abff0d4a542f00aa5d610b51f0006a5a4">PTKWorkflow</a>
+</li>
+<li>asCatalogWorkflow:
+: <a class="el" href="interface_p_t_k_workflow.html#aa3fcbd49828970b70269f0250f06117a">PTKWorkflow</a>
+</li>
+<li>asPOSBasketWorkflow:
+: <a class="el" href="interface_p_t_k_workflow.html#a631df664fd1652e13afae202e5980e55">PTKWorkflow</a>
 </li>
 <li>asProductWorkflow:
 : <a class="el" href="interface_p_t_k_workflow.html#a584570a21328b7f1f91514ab366f6c2b">PTKWorkflow</a>
@@ -218,13 +232,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>audioTagDetector:didStopWithError:
 : <a class="el" href="protocol_p_t_k_audio_tag_detector_delegate-p.html#a7f0ae514c3c905f19ee60ab536728434">&lt;PTKAudioTagDetectorDelegate&gt;</a>
 </li>
+<li>authorizeForInvoice:passcode:completion:
+: <a class="el" href="interface_p_t_k_payment_manager.html#ad534c13f5285eb2f3c7dbe081f419f6e">PTKPaymentManager</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

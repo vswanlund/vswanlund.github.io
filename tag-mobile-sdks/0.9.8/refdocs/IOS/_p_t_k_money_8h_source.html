@@ -115,10 +115,18 @@ $(document).ready(function(){initNavTree('_p_t_k_money_8h_source.html','');});
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;+ (nonnull instancetype)moneyWithCurrency:(nonnull NSString *)currency amount:(nonnull NSDecimalNumber *)amount;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;- (BOOL)isLessThan:(nonnull <a class="code" href="interface_p_t_k_money.html">PTKMoney</a> *)money;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (nonnull NSString *)<a class="code" href="interface_p_t_k_money.html#a02ed48e8add515e8e4343a8b537f111c">getCurrencyAsString</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (nonnull NSString *)<a class="code" href="interface_p_t_k_money.html#a0efe64bf1ba84bdf8c2613532f0c5f3d">getAmountAsString</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_money_html_aff91c6fd547d5da325ab9529a2893390"><div class="ttname"><a href="interface_p_t_k_money.html#aff91c6fd547d5da325ab9529a2893390">PTKMoney::currency</a></div><div class="ttdeci">NSString * currency</div><div class="ttdoc">Currency. </div><div class="ttdef"><b>Definition:</b> PTKMoney.h:26</div></div>
+<div class="ttc" id="interface_p_t_k_money_html_a02ed48e8add515e8e4343a8b537f111c"><div class="ttname"><a href="interface_p_t_k_money.html#a02ed48e8add515e8e4343a8b537f111c">-[PTKMoney getCurrencyAsString]</a></div><div class="ttdeci">nonnull NSString * getCurrencyAsString()</div><div class="ttdoc">Return currency. </div></div>
 <div class="ttc" id="interface_p_t_k_money_html"><div class="ttname"><a href="interface_p_t_k_money.html">PTKMoney</a></div><div class="ttdoc">An amount of money with the decimal places defined by the currency. </div><div class="ttdef"><b>Definition:</b> PTKMoney.h:16</div></div>
 <div class="ttc" id="interface_p_t_k_model_html"><div class="ttname"><a href="interface_p_t_k_model.html">PTKModel</a></div><div class="ttdoc">Base superclass for all PowaTag models. </div><div class="ttdef"><b>Definition:</b> PTKModel.h:12</div></div>
+<div class="ttc" id="interface_p_t_k_money_html_a0efe64bf1ba84bdf8c2613532f0c5f3d"><div class="ttname"><a href="interface_p_t_k_money.html#a0efe64bf1ba84bdf8c2613532f0c5f3d">-[PTKMoney getAmountAsString]</a></div><div class="ttdeci">nonnull NSString * getAmountAsString()</div><div class="ttdoc">Return amount in string format. </div></div>
 <div class="ttc" id="interface_p_t_k_money_html_a184929976b4f396b7b107306a23f42f6"><div class="ttname"><a href="interface_p_t_k_money.html#a184929976b4f396b7b107306a23f42f6">PTKMoney::amount</a></div><div class="ttdeci">NSDecimalNumber * amount</div><div class="ttdoc">Amount. </div><div class="ttdef"><b>Definition:</b> PTKMoney.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -126,7 +134,7 @@ $(document).ready(function(){initNavTree('_p_t_k_money_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKMoney.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

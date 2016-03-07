@@ -1,0 +1,4 @@
+var classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_undefined_property_serialization_exception =
+[
+    [ "PowaTagUndefinedPropertySerializationException", "classcom_1_1powatag_1_1android_1_1sdk_1_1_powa_tag_undefined_property_serialization_exception.html#a98be583e10377d7202de4fd79522b475", null ]
+];

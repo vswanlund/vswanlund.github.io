@@ -131,8 +131,6 @@ Inheritance diagram for PTKProfile:</div>
 Instance Methods</h2></td></tr>
 <tr class="memitem:a68d4a9d43a7330929a92de1b34b79293"><td class="memItemLeft" align="right" valign="top">(nonnull <a class="el" href="interface_p_t_k_profile_details.html">PTKProfileDetails</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile.html#a68d4a9d43a7330929a92de1b34b79293">editableCopy</a></td></tr>
 <tr class="separator:a68d4a9d43a7330929a92de1b34b79293"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a87e7dd4962b0143a143d7013f3ada"><td class="memItemLeft" align="right" valign="top">(nonnull NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile.html#a96a87e7dd4962b0143a143d7013f3ada">acceptedPaymentInstrumentsForMerchant:</a></td></tr>
-<tr class="separator:a96a87e7dd4962b0143a143d7013f3ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080b9d8bd23180c2c6b1e41e3832fa85"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_p_t_k_profile.html#a080b9d8bd23180c2c6b1e41e3832fa85">hasRequiredInfoForMerchant:</a></td></tr>
 <tr class="memdesc:a080b9d8bd23180c2c6b1e41e3832fa85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the profile has all information required to transact with a particular merchant.  <a href="#a080b9d8bd23180c2c6b1e41e3832fa85">More...</a><br /></td></tr>
 <tr class="separator:a080b9d8bd23180c2c6b1e41e3832fa85"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,29 +178,6 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div class="textblock"><p>Represents a basic PowaTag user profile. </p>
 <p>To update the profile use <a class="el" href="interface_p_t_k_profile.html#a68d4a9d43a7330929a92de1b34b79293">editableCopy</a> to create an <a class="el" href="interface_p_t_k_profile_details.html">PTKProfileDetails</a> that can be modified. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a96a87e7dd4962b0143a143d7013f3ada"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (nonnull NSArray *) acceptedPaymentInstrumentsForMerchant: </td>
-          <td></td>
-          <td class="paramtype">(nonnull <a class="el" href="interface_p_t_k_merchant.html">PTKMerchant</a> *)&#160;</td>
-          <td class="paramname"><em>merchant</em></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">merchant</td><td>The merchant these accepted methods are for. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The list of payment instruments for the user which are accepted by the specified merchant, as defined by {@link <a class="el" href="interface_p_t_k_merchant.html#a31f4d94ebe37025fc2b8f7380acaf834" title="The payment methods accepted by the merchant. ">PTKMerchant::paymentInstruments</a>}, or an empty list if none of the users payment methods are accepted. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a68d4a9d43a7330929a92de1b34b79293"></a>
 <div class="memitem">
 <div class="memproto">
@@ -646,7 +621,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_p_t_k_profile.html">PTKProfile</a></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:35 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:11 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

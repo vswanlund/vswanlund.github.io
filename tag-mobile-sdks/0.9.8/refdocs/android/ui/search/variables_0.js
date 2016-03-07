@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['accepted',['ACCEPTED',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1merchant_1_1_promotion_status.html#a6244c40969d76302eb7c2d6c2ae2d9cc',1,'com::powatag::android::sdk::merchant::PromotionStatus']]],
+  ['account_5fwas_5fblocked',['ACCOUNT_WAS_BLOCKED',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_service_error_codes.html#a3459d2210f20c076f262e0452befadcb',1,'com::powatag::android::sdk::ServiceErrorCodes']]],
+  ['account_5fwas_5ffrozen',['ACCOUNT_WAS_FROZEN',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_service_error_codes.html#ad6bd89abf7823df3b97a535d7f19d129',1,'com::powatag::android::sdk::ServiceErrorCodes']]],
+  ['act',['ACT',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1_workflow_type.html#a929ddad1e401666a9be7b6380349f2ca',1,'com::powatag::android::sdk::WorkflowType']]],
+  ['act_5ftransaction',['ACT_TRANSACTION',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1transaction_1_1_transaction_type.html#a86d615e1e46d19f7917ef95d6f183512',1,'com::powatag::android::sdk::transaction::TransactionType']]],
+  ['action_5faccess_5ftoken_5fchanged',['ACTION_ACCESS_TOKEN_CHANGED',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_access_token.html#a6fa417fb2c9b364cc95eee07f017243f',1,'com::powatag::android::sdk::AccessToken']]],
+  ['action_5fbasket_5fchanged',['ACTION_BASKET_CHANGED',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_baskets.html#a9d25da8ba9e85cc796b04b79983d9c45',1,'com::powatag::android::sdk::Baskets']]],
+  ['action_5fbaskets_5fchanged',['ACTION_BASKETS_CHANGED',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_baskets.html#ace6d5d01a6344dff2a38200ed2b49008',1,'com::powatag::android::sdk::Baskets']]],
+  ['action_5fprofile_5fchanged',['ACTION_PROFILE_CHANGED',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_profile.html#ab95f1f3d7690dbb3b8acbc2f90be1e70',1,'com::powatag::android::sdk::Profile']]],
+  ['active',['ACTIVE',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1profile_1_1_activation_status.html#a5a659420fe7b12e68f313a42ba21f654',1,'com::powatag::android::sdk::profile::ActivationStatus']]],
+  ['address',['ADDRESS',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1_act_data_type.html#a9ed04fc431f2e4d5e481b09bf439db70',1,'com.powatag.android.sdk.ActDataType.ADDRESS()'],['../enumcom_1_1powatag_1_1android_1_1sdk_1_1_custom_data_type.html#a00e1fc9cf5e0d76d808652c34ab971f4',1,'com.powatag.android.sdk.CustomDataType.ADDRESS()']]],
+  ['after_5fmax_5fdate',['AFTER_MAX_DATE',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1validators_1_1_validation_error.html#ac33656ae0b77a7096638fade2a5ac72d',1,'com::powatag::android::sdk::validators::ValidationError']]],
+  ['aim_5ftransaction',['AIM_TRANSACTION',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1transaction_1_1_transaction_type.html#ae9df1e3bd3107bf96433ecc23dd60df9',1,'com::powatag::android::sdk::transaction::TransactionType']]],
+  ['amex',['AMEX',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_credit_card_issuer.html#ab555e0ecdf4dfd879d55f471bc7b6231',1,'com::powatag::android::sdk::CreditCardIssuer']]],
+  ['appeal',['APPEAL',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1_workflow_type.html#a488d400c4c30dc70e27c90cd5ba8a87f',1,'com::powatag::android::sdk::WorkflowType']]],
+  ['audio',['AUDIO',['../enumcom_1_1powatag_1_1android_1_1sdk_1_1_tag_format.html#ae0732a63591bb74cec27c01f51640b98',1,'com::powatag::android::sdk::TagFormat']]],
+  ['authorization_5fprofile_5falready_5fregistered',['AUTHORIZATION_PROFILE_ALREADY_REGISTERED',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_service_error_codes.html#ad571c51eb845d09d1a2b852ef2331f3c',1,'com::powatag::android::sdk::ServiceErrorCodes']]],
+  ['authorization_5fuser_5fnot_5ffound',['AUTHORIZATION_USER_NOT_FOUND',['../classcom_1_1powatag_1_1android_1_1sdk_1_1_service_error_codes.html#a167f488e2eb1c49fd9f71c7234a5609d',1,'com::powatag::android::sdk::ServiceErrorCodes']]]
+];

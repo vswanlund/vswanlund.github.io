@@ -107,27 +107,33 @@ $(document).ready(function(){initNavTree('_p_t_k_country_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#import &quot;PTKModel.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="interface_p_t_k_country.html">   13</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_country.html">PTKCountry</a> : <a class="code" href="interface_p_t_k_model.html">PTKModel</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> NSString * __nonnull <span class="keyword">const</span> PTKUnitedKingdomCountryCode;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> NSString * __nonnull <span class="keyword">const</span> PTKChinaCountryCode;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">   18</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, nonnull, readonly) NSString *<a class="code" href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">alpha2Code</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_p_t_k_country.html#a26542c8be6b0b7977c73b68f34180981">   23</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) BOOL <a class="code" href="interface_p_t_k_country.html#a26542c8be6b0b7977c73b68f34180981">supported</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;+ (nonnull instancetype)countryForCode:(nonnull NSString *)alpha2Code;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;+ (nonnull NSArray *)<a class="code" href="interface_p_t_k_country.html#adcbd7fea8e8b0b613b6aa7d58474aeab">supportedCountries</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_p_t_k_country.html">   19</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_p_t_k_country.html">PTKCountry</a> : <a class="code" href="interface_p_t_k_model.html">PTKModel</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">   24</a></span>&#160;<span class="keyword">@property</span> (nonatomic, strong, nonnull, readonly) NSString *<a class="code" href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">alpha2Code</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interface_p_t_k_country.html#a26542c8be6b0b7977c73b68f34180981">   29</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) BOOL <a class="code" href="interface_p_t_k_country.html#a26542c8be6b0b7977c73b68f34180981">supported</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;+ (nonnull instancetype)countryForCode:(nonnull NSString *)alpha2Code;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_country.html">PTKCountry</a> *)<a class="code" href="interface_p_t_k_country.html#a37fa60a570eb6965bdccf2a684aef3f5">Unknown</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_country.html">PTKCountry</a> *)<a class="code" href="interface_p_t_k_country.html#afada20ff155c01eab3e99e16eb8c17de">UnitedKingdom</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;+ (nonnull NSArray *)<a class="code" href="interface_p_t_k_country.html#adcbd7fea8e8b0b613b6aa7d58474aeab">supportedCountries</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_country.html">PTKCountry</a> *)<a class="code" href="interface_p_t_k_country.html#a37fa60a570eb6965bdccf2a684aef3f5">Unknown</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_country.html">PTKCountry</a> *)<a class="code" href="interface_p_t_k_country.html#afada20ff155c01eab3e99e16eb8c17de">UnitedKingdom</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;+ (nonnull <a class="code" href="interface_p_t_k_country.html">PTKCountry</a> *)<a class="code" href="interface_p_t_k_country.html#a5becab40d205c80f97769578123c531b">China</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_p_t_k_country_html_adcbd7fea8e8b0b613b6aa7d58474aeab"><div class="ttname"><a href="interface_p_t_k_country.html#adcbd7fea8e8b0b613b6aa7d58474aeab">+[PTKCountry supportedCountries]</a></div><div class="ttdeci">nonnull NSArray * supportedCountries()</div><div class="ttdoc">Gets the list of countries supported by this version of the SDK. </div></div>
-<div class="ttc" id="interface_p_t_k_country_html_a582b425a0aabbf476f6ca9b44a3db72b"><div class="ttname"><a href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">PTKCountry::alpha2Code</a></div><div class="ttdeci">NSString * alpha2Code</div><div class="ttdoc">ISO 3166-1 alpha-2 country code. </div><div class="ttdef"><b>Definition:</b> PTKCountry.h:18</div></div>
+<div class="ttc" id="interface_p_t_k_country_html_a5becab40d205c80f97769578123c531b"><div class="ttname"><a href="interface_p_t_k_country.html#a5becab40d205c80f97769578123c531b">+[PTKCountry China]</a></div><div class="ttdeci">nonnull PTKCountry * China()</div><div class="ttdoc">Predefined object representing China. </div></div>
+<div class="ttc" id="interface_p_t_k_country_html_a582b425a0aabbf476f6ca9b44a3db72b"><div class="ttname"><a href="interface_p_t_k_country.html#a582b425a0aabbf476f6ca9b44a3db72b">PTKCountry::alpha2Code</a></div><div class="ttdeci">NSString * alpha2Code</div><div class="ttdoc">ISO 3166-1 alpha-2 country code. </div><div class="ttdef"><b>Definition:</b> PTKCountry.h:24</div></div>
 <div class="ttc" id="interface_p_t_k_country_html_a37fa60a570eb6965bdccf2a684aef3f5"><div class="ttname"><a href="interface_p_t_k_country.html#a37fa60a570eb6965bdccf2a684aef3f5">+[PTKCountry Unknown]</a></div><div class="ttdeci">nonnull PTKCountry * Unknown()</div><div class="ttdoc">Preedefined Unknown country. </div></div>
 <div class="ttc" id="interface_p_t_k_model_html"><div class="ttname"><a href="interface_p_t_k_model.html">PTKModel</a></div><div class="ttdoc">Base superclass for all PowaTag models. </div><div class="ttdef"><b>Definition:</b> PTKModel.h:12</div></div>
-<div class="ttc" id="interface_p_t_k_country_html"><div class="ttname"><a href="interface_p_t_k_country.html">PTKCountry</a></div><div class="ttdoc">Class of supported countries. </div><div class="ttdef"><b>Definition:</b> PTKCountry.h:13</div></div>
-<div class="ttc" id="interface_p_t_k_country_html_a26542c8be6b0b7977c73b68f34180981"><div class="ttname"><a href="interface_p_t_k_country.html#a26542c8be6b0b7977c73b68f34180981">PTKCountry::supported</a></div><div class="ttdeci">BOOL supported</div><div class="ttdef"><b>Definition:</b> PTKCountry.h:23</div></div>
+<div class="ttc" id="interface_p_t_k_country_html"><div class="ttname"><a href="interface_p_t_k_country.html">PTKCountry</a></div><div class="ttdoc">Class of supported countries. </div><div class="ttdef"><b>Definition:</b> PTKCountry.h:19</div></div>
+<div class="ttc" id="interface_p_t_k_country_html_a26542c8be6b0b7977c73b68f34180981"><div class="ttname"><a href="interface_p_t_k_country.html#a26542c8be6b0b7977c73b68f34180981">PTKCountry::supported</a></div><div class="ttdeci">BOOL supported</div><div class="ttdef"><b>Definition:</b> PTKCountry.h:29</div></div>
 <div class="ttc" id="interface_p_t_k_country_html_afada20ff155c01eab3e99e16eb8c17de"><div class="ttname"><a href="interface_p_t_k_country.html#afada20ff155c01eab3e99e16eb8c17de">+[PTKCountry UnitedKingdom]</a></div><div class="ttdeci">nonnull PTKCountry * UnitedKingdom()</div><div class="ttdoc">Predefined object representing United Kingdom. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -135,7 +141,7 @@ $(document).ready(function(){initNavTree('_p_t_k_country_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_25ce295b4a52efef9f005f77d7005d08.html">PowaTagKit</a></li><li class="navelem"><a class="el" href="dir_147ee5a69418168733200a6b552ed255.html">Library</a></li><li class="navelem"><a class="el" href="dir_55cafdbf1a07db0ecdc2a91b95d0dd8a.html">Models</a></li><li class="navelem"><b>PTKCountry.h</b></li>
-    <li class="footer">Generated on Thu Oct 29 2015 14:57:34 for PowaTag Kit by
+    <li class="footer">Generated on Tue Feb 9 2016 17:38:10 for PowaTag Kit by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

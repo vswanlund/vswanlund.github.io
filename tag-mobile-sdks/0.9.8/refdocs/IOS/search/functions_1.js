@@ -11,6 +11,5 @@ var searchData=
   ['basketswithprofileid_3a',['basketsWithProfileId:',['../interface_p_t_k_baskets.html#ace63fa25b71e1effbd778cdc7d62d8e8',1,'PTKBaskets']]],
   ['basketwithid_3aitems_3amerchant_3atemporary_3a',['basketWithId:items:merchant:temporary:',['../interface_p_t_k_basket.html#a01d93d0c93b7168794a0a2354b3c09dc',1,'PTKBasket']]],
   ['basketwithmerchant_3a',['basketWithMerchant:',['../interface_p_t_k_baskets.html#a7ef15008258f2ef70a01bc10dd021327',1,'PTKBaskets']]],
-  ['build',['build',['../interface_powa_tag_endpoint_components.html#a4e68791b2a40d6577b094855a8a0b171',1,'PowaTagEndpointComponents']]],
-  ['buildsha',['buildSha',['../interface_powa_tag_kit.html#a814bb794bacbae01063472237637160c',1,'PowaTagKit']]]
+  ['build_3a',['build:',['../interface_storable_profile_details.html#a01fd1d77a4a08d4cac33fe0f3b989b70',1,'StorableProfileDetails']]]
 ];
