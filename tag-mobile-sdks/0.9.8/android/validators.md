@@ -54,19 +54,13 @@ The following usage example shows how to use the `AddressDetailsValidator`:<br /
 
 1. The latest profile information for the current user can be retrieved using:
 
-asdfasfasdf
-asdfa
-sdfasd
-fasdf
-asdf
-
     <pre>ProfileManager pm = ProfileManager.getInstance();
-   pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
-     public void onSuccess(Profile latestProfile) {
-       // Profile was successfully retrieved
-     }
-     public void onError(PowaTagException exception) {
-     }
+    pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
+       public void onSuccess(Profile latestProfile) {
+         // Profile was successfully retrieved
+       }
+       public void onError(PowaTagException exception) {
+       }
    });</pre>
 
 
