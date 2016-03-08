@@ -38,7 +38,7 @@ The following usage example shows how to use the `AddressDetailsValidator`:<br /
 AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
 List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
 if(errors != null){
-	for (int s = 0; s < errors.size(); s++) {
+    for (int s = 0; s < errors.size(); s++) {
 		ValidationFailure validationFailure = errors.get(s);
 		String property = validationFailure.getPropertyName();
 		ValidationError errorCode = validationFailure.getErrorCode();
@@ -191,6 +191,7 @@ if(!maxIntValueValidator.isValid(input.getQuantity()){
 }
 </pre>
 	
-For more details on each validator please review the reference documentation.
+For more details on the validators please review the [reference]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/android/sdk/interfacecom_1_1powatag_1_1android_1_1sdk_1_1validators_1_1_model_validator.html){:target="_blank"} documentation.
+
 <br /> <br />
 
