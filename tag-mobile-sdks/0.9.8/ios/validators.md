@@ -31,7 +31,9 @@ Property validators are used to:
 * <code>PTKUKPostcodeValidator</code> - to check thet a UK postcode is valid.
 
 The following usage example shows how to use the `PTKAddressDetailsValidator`:<br />
+
 ##Tiago to provide snippet
+
 <pre>// addressDetails has been populated with the values obtained from the user
 AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
 List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
@@ -64,7 +66,9 @@ Property validators are used to:
 
 
 The following usage example shows how to use the `PTKProfileDetailsValidator`:<br />
+
 ##Tiago to provide snippet
+
 <pre>// The user's country is obtained and set in userCountry
 ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
 // Use the profileDetails obtain in an earlier step
@@ -98,7 +102,9 @@ Property validators are used to:
 
 
 The following usage example shows how to use the `PTKPaymentMethodDetailsValidator`:<br />
+
 ##Tiago to provide snippet
+
 <pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
 List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
 if(errors != null){
@@ -143,10 +149,12 @@ The following property validators are available:<br />
 * **PTKCreditCardNumberValidator** - checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
 * **PTKDecimalValueValidator** - abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
 * **PTKDonationAmountValidator** - checks if donation amount is greater than zero.
-* **PTKIntValueValidator - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. 
+* **PTKIntValueValidator** - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. 
 
 Here is an example of using one of the validators:<br />
+
 ##Tiago provide snippet
+
 <pre>// Set the conditions for the validator
 TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
 // Validate the the supplied card number 
@@ -181,7 +189,9 @@ The following property validators are available:<br />
 
 
 Here is an example of using one of the validators:<br />
+
 ##Tiago to provide snippet
+
 <pre>MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
 // Validate the the supplied int number 
 if(!maxIntValueValidator.isValid(input.getQuantity()){
