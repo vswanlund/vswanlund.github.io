@@ -34,7 +34,7 @@ Property validators are used to:
 
 The following usage example shows how to use the `AddressDetailsValidator`:<br />
 
-	<pre>// addressDetails has been populated with the values obtained from the user
+	<pre><code>// addressDetails has been populated with the values obtained from the user
 	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
 	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
 	if(errors != null){
@@ -46,7 +46,7 @@ The following usage example shows how to use the `AddressDetailsValidator`:<br /
 		}
 	} else {
 		// No issues found while validating the address details
-	}</pre>
+	}</code></pre>
 
 <br />
 
