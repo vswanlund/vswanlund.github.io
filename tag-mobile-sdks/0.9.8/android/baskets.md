@@ -116,7 +116,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
 
-    <pre>basketsManager.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
+	<pre>basketsManager.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
 		public void onSuccess(PaymentInvoice invoice) {
 			Cost cost = invoice.getCost();
 		}
@@ -145,6 +145,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	}
 	});</pre>
 <br />
+
 
 # Paying for a Payment Invoice
 
