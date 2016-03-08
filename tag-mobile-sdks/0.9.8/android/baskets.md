@@ -191,7 +191,3 @@ Once you have created an invoice for a basket you can make a [Payment]({{site.ba
 	public void onNext(PaymentInvoice paymentInvoice) {
 	}
 	});</pre>
-<br />
-
-	
-
