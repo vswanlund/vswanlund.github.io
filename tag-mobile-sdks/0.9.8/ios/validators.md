@@ -144,7 +144,7 @@ The following property validators are available:<br />
 * **CardNumberValidator** - checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
 * **DecimalValueValidator** - abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
 * **DonationAmountValidator** - checks if donation amount is greater than zero.
-* **IntValueValidator** - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. <br />
+* **IntValueValidator - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. 
 
 Here is an example of using one of the validators:<br />
 
