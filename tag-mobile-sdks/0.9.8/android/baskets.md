@@ -4,7 +4,7 @@ title: Baskets on Android
 permalink: /tag-mobile-sdks/0.9.8/android/baskets/
 ---
 
-Baskets are a collection of a product variants (such as a small, black T Shirt). There are two different types of baskets: TemporaryBaskets and PersistentBaskets. The contents of a PersistentBasket are managed by the user and changes to the baskets are saved with the user profile, whereas the contents of a TemporaryBasket cannot be modified by the user and the basket is not saved with the user profile.
+Baskets are a collection of product variants (such as small, black T Shirt). There are two different types of baskets: TemporaryBaskets and PersistentBaskets. The contents of a PersistentBasket are managed by the user and changes to the baskets are saved with the user profile, whereas the contents of a TemporaryBasket cannot be modified by the user and the basket is not saved with the user profile.
 
 Manipulation of PersistentBaskets, such as adding or removing products and changing quantities is performed locally using the `BasketsManager`.
 
@@ -17,7 +17,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 1. Check the `isTemporary` property of the basket:
 
     <pre>if (basket.isTemporary()) {
-     // Preset basket
+     // Pre-set basket
      TemporaryBasket basket = (TemporaryBasket) basket;
    } else {
      // User basket
@@ -93,12 +93,13 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
-    <pre>List<PaymentMethodAlias> acceptedPaymentInstruments = ProfileManager.getInstance().getCurrentProfile().getAcceptedPaymentInstruments(merchant);
-   PaymentInstrument paymentInstrument = acceptedPaymentInstruments.get(0);</pre>
+    <pre>ProfileManager profileManager = ManagerFactory.getInstance().getProfileManager();
+	List<PaymentMethodAlias> acceptedPaymentInstruments = profileManager.getAcceptedPaymentInstruments(merchant);
+    PaymentInstrument paymentInstrument = acceptedPaymentInstruments.get(0);</pre>
 
 2. Select an Address to use for the shipping address from the Profile:
 
-    <pre>Address shippingAddress = ProfileManager.getInstance().getCurrentProfile().getAddresses().get(0);</pre>
+    <pre>Address shippingAddress = profileManager.getCurrentProfile().getAddresses().get(0);</pre>
 
 3. Select a ShippingOption to use for delivery from the Merchant:
 
@@ -111,14 +112,34 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
 
     <pre>BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
-   bm.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
-     public void onSuccess(PaymentInvoice invoice) {
-       Cost cost = invoice.getCost();
-     }
-     public void onError(PowaTagException exception) {
-     }
-   });</pre>
+	bm.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
+		public void onSuccess(PaymentInvoice invoice) {
+			Cost cost = invoice.getCost();
+		}
+		public void onError(PowaTagException exception) {
+		}
+	});</pre>
 
+	This can also be done using RxJava:
+	
+<pre>RxBasketsManager bm = RxManagerFactory.getInstance().getBasketsManager();
+bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber<PaymentInvoice>() {
+@Override
+public void onCompleted() {
+		
+}
+
+@Override
+public void onError(Throwable e) {
+
+}
+
+@Override
+public void onNext(PaymentInvoice paymentInvoice) {
+
+}
+});
+</pre>
 <br />
 
 # Paying for a Payment Invoice
