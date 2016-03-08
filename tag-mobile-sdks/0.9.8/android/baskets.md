@@ -94,7 +94,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 # Creating an Invoice for a Basket
 
-Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/) has all required information for the merchant.
+Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/) has all the information required by the merchant.
 
 1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
 
