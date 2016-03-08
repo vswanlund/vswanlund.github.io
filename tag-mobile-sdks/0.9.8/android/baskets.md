@@ -147,12 +147,9 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	
 	
 <br />
-<br />
 
 
 <br />
-
-### Paying for a Payment Invoice
 
 ### Paying for a Payment Invoice
 
