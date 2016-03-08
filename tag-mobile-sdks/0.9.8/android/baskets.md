@@ -33,7 +33,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 	<pre>BasketsManager basketsManager = ManagerFactory.getInstance().getBasketsManager();
 	Baskets baskets = basketsManager.getCurrentBaskets();</pre>
 	
-	If using RxJava then use the RxManagerFactory to obtain the instance:
+	For those using RxJava, the RxManagerFactory is used to obtain the instance:
 	
 	<pre>RxBasketsManager basketsManager = RxManagerFactory.getInstance().getBasketsManager();
 	Baskets baskets = basketsManager.getCurrentBaskets();</pre>	
