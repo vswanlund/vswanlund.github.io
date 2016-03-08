@@ -14,7 +14,7 @@ Helps you build engaging payment and retail apps and get more customers.
 **[Get Started]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/start/)**<br />
 Basic guide for Android
 
-**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/android/sdk)**<br />
+**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/android/sdk){:target="_blank"}**<br />
 Documentation of every method and parameter.
 <br />
 
