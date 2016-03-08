@@ -15,8 +15,9 @@ Helps you build engaging payment and retail apps and get more customers.
 **[Get Started]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/start/)**<br />
 Basic guide for iOS
 
-**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/IOS)**<br />
+**[Reference Docs]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/IOS){:target="_blank"}**<br />
 Documentation of every method and parameter.
+<br />
 
 <br />
 
