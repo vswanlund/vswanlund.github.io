@@ -125,26 +125,26 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	});</pre>
 <br />
 
-This can also be done using RxJava:
+	This can also be done using RxJava:
 	
-<pre>RxBasketsManager bm = RxManagerFactory.getInstance().getBasketsManager();
-bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber<PaymentInvoice>() {
-@Override
-public void onCompleted() {
-		
-}
+	<pre>RxBasketsManager bm = RxManagerFactory.getInstance().getBasketsManager();
+	bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber<PaymentInvoice>() {
+	@Override
+	public void onCompleted() {
+			
+	}
 
-@Override
-public void onError(Throwable e) {
+	@Override
+	public void onError(Throwable e) {
 
-}
+	}
 
-@Override
-public void onNext(PaymentInvoice paymentInvoice) {
-	cost cost = paymentInvoice.getCost();
-}
-});
-</pre>
+	@Override
+	public void onNext(PaymentInvoice paymentInvoice) {
+		cost cost = paymentInvoice.getCost();
+	}
+	});
+	</pre>
 <br />
 
 # Paying for a Payment Invoice
