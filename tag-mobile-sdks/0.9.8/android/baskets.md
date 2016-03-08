@@ -32,7 +32,9 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 	<pre>Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();</pre>
 	
+	If using RxJava then use the RxManagerFactory to obtain the instance:
 	
+	<pre>Baskets baskets = RxManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();</pre>	
 
 2. Get the user's basket for a specific merchant:
 
@@ -121,8 +123,9 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 		public void onError(PowaTagException exception) {
 		}
 	});</pre>
+<br />
 
-	This can also be done using RxJava:
+This can also be done using RxJava:
 	
 <pre>RxBasketsManager bm = RxManagerFactory.getInstance().getBasketsManager();
 bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber<PaymentInvoice>() {
