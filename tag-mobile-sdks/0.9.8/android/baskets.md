@@ -146,7 +146,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	});</pre>
 <br />
 
-
+asdf
 # Paying for a Payment Invoice
 
 Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/) for that invoice.
