@@ -11,7 +11,7 @@ Use the PowaTag Mobile SDKs to build innovative and engaging retail experiences.
 **[PowaTag SDK for Android]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android)**<br />
 Add PowaTag to your Android app.
 
-**[PowaTag SDK for iOS]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/)**<br />
+**[PowaTag SDK for iOS]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/){:target="_blank"}**<br />
 Add PowaTag to your iOS app.
 
 # PowaTag SDK 0.9.7
