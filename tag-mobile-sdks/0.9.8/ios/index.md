@@ -51,6 +51,9 @@ Provide fund-raising tools to charities, causes and events.
 **[Acts]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/acts/)**<br />
 Provide functionality to allow users to perform acts.
 
+**[Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/validators/)**<br />
+Validate user inputs using a validator.
+
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/)**<br />
 Add payments functionality to your app simply and easily.
 
