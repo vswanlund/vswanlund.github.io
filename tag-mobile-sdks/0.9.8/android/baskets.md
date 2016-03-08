@@ -28,9 +28,11 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 # Obtaining the Baskets for a User
 
-1. Get the list of baskets for the current user:
+1. Get the list of baskets for the current user using the `BasketsManager`:
 
 	<pre>Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();</pre>
+	
+	
 
 2. Get the user's basket for a specific merchant:
 
@@ -136,7 +138,7 @@ public void onError(Throwable e) {
 
 @Override
 public void onNext(PaymentInvoice paymentInvoice) {
-
+	cost cost = paymentInvoice.getCost();
 }
 });
 </pre>
