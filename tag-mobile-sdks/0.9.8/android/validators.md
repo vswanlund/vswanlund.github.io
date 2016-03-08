@@ -34,19 +34,19 @@ Property validators are used to:
 
 The following usage example shows how to use the `AddressDetailsValidator`:<br />
 
-<pre>	/1/ addressDetails has been populated with the values obtained from the user
-	AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
-	if(errors != null){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
-			// Display validation to user and obtain updated value
-		}
-	} else {
-		// No issues found while validating the address details
+<pre>// addressDetails has been populated with the values obtained from the user
+AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
+List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
+if(errors != null){
+	for (int s = 0; s < errors.size(); s++) {
+		ValidationFailure validationFailure = errors.get(s);
+		String property = validationFailure.getPropertyName();
+		ValidationError errorCode = validationFailure.getErrorCode();
+		// Display validation to user and obtain updated value
 	}
+} else {
+	// No issues found while validating the address details
+}
 </pre>
 
 <br />
@@ -65,20 +65,20 @@ Property validators are used to:
 
 The following usage example shows how to use the `ProfileDetailsValidator`:<br />
 
-<pre>	// The user's country is obtained and set in userCountry
-	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
-	// Use the profileDetails obtain in an earlier step
-	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
+<pre>// The user's country is obtained and set in userCountry
+ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
+// Use the profileDetails obtain in an earlier step
+List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
 	if(!errors.isEmpty()){
-		for (int s = 0; s < errors.size(); s++) {
-			ValidationFailure validationFailure = errors.get(s);
-			String property = validationFailure.getPropertyName();
-			ValidationError errorCode = validationFailure.getErrorCode();
-			// Display validation to user and obtain an updated value
-		}
-	} else {
-		// No issues found while validating the profile details
+	for (int s = 0; s < errors.size(); s++) {
+		ValidationFailure validationFailure = errors.get(s);
+		String property = validationFailure.getPropertyName();
+		ValidationError errorCode = validationFailure.getErrorCode();
+		// Display validation to user and obtain an updated value
 	}
+} else {
+	// No issues found while validating the profile details
+}
 </pre>		
 		
 <br />
@@ -183,12 +183,12 @@ The following property validators are available:<br />
 
 Here is an example of using one of the validators:<br />
 
-<pre>	MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
-	// Validate the the supplied int number 
-	if(!maxIntValueValidator.isValid(input.getQuantity()){
-		ValidationError error = maxIntValueValidator.getError();
-		// handle error		
-	}
+<pre>MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
+// Validate the the supplied int number 
+if(!maxIntValueValidator.isValid(input.getQuantity()){
+	ValidationError error = maxIntValueValidator.getError();
+	// handle error		
+}
 </pre>
 	
 For more details on each validator please review the reference documentation.
