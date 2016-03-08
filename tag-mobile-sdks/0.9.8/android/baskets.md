@@ -30,11 +30,13 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. Get the list of baskets for the current user using the `BasketsManager`:
 
-	<pre>Baskets baskets = ManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();</pre>
+	<pre>BasketsManager basketsManager = ManagerFactory.getInstance().getBasketsManager();
+	Baskets baskets = basketsManager.getCurrentBaskets();</pre>
 	
 	If using RxJava then use the RxManagerFactory to obtain the instance:
 	
-	<pre>Baskets baskets = RxManagerFactory.getInstance().getBasketsManager().getCurrentBaskets();</pre>	
+	<pre>RxBasketsManager basketsManager = RxManagerFactory.getInstance().getBasketsManager();
+	Baskets baskets = basketsManager.getCurrentBaskets();</pre>	
 
 2. Get the user's basket for a specific merchant:
 
@@ -47,12 +49,11 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 1. Add a product variant to the basket for the merchant:
 
     <pre>ProductVariant variant = workflow.getProduct().getVariants().get(0);
-   BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
-   bm.addVariant(workflow.getMerchant(), variant);</pre>
+	basketsManager.addVariant(workflow.getMerchant(), variant);</pre>
 
 2. Or you can add a specific quantity of the product variant to the basket:
 
-    <pre>bm.addVariant(workflow.getMerchant(), variant, 2);</pre>
+    <pre>basketsManager.addVariant(workflow.getMerchant(), variant, 2);</pre>
 
 <br />
 
@@ -60,11 +61,11 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. You can remove a single quantity of a variant (this will return true if the quantity of the variant was decreased by 1), if the remaining quantity is 0 the item will be removed from the basket:
 
-    <pre>boolean singleQuantityRemoved = bm.removeVariant(merchant, variant);</pre>
+    <pre>boolean singleQuantityRemoved = basketsManager.removeVariant(merchant, variant);</pre>
 
 2. Or you can remove a specific quantity (in this the amount the quantity was decreased by will be returned):
 
-    <pre>int quantityRemoved = bm.removeVariant(merchant, variant, 2);</pre>
+    <pre>int quantityRemoved = basketsManager.removeVariant(merchant, variant, 2);</pre>
 
 <br />
 
@@ -72,11 +73,11 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 1. Set the quantity of a variant (this will override any existing quantity, if you set the quantity to 0 the basket item for that variant will be removed):
 
-    <pre>bm.setVariantQuantity(merchant, variant, 3);</pre>
+    <pre>basketsManager.setVariantQuantity(merchant, variant, 3);</pre>
 
 2. You can use this to remove a variant from a basket entirely, regardless of the current quantity by setting the quantity to 0 (causing the basket item for the variant to be removed from the basket):
 
-    <pre>bm.setVariantQuantity(merchant, variant, 0);</pre>
+    <pre>basketsManager.setVariantQuantity(merchant, variant, 0);</pre>
 
 <br />
 
@@ -109,14 +110,13 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
     <pre>ShippingOption shippingOption = basket.getMerchant().getShippingOptions.get(0);</pre>
 
-4. Create an PaymentInvoiceDetails to provide payment instrument, shipping address and shipping options for crating an invoice:
+4. Create a `PaymentInvoiceDetails` to provide payment instrument, shipping address and shipping options for creating an invoice:
 
 	<pre> PaymentInvoiceDetails paymentInvoiceDetails = new PaymentInvoiceDetails(paymentInstrument, shippingAddress, shippingOption);
 
 5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
 
-    <pre>BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
-	bm.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
+    <pre>basketsManager.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
 		public void onSuccess(PaymentInvoice invoice) {
 			Cost cost = invoice.getCost();
 		}
@@ -131,7 +131,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber<PaymentInvoice>() {
 	@Override
 	public void onCompleted() {
-			
+		
 	}
 
 	@Override
@@ -141,10 +141,9 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 	@Override
 	public void onNext(PaymentInvoice paymentInvoice) {
-		cost cost = paymentInvoice.getCost();
+		Cost cost = paymentInvoice.getCost();
 	}
-	});
-	</pre>
+	});</pre>
 <br />
 
 # Paying for a Payment Invoice
@@ -157,17 +156,37 @@ Once you have created an invoice for a basket you can make a [Payment]({{site.ba
 
 1. To make Basket information available to other devices or between logins you need to update the Basket on the server using the BasketsManager:
 
-    <pre>BasketsManager bm = ManagerFactory.getInstance().getBasketsManager();
-   bm.updateBasket(merchant, new PowaTagCallback&lt;Basket&gt;() {
-    public void onSuccess(Basket basket) {
-      // Basket is now accessible from other devices
-    }
-    public void onError(PowaTagException exception) {
-    }
-   });</pre>
+    <pre>basketsManager.updateBasket(merchant, new PowaTagCallback&lt;Basket&gt;() {
+		public void onSuccess(Basket basket) {
+		// Basket is now accessible from other devices
+		}
+		public void onError(PowaTagException exception) {
+		}
+	});</pre>
 
-   The <code>BasketManager</code> also provides a synchronous <code>updateBasket</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
+	The <code>BasketManager</code> also provides a synchronous <code>updateBasket</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
 
-   <pre>Basket basket = bm.updateBasket(merchant);</pre>
+	<pre>Basket basket = bm.updateBasket(merchant);</pre>
+	
+	
+	This can also be done using RxJava:
+	
+	<pre>basketManager.updateBasket(basket).subscribe(new Subscriber<Basket>() {
+	@Override
+	public void onCompleted() {
+		// Basket is now accessible from other devices
+	}
 
+	@Override
+	public void onError(Throwable e) {
+
+	}
+
+	@Override
+	public void onNext(PaymentInvoice paymentInvoice) {
+	}
+	});</pre>
+<br />
+
+	
 
