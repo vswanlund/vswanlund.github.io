@@ -124,7 +124,6 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 		}
 	});</pre>
 <br />
-
 	This can also be done using RxJava:
 	
 	<pre>RxBasketsManager bm = RxManagerFactory.getInstance().getBasketsManager();
@@ -143,7 +142,8 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	public void onNext(PaymentInvoice paymentInvoice) {
 		Cost cost = paymentInvoice.getCost();
 	}
-	});</pre>
+	});
+	</pre>
 	
 	
 <br />
@@ -151,6 +151,8 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 
 <br />
+
+### Paying for a Payment Invoice
 
 ### Paying for a Payment Invoice
 
