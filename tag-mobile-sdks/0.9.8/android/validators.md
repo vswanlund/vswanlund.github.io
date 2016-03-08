@@ -65,7 +65,7 @@ Property validators are used to:
 
 The following usage example shows how to use the `ProfileDetailsValidator`:<br />
 
-	<pre>// The user's country is obtained and set in userCountry
+<pre>	// The user's country is obtained and set in userCountry
 	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
 	// Use the profileDetails obtain in an earlier step
 	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
@@ -78,7 +78,8 @@ The following usage example shows how to use the `ProfileDetailsValidator`:<br /
 		}
 	} else {
 		// No issues found while validating the profile details
-	}</pre>		
+	}
+</pre>		
 		
 <br />
 		
@@ -96,7 +97,7 @@ Property validators are used to:
 
 The following usage example shows how to use the `PaymentMethodDetailsValidator`:<br />
 
-	<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
+<pre>	PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
 	List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
@@ -107,7 +108,8 @@ The following usage example shows how to use the `PaymentMethodDetailsValidator`
 		}
 	} else {
 		// No issues found while validating the payment details
-	}</pre>
+	}
+</pre>
 	
 	
 <br /> <br />
@@ -146,7 +148,7 @@ The following property validators are available:<br />
 
 Here is an example of using one of the validators:<br />
 
-	<pre>// Set the conditions for the validator
+<pre>	// Set the conditions for the validator
 	TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
 	// Validate the the supplied card number 
 	ValidationFailure error = cardNumberValidator.validate(input.getCardNumber());
@@ -154,7 +156,8 @@ Here is an example of using one of the validators:<br />
 		// handle error
 	} else {
 		// No issues found while validating the card number
-	}</pre>
+	}
+</pre>
 	
 For more details on each validator please review the reference documentation.
 <br /> <br />
@@ -180,12 +183,13 @@ The following property validators are available:<br />
 
 Here is an example of using one of the validators:<br />
 
-	<pre>MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
+<pre>	MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
 	// Validate the the supplied int number 
 	if(!maxIntValueValidator.isValid(input.getQuantity()){
 		ValidationError error = maxIntValueValidator.getError();
 		// handle error		
-	}</pre>
+	}
+</pre>
 	
 For more details on each validator please review the reference documentation.
 <br /> <br />
