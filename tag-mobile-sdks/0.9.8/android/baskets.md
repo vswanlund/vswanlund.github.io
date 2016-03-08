@@ -144,11 +144,13 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 		Cost cost = paymentInvoice.getCost();
 	}
 	});</pre>
+	
+	
 <br />
 <br />
 
 
-
+<br />
 
 ### Paying for a Payment Invoice
 
