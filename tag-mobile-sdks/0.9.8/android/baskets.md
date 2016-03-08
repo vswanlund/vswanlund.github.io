@@ -145,7 +145,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	}
 	});</pre>
 <br />
-
+<br />
 asdf
 # Paying for a Payment Invoice
 
