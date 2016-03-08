@@ -12,7 +12,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Checking if a Basket is a TemporaryBasket or PersistentBasket
+### Checking if a Basket is a TemporaryBasket or PersistentBasket
 
 1. Check the `isTemporary` property of the basket:
 
@@ -26,7 +26,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Obtaining the Baskets for a User
+### Obtaining the Baskets for a User
 
 1. Get the list of baskets for the current user using the `BasketsManager`:
 
@@ -44,7 +44,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br/>
 
-# Adding a Product Variant to a Basket
+### Adding a Product Variant to a Basket
 
 1. Add a product variant to the basket for the merchant:
 
@@ -57,7 +57,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Removing a Product Variant from a Basket
+### Removing a Product Variant from a Basket
 
 1. You can remove a single quantity of a variant (this will return true if the quantity of the variant was decreased by 1), if the remaining quantity is 0 the item will be removed from the basket:
 
@@ -69,7 +69,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Changing the Quantity of a Product Variant
+### Changing the Quantity of a Product Variant
 
 1. Set the quantity of a variant (this will override any existing quantity, if you set the quantity to 0 the basket item for that variant will be removed):
 
@@ -81,7 +81,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Basket Items
+### Basket Items
 
 1. A basket is made up of multiple line items, one for each unique product variant. An item records the quantity of each variant (the quantity will always be >= 1):
 
@@ -92,7 +92,7 @@ A TemporaryBasket can only be retrieved from a TemporaryBasketWorkflow and canno
 
 <br />
 
-# Creating an Invoice for a Basket
+### Creating an Invoice for a Basket
 
 Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/) has all the information required by the merchant.
 
@@ -147,13 +147,16 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 <br />
 <br />
 
-# Paying for a Payment Invoice
+
+
+
+### Paying for a Payment Invoice
 
 Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/) for that invoice.
 
 <br />
 
-# Saving a Basket to the Server
+### Saving a Basket to the Server
 
 1. To make Basket information available to other devices or between logins you need to update the Basket on the server using the BasketsManager:
 
