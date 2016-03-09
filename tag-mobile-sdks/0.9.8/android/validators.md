@@ -34,7 +34,7 @@ Property validators are used to:
 
 The following usage example shows how to use the `AddressDetailsValidator`:<br />
 
-<pre>// addressDetails has been populated with the values obtained from the user
+<pre>// Values obtained from the user have been stored in addressDetails 
 AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
 List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
 if(errors != null){
@@ -150,12 +150,12 @@ Here is an example of using one of the validators:<br />
 
 <pre>// Set the conditions for the validator
 TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
-// Validate the the supplied card number 
-ValidationFailure error = cardNumberValidator.validate(input.getCardNumber());
+// Validate the the supplied string
+ValidationFailure error = textValidator.validate(input.getDescription());
 if(error != null){
 	// handle error
 } else {
-	// No issues found while validating the card number
+	// No issues found while validating the string
 }
 </pre>
 	

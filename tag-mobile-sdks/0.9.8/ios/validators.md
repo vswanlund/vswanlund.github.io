@@ -32,20 +32,21 @@ Property validators are used to:
 
 The following usage example shows how to use the `PTKAddressDetailsValidator`:<br />
 
-## Tiago to provide snippet
-
-<pre>// addressDetails has been populated with the values obtained from the user
-AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.CHINA); //set the country to validate for
-List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(addressDetails);
-if(errors != null){
-    for (int s = 0; s < errors.size(); s++) {
-		ValidationFailure validationFailure = errors.get(s);
-		String property = validationFailure.getPropertyName();
-		ValidationError errorCode = validationFailure.getErrorCode();
-		// Display validation to user and obtain updated value
-	}
-} else {
-	// No issues found while validating the address details
+<pre>// Values obtained from the user have been stored in addressDetails 
+- (void)validateAddressWithDetails:(PTKAddressDetails *)addressDetails
+{
+    PTKAddressDetailsValidator *addressValidator = [[PTKAddressDetailsValidator alloc] init];
+    NSArray *errors = [addressValidator validate:addressDetails];
+    
+    if (errors != nil) {
+        for (PTKValidationFailure *validationFailure in errors) {
+            NSString *propertyName = validationFailure.propertyName;
+            PTKValidationError validationError = validationFailure.errorCode;
+            // Display validation error
+        }
+    } else {
+        // No issues found while validating the address details
+    }
 }
 </pre>
 
@@ -67,23 +68,22 @@ Property validators are used to:
 
 The following usage example shows how to use the `PTKProfileDetailsValidator`:<br />
 
-## Tiago to provide snippet
-
-<pre>// The user's country is obtained and set in userCountry
-ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(userCountry.getAlpha2Code());
-// Use the profileDetails obtain in an earlier step
-List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profileDetails);
-	if(!errors.isEmpty()){
-	for (int s = 0; s < errors.size(); s++) {
-		ValidationFailure validationFailure = errors.get(s);
-		String property = validationFailure.getPropertyName();
-		ValidationError errorCode = validationFailure.getErrorCode();
-		// Display validation to user and obtain an updated value
-	}
-} else {
-	// No issues found while validating the profile details
+<pre>- (void)validateProfileWithDetails:(PTKProfileDetails *)profileDetails
+{
+    PTKProfileDetailsValidator *profileDetailsValidator = [[PTKProfileDetailsValidator alloc] init];
+    NSArray *errors = [profileDetailsValidator validate:profileDetails];
+    
+    if (errors != nil) {
+        for (PTKValidationFailure *validationFailure in errors) {
+            NSString *propertyName = validationFailure.propertyName;
+            PTKValidationError validationError = validationFailure.errorCode;
+            // Display validation error
+        }
+    } else {
+        // No issues found while validating the profile details
+    }
 }
-</pre>		
+</pre>
 		
 <br />
 		
@@ -103,21 +103,24 @@ Property validators are used to:
 
 The following usage example shows how to use the `PTKPaymentMethodDetailsValidator`:<br />
 
-## Tiago to provide snippet
-
-<pre>PaymentMethodDetailsValidator paymentMethodDetailsValidator = new PaymentMethodDetailsValidator();
-List&lt;ValidationFailure&gt; errors = paymentMethodDetailsValidator.validate(paymentMethodDetails);
-if(errors != null){
-	for (int s = 0; s < errors.size(); s++) {
-		ValidationFailure validationFailure = errors.get(s);
-		String property = validationFailure.getPropertyName();
-		ValidationError errorCode = validationFailure.getErrorCode();
-		// Display validation to user and obtain an updated value
-	}
-} else {
-	// No issues found while validating the payment details
+<pre>- (void)validatePaymentMethodWithDetails:(PTKPaymentMethodDetails *)paymentMethodDetails
+{
+    PTKPaymentMethodDetailsValidator *paymentMethodValidator = [[PTKPaymentMethodDetailsValidator alloc] init];
+    NSArray *errors = [paymentMethodValidator validate:paymentMethodDetails];
+    
+    if (errors != nil) {
+        for (PTKValidationFailure *validationFailure in errors) {
+            NSString *propertyName = validationFailure.propertyName;
+            PTKValidationError validationError = validationFailure.errorCode;
+            // Display validation error
+        }
+    } else {
+        // No issues found while validating the payment method details
+    }
 }
 </pre>
+
+
 <br />
 For more details each of these model validators please review the [reference]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/IOS/protocol_p_t_k_model_validator-p.html){:target="_blank"} documentation
 	
@@ -153,16 +156,11 @@ The following property validators are available:<br />
 
 Here is an example of using one of the validators:<br />
 
-## Tiago provide snippet
-
-<pre>// Set the conditions for the validator
-TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
-// Validate the the supplied card number 
-ValidationFailure error = cardNumberValidator.validate(input.getCardNumber());
-if(error != null){
+<pre>PTKAddressLineValidator *requiredAddressLineValidator = [PTKAddressLineValidator addressLineValidatorWithRequired:YES];
+PTKValidationError error = PTKValidationErrorNone;
+error = [requiredAddressLineValidator validateValue:input.state];
+if (stateError != PTKValidationErrorNone) {
 	// handle error
-} else {
-	// No issues found while validating the card number
 }
 </pre>
 	
@@ -190,15 +188,13 @@ The following property validators are available:<br />
 
 Here is an example of using one of the validators:<br />
 
-## Tiago to provide snippet
+<pre>// Validate the the supplied quantity
+</pre>PTKMaxIntValueValidator *maxValueValidator = [PTKMaxIntValueValidator validatorWithMaxValue:1000];
+if (!maxValueValidator isValid:input.quantity) {
+	//handle error
+};</pre>
 
-<pre>MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
-// Validate the the supplied int number 
-if(!maxIntValueValidator.isValid(input.getQuantity()){
-	ValidationError error = maxIntValueValidator.getError();
-	// handle error		
-}
-</pre>
+
 <br /><br />	
 For more details on the validators please review the [reference]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/IOS/interface_p_t_k_validator.html){:target="_blank"} documentation.
 
