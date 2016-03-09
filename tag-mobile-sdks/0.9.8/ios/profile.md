@@ -164,29 +164,29 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 	<strong> TODO: </strong> this is a Swift code sample, need to get an Objective-C from Tiago.
 
-	<pre>
-	if paymentInstrument.activationStatus != .NotRequired {
-		PTKProfileManager.sharedManager().sendActivationCodeForPaymentInstrument(paymentInstrument) { (error) -> Void in
-            if let error = error {
-                // Handle error
+	<pre>if (paymentInstrument.activationStatus != PTKActivationStatusNotRequired) {
+                [[PTKProfileManager sharedManager] sendActivationCodeForPaymentInstrument:paymentInstrument completion:^(NSError * _Nullable error) {
+                    if (error != nil) {
+                        // Handle error
+                    } else {
+                        // Inform user that activation code has been sent
+                    }
+                }];
             }
-        }
-     }
      </pre>
 
 6. Once the user inputs the activation code, activate the payment instrument.
 
-	<strong> TODO: </strong> this is a Swift code sample, need to get an Objective-C from Tiago.
-
-	<pre>
-		PTKProfileManager.sharedManager().activatePaymentInstrument(paymentInstrument, withActivationCode: activationCode) { (paymentInstrument, error) -> Void in
-                
-                if let error = error {
-                    // Handle error
-                }
-            }
+	<pre>[[PTKProfileManager sharedManager] activatePaymentInstrument:paymentInstrument withActivationCode:activationCode completion:^(PTKPaymentInstrument  _Nullable paymentInstrument, NSError  _Nullable error) {
+        if (error != nil) {
+            // Handle error
+        } else {
+            // Activation successful
+        }
+    }];
 	</pre>
-
+	<br />
+	
 7. The new payment method will also be available in the current profile:
 
     <pre>NSArray *paymentInstruments = [PTKProfileManager sharedManager].currentProfile.paymentInstruments;</pre>
