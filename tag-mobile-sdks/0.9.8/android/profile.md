@@ -99,34 +99,25 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 1. Create a new Address object and set the address information:
 
-	<pre>AddressDetails address = new AddressDetails();
-	address.setAlias("Powa");
-	address.setFirstName("Joe");
-	address.setLastName("Bloggs");
-	address.setLine1("110 Bishopsgate");
-	address.setCity("London");
-	address.setPostCode("EC2N 4AY");
-	address.setCounty("London");
+	<pre>AddressDetails addressDetails = new AddressDetails();
+	addressDetails.setAlias("Powa");
+	addressDetails.setFirstName("Joe");
+	addressDetails.setLastName("Bloggs");
+	addressDetails.setLine1("110 Bishopsgate");
+	addressDetails.setCity("London");
+	addressDetails.setPostCode("EC2N 4AY");
+	addressDetails.setCounty("London");
 	Country country = new Country();
 	country.setAlpha2Code("GB");
 	country.setName("United Kingdom");
-	address.setCountry(country);</pre>
+	addressDetails.setCountry(country);</pre>
 
 2. Validate the address details
 
-	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.
-	This validator uses property validators to validate each property of <code>AddressDetails</code>:
+	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.	
 
-	* <code>AliasValidator</code> - to check the alias.
-	* <code>NameValidator</code> - to check the first name, last name and county.
-	* <code>UkPostcodeValidator</code> - to check the post code.
-	* <code>AddressLineValidator</code> - to check all remaining address lines for checking all address lines.
-
-
-	For more information on each of these property validators please see the reference documentation included as part of the SDK.
-
-	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator();
-	List&lt;ValidationFailure&gt; errors = addressDetailsValidator.validate(address);
+	<pre>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.UK); //set the country to validate for
+	List<ValidationFailure> errors = addressDetailsValidator.validate(addressDetails);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
 			ValidationFailure validationFailure = errors.get(s);
@@ -137,7 +128,11 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	} else {
 		// No issues found while validating the address details
 	}</pre>
-
+	
+	
+	For more information on each of these property validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
+	
+	
 3. Add the address to the user profile using the ProfileManager:
 
     <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
@@ -321,28 +316,27 @@ You can only change the billing address of a payment instrument once created.
 
 1. Use the ProfileManager to delete an existing payment instrument:
 
-    <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
-   pm.deletePaymentInstrument(paymentInstrument, new PowaTagCallback&lt;Profile&gt;() {
-     public void onSuccess(Profile updatedProfile) {
-       // Payment instrument was successfully deleted from profile
-     }
-     public void onError(PowaTagException exception) {
-     }
+    <pre>ProfileManager profileManager = ManagerFactory.getInstance().getProfileManager();
+	profileManager.deletePaymentInstrument(paymentInstrument, new PowaTagCallback&lt;Profile&gt;() {
+      public void onSuccess(Profile updatedProfile) {
+        // Payment instrument was successfully deleted from profile
+      }
+      public void onError(PowaTagException exception) {
+      }
    });</pre>
 
     The synchronous version of the <code>deletePaymentInstrument</code> method should <b>not be used in the main thread</b> to avoid performance issues:
 
-    <code> Profile updatedProfile =pm.deletePaymentInstrument(paymentInstrument); </code>
+    <code> Profile updatedProfile =profileManager.deletePaymentInstrument(paymentInstrument); </code>
 
 <br />
 
 # Getting the Payment Instruments Accepted by a Merchant
 
-To obtain the payment instruments from the profile that are accepted by a specified <code>Merchant</code>:
+To obtain the list of payment instruments from the user profile that are accepted by a specified <code>Merchant</code>:
 
-	Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
-	List<PaymentInstrument> acceptedPaymentInstruments = profile.getAcceptedPaymentInstruments(merchant);
-
+    List<PaymentInstrument> acceptedPaymentInstruments = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
+	 
 
 In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> is returned.
 
