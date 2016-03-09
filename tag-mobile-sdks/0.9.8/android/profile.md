@@ -12,9 +12,15 @@ After logging in you can retrieve the current user's profile using <code>Manager
 
 # Retrieving the Current User's Profile Information
 
-1. The current authenticated user's profile, which reflects any successful modifications, can be retrieved using:
+1. The current authenticated user's profile, which reflects any successful modifications, can be retrieved using the `ManagerFactory`:
 
     <pre>Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();</pre>
+	
+	For those using RxJava, the RxManagerFactory is used to obtain the instance:
+	
+	<pre>RxBasketsManager basketsManager = RxManagerFactory.getInstance().getBasketsManager();
+	Baskets baskets = basketsManager.getCurrentBaskets();</pre>	
+
 
 2. Check whether the current profile is temporary using:
 
@@ -59,7 +65,7 @@ After logging in you can retrieve the current user's profile using <code>Manager
 1. The latest profile information for the current user can be retrieved using:
 
     <pre>ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
-   pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
+    pm.getProfile(new PowaTagCallback&lt;Profile&gt;() {
      public void onSuccess(Profile latestProfile) {
        // Profile was successfully retrieved
      }
