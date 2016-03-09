@@ -21,8 +21,53 @@
     url: "/tag-mobile-sdks/0.9.8/android"
     pages:
     
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/0.9.8/android/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/0.9.8/android/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/0.9.8/android/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/0.9.8/android/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/0.9.8/android/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/0.9.8/android/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/0.9.8/android/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/0.9.8/android/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/0.9.8/android/campaigns/"
+
+    - title: "Acts"
+      url: "/tag-mobile-sdks/0.9.8/android/acts/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/0.9.8/android/payments/"
+
     - title: "Validators"
       url: "/tag-mobile-sdks/0.9.8/android/validators/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.8/android/errors/"
+
+    - title: "Reference Documentation"
+      url:  "/tag-mobile-sdks/0.9.8/refdocs/Android/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/0.9.8/android/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/0.9.8/android/changelog/"
 
 - title: "0.9.6 Mobile SDKs"
   url: "/tag-mobile-sdks/"
