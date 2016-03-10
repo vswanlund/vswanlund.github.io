@@ -548,7 +548,13 @@ You can only change the billing address of a payment instrument once created.
 	
 <br/>  
 
-    <p>The synchronous version of the <code>saveProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues</p>
+    The synchronous version of the <code>saveProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues.
+	
+	
+	
+	
+	
+	
 
     <pre>Profile savedProfile = pm.saveProfile(password); </pre>
 	
