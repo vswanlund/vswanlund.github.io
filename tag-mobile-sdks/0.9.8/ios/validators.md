@@ -134,25 +134,81 @@ They adopt the `PTKPropertyValidator` protocol which defines a method called `va
 
 The following property validators are available:<br />
 
-* **PTKTextValidator** - checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
-* **PTKIssueNumberValidator** - checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
-* **PTKAliasValidator** - checks if the alias is less than 256 characters long. 
-* **PTKTitleValidator** - checks if title is not an empty string. 
-* **PTKEmailValidator** - checks if an email address is in the correct format. 
-* **PTKCardHolderNameValidator** - checks if card holder name is less than 256 characters and in the correct format.
-* **PTKAddressLineValidator** - checks if an address line is less than 256 characters. 
-* **PTKCvvValidator** - checks if CVV is correct length for the card issuer and that only digits 0-9 are used.
-* **PTKNameValidator** - checks if the name is less than 256 characters and is in the correct format.
-* **PTKPostcodeValidator** - abstract class that provides logic for country specific post code validators to check if the postcode conforms to a supplied format. 
-* **PTKUkPostcodeValidator** - checks if a UK postcode is valid based on the UK Format
-* **PTKCardDateValidator** - abstract class that provides logic for card date validators. checks if a YearMonth is between a specified minimum and maximum date range. 
-* **PTKValidFromDateValidator** - checks if "Valid From" date is valid.
-* **PTKExpiryDateValidator** - checks if expiry date is valid.
-* **PTKMobileNumberValidator** - checks if a mobile number is valid for a specific country.  
-* **PTKCreditCardNumberValidator** - checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
-* **PTKDecimalValueValidator** - abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
-* **PTKDonationAmountValidator** - checks if donation amount is greater than zero.
-* **PTKIntValueValidator** - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. 
+**PTKTextValidator** 
+
+: checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
+
+**PTKIssueNumberValidator** 
+
+: checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
+
+**PTKAliasValidator** 
+
+: checks if the alias is less than 256 characters long. 
+
+**PTKTitleValidator** 
+
+: checks if title is not an empty string. 
+
+**PTKEmailValidator** 
+
+: checks if an email address is in the correct format. 
+
+**PTKCardHolderNameValidator** 
+
+: checks if card holder name is less than 256 characters and in the correct format.
+
+**PTKAddressLineValidator** 
+
+: checks if an address line is less than 256 characters. 
+
+**PTKCvvValidator** 
+
+: checks if CVV is correct length for the card issuer and that only digits 0-9 are used.
+
+**PTKNameValidator** 
+
+: checks if the name is less than 256 characters and is in the correct format.
+
+**PTKPostcodeValidator** 
+
+: abstract class that provides logic for country specific post code validators to check if the postcode conforms to a supplied format. 
+
+**PTKUkPostcodeValidator** 
+
+: checks if a UK postcode is valid based on the UK Format
+
+**PTKCardDateValidator** 
+
+: abstract class that provides logic for card date validators. checks if a YearMonth is between a specified minimum and maximum date range. 
+
+**PTKValidFromDateValidator** 
+
+: checks if "Valid From" date is valid.
+
+**PTKExpiryDateValidator** 
+
+: checks if expiry date is valid.
+
+**PTKMobileNumberValidator** 
+
+: checks if a mobile number is valid for a specific country.  
+
+**PTKCreditCardNumberValidator** 
+
+: checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
+
+**PTKDecimalValueValidator** 
+
+: abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
+
+**PTKDonationAmountValidator** 
+
+: checks if donation amount is greater than zero.
+
+**PTKIntValueValidator** 
+
+: abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. 
 
 Here is an example of using one of the validators:<br />
 
@@ -174,16 +230,45 @@ They implement the `Validator` interface which defines methods `isValid` and `ge
 
 The following property validators are available:<br />
 
-* **PTKFormatValidator** - checks if a input string matches the specified regular expression. 
-* **PTKMaxLengthValidator** - Checks whether the input string is not longer than the maximum length.
-* **PTKMinDecimalValueValidator** - Checks that the input value is not less than the minimum allowed decimal value. 
-* **PTKMinIntValueValidator** -  Checks that the input value is not less than the minimum allowed int value. 
-* **PTKMinLengthValidator** - Checks whether the input string is not shorter than the minimum length.
-* **PTKLuhnValidator** - Checks a credit card number using the Luhn algorithm.
-* **PTKMaxDecimalValueValidator** - Checks that an input value is not greater than the maximum allowed decimal value.
-* **PTKMaxIntValueValidator** - Checks that an input value is not greater than the maximum allowed int value.
-* **PTKNotEmptyValidator** - checks if the input is an empty string.
-* **PTKNotNullValidator** - checks if input object is not null.
+**PTKFormatValidator** 
+
+: checks if a input string matches the specified regular expression. 
+
+**PTKMaxLengthValidator** 
+
+: Checks whether the input string is not longer than the maximum length.
+
+**PTKMinDecimalValueValidator** 
+
+: Checks that the input value is not less than the minimum allowed decimal value. 
+
+**PTKMinIntValueValidator** 
+
+:  Checks that the input value is not less than the minimum allowed int value. 
+
+**PTKMinLengthValidator** 
+
+: Checks whether the input string is not shorter than the minimum length.
+
+**PTKLuhnValidator** 
+
+: Checks a credit card number using the Luhn algorithm.
+
+**PTKMaxDecimalValueValidator** 
+
+: Checks that an input value is not greater than the maximum allowed decimal value.
+
+**PTKMaxIntValueValidator** 
+
+: Checks that an input value is not greater than the maximum allowed int value.
+
+**PTKNotEmptyValidator** 
+
+: checks if the input is an empty string.
+
+**PTKNotNullValidator** 
+
+: checks if input object is not null.
 
 
 Here is an example of using one of the validators:<br />
