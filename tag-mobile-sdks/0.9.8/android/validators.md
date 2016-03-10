@@ -131,6 +131,7 @@ The following property validators are available:<br />
 : checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
 
 **AliasValidator** 
+
 : checks if the alias is less than 256 characters long. 
 
 **TitleValidator** 
