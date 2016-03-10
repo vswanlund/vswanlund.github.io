@@ -122,7 +122,7 @@ They implement the `PropertyValidator` interface which defines a method called `
 
 The following property validators are available:<br />
 
-* **TextValidator** 
+**TextValidator** 
 
 : checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
 
