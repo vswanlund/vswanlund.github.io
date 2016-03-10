@@ -135,8 +135,6 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	
 	
 	For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
-	
-For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
 		
 3. Add the address to the user profile using the ProfileManager:
 
