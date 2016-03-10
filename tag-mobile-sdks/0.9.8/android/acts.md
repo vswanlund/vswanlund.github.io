@@ -10,7 +10,7 @@ The "Act Now" functionality provides users with a means to respond to a merchant
  - Request an information pack from a charity.
  - Book a viewing of a painting at an art gallery.
 
-When a merchant creates an "Act Now" they specify the information they require from the user which is then stored as a template on the server and link it to an Act [Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflows).
+When a merchant creates an "Act Now" they specify the information they require from the user which is then stored as a template on the server and link it to an Act [workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflows).
 When a user interacts with the PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/triggers) associated with the workflow they need to be prompted to provide the required.
 
 <br/>
