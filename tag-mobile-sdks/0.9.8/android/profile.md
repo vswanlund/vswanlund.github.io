@@ -78,7 +78,7 @@ After logging in you can retrieve the current user's profile using <code>Manager
 	<br />This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.getProfile().subscribe(new Subscriber<Profile>() {
+	profileManager.getProfile().subscribe(new Subscriber&lt;Profile&gt;() {
 		@Override
 		public void onCompleted() {
 		}
