@@ -310,7 +310,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.AddPaymentInstrument(paymentInstrumentDetails).subscribe(new Subscriber<PaymentInstrument>() {
+	profileManager.AddPaymentInstrument(paymentInstrumentDetails).subscribe(new Subscriber&lt;PaymentInstrument&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 }
@@ -375,7 +375,7 @@ You can only change the billing address of a payment instrument once created.
 	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.updatePaymentInstrument(paymentInstrument, billingAddress).subscribe(new Subscriber<PaymentInstrument>() {
+	profileManager.updatePaymentInstrument(paymentInstrument, billingAddress).subscribe(new Subscriber&lt;PaymentInstrument&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 }
@@ -412,7 +412,7 @@ You can only change the billing address of a payment instrument once created.
 	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.deletePaymentInstrument(paymentInstrument).subscribe(new Subscriber<Profile>() {
+	profileManager.deletePaymentInstrument(paymentInstrument).subscribe(new Subscriber&lt;Profile&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 }
@@ -478,7 +478,7 @@ Before transacting with a merchant you should check if the profile contains all 
 		// No issues found while validating the profile details
 	}</pre>
 
-	#######link to validators
+	For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />	
 
 3. Use the ProfileManager to update the current profile:
 
@@ -500,7 +500,7 @@ Before transacting with a merchant you should check if the profile contains all 
 	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.updateProfile(profileDetails).subscribe(new Subscriber<Profile>() {
+	profileManager.updateProfile(profileDetails).subscribe(new Subscriber&lt;Profile&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 }
@@ -548,7 +548,7 @@ Before transacting with a merchant you should check if the profile contains all 
 	
 	<pre>signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 	RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.saveProfile(signUpDetails).subscribe(new Subscriber<Set<Coupon>>() {
+	profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 }
