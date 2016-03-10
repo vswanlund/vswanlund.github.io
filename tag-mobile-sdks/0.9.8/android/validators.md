@@ -133,26 +133,85 @@ The following property validators are available:<br />
 **AliasValidator** 
 : checks if the alias is less than 256 characters long. 
 
-* **TitleValidator** - checks if title is not an empty string. 
-* **EmailValidator** - checks if an email address is in the correct format. 
-* **CardHolderNameValidator** - checks if card holder name is less than 256 characters and in the correct format.
-* **AddressLineValidator** - checks if an address line is less than 256 characters. 
-* **CountyValidator** - checks if county is less than 256 characters. 
-* **CvvValidator** - checks if CVV is correct length for the card issuer and that only digits 0-9 are used.
-* **NameValidator** - checks if the name is less than 256 characters and is in the correct format.
-* **CountryValidator** - checks if country is 2 characters in length. 
-* **PostcodeValidator** - abstract class that provides logic for country specific post code validators to check if the postcode conforms to a supplied format. 
-* **UkPostcodeValidator** - checks if a UK postcode is valid based on the UK Format
-* **ChinaPostcodeValidator** - checks if a UK postcode is valid based on the Chinese Format
-* **CardDateValidator** - abstract class that provides logic for card date validators. checks if a YearMonth is between a specified minimum and maximum date range. 
-* **ValidFromDateValidator** - checks if "Valid From" date is valid.
-* **ExpiryDateValidator** - checks if expiry date is valid.
-* **MobileNumberValidator** - checks if a mobile number is valid for a specific country.  
-* **PasscodeValidator** - checks if the passcode is 6 digits long. 
-* **CardNumberValidator** - checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
-* **DecimalValueValidator** - abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
-* **DonationAmountValidator** - checks if donation amount is greater than zero.
-* **IntValueValidator** - abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. <br />
+**TitleValidator** 
+
+: checks if title is not an empty string. 
+
+**EmailValidator** 
+
+: checks if an email address is in the correct format. 
+
+**CardHolderNameValidator** 
+
+: checks if card holder name is less than 256 characters and in the correct format.
+
+**AddressLineValidator** 
+
+: checks if an address line is less than 256 characters. 
+
+**CountyValidator** 
+
+: checks if county is less than 256 characters. 
+
+**CvvValidator** 
+
+: checks if CVV is correct length for the card issuer and that only digits 0-9 are used.
+
+**NameValidator** 
+
+: checks if the name is less than 256 characters and is in the correct format.
+
+**CountryValidator** 
+
+: checks if country is 2 characters in length. 
+
+**PostcodeValidator** 
+
+: abstract class that provides logic for country specific post code validators to check if the postcode conforms to a supplied format. 
+
+**UkPostcodeValidator** 
+
+: checks if a UK postcode is valid based on the UK Format
+
+**ChinaPostcodeValidator** 
+
+: checks if a UK postcode is valid based on the Chinese Format
+
+**CardDateValidator** 
+
+: abstract class that provides logic for card date validators. checks if a YearMonth is between a specified minimum and maximum date range. 
+
+**ValidFromDateValidator** 
+
+: checks if "Valid From" date is valid.
+
+**ExpiryDateValidator** 
+
+: checks if expiry date is valid.
+
+**MobileNumberValidator** 
+
+: checks if a mobile number is valid for a specific country.  
+
+**PasscodeValidator** 
+
+: checks if the passcode is 6 digits long. 
+
+**CardNumberValidator** 
+
+: checks if the card number is not null, is greater than the minimum and less than the maximum value and in the correct format based on the card issuer. 
+
+**DecimalValueValidator** 
+
+: abstract class providing logic for decimal values.  checks if greater than the minimum and less than the maximum value.
+
+**DonationAmountValidator** 
+
+: checks if donation amount is greater than zero.
+
+**IntValueValidator** 
+
+: abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. <br />
 
 Here is an example of using one of the validators:<br />
 
@@ -177,16 +236,45 @@ They implement the `Validator` interface which defines methods `isValid` and `ge
 
 The following property validators are available:<br />
 
-* **FormatValidator** - checks if a input string matches the specified regular expression. 
-* **MaxLengthValidator** - Checks whether the input string is not longer than the maximum length.
-* **MinDecimalValueValidator** - Checks that the input value is not less than the minimum allowed decimal value. 
-* **MinIntValueValidator** -  Checks that the input value is not less than the minimum allowed int value. 
-* **MinLengthValidator** - Checks whether the input string is not shorter than the minimum length.
-* **LuhnValidator** - Checks a credit card number using the Luhn algorithm.
-* **MaxDecimalValueValidator** - Checks that an input value is not greater than the maximum allowed decimal value.
-* **MaxIntValueValidator** - Checks that an input value is not greater than the maximum allowed int value.
-* **NotEmptyValidator** - checks if the input is an empty string.
-* **NotNullValidator** - checks if input object is not null.
+**FormatValidator** 
+
+: checks if a input string matches the specified regular expression. 
+
+**MaxLengthValidator** 
+
+: Checks whether the input string is not longer than the maximum length.
+
+**MinDecimalValueValidator** 
+
+: Checks that the input value is not less than the minimum allowed decimal value. 
+
+**MinIntValueValidator** 
+
+:  Checks that the input value is not less than the minimum allowed int value. 
+
+**MinLengthValidator** 
+
+: Checks whether the input string is not shorter than the minimum length.
+
+**LuhnValidator** 
+
+: Checks a credit card number using the Luhn algorithm.
+
+**MaxDecimalValueValidator** 
+
+: Checks that an input value is not greater than the maximum allowed decimal value.
+
+**MaxIntValueValidator** 
+
+: Checks that an input value is not greater than the maximum allowed int value.
+
+**NotEmptyValidator** 
+
+: checks if the input is an empty string.
+
+**NotNullValidator** 
+
+: checks if input object is not null.
 
 
 Here is an example of using one of the validators:<br />
