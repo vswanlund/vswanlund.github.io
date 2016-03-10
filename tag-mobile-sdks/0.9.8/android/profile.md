@@ -129,9 +129,8 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 		}
 	} else {
 		// No issues found while validating the address details
-	}</code></pre>
-	<br />
-	
+    }</code></pre>
+		
 	
 For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
 	
@@ -150,26 +149,25 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 
     The synchronous version of the <code>addAddress</code> method should <b>not be used in the main thread</b> to avoid performance issues
 
-    Address addedAddress = pm.addAddress(addressDetails);
+    <code>Address addedAddress = pm.addAddress(addressDetails);</code>
 	
 	<br />
 	This can also be done using RxJava:
 	
-	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.addAddresss(addressDetails).subscribe(new Subscriber&lt;Address&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 } 
+    <pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
+    profileManager.addAddresss(addressDetails).subscribe(new Subscriber&lt;Address&gt;()) {
+		@Override
+		public void onCompleted() {
+		} 
  
- 	 @Override
-	 public void onError(Throwable e) {
-	 }
+		@Override
+		public void onError(Throwable e) {
+		}
 
-	 @Override
-	 public void onNext(Address addedAddress) {
-	 }
-	});
-	</pre>
+		@Override
+		public void onNext(Address addedAddress) {
+		}
+	});</pre>
 
  4. The new address will also be available in the current profile:
 
