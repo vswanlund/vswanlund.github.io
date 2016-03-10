@@ -122,7 +122,10 @@ They implement the `PropertyValidator` interface which defines a method called `
 
 The following property validators are available:<br />
 
-* **TextValidator** - checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
+* **TextValidator** 
+
+: checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
+
 * **IssueNumberValidator** - checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
 * **AliasValidator** - checks if the alias is less than 256 characters long. 
 * **TitleValidator** - checks if title is not an empty string. 
@@ -151,7 +154,7 @@ Here is an example of using one of the validators:<br />
 <pre>// Set the conditions for the validator
 TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
 // Validate the the supplied string
-ValidationFailure error = textValidator.validate(input.getDescription());
+ValidationError error = textValidator.validate(input.getDescription());
 if(error != null){
 	// handle error
 } else {
