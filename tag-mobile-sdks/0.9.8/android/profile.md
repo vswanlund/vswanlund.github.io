@@ -550,17 +550,14 @@ You can only change the billing address of a payment instrument once created.
 
 The synchronous version of the <code>saveProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues.
     
-~~~
-Profile savedProfile = pm.saveProfile(password);2
-~~~
-
+<code>Profile savedProfile = pm.saveProfile(password);</code>
 
 	
 <br/>  
 
 <p>This can also be done using RxJava:</p>
 
-~~~
+~~~<code>
 signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
@@ -577,4 +574,4 @@ profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Cou
 		// display coupons to user.
 	}
 });
-~~~
+<\code>~~~
