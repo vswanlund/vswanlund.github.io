@@ -209,11 +209,11 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	 @Override
 	 public void onCompleted() {
 	 }
-  
+		
 	 @Override
 	 public void onError(Throwable e) {
 	 }
- 
+		
  	 @Override 
 	 public void onNext(Address updatedAddress) {
 	 }
