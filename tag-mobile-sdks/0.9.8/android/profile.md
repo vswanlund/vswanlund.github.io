@@ -441,7 +441,7 @@ You can only change the billing address of a payment instrument once created.
 <br />  
 
     
-	In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> is returned.
+<p>    In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> is returned.</p>
 
 <br/>
 
