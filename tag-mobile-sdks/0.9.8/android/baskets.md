@@ -127,7 +127,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 	This can also be done using RxJava:
 	
 	<pre>RxBasketsManager bm = RxManagerFactory.getInstance().getBasketsManager();
-	bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber<PaymentInvoice>() {
+	bm.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber&lt;PaymentInvoice&gt;() {
 	@Override
 	public void onCompleted() {
 		
@@ -172,18 +172,17 @@ Once you have created an invoice for a basket you can make a [Payment]({{site.ba
 	
 	This can also be done using RxJava:
 	
-	<pre>basketManager.updateBasket(basket).subscribe(new Subscriber<Basket>() {
+	<pre>basketManager.updateBasket(basket).subscribe(new Subscriber&lt;Basket&gt;() {
 	@Override
 	public void onCompleted() {
-		// Basket is now accessible from other devices
 	}
 
 	@Override
 	public void onError(Throwable e) {
-
 	}
 
 	@Override
-	public void onNext(PaymentInvoice paymentInvoice) {
+	public void onNext(Basket basket) {
+		// Basket is now accessible from other devices
 	}
 	});</pre>
