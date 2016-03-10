@@ -10,7 +10,7 @@ After logging in you can retrieve the current user's profile using <code>Manager
 
 <br />
 
-# Retrieving the Current User's Profile Information
+### Retrieving the Current User's Profile Information
 
 1. The current authenticated user's profile, which reflects any successful modifications, can be retrieved using the `ManagerFactory`:
 
@@ -58,7 +58,7 @@ After logging in you can retrieve the current user's profile using <code>Manager
 
 <br />
 
-# Retrieving the Latest Profile for the Current User
+### Retrieving the Latest Profile for the Current User
 
 1. The latest profile information for the current user can be retrieved using:
 
@@ -95,7 +95,7 @@ After logging in you can retrieve the current user's profile using <code>Manager
 	
 <br/>
 
-# Adding an Address
+### Adding an Address
 
 For more information on using and displaying addresses see [Addresses]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/addresses/).
 
@@ -175,7 +175,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 
 <br />
 
-# Updating an Address
+### Updating an Address
 
 1. Create an AddressDetails object from an existing Address and modify the address information:
 
@@ -220,7 +220,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	});
 	</pre>
 
-# Deleting an Address
+### Deleting an Address
 
 1. Use the ProfileManager to delete an existing address:
 
@@ -256,7 +256,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	</pre>
 
 
-# Adding a Payment Instrument
+### Adding a Payment Instrument
 
 1. Create a new PaymentMethodDetails object and set the card information:
 
@@ -355,7 +355,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 
 <br />
 
-# Updating a Payment Instrument
+### Updating a Payment Instrument
 
 You can only change the billing address of a payment instrument once created.
 
@@ -394,7 +394,7 @@ You can only change the billing address of a payment instrument once created.
 
 <br />
 
-# Deleting a Payment Instrument
+### Deleting a Payment Instrument
 
 1. Use the ProfileManager to delete an existing payment instrument:
 
@@ -415,42 +415,45 @@ You can only change the billing address of a payment instrument once created.
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 	profileManager.deletePaymentInstrument(paymentInstrument).subscribe(new Subscriber&lt;Profile&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 }
-  
-	 @Override
-	 public void onError(Throwable e) {
-	 }
- 
- 	 @Override 
-	 public void onNext(Profile updatedProfile) {
-	 }
+		@Override
+		public void onCompleted() {
+		}
+
+		@Override
+		public void onError(Throwable e) {
+		}
+
+		@Override 
+		public void onNext(Profile updatedProfile) {
+		}
 	});
 	</pre>
 
 <br />
 
-# Getting the Payment Instruments Accepted by a Merchant
 
-To obtain the list of payment instruments from the user profile that are accepted by a specified <code>Merchant</code>:
+### Getting the Payment Instruments Accepted by a Merchant
+
+	To obtain the list of payment instruments from the user profile that are accepted by a specified <code>Merchant</code>:
 
     <code>List<PaymentInstrument> acceptedPaymentInstruments = ManagerFactory.getInstance().getProfileManager().getCurrentProfile().getAcceptedPaymentInstruments(merchant);</code>
+	<br />
 
 	In the case where the profile does not contain any accepted payment instruments an empty <code>List</code> is returned.
 
 <br/>
 
-# Checking the Profile Against a Merchant's Requirements
 
-Before transacting with a merchant you should check if the profile contains all the information required for the merchant.
+### Checking the Profile Against a Merchant's Requirements
+
+	Before transacting with a merchant you should check if the profile contains all the information required for the merchant.
 
    <pre>boolean canTransact = profile.hasRequiredInfo(merchant);</pre>
 
 <br/>
 
 
-# Updating the Profile
+### Updating the Profile
 
 1. Create a new ProfileDetails object and set the profile information:
 
@@ -503,17 +506,17 @@ Before transacting with a merchant you should check if the profile contains all 
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 	profileManager.updateProfile(profileDetails).subscribe(new Subscriber&lt;Profile&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 }
-  
-	 @Override
-	 public void onError(Throwable e) {
-	 }
- 
- 	 @Override 
-	 public void onNext(Profile updatedProfile) {
-	 }
+		@Override
+		public void onCompleted() {
+		}
+
+		@Override
+		public void onError(Throwable e) {
+		}
+
+		@Override 
+		public void onNext(Profile updatedProfile) {
+		}
 	});
 	</pre>
 
@@ -525,7 +528,7 @@ Before transacting with a merchant you should check if the profile contains all 
 
 <br/>
 
-# Saving the Profile
+### Saving the Profile
 
 1. Use the ProfileManager to save the current profile:
 
@@ -540,29 +543,33 @@ Before transacting with a merchant you should check if the profile contains all 
 		public void onError(PowaTagException exception) {
 		}
 	}</pre>
- <br/>
+	
+ <br/>  
+
 
 	The synchronous version of the <code>saveProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues
 
 	<code>Profile savedProfile = pm.saveProfile(password); </code>
 <br/>
+
+
     This can also be done using RxJava:
 	
 	<pre>signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 	RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 	profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 }
-  
-	 @Override
-	 public void onError(Throwable e) {
-	 }
- 
- 	 @Override 
-	 public void onNext(Set<Coupon> registrationCoupons) {
-	    // display coupons to user.
-	 }
+		@Override
+		public void onCompleted() {
+		}
+
+		@Override
+		public void onError(Throwable e) {
+		}
+
+		@Override 
+		public void onNext(Set<Coupon> registrationCoupons) {
+		// display coupons to user.
+		}
 	});
 	</pre>
 
