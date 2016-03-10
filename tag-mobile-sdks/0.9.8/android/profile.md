@@ -118,7 +118,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     
 	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.	
 
-	<pre><code>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.UK); //set the country to validate for
+    <pre><code>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.UK); //set the country to validate for
 	List<ValidationFailure> errors = addressDetailsValidator.validate(addressDetails);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
@@ -130,11 +130,12 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	} else {
 		// No issues found while validating the address details
 	}</code></pre>
-
-	<br />
 	<br />
 	
+	
 	For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
+	
+	
 		
 3. Add the address to the user profile using the ProfileManager:
 
