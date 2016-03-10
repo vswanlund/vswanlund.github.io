@@ -539,7 +539,7 @@ You can only change the billing address of a payment instrument once created.
 	<pre>signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 	ProfileManager pm = ManagerFactory.getInstance().getProfileManager();
 	pm.saveProfile(signUpDetails, new PowaTagCallback&lt;Profile&gt;() {
-		public void onSuccess(@Nullable Set<Coupon> coupons) {
+		public void onSuccess(@Nullable Set<Coupon> registrationCoupons) {
 		// Profile is now permanent. Display returned coupons to user
 		}
 		public void onError(PowaTagException exception) {
@@ -550,7 +550,7 @@ You can only change the billing address of a payment instrument once created.
 
 The synchronous version of the <code>saveProfile</code> method should <b>not be used in the main thread</b> to avoid performance issues.
     
-<code>Profile savedProfile = pm.saveProfile(password);</code>
+<code>Set&lt;Coupon&gt; registrationCoupons = pm.saveProfile(signUpDetails);</code>
 
 	
 <br/>  
@@ -558,7 +558,7 @@ The synchronous version of the <code>saveProfile</code> method should <b>not be 
 <p>This can also be done using RxJava:</p>
 
 <pre>
-signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
+SignUpDetails signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
 	@Override
@@ -575,3 +575,5 @@ profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Cou
 	}
 });
 <\pre>
+
+Please review the [Coupons]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/coupons/) page for more details.
