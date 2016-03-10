@@ -214,7 +214,7 @@ The following property validators are available:<br />
 
 : abstract class providing logic for int values. checks if greater than the minimum and less than the maximum value. <br />
 
-Here is an example of using one of the validators:<br />
+Here is a usage example for one of the property validators:<br />
 
 <pre>// Set the conditions for the validator
 TextValidator textValidator = new TextValidator(isRequired, minLength, maxLegnth, format);
@@ -227,7 +227,7 @@ if(error != null){
 }
 </pre>
 	
-For more details on each validator please review the reference documentation.
+For more details on the property validators please review the [reference]({{site.baseurl}}/tag-mobile-sdks/0.9.8/refdocs/android/sdk/interfacecom_1_1powatag_1_1android_1_1sdk_1_1validators_1_1_property_validator.html){:target="_blank"} documentation.
 <br /> <br />
 
 ##  Validators
@@ -235,7 +235,7 @@ These are low level validators which are used to check aspects of a data type (e
 
 They implement the `Validator` interface which defines methods `isValid` and `getError`.
 
-The following property validators are available:<br />
+The following validators are available:<br />
 
 **FormatValidator** 
 
@@ -278,7 +278,7 @@ The following property validators are available:<br />
 : checks if input object is not null.
 
 
-Here is an example of using one of the validators:<br />
+Here is an usage example for one of the validators:<br />
 
 <pre>MaxIntValueValidator maxIntValueValidator = new MaxIntValueValidator(1000);
 // Validate the the supplied int number 
