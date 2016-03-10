@@ -126,8 +126,13 @@ The following property validators are available:<br />
 
 : checks if string is greater than the minimum and less than the maximum lengths, and if it matches a specified format.<br />
 
-* **IssueNumberValidator** - checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
-* **AliasValidator** - checks if the alias is less than 256 characters long. 
+**IssueNumberValidator**
+
+: checks if the card issue number is 4 digits long and that only digits 0-9 are used. 
+
+**AliasValidator** 
+: checks if the alias is less than 256 characters long. 
+
 * **TitleValidator** - checks if title is not an empty string. 
 * **EmailValidator** - checks if an email address is in the correct format. 
 * **CardHolderNameValidator** - checks if card holder name is less than 256 characters and in the correct format.
