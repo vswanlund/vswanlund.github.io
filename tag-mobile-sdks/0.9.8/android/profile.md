@@ -206,17 +206,17 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 	profileManager.updateAddress(address,modifiedAddressDetails).subscribe(new Subscriber&lt;Address&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 }
-		
-	 @Override
-	 public void onError(Throwable e) {
-	 }
-	 
- 	 @Override 
-	 public void onNext(Address updatedAddress) {
-	 }
+		@Override
+		public void onCompleted() {
+		}
+
+		@Override
+		public void onError(Throwable e) {
+		}
+
+		@Override 
+		public void onNext(Address updatedAddress) {
+		}
 	});
 	</pre>
 
