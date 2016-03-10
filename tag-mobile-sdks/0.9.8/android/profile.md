@@ -313,17 +313,17 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 	profileManager.AddPaymentInstrument(paymentInstrumentDetails).subscribe(new Subscriber&lt;PaymentInstrument&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 }
-  
-	 @Override
-	 public void onError(Throwable e) {
-	 }
- 
- 	 @Override 
-	 public void onNext(PaymentInstrument paymentInstrument) {
-	 }
+		@Override
+		public void onCompleted() {
+		}
+		
+		@Override
+		public void onError(Throwable e) {
+		}
+	 
+		@Override 
+		public void onNext(PaymentInstrument paymentInstrument) {
+		}
 	});
 	</pre>
 		
