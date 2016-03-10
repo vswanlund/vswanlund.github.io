@@ -133,7 +133,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	<br />
 	
 	
-	For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
+For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
 	
 	
 		
