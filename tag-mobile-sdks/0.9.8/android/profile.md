@@ -557,7 +557,7 @@ The synchronous version of the <code>saveProfile</code> method should <b>not be 
 
 <p>This can also be done using RxJava:</p>
 
-<pre>
+~~~<pre>
 SignUpDetails signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
@@ -573,7 +573,9 @@ profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Cou
 	public void onNext(Set<Coupon> registrationCoupons) {
 		// display coupons to user.
 	}
-});</pre>
+});
+</pre>
+~~~
 <br />
 
 Please review the [Coupons]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/coupons/) page for more details.
