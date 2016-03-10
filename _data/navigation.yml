@@ -57,6 +57,9 @@
     - title: "Validators"
       url: "/tag-mobile-sdks/0.9.8/android/validators/"
 
+    - title: "RxJava"
+      url: "/tag-mobile-sdks/0.9.8/android/rxjava/"
+
     - title: "Error Handling"
       url: "/tag-mobile-sdks/0.9.8/android/errors/"
 
@@ -68,6 +71,58 @@
 
     - title: "Changelog"
       url: "/tag-mobile-sdks/0.9.8/android/changelog/"
+
+  - title: "iOS SDK 0.9.8"
+    url: "/tag-mobile-sdks/0.9.8/android"
+    pages:
+    
+    - title: "Getting Started"
+      url: "/tag-mobile-sdks/0.9.8/ios/start/"
+
+    - title: "Login"
+      url: "/tag-mobile-sdks/0.9.8/ios/login/"
+
+    - title: "Profile"
+      url: "/tag-mobile-sdks/0.9.8/ios/profile/"
+
+    - title: "Addresses"
+      url: "/tag-mobile-sdks/0.9.8/android/addresses/"
+
+    - title: "Triggers"
+      url: "/tag-mobile-sdks/0.9.8/ios/triggers/"
+
+    - title: "Workflows"
+      url: "/tag-mobile-sdks/0.9.8/ios/workflows/"
+
+    - title: "Products"
+      url: "/tag-mobile-sdks/0.9.8/ios/products/"
+
+    - title: "Baskets"
+      url: "/tag-mobile-sdks/0.9.8/ios/baskets/"
+
+    - title: "Campaigns"
+      url: "/tag-mobile-sdks/0.9.8/ios/campaigns/"
+
+    - title: "Acts"
+      url: "/tag-mobile-sdks/0.9.8/ios/acts/"
+
+    - title: "Payments"
+      url: "/tag-mobile-sdks/0.9.8/ios/payments/"
+
+    - title: "Validators"
+      url: "/tag-mobile-sdks/0.9.8/ios/validators/"
+
+    - title: "Error Handling"
+      url: "/tag-mobile-sdks/0.9.8/ios/errors/"
+
+    - title: "Reference Documentation"
+      url:  "/tag-mobile-sdks/0.9.8/refdocs/ios/"
+
+    - title: "FAQ & Troubleshooting"
+      url: "/tag-mobile-sdks/0.9.8/ios/faq/"
+
+    - title: "Changelog"
+      url: "/tag-mobile-sdks/0.9.8/ios/changelog/"
 
 - title: "0.9.7 Mobile SDKs"
   url: "/tag-mobile-sdks/"
