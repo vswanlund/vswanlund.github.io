@@ -557,25 +557,19 @@ The synchronous version of the <code>saveProfile</code> method should <b>not be 
 
 This can also be done using RxJava:  
 
-	SignUpDetails signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
-	RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
-		@Override
-		public void onCompleted() {
-		}
-		
-		@Override
-		public void onError(Throwable e) {
-		}
-		
-		@Override 
-		public void onNext(Set<Coupon> registrationCoupons) {
-			// display coupons to user.
-		}
-    });
+<pre>SignUpDetails signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
+RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
+profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Coupon&gt;&gt;() {
+	@Override
+	public void onCompleted() {
+	}
 	
-<br/>
-
-^
-
-link to ref
+	@Override
+	public void onError(Throwable e) {
+	}
+	
+	@Override 
+	public void onNext(Set<Coupon> registrationCoupons) {
+		// display coupons to user.
+	}
+}); </pre>
