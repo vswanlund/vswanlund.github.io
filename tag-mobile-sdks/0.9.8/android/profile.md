@@ -213,7 +213,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	 @Override
 	 public void onError(Throwable e) {
 	 }
-		2
+	 
  	 @Override 
 	 public void onNext(Address updatedAddress) {
 	 }
