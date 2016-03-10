@@ -130,6 +130,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	} else {
 		// No issues found while validating the address details
 	}</pre>
+	<br />
 	
 	For more information on validators please see the [Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/) page. <br />
 		
