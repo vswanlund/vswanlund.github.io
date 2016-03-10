@@ -555,7 +555,7 @@ The synchronous version of the <code>saveProfile</code> method should <b>not be 
 	
 <br/>  
 
-<p>This can also be done using RxJava:</p>
+	This can also be done using RxJava:
 
     <pre>SignUpDetails signUpDetails = new SignUpDetails(passwordEditText.getText().toString());
 	RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
