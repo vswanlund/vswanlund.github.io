@@ -446,9 +446,9 @@ You can only change the billing address of a payment instrument once created.
 
 ### Checking the Profile Against a Merchant's Requirements  
 
-> Before transacting with a merchant you should check if the profile contains all the information required for the merchant.
+    <p>Before transacting with a merchant you should check if the profile contains all the information required for the merchant.</p>
 
-   <pre>boolean canTransact = profile.hasRequiredInfo(merchant);</pre>
+    <pre>boolean canTransact = profile.hasRequiredInfo(merchant);</pre>
 
 <br/>
 
