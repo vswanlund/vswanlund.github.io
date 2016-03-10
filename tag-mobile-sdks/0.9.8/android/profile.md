@@ -436,7 +436,7 @@ You can only change the billing address of a payment instrument once created.
 
 1. To obtain the list of payment instruments from the user profile that are accepted by a specified <code>Merchant</code>: 
 
-    <code>List<PaymentInstrument> acceptedPaymentInstruments = ManagerFactory.getInstance().getProfileManager().getCurrentProfile().getAcceptedPaymentInstruments(merchant);</code>
+    <pre>List<PaymentInstrument> acceptedPaymentInstruments = ManagerFactory.getInstance().getProfileManager().getCurrentProfile().getAcceptedPaymentInstruments(merchant);</pre>
 	
 <br />  
 
