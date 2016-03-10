@@ -148,10 +148,11 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
     Address addedAddress = pm.addAddress(addressDetails);
 	
-		<br />This can also be done using RxJava:
+	<br />
+	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.addAddresss(addressDetails).subscribe(new Subscriber<Address>() {
+	profileManager.addAddresss(addressDetails).subscribe(new Subscriber&lt;Address&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 } 
@@ -202,7 +203,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.updateAddress(address,modifiedAddressDetails).subscribe(new Subscriber<Address>() {
+	profileManager.updateAddress(address,modifiedAddressDetails).subscribe(new Subscriber&lt;Address&gt;() {
 	 @Override
 	 public void onCompleted() {
 	 }
@@ -237,7 +238,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
    	This can also be done using RxJava:
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-	profileManager.deleteAddress(address).subscribe(new Subscriber<Profile>() {
+	profileManager.deleteAddress(address).subscribe(new Subscriber&lt;Profile&gt;() {
 	@Override
 	public void onCompleted() {
 	}
