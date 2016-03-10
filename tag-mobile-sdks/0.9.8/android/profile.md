@@ -574,4 +574,3 @@ profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Cou
 		// display coupons to user.
 	}
 });</pre>
-
