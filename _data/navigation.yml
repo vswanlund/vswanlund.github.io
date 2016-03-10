@@ -73,7 +73,7 @@
       url: "/tag-mobile-sdks/0.9.8/android/changelog/"
 
   - title: "iOS SDK 0.9.8"
-    url: "/tag-mobile-sdks/0.9.8/android"
+    url: "/tag-mobile-sdks/0.9.8/ios"
     pages:
     
     - title: "Getting Started"
