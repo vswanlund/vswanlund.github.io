@@ -91,9 +91,9 @@ When a user interacts with the PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdk
 	// submit the transaction and keep the transaction ID stored in actTransaction
 	ActTransaction actTransaction = actManager.submitTransaction(act, actTransactionDetails,new PowaTagCallback&lt;ActTransaction&gt;());  </pre>  
 
-<br/>
+<br/>  
 
-	This can also be done using RxJava:
+This can also be done using RxJava:
 	
 <pre>RxActManager actManager = RxManagerFactory.getInstance().getActManager();
 actManager.submitTransaction(act,actTransactionDetails).subscribe(new Subscriber&lt;ActTransaction&gt;() {
