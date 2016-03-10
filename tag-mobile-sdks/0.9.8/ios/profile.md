@@ -163,14 +163,14 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 5. If the payment instrument needs to be activated, send an activation code to the user.
 
 	<pre>if (paymentInstrument.activationStatus != PTKActivationStatusNotRequired) {
-                [[PTKProfileManager sharedManager] sendActivationCodeForPaymentInstrument:paymentInstrument completion:^(NSError * _Nullable error) {
-                    if (error != nil) {
-                        // Handle error
-                    } else {
-                        // Inform user that activation code has been sent
-                    }
-                }];
+        [[PTKProfileManager sharedManager] sendActivationCodeForPaymentInstrument:paymentInstrument completion:^(NSError * _Nullable error) {
+            if (error != nil) {
+                // Handle error
+            } else {
+                // Inform user that activation code has been sent
             }
+        }];
+    }
      </pre>
 
 6. Once the user inputs the activation code, activate the payment instrument.
