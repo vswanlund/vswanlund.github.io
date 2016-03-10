@@ -95,21 +95,21 @@ When a user interacts with the PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdk
 
 	This can also be done using RxJava:
 	
-	<pre>RxActManager actManager = RxManagerFactory.getInstance().getActManager();
-	actManager.submitTransaction(act,actTransactionDetails).subscribe(new Subscriber&lt;ActTransaction&gt;() {
-		@Override
-		public void onCompleted() {
-		}
+<pre>RxActManager actManager = RxManagerFactory.getInstance().getActManager();
+actManager.submitTransaction(act,actTransactionDetails).subscribe(new Subscriber&lt;ActTransaction&gt;() {
+	@Override
+	public void onCompleted() {
+	}
 
-		@Override
-		public void onError(Throwable e) {
-		}
+	@Override
+	public void onError(Throwable e) {
+	}
 
-		@Override 
-		public void onNext(ActTransaction actTransaction) {
-		}
-	});
-	</pre>
+	@Override 
+	public void onNext(ActTransaction actTransaction) {
+	}
+});
+</pre>
 
 <br/>
 
