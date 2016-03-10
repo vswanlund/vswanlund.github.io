@@ -577,4 +577,11 @@ profileManager.saveProfile(signUpDetails).subscribe(new Subscriber&lt;Set&lt;Cou
 
 <br/>
 
-  Please review the [Coupons]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/coupons/) page for more details.
+
+
+
+
+
+
+
+<p>Please review the [Coupons]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/coupons/) page for more details.</p>
