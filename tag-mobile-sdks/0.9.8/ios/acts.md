@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Acts on iOS
+title: Act Now on iOS
 permalink: /tag-mobile-sdks/0.9.8/ios/acts/
 ---
 
-The "Act Now" functionality provides users with a means to respond to a merchant's act campaign.
+The "Act Now" functionality provides users with a means to respond to a merchant's "call to action".
 <p>Some examples of Acts:</p>
  - Book a test drive at a car dealership.
  - Request an information pack from a charity.
  - Book a viewing of a painting at an art gallery.
 
-When a merchant creates an Act campaign they specify the information they require from the user which is then stored as a template on the server.
-When a user interacts with the PowaTag trigger for the act campaign they need to be prompted to provide this information which is then sent to the merchant.
+When a merchant creates an "Act Now" they specify the information they require from the user which is then stored as a template on the server and link it to an Act [Workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows).
+When a user interacts with the PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/triggers) associated with the workflow they need to be prompted to provide the required.
 
 <br/>
 
