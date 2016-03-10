@@ -162,8 +162,6 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 
 5. If the payment instrument needs to be activated, send an activation code to the user.
 
-	<strong> TODO: </strong> this is a Swift code sample, need to get an Objective-C from Tiago.
-
 	<pre>if (paymentInstrument.activationStatus != PTKActivationStatusNotRequired) {
                 [[PTKProfileManager sharedManager] sendActivationCodeForPaymentInstrument:paymentInstrument completion:^(NSError * _Nullable error) {
                     if (error != nil) {
