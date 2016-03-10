@@ -155,7 +155,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	This can also be done using RxJava:
 	
     <pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-    profileManager.addAddresss(addressDetails).subscribe(new Subscriber&lt;Address&gt;()) {
+    profileManager.addAddresss(addressDetails).subscribe(new Subscriber&lt;Address&gt;() {
 		@Override
 		public void onCompleted() {
 		} 
@@ -213,7 +213,7 @@ For more information on validators please see the [Validators]({{site.baseurl}}/
 	 @Override
 	 public void onError(Throwable e) {
 	 }
-		
+		2
  	 @Override 
 	 public void onNext(Address updatedAddress) {
 	 }
