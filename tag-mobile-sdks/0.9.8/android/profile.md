@@ -118,7 +118,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
     
 	Use <code>AddressDetailsValidator</code> to verify that all address details have been entered correctly.	
 
-	<code>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.UK); //set the country to validate for
+	<pre><code>AddressDetailsValidator addressDetailsValidator = new AddressDetailsValidator(CountryAwareAddressDetailContext.UK); //set the country to validate for
 	List<ValidationFailure> errors = addressDetailsValidator.validate(addressDetails);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
@@ -129,7 +129,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 		}
 	} else {
 		// No issues found while validating the address details
-	}</code>
+	}</code></pre>
 
 	<br />
 	<br />
