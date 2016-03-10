@@ -378,17 +378,17 @@ You can only change the billing address of a payment instrument once created.
 	
 	<pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
 	profileManager.updatePaymentInstrument(paymentInstrument, billingAddress).subscribe(new Subscriber&lt;PaymentInstrument&gt;() {
-	 @Override
-	 public void onCompleted() {
-	 }
-  
-	 @Override
-	 public void onError(Throwable e) {
-	 }
- 
- 	 @Override 
-	 public void onNext(PaymentInstrument updatedPaymentInstrument) {
-	 }
+		@Override
+		public void onCompleted() {
+		}
+
+		@Override
+		public void onError(Throwable e) {
+		}
+
+		@Override 
+		public void onNext(PaymentInstrument updatedPaymentInstrument) {
+		}
 	});
 	</pre>
 
