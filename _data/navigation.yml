@@ -45,10 +45,10 @@
     - title: "Baskets"
       url: "/tag-mobile-sdks/0.9.8/android/baskets/"
 
-    - title: "Campaigns"
-      url: "/tag-mobile-sdks/0.9.8/android/campaigns/"
+    - title: "Appeals"
+      url: "/tag-mobile-sdks/0.9.8/android/appeals/"
 
-    - title: "Acts"
+    - title: "Act Now"
       url: "/tag-mobile-sdks/0.9.8/android/acts/"
 
     - title: "Payments"
@@ -100,10 +100,10 @@
     - title: "Baskets"
       url: "/tag-mobile-sdks/0.9.8/ios/baskets/"
 
-    - title: "Campaigns"
-      url: "/tag-mobile-sdks/0.9.8/ios/campaigns/"
+    - title: "Appeals"
+      url: "/tag-mobile-sdks/0.9.8/ios/appeals/"
 
-    - title: "Acts"
+    - title: "Act Now"
       url: "/tag-mobile-sdks/0.9.8/ios/acts/"
 
     - title: "Payments"

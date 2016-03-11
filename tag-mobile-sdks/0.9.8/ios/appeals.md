@@ -1,16 +1,17 @@
 ---
 layout: page
-title: Campaigns on iOS
-permalink: /tag-mobile-sdks/0.9.8/ios/campaigns/
+title: Appeals on iOS
+permalink: /tag-mobile-sdks/0.9.8/ios/appeals/
 ---
 
-A Campaign is a particular charity or even a specific cause or event that the user can donate to. Donations can be made on a single-time or on a recurring monthly basis. If the merchant (charity) and consumer are both eligible for a tax-reclaim scheme, such as Gift Aid in the UK, this can be offered through the app.
+An Appeal is a particular charity or even a specific cause or event that the user can donate to. Donations can be made on a once-off or recurring monthly basis. If the merchant (charity) and consumer are both eligible for a tax-reclaim scheme, such as Gift Aid in the UK, this can be offered through the app.
 
-To make a donation for a campaign create an invoice for the donation using `PTKCampaignManager`, then make a  [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/) for that invoice.
+To make a donation the user will interact with a PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/triggers/) which is associated with the appeal and using the SDK you will obtain the  [workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/workflows/). 
+Then create a donation invoice using the `CampaignManager`, then make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/) for the invoice.
 
 <br />
 
-# Creating an Invoice for a Campaign
+# Creating an Invoice for a Appeal
 
 Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/profile/) has all required information for the merchant.
 
@@ -36,7 +37,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 # Paying for a Donation Invoice
 
-Once you have created an invoice for a campaign donation you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/) for that invoice.
+Once you have created an invoice for an appeal you can [Pay]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/payments/) the invoice.
 
 # Gift Aid
 
