@@ -50,8 +50,6 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
 	Use <code>PTKAddressDetailsValidator</code> to verify that all address details have been entered correctly.
 	This validator uses property validators to validate each property of <code>PTKAddressDetails</code>:
 
-	For more information on each of these property validators please see the reference documentation included as part of the SDK.
-
 	<pre>PTKAddressDetailsValidator *addressDetailsValidator = [PTKAddressDetailsValidator new];
 	NSError *errors = [addressDetailsValidator validate:addressDetails];
 	if (errors) {
@@ -170,6 +168,7 @@ For more information on using and displaying addresses see [Addresses]({{site.ba
                 // Inform user that activation code has been sent
             }
         }];
+    }
     }
      </pre>
 

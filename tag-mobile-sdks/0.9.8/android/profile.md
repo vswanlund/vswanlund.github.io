@@ -472,7 +472,8 @@ You can only change the billing address of a payment instrument once created.
 
 	Use <code>ProfileDetailsValidator</code> to verify that all profile details have been entered correctly.
 
-	<pre>ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator();
+	<pre>// Set the country to validate ProfileDetails against
+	ProfileDetailsValidator profileDetailsValidator = new ProfileDetailsValidator(input.getCountry().getAlpha2code());
 	List&lt;ValidationFailure&gt; errors = profileDetailsValidator.validate(profile);
 	if(errors != null){
 		for (int s = 0; s < errors.size(); s++) {
