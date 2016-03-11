@@ -40,21 +40,22 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 This can also be done using RxJava:  <br />
 	
-    RxCampaignManager campaignManager = RxManagerFactory.getInstance().getCampaignManager();
-    campaignManager.createInvoice(campaign, donationInvoiceDetails).subscribe(new Subscriber&lt;DonationInvoice&gt;() {
-		@Override
-		public void onCompleted() {
-		} 
- 
-		@Override
-		public void onError(Throwable e) {
-		}
+<pre>RxCampaignManager campaignManager = RxManagerFactory.getInstance().getCampaignManager();
+campaignManager.createInvoice(campaign, donationInvoiceDetails).subscribe(new Subscriber&lt;DonationInvoice&gt;() {
+	@Override
+	public void onCompleted() {
+	} 
 
-		@Override
-		public void onNext(DonationInvoice createdInvoice) {
-		}
-    });   
+	@Override
+	public void onError(Throwable e) {
+	}
 
+	@Override
+	public void onNext(DonationInvoice createdInvoice) {
+	}
+});  </pre>
+
+	
 <br/>
 
 # Paying for a Donation Invoice
