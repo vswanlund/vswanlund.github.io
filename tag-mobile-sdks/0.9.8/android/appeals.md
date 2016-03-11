@@ -40,7 +40,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 This can also be done using RxJava:  <br />
 	
-    <pre>RxCampaignManager campaignManager = RxManagerFactory.getInstance().getCampaignManager();
+    RxCampaignManager campaignManager = RxManagerFactory.getInstance().getCampaignManager();
     campaignManager.createInvoice(campaign, donationInvoiceDetails).subscribe(new Subscriber&lt;DonationInvoice&gt;() {
 		@Override
 		public void onCompleted() {
@@ -53,7 +53,7 @@ This can also be done using RxJava:  <br />
 		@Override
 		public void onNext(DonationInvoice createdInvoice) {
 		}
-    });  </pre>  
+    });   
 
 <br/>
 
