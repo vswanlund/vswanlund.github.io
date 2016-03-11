@@ -4,10 +4,11 @@ title: Payments on Android
 permalink: /tag-mobile-sdks/0.9.8/android/payments/
 ---
 
-PowaTag supports payments for a variety of different goods and services. In order to make a payment, you first need to create an invoice for one of the supported goods or service types:
+PowaTag supports payments for a variety of different goods and services. In order to make a payment, you first need to create an invoice which can be one of the following types:
 
-* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) - PaymentInvoice
-* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/campaigns/) - DonationInvoice
+* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) - Create a `PaymentInvoice`
+* [Appeals]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/appeal/) - Create a `DonationInvoice`
+* [POS Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/pospayments/) - Create a `PosInvoice`
 
 <br />
 
@@ -19,8 +20,8 @@ PowaTag supports payments for a variety of different goods and services. In orde
 
 2. Use the PaymentManager to pay for the invoice:
 
-    <pre>PaymentManager pm = ManagerFactory.getInstance().getPaymentManager();
-	pm.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
+    <pre>PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
+	paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
 		public void onSuccess(Payment payment) {
 		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
 		}
