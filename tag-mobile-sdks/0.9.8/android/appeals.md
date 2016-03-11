@@ -4,7 +4,7 @@ title: Appeals on Android
 permalink: /tag-mobile-sdks/0.9.8/android/appeals/
 ---
 
-An Appeal is a particular charity or even a specific cause or event that the user can donate to. Donations can be made on a once-off or recurring monthly basis. If the merchant (charity) and consumer are both eligible for a tax-reclaim scheme, such as Gift Aid in the UK, this can be offered through the app.
+An Appeal is a particular charity, cause or event that the user can donate to. Donations can be made on a once-off or recurring monthly basis. If the merchant (charity) and consumer are both eligible for a tax-reclaim scheme, such as Gift Aid in the UK, this can be offered through the app.
 
 To make a donation the user will interact with a PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/triggers/) which is associated with the appeal and using the SDK you will obtain the  [workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflows/). 
 Then create a donation invoice using the `CampaignManager`, then make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/) for the invoice.
@@ -38,7 +38,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 
 <br />
 
-	This can also be done using RxJava:
+	This can also be done using RxJava:  <br />
 	
     <pre>RxCampaignManager campaignManager = RxManagerFactory.getInstance().getCampaignManager();
     campaignManager.createInvoice(campaign, donationInvoiceDetails).subscribe(new Subscriber&lt;DonationInvoice&gt;() {
@@ -53,7 +53,7 @@ Before creating an invoice you need to ensure the users [Profile]({{site.baseurl
 		@Override
 		public void onNext(DonationInvoice createdInvoice) {
 		}
-	});</pre>
+    });  </pre>  
 
 <br/>
 
