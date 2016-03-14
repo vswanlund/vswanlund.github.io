@@ -11,7 +11,7 @@ PowaTag supports payments for a variety of goods and services. In order to make 
 * [POS Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/posbaskets/) - Create a `PosInvoice`
 
 <br />
-Making a payment for a Basket or a Donation is handled using the same set of step wheras paying for a POS basket requires a few additional steps.
+The steps for making a Basket or Donation payment can be found below. POS basket payments are documented [here]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments#pos-basket-payments)
 
 ## Basket and Donation Payments
 
@@ -62,7 +62,7 @@ Making a payment for a Basket or a Donation is handled using the same set of ste
 	<pre>Payment payment = pm.pay(invoice, encryptedCvv);</pre>
 
 
-## POS Payments
+## POS Basket Payments
 
 ----------17 Feb------------------
 Pay at Pos 6:33
