@@ -43,6 +43,9 @@ Show product information and let users pick product options.
 **[Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/)**<br />
 People using your application can add products to their basket, checkout or save for later.
 
+**[POS Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/posbaskets/)**<br />
+People using your application can pay for a basket of goods at a POS terminal.
+
 **[Appeals]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/appeals/)**<br />
 Provide fund-raising tools to charities, causes and events.
 
@@ -51,9 +54,6 @@ Provide functionality to allow users to perform acts.
 
 **[Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/)**<br />
 Add payments functionality to your app simply and easily
-
-**[POS Payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/pospayments/)**<br />
-Add the ability to process payments at a Point Of Service
 
 **[Validators]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/validators/)**<br />
 Validate user inputs using a validator.

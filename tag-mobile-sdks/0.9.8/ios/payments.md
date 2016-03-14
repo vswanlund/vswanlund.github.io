@@ -4,7 +4,7 @@ title: Payments on iOS
 permalink: /tag-mobile-sdks/0.9.8/ios/payments/
 ---
 
-PowaTag supports payments for a variety of different goods and services. In order to make a payment, you first need to create an invoice which can be one of the following types:
+PowaTag supports payments for a variety of goods and services. In order to make a payment, you first need to create an invoice which can be one of the following types:
 
 * [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/baskets/) - Create a `PTKPaymentInvoice`
 * [Appeals]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/appeal/) - Create a `PTKDonationInvoice`
