@@ -45,6 +45,9 @@
     - title: "Baskets"
       url: "/tag-mobile-sdks/0.9.8/android/baskets/"
 
+    - title: "POS Baskets"
+      url: "/tag-mobile-sdks/0.9.8/android/posbaskets/"
+
     - title: "Appeals"
       url: "/tag-mobile-sdks/0.9.8/android/appeals/"
 
@@ -99,6 +102,9 @@
 
     - title: "Baskets"
       url: "/tag-mobile-sdks/0.9.8/ios/baskets/"
+
+    - title: "POS Baskets"
+      url: "/tag-mobile-sdks/0.9.8/ios/posbaskets/"
 
     - title: "Appeals"
       url: "/tag-mobile-sdks/0.9.8/ios/appeals/"
