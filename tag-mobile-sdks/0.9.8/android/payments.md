@@ -65,16 +65,7 @@ The steps for making a Basket or Donation payment can be found below. POS basket
 ## POS Basket Payments
 
 ----------17 Feb------------------
-Pay at Pos 6:33
-    scan tag, obtain workflow of type posbasket
-	triggered coupons
-	pos basket includes list of available coupons that match the pos basket
-	SDK retrieves possible coupon combinations
-	couponmamanger.getpossiblediscounts()  (services return the possible combinations)
-	CouponPicker is provided to app developer (this component automatically refreshes display based on couponstate objects )
-	POSManager.createInvoice (posinvoicedetails, )           -posinvoicedetails contains (20:00)
-	POSINvoice object is returned (including terminal id,)
-	if authorizationrequires = true then PaymentMethod.authorise(posinvoice) (24:00 - 28:30)   (two authorise methods, one for posinvoice and one for posinvoice + cvv)
+    if authorizationrequires = true then PaymentMethod.authorise(posinvoice) (24:00 - 28:30)   (two authorise methods, one for posinvoice and one for posinvoice + cvv)
 	encrypting CVV(30:50)
 	payment operation returns payment (including transaction ID for tracing transaction)
 
