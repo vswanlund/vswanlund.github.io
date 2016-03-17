@@ -17,7 +17,8 @@ The steps for making a payment can be found below.
 
 Depending on thresholds set by the merchant, an invoice may require authorization from the end user before payment can be made. The user provides authorization by entering their passcode.  <br />
 
-<pre>PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
+````
+PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
 if (invoice.isAuthorizationRequired()){
 	// prompt user for their passcode
 	paymentManager().authorize(invoice, passcodeEditText.getText().toString(), new PowaTagCallback<Void>() {
@@ -30,8 +31,7 @@ if (invoice.isAuthorizationRequired()){
 		}
 	});
 }
-</pre>  
-	
+````	
 <br />
 	
 
@@ -157,7 +157,7 @@ This can also be done using RxJava:
 
 <br/>
 
-### Paying for an Invoice Using an Encrypted CVV
+## Paying for an Invoice Using an Encrypted CVV
 
 1. Create EncryptedCVV with the CVV:
 
@@ -199,8 +199,7 @@ This can also be done using RxJava:
 		}
 	});</pre>
 
-DMliteelectronicdrumkitbyalesis
-### Paying for an Invoice Without Using a CVV
+## Paying for an Invoice Using an Encrypted CVV
 
 1. Use the PaymentManager to pay for the invoice:
 
