@@ -48,11 +48,17 @@
     - title: "POS Baskets"
       url: "/tag-mobile-sdks/0.9.8/android/posbaskets/"
 
+    - title: "Category"
+      url: "/tag-mobile-sdks/0.9.8/android/category/"
+
     - title: "Appeals"
       url: "/tag-mobile-sdks/0.9.8/android/appeals/"
 
     - title: "Act Now"
       url: "/tag-mobile-sdks/0.9.8/android/acts/"
+
+    - title: "Coupons"
+      url: "/tag-mobile-sdks/0.9.8/android/coupons/"
 
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.8/android/payments/"
@@ -106,11 +112,17 @@
     - title: "POS Baskets"
       url: "/tag-mobile-sdks/0.9.8/ios/posbaskets/"
 
+    - title: "Category"
+      url: "/tag-mobile-sdks/0.9.8/ios/category/"
+
     - title: "Appeals"
       url: "/tag-mobile-sdks/0.9.8/ios/appeals/"
 
     - title: "Act Now"
       url: "/tag-mobile-sdks/0.9.8/ios/acts/"
+
+    - title: "Coupons"
+      url: "/tag-mobile-sdks/0.9.8/ios/coupons/"
 
     - title: "Payments"
       url: "/tag-mobile-sdks/0.9.8/ios/payments/"

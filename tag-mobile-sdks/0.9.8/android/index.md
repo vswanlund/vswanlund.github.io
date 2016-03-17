@@ -46,6 +46,9 @@ People using your application can add products to their basket, checkout or save
 **[POS Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/posbaskets/)**<br />
 People using your application can pay for a basket of goods at a POS terminal.
 
+**[Category]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/category/)**<br />
+People using your application can obtain an entire catalog of products to review, select and checkout.
+
 **[Appeals]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/appeals/)**<br />
 Provide fund-raising tools to charities, causes and events.
 
