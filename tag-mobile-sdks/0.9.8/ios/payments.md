@@ -28,7 +28,7 @@ Depending on thresholds set by the merchant, an invoice may require authorizatio
 ## Paying for an Invoice
 
 The invoice has been authorized and payment can now be made using either the CVV, encrypted CVV or no CVV.  
-Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is required.
+Use the `paymentInstrument.isCvvRequired` method to determine if the CVV is required.
 
 
 ### Paying for an Invoice using CVV
@@ -51,8 +51,8 @@ Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is re
 
 1. Create EncryptedCVV with the CVV:
 
-	<pre>PaymentInstrument paymentInstrument = PTKProfileManagerFactory.getInstance().getProfileManager().getCurrentProfile()getDefaultPaymentInstrument();
-	EncryptedCVV encryptedCvv = EncryptedCvvStorage.getInstance().getCvv(paymentInstrument);</pre>
+	<pre>PTKPaymentInstrument *paymentInstrument = [PTKProfileManager profileManager].currentProfile.defaultPaymentInstrument;
+	PTKEncryptedCvv *encryptedCvv = PTKEncryptedCvvStorage.cvvForPaymentInstrument(paymentInstrument);</pre>
 	
 2. Use the PaymentManager to pay for the invoice:
 
