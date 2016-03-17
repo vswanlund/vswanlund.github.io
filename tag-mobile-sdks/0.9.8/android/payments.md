@@ -13,7 +13,7 @@ PowaTag provides the mechanism to pay for the user's selected goods and services
 <br />
 The steps for making a payment can be found below. 
 
-## Authorize the invoice
+## Authorizing the invoice
 
 Depending on thresholds set by the merchant, an invoice may require authorization from the end user before payment can be made. The user provides authorization by entering their passcode.  <br />
 
@@ -30,16 +30,8 @@ Depending on thresholds set by the merchant, an invoice may require authorizatio
 			}
 		});
 	}
-
-
-
-  
+ 
 <br />
-
-<br />
-	
-
-
 
 The synchronous version of the <code>authorize</code> method should <b>not be used in the main thread</b> to avoid performance issues
 
@@ -62,8 +54,15 @@ This can also be done using RxJava:
 	}
 });</pre>   
 
+<br/>
 
-## Paying for an Invoice using CVV
+
+## Paying for an Invoice
+
+The invoice has been authorized and payment can now be made using either the CVV, encrypted CVV or no CVV.  
+Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is required.
+
+### Paying using using the CVV
 
 1. Create PaymentDetails with the CVV:
 
@@ -72,83 +71,28 @@ This can also be done using RxJava:
 3. Use the PaymentManager to pay for the invoice:
 
 	<pre>PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
-	if (invoice.isAuthorizationRequired()){
-		// obtain passcode from user
-		paymentManager().authorize(invoice, passcodeEditText.getText().toString(), new PowaTagCallback<Void>() {
-			@Override
-			public void onSuccess(@Nullable Void aVoid) {
-				paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
-					public void onSuccess(Payment payment) {
-					
-					}
-					public void onError(PowaTagException exception) {
-					}
-				}
-
-			@Override
-			public void onError(@NonNull PowaTagException e) {
-
-			}
-	});
-	}</pre>
+	paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
+		public void onSuccess(Payment payment) {
+			// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
+		}
+		public void onError(PowaTagException exception) {
+		}
+	});</pre>
 <br />	
 
-    
-	The synchronous version of the <code>addAddress</code> method should <b>not be used in the main thread</b> to avoid performance issues
+	The synchronous version of the <code>pay</code> method should <b>not be used in the main thread</b> to avoid performance issues
 
-    <code>paymentManager.authorize(invoice,) addedAddress = pm.addAddress(addressDetails);</code>
+    <code>Payment payment = paymentManager.pay(invoice, paymentDetails);</code>
 	
 	<br />
 	This can also be done using RxJava:
 	
     <pre>RxProfileManager profileManager = RxManagerFactory.getInstance().getProfileManager();
-    profileManager.addAddresss(addressDetails).subscribe(new Subscriber&lt;Address&gt;() {
+    profileManager.pay(invoice, paymentDetails).subscribe(new Subscriber&lt;Payment&gt;() {
 		@Override
 		public void onCompleted() {
 		} 
- 
-		@Override
-		public void onError(Throwable e) {
-		}
-
-		@Override
-		public void onNext(Address addedAddress) {
-		}
-	});</pre>   
-
-
-   <pre>paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
-		public void onSuccess(Payment payment) {
-		
-		}
-		public void onError(PowaTagException exception) {
-		}
-	});</pre>
-	
-	
-					paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
-					public void onSuccess(Payment payment) {
-					
-					}
-					public void onError(PowaTagException exception) {
-					}
-				}
-
-
-	The <code>PaymentManager</code> also provides a synchronous <code>pay</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
-
-	<pre>Payment payment = pm.pay(invoice, paymentDetails);</pre>
-	
-	
-	This can also be done using RxJava:
-	
-    <pre>RxPaymentManager paymentManager = RxManagerFactory.getInstance().getPaymentManager();
-    paymentManager.pay(invoice,paymentDetails).subscribe(new Subscriber&lt;Payment&gt;() {
-		@Override
-		public void onCompleted() {
-		} 
- 
-		@Override
+ 		@Override
 		public void onError(Throwable e) {
 		}
 
@@ -156,17 +100,15 @@ This can also be done using RxJava:
 		public void onNext(Payment payment) {
 			// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
 		}
-	});</pre>
-
+	});</pre>   
 
 <br/>
 
-## Paying for an Invoice Using an Encrypted CVV
+### Paying for an Invoice Using Encrypted CVV
 
 1. Create EncryptedCVV with the CVV:
 
-	<pre>Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
-	PaymentInstrument paymentInstrument = profile.getDefaultPaymentInstrument();
+	<pre>PaymentInstrument paymentInstrument = ManagerFactory.getInstance().getProfileManager().getCurrentProfile()getDefaultPaymentInstrument();
 	EncryptedCVV encryptedCvv = EncryptedCvvStorage.getInstance().getCvv(paymentInstrument);
 
 2. Use the PaymentManager to pay for the invoice:
@@ -192,8 +134,7 @@ This can also be done using RxJava:
 		@Override
 		public void onCompleted() {
 		} 
- 
-		@Override
+ 		@Override
 		public void onError(Throwable e) {
 		}
 
@@ -203,7 +144,7 @@ This can also be done using RxJava:
 		}
 	});</pre>
 
-## Paying for an Invoice Using an Encrypted CVV
+### Paying for an Invoice Without CVV
 
 1. Use the PaymentManager to pay for the invoice:
 
@@ -231,8 +172,7 @@ This can also be done using RxJava:
 		@Override
 		public void onCompleted() {
 		} 
- 
-		@Override
+ 		@Override
 		public void onError(Throwable e) {
 		}
 
@@ -243,58 +183,3 @@ This can also be done using RxJava:
 	});</pre>	
 
 	
-## POS Basket Payments
-
-----------17 Feb------------------
-    if authorizationrequires = true then PaymentMethod.authorise(posinvoice) (24:00 - 28:30)   (two authorise methods, one for posinvoice and one for posinvoice + cvv)
-	encrypting CVV(30:50)
-	payment operation returns payment (including transaction ID for tracing transaction)
-
-
-### Paying for an Invoice using CVV
-
-1. Create PaymentDetails with the CVV:
-
-	<pre>PaymentDetails paymentDetails = new PaymentDetails("123");
-
-2. Use the PaymentManager to pay for the invoice:
-
-    <pre>PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
-	paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
-		public void onSuccess(Payment payment) {
-		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
-		}
-		public void onError(PowaTagException exception) {
-		}
-	});</pre>
-
-	The <code>PaymentManager</code> also provides a synchronous <code>pay</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
-
-	<pre>Payment payment = pm.pay(invoice, paymentDetails);</pre>
-
-<br/>
-
-### Paying for an Invoice Using an Encrypted CVV
-
-1. Create EncryptedCVV with the CVV:
-
-	<pre>Profile profile = ManagerFactory.getInstance().getProfileManager().getCurrentProfile();
-	PaymentInstrument paymentInstrument = profile.getDefaultPaymentInstrument();
-	EncryptedCVV encryptedCvv = EncryptedCvvStorage.getInstance().getCvv(paymentInstrument);
-
-2. Use the PaymentManager to pay for the invoice:
-
-	<pre>PaymentManager pm = ManagerFactory.getInstance().getPaymentManager();
-	pm.pay(invoice, encryptedCvv, new PowaTagCallback&lt;Payment&gt;() {
-		public void onSuccess(Payment payment) {
-		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
-		}
-		public void onError(PowaTagException exception) {
-		}
-	});</pre>
-
-	The <code>PaymentManager</code> also provides a synchronous <code>pay</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
-
-	<pre>Payment payment = pm.pay(invoice, encryptedCvv);</pre>
-
-
