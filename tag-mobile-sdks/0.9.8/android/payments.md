@@ -31,6 +31,8 @@ if (invoice.isAuthorizationRequired()){
 		}
 	});
 }</pre>  
+<br />
+
 
 The synchronous version of the <code>authorize</code> method should <b>not be used in the main thread</b> to avoid performance issues
 
