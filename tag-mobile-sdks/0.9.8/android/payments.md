@@ -15,8 +15,7 @@ The steps for making a payment can be found below.
 
 ## Authorize the invoice
 
-Depending on thresholds set by the merchant, an invoice may require authorization from the end user before payment can be made. The user provides authorization by entering their passcode.  
-
+Depending on thresholds set by the merchant, an invoice may require authorization from the end user before payment can be made. The user provides authorization by entering their passcode.  <br />
 
 <pre>PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
 if (invoice.isAuthorizationRequired()){
@@ -32,11 +31,9 @@ if (invoice.isAuthorizationRequired()){
 	});
 }
 </pre>  
-
+	
 <br />
-
-
-
+	
 
 
 
@@ -60,6 +57,7 @@ This can also be done using RxJava:
 	public void onNext(Address addedAddress) {
 	}
 });</pre>   
+
 
 ## Paying for an Invoice using CVV
 
