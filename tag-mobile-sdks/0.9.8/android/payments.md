@@ -17,21 +17,25 @@ The steps for making a payment can be found below.
 
 Depending on thresholds set by the merchant, an invoice may require authorization from the end user before payment can be made. The user provides authorization by entering their passcode.  <br />
 
-````
-PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
-if (invoice.isAuthorizationRequired()){
-	// prompt user for their passcode
-	paymentManager().authorize(invoice, passcodeEditText.getText().toString(), new PowaTagCallback<Void>() {
-		@Override
-		public void onSuccess(@Nullable Void aVoid) {
-		}
-			
-		@Override
-		public void onError(@NonNull PowaTagException e) {
-		}
-	});
-}
-````	
+	PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
+	if (invoice.isAuthorizationRequired()){
+		// prompt user for their passcode
+		paymentManager().authorize(invoice, passcodeEditText.getText().toString(), new PowaTagCallback<Void>() {
+			@Override
+			public void onSuccess(@Nullable Void aVoid) {
+			}
+				
+			@Override
+			public void onError(@NonNull PowaTagException e) {
+			}
+		});
+	}
+
+
+
+  
+<br />
+
 <br />
 	
 
