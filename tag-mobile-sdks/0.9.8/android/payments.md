@@ -172,7 +172,7 @@ Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is re
 		@Override
 		public void onCompleted() {
 		} 
- 		@Override
+		@Override
 		public void onError(Throwable e) {
 		}
 
