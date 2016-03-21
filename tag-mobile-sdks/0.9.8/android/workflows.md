@@ -19,13 +19,13 @@ The workflow information will contain the data necessary to integrate with the a
 The currently supported workflow types are:
 
 **[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/products/)**<br />
-Single product, that can be purchased immediately or added to a basket for later.
+Retrieve a single product, that can be purchased immediately or added to a basket for later.
 
 **[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/)**<br />
 TemporaryBasket containing a fixed set of items that can be purchased.
 
 **[Appeal]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/appeal/)**<br />
-Charity donation campaign, one time or recurring.
+A one-time or recurring donation.
 
 **[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/acts/)**<br />
 Custom user information required to act on a merchant's call to action.
