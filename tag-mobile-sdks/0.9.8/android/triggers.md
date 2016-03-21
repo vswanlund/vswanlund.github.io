@@ -10,60 +10,12 @@ Once a Tag has been detected your application must [retrieve the Workflow]({{sit
 
 A number of triggers are currently supported:
 
-* Audio
 * QR
+* NFC
+* Audio
 * Touch To Buy (Mobile Web or App2App)
 
 <br />
-
-
-# Audio Tags
-
-1. Audio tag detection requires the use of the audio recording permission. Add the following entry to your manifest:
-
-    <pre>&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;</pre>
-
-2. Create an AudioTagDetector and set an AudioTagDetectorListener to be notified of any events:
-
-    <pre>@Override
-   protected void onCreate(final Bundle savedInstanceState) {
-     super.onCreate(savedInstanceState);
-     audioTagDetector = new AudioTagDetector(this);
-     audioTagDetector.setAudioTagDetectorListener(new AudioTagDetectorListener() {
-       @Override
-       public void onAudioTagDetected(final AudioTagDetector audioTagDetector,final Tag audioTag) {
-         showAlertDialog("PowaTag Audio Tag Detected", audioTag.getReference());
-       }
-       @Override
-       public void onVolumeChanged(final AudioTagDetector audioTagDetector, final float volume) {
-         // Volume from 0.0f to 1.0f
-         showAlertDialog("Current Volume", Float.toString(volume));
-       }
-       @Override
-       public void onDetectorStopped(final AudioTagDetector audioTagDetector, final PowaTagException exception) {
-         if (exception != null) {
-           // Detector stopped due to an error.
-           showAlertDialog("Exception!", exception.getMessage());
-         }
-       }
-     });
-   }</pre>
-
-3. Call startDetection and stopDetection when required:
-
-    <pre>public void onStartButtonClick() {
-     audioTagDetector.startDetection();
-   }
-
-   public void onStopButtonClick() {
-     audioTagDetector.stopDetection();
-   }</pre>
-
-4. To check if the audio tag detector is actively listening for tags use:
-
-	<code>audioTagDetector.isDetecting();</code>
-
-<br/>
 
 
 # QR Tags
@@ -133,6 +85,76 @@ A number of triggers are currently supported:
 
 	<code>audioTagDetector.isDetecting()</code>
 <br />
+
+
+
+# NFC Tags
+
+1. NFC tag detection requires use of the NFC system hardware. Add the following entry to your manifest to grant the application the necessary permissions and features:
+
+    <pre>&lt;uses-permission android:name="android.permission.NFC" /&gt;
+   &lt;uses-feature android:name="android.hardware.nfc" /&gt;</pre>
+
+2. Add the BarcodeTagDetectorView to your layout XML:
+
+    <pre>protected void onNewIntent(final Intent intent) {
+		Set<String> schemes = new HashSet<>();
+        schemes.add("http");
+        NfcTagDetector nfcTagDetector = new NfcTagDetector(schemes);
+        Tag ntag = nfcTagDetector.detectNfcTag(intent);
+        if (ntag != null) {
+            // obtain workflow for ntag;
+        } 
+	}</pre>
+
+
+# Audio Tags
+
+1. Audio tag detection requires the use of the audio recording permission. Add the following entry to your manifest:
+
+    <pre>&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;</pre>
+
+2. Create an AudioTagDetector and set an AudioTagDetectorListener to be notified of any events:
+
+    <pre>@Override
+   protected void onCreate(final Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     audioTagDetector = new AudioTagDetector(this);
+     audioTagDetector.setAudioTagDetectorListener(new AudioTagDetectorListener() {
+       @Override
+       public void onAudioTagDetected(final AudioTagDetector audioTagDetector,final Tag audioTag) {
+         showAlertDialog("PowaTag Audio Tag Detected", audioTag.getReference());
+       }
+       @Override
+       public void onVolumeChanged(final AudioTagDetector audioTagDetector, final float volume) {
+         // Volume from 0.0f to 1.0f
+         showAlertDialog("Current Volume", Float.toString(volume));
+       }
+       @Override
+       public void onDetectorStopped(final AudioTagDetector audioTagDetector, final PowaTagException exception) {
+         if (exception != null) {
+           // Detector stopped due to an error.
+           showAlertDialog("Exception!", exception.getMessage());
+         }
+       }
+     });
+   }</pre>
+
+3. Call startDetection and stopDetection when required:
+
+    <pre>public void onStartButtonClick() {
+     audioTagDetector.startDetection();
+   }
+
+   public void onStopButtonClick() {
+     audioTagDetector.stopDetection();
+   }</pre>
+
+4. To check if the audio tag detector is actively listening for tags use:
+
+	<code>audioTagDetector.isDetecting();</code>
+
+<br/>
 
 
 # Touch to Buy Tags
