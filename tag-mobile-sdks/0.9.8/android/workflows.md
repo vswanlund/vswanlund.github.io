@@ -92,28 +92,28 @@ Allows the user to retrieve a catalog of products to review, select and checkout
 
   	The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues
 
-    <code>Workflow workflow = workflowManager.getWorkflow(tag);</code>
+<code>Workflow workflow = workflowManager.getWorkflow(tag);</code>
 	
 	<br />  
 	
 	
 	This can also be done using RxJava:
 	
-	<pre>RxWorkflowManager workflowManager = RxManagerFactory.getInstance().getWorkflowManager();
-	workflowManager.getWorkflow(tag).subscribe(new Subscriber&lt;Workflow&gt;() {
-		@Override
-		public void onCompleted() {
-		} 
-		@Override
-		public void onError(Throwable e) {
-		}
+<pre>RxWorkflowManager workflowManager = RxManagerFactory.getInstance().getWorkflowManager();
+workflowManager.getWorkflow(tag).subscribe(new Subscriber&lt;Workflow&gt;() {
+	@Override
+	public void onCompleted() {
+	} 
+	@Override
+	public void onError(Throwable e) {
+	}
 
-		@Override
-		public void onNext(Workflow workflow) {
-			switch (workflow.getWorkflowType()) {
-			...
-			}
+	@Override
+	public void onNext(Workflow workflow) {
+		switch (workflow.getWorkflowType()) {
+		...
 		}
-	});  </pre>
+	}
+});  </pre>
 
 <br />
