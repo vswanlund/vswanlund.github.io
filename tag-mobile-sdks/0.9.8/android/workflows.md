@@ -14,12 +14,25 @@ The workflow information will contain the data necessary to integrate with the a
 
 The currently supported workflows are:
 
-* Product
-* Basket
-* POS Basket
-* Appeal
-* Act
-* Catalog
+# Workflow Types
+
+**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/products/)**<br />
+Single product, that can be purchased immediately or added to a basket for later.
+
+**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/)**<br />
+TemporaryBasket containing a fixed set of items that can be purchased.
+
+**[Appeal]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/appeal/)**<br />
+Charity donation campaign, one time or recurring.
+
+**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/acts/)**<br />
+Custom user information required to act on a merchant's call to action.
+
+**[POS Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/posbasket/)**<br />
+Purchase of products at a Point Of Service.
+
+**[Catalog]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/catalog/)**<br />
+Allows the user to retrieve a catalog of products to review, select and checkout.
 
 <br />
 
@@ -78,25 +91,28 @@ The currently supported workflows are:
   	The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues
 
     Workflow workflow = workflowManager.getWorkflow(tag);
+	
+	<br />
+	This can also be done using RxJava:
+	
+    <pre>RxWorkflowManager workflowManager = RxManagerFactory.getInstance().getWorkflowManager();
+    workflowManager.getWorkflow(tag).subscribe(new Subscriber&lt;Workflow&gt;() {
+		@Override
+		public void onCompleted() {
+		} 
+ 
+		@Override
+		public void onError(Throwable e) {
+		}
+
+		@Override
+		public void onNext(Workflow workflow) {
+			switch (workflow.getWorkflowType()) {
+			...
+			}
+		}
+	});</pre>
 
 <br />
 
-# Workflow Types
 
-**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/products/)**<br />
-Single product, that can be purchased immediately or added to a basket for later.
-
-**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/)**<br />
-TemporaryBasket containing a fixed set of items that can be purchased.
-
-**[Appeal]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/appeal/)**<br />
-Charity donation campaign, one time or recurring.
-
-**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/acts/)**<br />
-Custom user information required to act on a merchant's call to action.
-
-**[POS Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/posbasket/)**<br />
-Custom user information required to act on a merchant's act campaign.
-
-**[Catalog]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/acts/)**<br />
-Custom user information required to act on a merchant's act campaign.
