@@ -42,32 +42,32 @@ Allows the user to retrieve a catalog of products to review, select and checkout
 
 1. Use the `WorkflowType.asXyzWorkflow` methods to convert the generic workflow object to the correct workflow subclass:
 
-    <pre>switch (workflow.getWorkflowType()) {
-     case PRODUCT:
-       ProductWorkflow productWorkflow = WorkflowType.asProductWorkflow(workflow);
-       Product product = productWorkflow.getProduct();
-       break;
-     case BASKET:
-       TemporaryBasketWorkflow basketWorkflow = WorkflowType.asBasketWorkflow(workflow);
-       TemporaryBasket basket = basketWorkflow.getBasket();
-       break;
-     case CAMPAIGN:
-       CampaignWorkflow campaignWorkflow = WorkflowType.asCampaignWorkflow(workflow);
-       Campaign campaign = campaignWorkflow.getCampaign();
-       break;
-     case ACT:
-       ActWorkflow actWorkflow = WorkflowType.asActWorkflow(workflow);
-       Act act = actWorkflow.getAct();
-       break;
-     case POS_BASKET:
-       PosBasketWorkflow posBasketWorkflow = WorkflowType.asPosBasketWorkflow(workflow);
-       PosBasket posBasket = posBasketWorkflow.getPosBasket();
-       break;
-     case CATALOG:
-       CatalogWorkflow catalogWorkflow = WorkflowType.asCatalogWorkflow(workflow);
-       Catalog catalog = catalogWorkflow.getCatalog();
-       break;	   
-   }</pre>
+<pre>switch (workflow.getWorkflowType()) {
+ case PRODUCT:
+   ProductWorkflow productWorkflow = WorkflowType.asProductWorkflow(workflow);
+   Product product = productWorkflow.getProduct();
+   break;
+ case BASKET:
+   TemporaryBasketWorkflow basketWorkflow = WorkflowType.asBasketWorkflow(workflow);
+   TemporaryBasket basket = basketWorkflow.getBasket();
+   break;
+ case CAMPAIGN:
+   CampaignWorkflow campaignWorkflow = WorkflowType.asCampaignWorkflow(workflow);
+   Campaign campaign = campaignWorkflow.getCampaign();
+   break;
+ case ACT:
+   ActWorkflow actWorkflow = WorkflowType.asActWorkflow(workflow);
+   Act act = actWorkflow.getAct();
+   break;
+ case POS_BASKET:
+   PosBasketWorkflow posBasketWorkflow = WorkflowType.asPosBasketWorkflow(workflow);
+   PosBasket posBasket = posBasketWorkflow.getPosBasket();
+   break;
+ case CATALOG:
+   CatalogWorkflow catalogWorkflow = WorkflowType.asCatalogWorkflow(workflow);
+   Catalog catalog = catalogWorkflow.getCatalog();
+   break;	   
+}</pre>
 
 
 <br />
@@ -76,34 +76,28 @@ Allows the user to retrieve a catalog of products to review, select and checkout
 
 1. Retrieve an instance of `WorkflowManager`:
 
-    <pre>WorkflowManager workflowManager = ManagerFactory.getInstance().getWorkflowManager();</pre>
+<pre>WorkflowManager workflowManager = ManagerFactory.getInstance().getWorkflowManager();</pre>
 
 2. Request the workflow information for a tag:
 
-    <pre>workflowManager.getWorkflow(tag, new PowaTagCallback&lt;Workflow&gt;() {
-     public void onSuccess(Workflow workflow) {
-       switch (workflow.getWorkflowType()) {
-         ...
-       }
-     }
-     public void onError(PowaTagException exception) {
-     }
-   });</pre>
+<pre>workflowManager.getWorkflow(tag, new PowaTagCallback&lt;Workflow&gt;() {
+ public void onSuccess(Workflow workflow) {
+   switch (workflow.getWorkflowType()) {
+	 ...
+   }
+ }
+ public void onError(PowaTagException exception) {
+ }
+});</pre>
 
-  	The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues
+The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues
 
 <code>Workflow workflow = workflowManager.getWorkflow(tag);</code>
 	
 <br />  
 	
-3. test
-sdf
-sdfsd
-f
 
-sdfsdfsd
-
-	This can also be done using RxJava:
+This can also be done using RxJava:
 	
 <pre>RxWorkflowManager workflowManager = RxManagerFactory.getInstance().getWorkflowManager();
 workflowManager.getWorkflow(tag).subscribe(new Subscriber&lt;Workflow&gt;() {
