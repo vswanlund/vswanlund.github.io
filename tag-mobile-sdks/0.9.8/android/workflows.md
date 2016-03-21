@@ -94,7 +94,7 @@ Allows the user to retrieve a catalog of products to review, select and checkout
 
 <code>Workflow workflow = workflowManager.getWorkflow(tag);</code>
 	
-	<br />  
+<br />  
 	
 	
 	This can also be done using RxJava:
