@@ -8,16 +8,33 @@ A workflow defines the action(s) an application should offer the user for a part
 
 The workflow also includes the information required to display the actions (such as the product information).
 
-After detecting a tag with one of the triggers use `PTKWorkflowManager` to retrieve the workflow information for that tag.
+After detecting a tag with one of the [triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/triggers/) use the `PTKWorkflowManager` to retrieve the workflow information for the tag.
 
-The workflow information will contain the data necessary to integrate with the action SDK components (for instance through `BasketManager` and `Baskets` for a Product workflow).
+The workflow information will contain the data necessary to integrate with the action SDK components (for instance through `PTKBasketManager` and `PTKBaskets` for a product workflow).
 
-The currently supported workflows are:
 
-* Product
-* Basket
-* Campaign
-* Act
+
+# Workflow Types
+
+The currently supported workflow types are:
+
+**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/products/)**<br />
+Retrieve a single product, that can be purchased immediately or added to a basket for later.
+
+**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/baskets/)**<br />
+TemporaryBasket containing a fixed set of items that can be purchased.
+
+**[Appeal]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/appeal/)**<br />
+A one-time or recurring donation.
+
+**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/acts/)**<br />
+Custom user information required to act on a merchant's call to action.
+
+**[POS Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/posbasket/)**<br />
+Purchase of products at a Point Of Service.
+
+**[Catalog]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/catalog/)**<br />
+Allows the user to retrieve a catalog of products to review, select and checkout.
 
 <br />
 
@@ -34,14 +51,22 @@ The currently supported workflows are:
        PTKTemporaryBasketWorkflow *basketWorkflow = [PTKWorkflow asBasketWorkflow:workflow];
        PTKTemporaryBasket *basket = basketWorkflow.basket;
        break;
-     case PTKWorkflowTypeCampaign:
+     case PTKWorkflowTypeAppeal:
        PTKCampaignWorkflow *campaignWorkflow = [PTKWorkflow asCampaignWorkflow:workflow];
        PTKCampaign *campaign = campaignWorkflow.campaign;
        break;
-	case PTKWorkflowTypeCampaign:
+	case PTKWorkflowTypeAct:
        PTKActWorkflow *actWorkflow = [PTKWorkflow asActWorkflow:workflow];
-       PTKAct *act = actWorkflow.campaign;
+       PTKAct *act = actWorkflow.act;
        break;
+	case PTKWorkflowTypePOSBasket:
+       PTKPOSBasketWorkflow *posBasketWorkflow = [PTKWorkflow asPOSBasketWorkflow:workflow];
+       PTKPOSBasket *posBasket = posBasketWorkflow.posBasket;
+       break;
+	case PTKWorkflowTypeCatalog:
+       PTKCampaignWorkflow *campaignWorkflow = [PTKWorkflow asCampaignWorkflow:workflow];
+       PTKCatalog *catalog = campaignWorkflow.catalog;
+       break;	   
    }</pre>
 
 # Retrieve a Workflow
@@ -59,17 +84,3 @@ The currently supported workflows are:
    });</pre>
 
 <br />
-
-# Workflow Types
-
-**[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/products/)**<br />
-Single product, that can be purchased immediately or added to a basket for later.
-
-**[Basket]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/baskets/)**<br />
-TemporaryBasket containing a fixed set of items that can be purchased.
-
-**[Campaign]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/campaigns/)**<br />
-Charity donation campaign, one time or recurring.
-
-**[Act]({{site.baseurl}}/tag-mobile-sdks/0.9.8/ios/acts/)**<br />
-Custom user information required to act on a merchant's act campaign.
