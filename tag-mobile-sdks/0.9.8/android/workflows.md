@@ -92,9 +92,10 @@ Allows the user to retrieve a catalog of products to review, select and checkout
 
   	The synchronous version of the <code>getWorkflow</code> method should not be used in the main thread to avoid performance issues
 
-    Workflow workflow = workflowManager.getWorkflow(tag);
+    <code>Workflow workflow = workflowManager.getWorkflow(tag);</code>
 	
 	<br />  
+	
 	
 	This can also be done using RxJava:
 	
