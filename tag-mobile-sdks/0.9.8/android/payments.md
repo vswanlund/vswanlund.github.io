@@ -68,7 +68,7 @@ Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is re
 
 	<pre>PaymentDetails paymentDetails = new PaymentDetails("123");
 
-3. Use the PaymentManager to pay for the invoice:
+2. Use the PaymentManager to pay for the invoice:
 
 	<pre>PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
 	paymentManager.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {

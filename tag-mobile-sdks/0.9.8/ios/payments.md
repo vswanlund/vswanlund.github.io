@@ -47,7 +47,7 @@ Use the `paymentInstrument.isCvvRequired` method to determine if the CVV is requ
    }];</pre>
    
    
- ### Paying for an Invoice Using Encrypted CVV
+### Paying for an Invoice Using Encrypted CVV
 
 1. Create EncryptedCVV with the CVV:
 
