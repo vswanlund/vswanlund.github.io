@@ -1,4 +1,4 @@
-t---
+---
 layout: page
 title: Workflows on Android
 permalink: /tag-mobile-sdks/0.9.8/android/workflows/
@@ -8,7 +8,7 @@ A workflow defines the action(s) an application should offer the user for a part
 
 The workflow also includes the information required to display the actions (such as the product information).
 
-After detecting a tag with one of the [triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/triggers/) use the `WorkflowManager` to retrieve the workflow information for that tag.
+After detecting a tag with one of the [triggers]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/triggers/) use the `WorkflowManager` to retrieve the workflow information for the tag.
 
 The workflow information will contain the data necessary to integrate with the action SDK components (for instance through `BasketManager` and `Baskets` for a Product workflow).
 
