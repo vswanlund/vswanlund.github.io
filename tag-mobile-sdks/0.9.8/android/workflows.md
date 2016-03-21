@@ -12,9 +12,11 @@ After detecting a tag with one of the [triggers]({{site.baseurl}}/tag-mobile-sdk
 
 The workflow information will contain the data necessary to integrate with the action SDK components (for instance through `BasketManager` and `Baskets` for a Product workflow).
 
-The currently supported workflows are:
+
 
 # Workflow Types
+
+The currently supported workflow types are:
 
 **[Product]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/products/)**<br />
 Single product, that can be purchased immediately or added to a basket for later.
