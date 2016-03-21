@@ -107,7 +107,6 @@ A number of triggers are currently supported:
         } 
 	}</pre>
 
-
 # Audio Tags
 
 1. Audio tag detection requires the use of the audio recording permission. Add the following entry to your manifest:
