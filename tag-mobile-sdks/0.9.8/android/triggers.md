@@ -95,7 +95,7 @@ A number of triggers are currently supported:
     <pre>&lt;uses-permission android:name="android.permission.NFC" /&gt;
    &lt;uses-feature android:name="android.hardware.nfc" /&gt;</pre>
 
-2. Add the BarcodeTagDetectorView to your layout XML:
+2. Use the NfcTagDetector class to obtain the Tag:
 
     <pre>protected void onNewIntent(final Intent intent) {
 		Set<String> schemes = new HashSet<>();
