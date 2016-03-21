@@ -44,6 +44,14 @@ The currently supported workflows are:
        ActWorkflow actWorkflow = WorkflowType.asActWorkflow(workflow);
        Act act = actWorkflow.getAct();
        break;
+     case POS_BASKET:
+       PosBasketWorkflow posBasketWorkflow = WorkflowType.asPosBasketWorkflow(workflow);
+       PosBasket posBasket = posBasketWorkflow.getPosBasket();
+       break;
+     case CATALOG:
+       CatalogWorkflow catalogWorkflow = WorkflowType.asCatalogWorkflow(workflow);
+       Catalog catalog = catalogWorkflow.getCatalog();
+       break;	   
    }</pre>
 
 
