@@ -1,80 +1,217 @@
 ---
 layout: page
 title: Payments at a POS
-permalink: /tag-mobile-sdks/0.9.8/android/pospayments/
+permalink: /tag-mobile-sdks/0.9.8/android/posbaskets/
 ---
 
-. 
+Pay at POS allows the user to pay for goods at a POS terminal with the app via a PowaTag trigger. 
+
+POS baskets are a collection of `BasketItem` which hold the product variant and quantity. The contents of a POSBasket cannot be modified by the user and the only actions that can be performed is to apply coupons and to create an invoice for the basket. 
+
+
 In order to make a POS payment, the following steps should be followed:
 
-1. Scan the PowaTag QR code or NFC tag
-Use the tag to obtain the workflow and POSBasket
+* The user presents a basket of good to the cashier at the POS.
+* Cashier rings up the goods and generates a `POSBasket`.
+* User scans the PowaTag [trigger]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/triggers/) (QR or NFC) associated with the POS terminal.
+* Retrieve the `POSBasket` from the [workflow]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/workflow/) associated with the tag.
+
+The the 
+
+## Obtaining Triggered Coupons
+
+
+## Use Coupon Picker to Present Valid Discounts to the user
+
+
+## Create an Invoice for the `POSBasket`
+
+
+## Authorize and Pay for the Invoice
+
+Please see the [payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/payments/) section for the steps to complete the payment.
+
+
 Get the list of all POS_PAIRING triggered coupons 
 obtain all coupon combinations    (couponmamanger.getpossiblediscounts()  (services return the possible combinations))
 use coupon picker to present valid discounts to the user and allow them to pick valid discounts (combinations of coupons) (this component automatically refreshes display based on couponstate objects )
 user clicks pay, and you create an POS Invoice (	POSManager.createInvoice (posinvoicedetails, )           -posinvoicedetails contains (20:00)
 POSINvoice object is returned (including terminal id,)
-if authorizationrequires = true then PaymentMethod.authorise(posinvoice) (24:00 - 28:30)   (two authorise methods, one for posinvoice and one for posinvoice + cvv)
-encrypting CVV(30:50)
-payment operation returns payment (including transaction ID for tracing transaction)
 
 
 
-
-PowaTag supports payments for goods at an PowaTag enabled POS terminal. In order to make a payment, you first need to create an invoice for one of the supported goods or service types:
-
-* [Baskets]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/baskets/) - PaymentInvoice
-* [Campaigns]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/campaigns/) - DonationInvoice
 
 <br />
 
-# Paying for an Invoice using CVV
+### Checking if a Basket is a TemporaryBasket or PersistentBasket
 
-1. Create PaymentDetails with the CVV:
+1. Check the `isTemporary` property of the basket:
 
-	<pre>PaymentDetails paymentDetails = new PaymentDetails("123");
+    <pre>if (basket.isTemporary()) {
+     // Pre-set basket
+     TemporaryBasket basket = (TemporaryBasket) basket;
+   } else {
+     // User basket
+     PersistentBasket basket = (PersistentBasket) basket;
+   }</pre>
 
-2. Use the PaymentManager to pay for the invoice:
+<br />
 
-    <pre>PaymentManager pm = PaymentManager.getInstance();
-	pm.pay(invoice, paymentDetails, new PowaTagCallback&lt;Payment&gt;() {
-		public void onSuccess(Payment payment) {
-		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
-		}
-		public void onError(PowaTagException exception) {
-		}
-	});</pre>
+### Obtaining the Baskets for a User
 
-	The <code>PaymentManager</code> also provides a synchronous <code>pay</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
+1. Get the list of baskets for the current user using the `BasketsManager`:
 
-	<pre>Payment payment = pm.pay(invoice, paymentDetails);</pre>
+	<pre>BasketsManager basketsManager = ManagerFactory.getInstance().getBasketsManager();
+	Baskets baskets = basketsManager.getCurrentBaskets();</pre>
+	
+	For those using RxJava, the RxManagerFactory is used to obtain the instance:
+	
+	<pre>RxBasketsManager basketsManager = RxManagerFactory.getInstance().getBasketsManager();
+	Baskets baskets = basketsManager.getCurrentBaskets();</pre>	
+
+2. Get the user's basket for a specific merchant:
+
+	<pre>PersistentBasket basket = baskets.getBasket(merchant);</pre>
 
 <br/>
 
-# Paying for an Invoice Using an Encrypted CVV
+### Adding a Product Variant to a Basket
 
-1. Create EncryptedCVV with the CVV:
+1. Add a product variant to the basket for the merchant:
 
-	<pre>Profile profile = ProfileManager.getInstance().getCurrentProfile();
-	PaymentInstrument paymentInstrument = profile.getDefaultPaymentInstrument();
-	EncryptedCVV encryptedCvv = EncryptedCvvStorage.getInstance().getCvv(paymentInstrument);
+    <pre>ProductVariant variant = workflow.getProduct().getVariants().get(0);
+	basketsManager.addVariant(workflow.getMerchant(), variant);</pre>
 
-2. Use the PaymentManager to pay for the invoice:
+2. Or you can add a specific quantity of the product variant to the basket:
 
-	<pre>PaymentManager pm = PaymentManager.getInstance();
-	pm.pay(invoice, encryptedCvv, new PowaTagCallback&lt;Payment&gt;() {
-		public void onSuccess(Payment payment) {
-		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
+    <pre>basketsManager.addVariant(workflow.getMerchant(), variant, 2);</pre>
+
+<br />
+
+### Removing a Product Variant from a Basket
+
+1. You can remove a single quantity of a variant (this will return true if the quantity of the variant was decreased by 1), if the remaining quantity is 0 the item will be removed from the basket:
+
+    <pre>boolean singleQuantityRemoved = basketsManager.removeVariant(merchant, variant);</pre>
+
+2. Or you can remove a specific quantity (in this the amount the quantity was decreased by will be returned):
+
+    <pre>int quantityRemoved = basketsManager.removeVariant(merchant, variant, 2);</pre>
+
+<br />
+
+### Changing the Quantity of a Product Variant
+
+1. Set the quantity of a variant (this will override any existing quantity, if you set the quantity to 0 the basket item for that variant will be removed):
+
+    <pre>basketsManager.setVariantQuantity(merchant, variant, 3);</pre>
+
+2. You can use this to remove a variant from a basket entirely, regardless of the current quantity by setting the quantity to 0 (causing the basket item for the variant to be removed from the basket):
+
+    <pre>basketsManager.setVariantQuantity(merchant, variant, 0);</pre>
+
+<br />
+
+### Basket Items
+
+1. A basket is made up of multiple line items, one for each unique product variant. An item records the quantity of each variant (the quantity will always be >= 1):
+
+    <pre>for (BasketItem item : basket.getItems()) {
+      ProductVariant variant = item.getVariant();
+      int quantity = item.getQuantity();
+   }</pre>
+
+<br />
+
+### Creating an Invoice for a Basket
+
+Before creating an invoice you need to ensure the users [Profile]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/profile/) has all the information required by the merchant.
+
+1. Select a PaymentInstrument from the Profile that is accepted by the Merchant:
+
+    <pre>ProfileManager profileManager = ManagerFactory.getInstance().getProfileManager();
+	List<PaymentMethodAlias> acceptedPaymentInstruments = profileManager.getAcceptedPaymentInstruments(merchant);
+    PaymentInstrument paymentInstrument = acceptedPaymentInstruments.get(0);</pre>
+
+2. Select an Address to use for the shipping address from the Profile:
+
+    <pre>Address shippingAddress = profileManager.getCurrentProfile().getAddresses().get(0);</pre>
+
+3. Select a ShippingOption to use for delivery from the Merchant:
+
+    <pre>ShippingOption shippingOption = basket.getMerchant().getShippingOptions.get(0);</pre>
+
+4. Create a `PaymentInvoiceDetails` to provide payment instrument, shipping address and shipping options for creating an invoice:
+
+	<pre> PaymentInvoiceDetails paymentInvoiceDetails = new PaymentInvoiceDetails(paymentInstrument, shippingAddress, shippingOption);
+
+5. Use the BasketsManager to get the cost for a Basket contents delivered by a particular shipping option:
+
+	<pre>basketsManager.createInvoice(basket, paymentInvoiceDetails, new PowaTagCallback&lt;PaymentInvoice&gt;() {
+		public void onSuccess(PaymentInvoice invoice) {
+			Cost cost = invoice.getCost();
+		}
+		public void onError(PowaTagException exception) {
+		}
+	});</pre>
+<br />
+	This can also be done using RxJava:
+	
+	<pre>RxBasketsManager basketsManager = RxManagerFactory.getInstance().getBasketsManager();
+	basketsManager.createInvoice(basket, paymentInvoiceDetails).subscribe(new Subscriber&lt;PaymentInvoice&gt;() {
+	@Override
+	public void onCompleted() {
+	}
+
+	@Override
+	public void onError(Throwable e) {
+	}
+
+	@Override
+	public void onNext(PaymentInvoice paymentInvoice) {
+		Cost cost = paymentInvoice.getCost();
+	}
+	});  </pre>
+	
+<br />
+
+
+### Paying for a Payment Invoice
+
+Once you have created an invoice for a basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/) for that invoice.
+
+<br />
+
+### Saving a Basket to the Server
+
+1. To make Basket information available to other devices or between logins you need to update the Basket on the server using the BasketsManager:
+
+    <pre>basketsManager.updateBasket(merchant, new PowaTagCallback&lt;Basket&gt;() {
+		public void onSuccess(Basket basket) {
+		// Basket is now accessible from other devices
 		}
 		public void onError(PowaTagException exception) {
 		}
 	});</pre>
 
-	The <code>PaymentManager</code> also provides a synchronous <code>pay</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
+	The <code>BasketManager</code> also provides a synchronous <code>updateBasket</code> method which should only be used outside of the main thread to avoid performance bottlenecks.
 
-	<pre>Payment payment = pm.pay(invoice, encryptedCvv);</pre>
+	<pre>Basket basket = bm.updateBasket(merchant);</pre>
+	
+	
+	This can also be done using RxJava:
+	
+	<pre>basketManager.updateBasket(basket).subscribe(new Subscriber&lt;Basket&gt;() {
+	@Override
+	public void onCompleted() {
+	}
 
+	@Override
+	public void onError(Throwable e) {
+	}
 
-
-
-
+	@Override
+	public void onNext(Basket basket) {
+		// Basket is now accessible from other devices
+	}
+	});</pre>
