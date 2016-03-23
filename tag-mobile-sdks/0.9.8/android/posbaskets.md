@@ -79,7 +79,7 @@ This can also be done using RxJava:
 
 <br />
 
-### Creating an Invoice for the PosBasket
+## Creating an Invoice for the PosBasket
 
 Once the user clicks the 'Pay' button, a `POSInvoice` needs to be created before the payment can be processed.
 
@@ -122,11 +122,9 @@ This can also be done using RxJava:
 		// The PosInvoice contains information such as the POS terminal ID, basket items, discount, total the coupons that were applied.
 	}
 });  </pre>
+<br/>  
 
-<br />
-
-
-### Paying the PosInvoice
+## Paying the PosInvoice
 
 Once you have created an invoice for the POS basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/).
 
