@@ -121,7 +121,8 @@ This can also be done using RxJava:
 	public void onNext(PosInvoice posInvoice) {
 		// The PosInvoice contains information such as the POS terminal ID, basket items, discount, total the coupons that were applied.
 	}
-});  </pre>
+}); </pre>
+
 <br/>  
 
 ## Paying the PosInvoice
