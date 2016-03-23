@@ -85,20 +85,19 @@ Once the user clicks the 'Pay' button, a `POSInvoice` needs to be created before
 
 1. Create a `PosInvoiceDetails` to provide the payment instrument, posBasket and selected coupons to apply to the the invoice:
 
-	<pre>// Use the payment instrument the user selected 
-	// Obtain the coupons for the discount the user selected
-	List&lt;Coupon&gt; selectedCoupons = selectedDiscount.getAppliedCoupons();
-	PosInvoiceDetails posInvoiceDetails = new PosInvoiceDetails(posBasket, paymentInstrument, selectedCoupons);
+<pre>// Obtain the coupons for the discount the user selected
+List&lt;Coupon&gt; selectedCoupons = selectedDiscount.getAppliedCoupons();
+PosInvoiceDetails posInvoiceDetails = new PosInvoiceDetails(posBasket, paymentInstrument, selectedCoupons);
 
 2. Use the `PosManager` to create the invoice:
 
-	<pre>ManagerFactory.getInstance().getPosManager().createInvoice(posInvoiceDetails, new PowaTagCallback&lt;PosInvoice&gt;() {
-		public void onSuccess(PosInvoice posInvoice) {
-			// The PosInvoice contains information such as the POS terminal ID, basket items, total , discount and the coupons that were applied.
-		}
-		public void onError(PowaTagException exception) {
-		}
-	});</pre>
+<pre>ManagerFactory.getInstance().getPosManager().createInvoice(posInvoiceDetails, new PowaTagCallback&lt;PosInvoice&gt;() {
+	public void onSuccess(PosInvoice posInvoice) {
+		// The PosInvoice contains information such as the POS terminal ID, basket items, total , discount and the coupons that were applied.
+	}
+	public void onError(PowaTagException exception) {
+	}
+});</pre>
 	
 <br />
 
@@ -132,31 +131,3 @@ This can also be done using RxJava:
 Once you have created an invoice for the POS basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/).
 
 <br />
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Authorize and Pay for the Invoice
-
-Please see the [payments]({{site.baseurl}}/tag-mobile-sdks/0.9.8/payments/) section for the steps to complete the payment.
-
-## Display Triggered Coupons 
-
-
-
-
-
-
-
-<br />
-
-
