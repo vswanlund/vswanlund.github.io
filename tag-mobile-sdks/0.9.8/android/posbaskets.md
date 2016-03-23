@@ -79,7 +79,7 @@ This can also be done using RxJava:
 
 <br />
 
-### Creating an Invoice for the `PosBasket`
+### Creating an Invoice for the PosBasket
 
 Once the user clicks the 'Pay' button, a `POSInvoice` needs to be created before the payment can be processed.
 
