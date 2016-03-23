@@ -25,7 +25,7 @@ The merchant has the ability to create coupons for use by their customers and ca
 
 1. Obtain all triggered coupons for the merchant by using the `PosBasketWorkflow`
 
-<pre>Set<Coupon> coupons = workflow.getTriggeredCoupons();
+<pre>Set&lt;Coupon&gt; coupons = workflow.getTriggeredCoupons();
 if(!coupons.isEmpty()){
 	for (for (Coupon coupon : coupons){
 		//obtain coupon details and display coupon list to user.
@@ -41,9 +41,9 @@ The POSBasket contains the set of all coupons that can be redeemed against the c
 
 1. Calculate the possible discounts using the `CouponManager`
 
-<pre>ManagerFactory.getInstance().getCouponManager().getAvailableDiscounts(posBasket, new PowaTagCallback<List<Discount>>() {
+<pre>ManagerFactory.getInstance().getCouponManager().getAvailableDiscounts(posBasket, new PowaTagCallback&lt;List&lt;Discount&gt;&gt;() {
 	@Override
-	public void onSuccess(@NonNull Set<Discount> possibleDiscounts) {
+	public void onSuccess(@NonNull Set&lt;Discount&gt; possibleDiscounts) {
 		// Display the discounts to the user and use discount.getSavings() to show the savings.
 		// Let the user select one.
 	}
@@ -55,14 +55,14 @@ The POSBasket contains the set of all coupons that can be redeemed against the c
 
 The synchronous version of the <code>getAvailableDiscounts</code> method is available but should not be used in the main thread to avoid performance issues
 
-<code>List<Discount> possibleDiscounts = ManagerFactory.getInstance().getCouponManager().getAvailableDiscounts(posBasket);</code>
+<code>List&lt;Discount&gt; possibleDiscounts = ManagerFactory.getInstance().getCouponManager().getAvailableDiscounts(posBasket);</code>
 	
 <br />  
 	
 
 This can also be done using RxJava:
 	
-<pre>RxManagerFactory.getInstance().getCouponManager().getAvailableDiscounts(posBasket).subscribe(new Subscriber&lt;<List<Discount>>&gt;() {
+<pre>RxManagerFactory.getInstance().getCouponManager().getAvailableDiscounts(posBasket).subscribe(new Subscriber&lt;List&lt;Discount&gt;&gt;() {
 	@Override
 	public void onCompleted() {
 	} 
@@ -71,7 +71,7 @@ This can also be done using RxJava:
 	}
 
 	@Override
-	public void onNext(List<Discount> possibleDiscounts) {
+	public void onNext(List&lt;Discount&gt; possibleDiscounts) {
 		// Display the discounts to the user and use discount.getSavings() to show the savings.
 		// Let the user select one.
 	}
@@ -87,7 +87,7 @@ Once the user clicks the 'Pay' button, a `POSInvoice` needs to be created before
 
 	<pre>// Use the payment instrument the user selected 
 	// Obtain the coupons for the discount the user selected
-	List<Coupon> selectedCoupons = selectedDiscount.getAppliedCoupons();
+	List&lt;Coupon&gt; selectedCoupons = selectedDiscount.getAppliedCoupons();
 	PosInvoiceDetails posInvoiceDetails = new PosInvoiceDetails(posBasket, paymentInstrument, selectedCoupons);
 
 2. Use the `PosManager` to create the invoice:
