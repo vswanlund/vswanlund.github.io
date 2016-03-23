@@ -121,11 +121,13 @@ This can also be done using RxJava:
 	public void onNext(PosInvoice posInvoice) {
 		// The PosInvoice contains information such as the POS terminal ID, basket items, discount, total the coupons that were applied.
 	}
-}); </pre>
+});</pre>
 
-<br/>  
+<br />  
 
-## Paying the PosInvoice
+
+
+<br/>## Paying the PosInvoice
 
 Once you have created an invoice for the POS basket you can make a [Payment]({{site.baseurl}}/tag-mobile-sdks/0.9.8/android/payments/).
 
