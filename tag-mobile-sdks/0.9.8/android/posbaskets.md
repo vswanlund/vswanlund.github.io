@@ -35,7 +35,7 @@ if(!coupons.isEmpty()){
 <br/>
 
 
-## Applying Coupons to Calculating Possible Discounts
+## Calculating Possible Discounts
 
 The POSBasket contains the set of all coupons that can be redeemed against the current basket. These coupons need to be combined to provide the user with the distinct possible discounts that can be applied to the basket.
 
