@@ -20,7 +20,7 @@ Depending on thresholds set by the merchant, an invoice may require authorizatio
 	PaymentManager paymentManager = ManagerFactory.getInstance().getPaymentManager();
 	if (invoice.isAuthorizationRequired()){
 		// prompt user for their passcode
-		paymentManager().authorize(invoice, passcodeEditText.getText().toString(), new PowaTagCallback<Void>() {
+		paymentManager.authorize(invoice, passcodeEditText.getText().toString(), new PowaTagCallback<Void>() {
 			@Override
 			public void onSuccess(@Nullable Void aVoid) {
 			}
@@ -154,7 +154,10 @@ Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is re
 		PaymentManager pm = ManagerFactory.getInstance().getPaymentManager();
 		pm.pay(invoice, new PowaTagCallback&lt;Payment&gt;() {
 		public void onSuccess(Payment payment) {
-		// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
+			// Payment contains information such as the PowaTag payment ID, Merchant payment ID, the invoice that was paid for and any triggered coupons.
+			Set<Coupons> triggeredCoupons = payment.getCoupons();
+			//display coupons to user.
+
 		}
 		public void onError(PowaTagException exception) {
 		}
@@ -178,7 +181,9 @@ Use the `paymentInstrument.isCvvRequired()` method to determine if the CVV is re
 
 		@Override
 		public void onNext(Payment payment) {
-			// Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for.
+			// Payment contains information such as the PowaTag payment ID, Merchant payment ID, the invoice that was paid for and any triggered coupons.
+			Set<Coupons> triggeredCoupons = payment.getCoupons();
+			//display coupons to user.
 		}
 	});</pre>	
 

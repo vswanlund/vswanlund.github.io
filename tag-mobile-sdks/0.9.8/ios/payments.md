@@ -71,6 +71,8 @@ Use the `paymentInstrument.isCvvRequired` method to determine if the CVV is requ
 	<pre>PTKPaymentManager *pm = [PTKPaymentManager sharedManager];
 	[pm payForInvoice:invoice completion:^(PTKPayment *payment, NSError *error) {
 	 if (!error) {
-       // Payment contains information such as the PowaTag payment ID, Merchant payment ID and the invoice that was paid for
+		// Payment contains information such as the PowaTag payment ID, Merchant payment ID, the invoice that was paid for and any triggered coupons
+		NSOrderedSet<PTKCoupon *> *triggeredCoupons = payment.TriggeredCoupons;
+		// Display coupons to user.
      }
 	}];</pre>
